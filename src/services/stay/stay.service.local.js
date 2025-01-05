@@ -17,25 +17,25 @@ window.cs = stayService
 
 async function query(filterBy = { txt: '', price: 0 }) {
     var stays = await storageService.query(STORAGE_KEY)
-    const { txt, minSpeed, maxPrice, sortField, sortDir } = filterBy
+    const { txt, minCapacity, maxPrice, sortField, sortDir } = filterBy
 
     if (txt) {
         const regex = new RegExp(filterBy.txt, 'i')
-        stays = stays.filter(stay => regex.test(stay.vendor) || regex.test(stay.description))
+        stays = stays.filter(stay => regex.test(stay.loc.country) || regex.test(stay.loc.city))
     }
-    if (minSpeed) {
-        stays = stays.filter(stay => stay.speed >= minSpeed)
+    if (minCapacity) {
+        stays = stays.filter(stay => stay.capacity >= minCapacity)
     }
-    if (sortField === 'vendor' || sortField === 'owner') {
+    if (sortField === 'country' || sortField === 'owner') {
         stays.sort((stay1, stay2) =>
             stay1[sortField].localeCompare(stay2[sortField]) * +sortDir)
     }
-    if (sortField === 'price' || sortField === 'speed') {
+    if (sortField === 'price' || sortField === 'capacity') {
         stays.sort((stay1, stay2) =>
             (stay1[sortField] - stay2[sortField]) * +sortDir)
     }
 
-    stays = stays.map(({ _id, vendor, price, speed, owner }) => ({ _id, vendor, price, speed, owner }))
+    // stays = stays.map(({ _id, vendor, price, capacity, owner }) => ({ _id, vendor, price, capacity, owner }))
     return stays
 }
 
@@ -54,14 +54,14 @@ async function save(stay) {
         const stayToSave = {
             _id: stay._id,
             price: stay.price,
-            speed: stay.speed,
+            capacity: stay.capacity,
         }
         savedStay = await storageService.put(STORAGE_KEY, stayToSave)
     } else {
         const stayToSave = {
-            vendor: stay.vendor,
+            loc: stay.loc,
             price: stay.price,
-            speed: stay.speed,
+            capacity: stay.capacity,
             // Later, owner is set by the backend
             owner: userService.getLoggedinUser(),
             msgs: []

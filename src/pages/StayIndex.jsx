@@ -30,7 +30,8 @@ export function StayIndex() {
 
     async function onAddStay() {
         const stay = stayService.getEmptyStay()
-        stay.vendor = prompt('Vendor?')
+        stay.loc.country = prompt('Country?')
+        stay.loc.city = prompt('City?')
         try {
             const savedStay = await addStay(stay)
             showSuccessMsg(`Stay added (id: ${savedStay._id})`)
@@ -40,13 +41,13 @@ export function StayIndex() {
     }
 
     async function onUpdateStay(stay) {
-        const speed = +prompt('New speed?', stay.speed)
-        if (speed === 0 || speed === stay.speed) return
+        const capacity = +prompt('New capacity?', stay.capacity)
+        if (capacity === 0 || capacity === stay.capacity) return
 
-        const stayToSave = { ...stay, speed }
+        const stayToSave = { ...stay, capacity }
         try {
             const savedStay = await updateStay(stayToSave)
-            showSuccessMsg(`Stay updated, new speed: ${savedStay.speed}`)
+            showSuccessMsg(`Stay updated, new capacity: ${savedStay.capacity}`)
         } catch (err) {
             showErrorMsg('Cannot update stay')
         }
