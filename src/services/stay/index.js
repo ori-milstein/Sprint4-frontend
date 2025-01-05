@@ -15,7 +15,7 @@ function getEmptyStay() {
             lat: 0,
             lng: 0,
         },
-        capacity: getRandomIntInclusive(80, 240),
+        capacity: getRandomIntInclusive(1, 10),
         msgs: [],
     }
 }
