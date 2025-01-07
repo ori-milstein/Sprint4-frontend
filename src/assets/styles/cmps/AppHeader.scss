@@ -17,7 +17,7 @@
         .logo {
             display: flex;
             font-weight: bold;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Airbnb Cereal VF', sans-serif;
             text-decoration: none;
             cursor: pointer;
             margin-top: 10px;
@@ -41,6 +41,7 @@
             display: flex;
             align-items: center;
             position: relative;
+
             *:not(input) {
                 cursor: pointer;
             }
@@ -60,11 +61,15 @@
             .filter-action-container:not(.who)::after {
                 content: "";
                 position: absolute;
-                top: 15%; /* Adjust this value for how far down you want the border to start */
-                bottom: 15%; /* Adjust this value for how far up you want the border to end */
+                top: 15%;
+                /* Adjust this value for how far down you want the border to start */
+                bottom: 15%;
+                /* Adjust this value for how far up you want the border to end */
                 right: 0;
-                width: 1px; /* Border thickness */
-                background-color: lightgray; /* Same as the border color */
+                width: 1px;
+                /* Border thickness */
+                background-color: lightgray;
+                /* Same as the border color */
             }
 
             .filter-action-container:hover {
