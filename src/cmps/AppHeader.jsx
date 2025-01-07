@@ -7,13 +7,16 @@ import Logo from './Logo'
 import { HeaderFilter } from './HeaderFilter'
 import { useState } from 'react'
 import { HeaderUserControls } from './HeaderUserControls'
+import { HeaderAuthMenu } from './HeaderAuthMenu'
 
 
 export function AppHeader() {
 	const user = useSelector(storeState => storeState.userModule.user)
 	const navigate = useNavigate()
 	const [isExpanded, setIsExpanded] = useState(true)
-
+	const [isAuthMenuOpen, setIsAuthMenuOpen] = useState(false)
+	console.log(isAuthMenuOpen, 'isAuthMenuOpen')
+	
 	async function onLogout() {
 		try {
 			await logout()
@@ -32,10 +35,9 @@ export function AppHeader() {
 					<h1>airbnb</h1>
 				</NavLink>
 				<HeaderFilter isExpanded={isExpanded} setIsExpanded={setIsExpanded} />
-				<HeaderUserControls />
+				<HeaderUserControls setIsAuthMenuOpen={setIsAuthMenuOpen} />
+				{isAuthMenuOpen && <HeaderAuthMenu />}
 			</nav>
 		</header>
-
-
 	)
 }

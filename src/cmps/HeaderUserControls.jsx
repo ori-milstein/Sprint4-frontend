@@ -1,6 +1,13 @@
-export function HeaderUserControls() {
+import { useState } from 'react'
+
+export function HeaderUserControls({setIsAuthMenuOpen}) { 
+
+    function onMenuOpen(){
+        setIsAuthMenuOpen(true)
+    }
+
     return (
-        <button className="user-controls">
+        <button className="user-controls" onClick={onMenuOpen}>
             <div className="controls-container">
                 <svg className="user-controls-actions"
                     xmlns="http://www.w3.org/2000/svg"
