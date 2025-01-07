@@ -6,6 +6,7 @@ import { logout } from '../store/actions/user.actions'
 import Logo from './Logo'
 import { HeaderFilter } from './HeaderFilter'
 import { useState } from 'react'
+import { HeaderUserControls } from './HeaderUserControls'
 
 
 export function AppHeader() {
@@ -31,17 +32,7 @@ export function AppHeader() {
 					<h1>airbnb</h1>
 				</NavLink>
 				<HeaderFilter isExpanded={isExpanded} setIsExpanded={setIsExpanded} />
-				{user?.isAdmin && <NavLink to="/admin">Admin</NavLink>}
-				{!user && <NavLink to="login" className="login-link">Login</NavLink>}
-				{user && (
-					<div className="user-info">
-						<Link to={`user/${user._id}`}>
-							{/* {user.imgUrl && <img src={user.imgUrl} />} */}
-							{user.fullname}
-						</Link>
-						<button onClick={onLogout}>logout</button>
-					</div>
-				)}
+				<HeaderUserControls />
 			</nav>
 		</header>
 
