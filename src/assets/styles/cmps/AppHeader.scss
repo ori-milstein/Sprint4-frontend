@@ -1,17 +1,16 @@
 .app-header {
+    box-sizing: border-box;
     top: 0;
     position: sticky;
     min-height: 80px;
-
     border-bottom: 1px solid lightgrey;
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     background-color: white;
 
     nav {
         display: flex;
         width: 100%;
-        align-items: center;
         justify-content: space-between;
         margin-inline: 40px;
 
@@ -21,15 +20,102 @@
             font-family: 'Montserrat', sans-serif;
             text-decoration: none;
             cursor: pointer;
+            margin-top: 10px;
 
             h1 {
                 color: #ff385c;
                 font-size: 22px;
-                margin:0;
-                margin-left:4px;
+                margin: 0;
+                margin-left: 4px;
             }
         }
 
-    }
+        .filter-container {
+            border: 1px solid #DDDD;
+            box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+            border-radius: 32px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            height: 56px;
+            outline: none;
+            display: flex;
+            align-items: center;
+            position: relative;
+            *:not(input) {
+                cursor: pointer;
+            }
 
+            .filter-action-container {
+                font-size: 12px;
+                padding-left: 20px;
+                margin: 0;
+                height: 100%;
+                position: relative;
+                /* For the pseudo-element */
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .filter-action-container:not(.who)::after {
+                content: "";
+                position: absolute;
+                top: 15%; /* Adjust this value for how far down you want the border to start */
+                bottom: 15%; /* Adjust this value for how far up you want the border to end */
+                right: 0;
+                width: 1px; /* Border thickness */
+                background-color: lightgray; /* Same as the border color */
+            }
+
+            .filter-action-container:hover {
+                border-radius: inherit;
+                background-color: lightgray;
+                height: 100%;
+            }
+
+            .filter-action-container:hover::after {
+                content: none;
+                /* Hides the pseudo-element */
+            }
+
+            .filter-label {
+                font-weight: bold;
+            }
+
+            .filter-action {
+                border: none;
+                outline: none;
+                background: none;
+                box-shadow: none;
+                padding: 0;
+                margin-right: 4px;
+                width: max-content;
+                height: auto;
+                font: inherit;
+                color: inherit;
+            }
+
+            .filter-action:focus {
+                outline: none;
+                color: none;
+                border: none;
+                background-color: none;
+                box-shadow: none;
+            }
+
+            .filter-search {
+                border-radius: 50%;
+                position: absolute;
+                background-color: #ff385c;
+                right: 10px;
+                stroke: white;
+                width: 40px;
+                height: 40px;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
 }

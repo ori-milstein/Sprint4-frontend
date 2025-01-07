@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service'
 import { logout } from '../store/actions/user.actions'
 import Logo from './Logo'
+import { HeaderFilter } from './HeaderFilter'
 
 export function AppHeader() {
 	const user = useSelector(storeState => storeState.userModule.user)
@@ -26,6 +27,7 @@ export function AppHeader() {
 						<Logo />
 						<h1>airbnb</h1>
 					</NavLink>
+					<HeaderFilter></HeaderFilter>
 					{user?.isAdmin && <NavLink to="/admin">Admin</NavLink>}
 					{!user && <NavLink to="login" className="login-link">Login</NavLink>}
 					{user && (
