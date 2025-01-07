@@ -2,25 +2,30 @@
     box-sizing: border-box;
 }
 
-html {
-    line-height: 1.6;
-    color: $clr2;
-}
-    
 body {
     max-width: 100%;
-    margin: 0 auto;
-
-    font-family: 'Montserrat', sans-serif;
-    font-size: rem(18px);
+    line-break: strict;
+    font-family: 'Airbnb Cereal VF', 'AirbnbCereal-med', -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.43;
+    color: $main-writing-color;
+    background-color: $main-bg-color;
+    margin: 0;
+    font-synthesis: none;
+    height: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0 0 0.6em;
 }
 
 img {
-    display: block;
+    display: inline-block;
     max-width: 100%;
 }
 
@@ -30,10 +35,6 @@ p {
 
 a {
     text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 ul {
