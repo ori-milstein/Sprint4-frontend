@@ -16,7 +16,7 @@
 
         margin-inline: 40px;
         margin-top: 20px;
-        transition: height 0.3s ease;
+        transition: height 0.9s ease-out;
 
         .logo {
             display: flex;
@@ -44,8 +44,8 @@
             bottom: 15px;
 
             height: 66px;
-            width: 750px;
-            padding-inline: 30px;
+            width: 700px;
+            // padding-inline: 30px;
             outline: none;
             display: flex;
             align-items: center;
@@ -66,6 +66,14 @@
                 flex-direction: column;
                 justify-content: center;
             }
+            
+            .filter-container {
+                &:not(.not-expanded):hover {
+                    background-color: #F5F5F5; // Very light grey for hover
+                    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+                    transition: all 0.3s ease; // Smooth transition
+                }
+            }
 
             .filter-action-container:not(.who)::after {
                 content: "";
@@ -77,10 +85,9 @@
                 right: 0;
                 width: 1px;
                 /* Border thickness */
-                background-color: lightgray;
+                background-color: #F5F5F5;
                 /* Same as the border color */
             }
-
 
             .filter-label {
                 font-weight: bold;
@@ -156,6 +163,7 @@
 
         .not-expanded {
             width: 380px;
+            padding-left: 20px;
             height: 48px;
         }
     }
