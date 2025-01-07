@@ -81,11 +81,6 @@
                 /* Same as the border color */
             }
 
-            .filter-action-container:hover {
-                border-radius: inherit;
-                background-color: lightgray;
-                /* Same as the border color */
-            }
 
             .filter-label {
                 font-weight: bold;
@@ -157,11 +152,10 @@
         }
         .filter-container:hover{
             box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-
         }
 
         .not-expanded {
-            width: 370px;
+            width: 380px;
             height: 48px;
         }
     }
