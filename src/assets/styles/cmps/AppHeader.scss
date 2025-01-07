@@ -5,14 +5,18 @@
     min-height: 80px;
     border-bottom: 1px solid lightgrey;
     display: flex;
-    // justify-content: center;
     background-color: white;
 
     nav {
         display: flex;
-        width: 100%;
         justify-content: space-between;
+        width: 100%;
+
+        position: relative;
+
         margin-inline: 40px;
+        margin-top: 20px;
+        transition: height 0.3s ease;
 
         .logo {
             display: flex;
@@ -20,7 +24,6 @@
             font-family: 'Airbnb Cereal VF', sans-serif;
             text-decoration: none;
             cursor: pointer;
-            margin-top: 10px;
 
             h1 {
                 color: #ff385c;
@@ -34,14 +37,20 @@
             border: 1px solid #DDDD;
             box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.08);
             border-radius: 32px;
-            margin-top: 40px;
-            margin-bottom: 15px;
-            height: 56px;
+
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 15px;
+
+            height: 66px;
+            width: 750px;
+            padding-inline: 30px;
             outline: none;
             display: flex;
             align-items: center;
-            position: relative;
 
+            transition: 0.3s ease;
             *:not(input) {
                 cursor: pointer;
             }
@@ -75,12 +84,7 @@
             .filter-action-container:hover {
                 border-radius: inherit;
                 background-color: lightgray;
-                height: 100%;
-            }
-
-            .filter-action-container:hover::after {
-                content: none;
-                /* Hides the pseudo-element */
+                /* Same as the border color */
             }
 
             .filter-label {
@@ -121,6 +125,48 @@
                 justify-content: center;
                 align-items: center;
             }
+
+            .short {
+                padding-right: 20px;
+
+                >* {
+                    font-size: 14px;
+                    width: 48px;
+                }
+
+                .short:hover {
+                    background-color: red;
+                }
+
+                .filter-label {
+                    width: max-content;
+                }
+
+                .add-guests {
+                    font-weight: unset;
+                    color: #707070;
+                    font-size: 14px;
+                    line-break: strict;
+                }
+            }
+
+            .anywhere {
+                padding-left: 0px;
+            }
+
         }
+        .filter-container:hover{
+            box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+
+        }
+
+        .not-expanded {
+            width: 370px;
+            height: 48px;
+        }
+    }
+
+    nav.expand {
+        height: 168px;
     }
 }
