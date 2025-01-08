@@ -1,9 +1,11 @@
 .filter-slider {
-    position: relative;
+    // position: relative;
+    // position: fixed;
+    // top: 120px;
     display: flex;
     // flex: 1;
     gap: 3rem;
-    overflow-y: hidden;
+    // overflow-y: hidden;
 
     // margin-inline-end: 1rem;
 
@@ -75,7 +77,7 @@
         position: absolute;
         top: 50%;
         cursor: pointer;
-        z-index: 3;
+        // z-index: 3;
         width: 30px;
         height: 30px;
         transform: translateY(-50%);
@@ -123,7 +125,7 @@
             width: 100%;
             position: absolute;
             bottom: 0rem;
-            z-index: 2;
+            // z-index: 2;
             height: 2px;
             opacity: 0;
             transition: 0.2s all cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -168,12 +170,12 @@
 .filters {
     max-width: 100%;
 
-    .wrapper {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        gap: 1.5rem;
-        align-items: center;
-    }
+    // .wrapper {
+    //     display: grid;
+    //     grid-template-columns: 1fr auto;
+    //     gap: 1.5rem;
+    //     align-items: center;
+    // }
 
     .filter-button {
         background-color: transparent;
