@@ -16,6 +16,7 @@ export function StayIndex() {
     const stays = useSelector(storeState => storeState.stayModule.stays)
 
     useEffect(() => {
+        console.log('filterBy', filterBy)
         loadStays(filterBy)
     }, [filterBy])
 
@@ -55,11 +56,9 @@ export function StayIndex() {
 
     return (
         <main className="stay-index">
-            <header>
-                <h2>Stays</h2>
-                {userService.getLoggedinUser() && <button onClick={onAddStay}>Add a Stay</button>}
-            </header>
-            <StayFilter filterBy={filterBy} setFilterBy={setFilterBy} />
+            <StayFilter
+                filterBy={filterBy}
+                setFilterBy={setFilterBy} />
             <StayList
                 stays={stays}
                 onRemoveStay={onRemoveStay}

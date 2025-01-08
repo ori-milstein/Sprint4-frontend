@@ -25,6 +25,7 @@ function getDefaultFilter() {
     return {
         txt: '',
         minCapacity: '',
+        label: '',
         sortField: '',
         sortDir: '',
     }
