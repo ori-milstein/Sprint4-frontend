@@ -1,7 +1,7 @@
 .app-header {
     box-sizing: border-box;
     top: 0;
-    position: sticky;
+    // position: sticky;
     min-height: 80px;
     border-bottom: 1px solid lightgrey;
     display: flex;
@@ -215,12 +215,13 @@
             display: flex;
             flex-direction: column;
 
-            .auth-menu-item{
+            .auth-menu-item {
                 width: 80px;
                 cursor: pointer;
             }
-            .auth-menu-item:hover{
-                background-color:#F6F6F6;
+
+            .auth-menu-item:hover {
+                background-color: #F6F6F6;
 
             }
         }

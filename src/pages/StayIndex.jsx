@@ -10,9 +10,9 @@ import { userService } from '../services/user'
 import { StayList } from '../cmps/StayList'
 import { StayFilter } from '../cmps/StayFilter'
 
-export function StayIndex() {
+export function StayIndex({ filterBy, setFilterBy }) {
 
-    const [filterBy, setFilterBy] = useState(stayService.getDefaultFilter())
+    // const [filterBy, setFilterBy] = useState(stayService.getDefaultFilter())
     const stays = useSelector(storeState => storeState.stayModule.stays)
 
     useEffect(() => {
@@ -56,9 +56,9 @@ export function StayIndex() {
 
     return (
         <main className="stay-index">
-            <StayFilter
+            {/* <StayFilter
                 filterBy={filterBy}
-                setFilterBy={setFilterBy} />
+                setFilterBy={setFilterBy} /> */}
             <StayList
                 stays={stays}
                 onRemoveStay={onRemoveStay}

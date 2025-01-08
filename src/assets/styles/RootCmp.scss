@@ -2,3 +2,8 @@
     min-height: calc(1100vh - 7rem);
     overflow: hidden; // Quick fix for JSONs in <pre>
 }
+
+.headers {
+    position: sticky;
+    top: 0;
+}
