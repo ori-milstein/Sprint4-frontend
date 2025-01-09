@@ -47,6 +47,8 @@ export function AppHeader() {
 
 	return (
 		<header className="app-header full" onClick={isMenuOpen}>
+			{isLoginSignupOpen.isOpen && <div className='modal-backdrop'></div>}
+
 			<nav className={isExpanded ? 'expand' : ''}>
 				<NavLink to="/" className="logo">
 					<Logo />

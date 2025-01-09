@@ -27,10 +27,10 @@ export function LoginSignup({ isLoginSignupOpen, setIsLoginSignupOpen }) {
 
     return (
         <div className="login-signup-page">
-            <h1>{isLoginSignupOpen.action === 'login' ? 'Login' : 'Signup'}</h1>
+            <h1 style={{paddingTop: isLoginSignupOpen.action === 'signup' ? '20px' : '0'}}>{isLoginSignupOpen.action === 'login' ? 'Login' : 'Signup'}</h1>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
-                    <label htmlFor="username">Username:</label>
+                    <label htmlFor="username"><span>* </span>Username:</label>
                     <input
                         type="text"
                         id="username"
@@ -41,7 +41,7 @@ export function LoginSignup({ isLoginSignupOpen, setIsLoginSignupOpen }) {
                     />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="password">Password:</label>
+                    <label htmlFor="password"><span>* </span>Password:</label>
                     <input
                         type="password"
                         id="password"
@@ -53,7 +53,7 @@ export function LoginSignup({ isLoginSignupOpen, setIsLoginSignupOpen }) {
                 </div>
                 {isLoginSignupOpen.action === 'signup' && (
                     <div className="form-group">
-                        <label htmlFor="fullname">Full Name:</label>
+                        <label htmlFor="fullname"><span>* </span>Full Name:</label>
                         <input
                             type="text"
                             id="fullname"
