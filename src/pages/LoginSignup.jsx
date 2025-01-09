@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 export function LoginSignup({ isLoginSignupOpen, setIsLoginSignupOpen }) {
-    console.log('isLoginSinupOpen', isLoginSignupOpen)
     const [formData, setFormData] = useState({
         username: '',
         password: '',
@@ -25,8 +24,12 @@ export function LoginSignup({ isLoginSignupOpen, setIsLoginSignupOpen }) {
         }
     };
 
+    function handleClick(event) {
+        event.stopPropagation()
+    }
+
     return (
-        <div className="login-signup-page">
+        <div className="login-signup-page" onClick={handleClick}>
             <h1 style={{paddingTop: isLoginSignupOpen.action === 'signup' ? '20px' : '0'}}>{isLoginSignupOpen.action === 'login' ? 'Login' : 'Signup'}</h1>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">

@@ -46,19 +46,21 @@ export function AppHeader() {
 	}
 
 	return (
-		<header className="app-header full" onClick={isMenuOpen}>
-			{isLoginSignupOpen.isOpen && <div className='modal-backdrop'></div>}
+		<>
+			<header className="app-header full" onClick={isMenuOpen}>
+				{isLoginSignupOpen.isOpen && <div className='modal-backdrop'></div>}
 
-			<nav className={isExpanded ? 'expand' : ''}>
-				<NavLink to="/" className="logo">
-					<Logo />
-					<h1>airbnb</h1>
-				</NavLink>
-				<HeaderFilter isExpanded={isExpanded} setIsExpanded={setIsExpanded} />
-				{!isLoginSignupOpen.isOpen && <HeaderUserControls onToggleMenu={onToggleMenu} />}
-				{isAuthMenuOpen && <HeaderAuthMenu onToggleLoginSignupDialog={onToggleLoginSignupDialog} />}
-				{isLoginSignupOpen.isOpen && <LoginSignup isLoginSignupOpen={isLoginSignupOpen} setIsLoginSignupOpen={setIsLoginSignupOpen} />}
-			</nav>
-		</header>
+				<nav className={isExpanded ? 'expand' : ''}>
+					<NavLink to="/" className="logo">
+						<Logo />
+						<h1>airbnb</h1>
+					</NavLink>
+					<HeaderFilter isExpanded={isExpanded} setIsExpanded={setIsExpanded} />
+					{!isLoginSignupOpen.isOpen && <HeaderUserControls onToggleMenu={onToggleMenu} />}
+					{isAuthMenuOpen && <HeaderAuthMenu onToggleLoginSignupDialog={onToggleLoginSignupDialog} />}
+					{isLoginSignupOpen.isOpen && <LoginSignup isLoginSignupOpen={isLoginSignupOpen} setIsLoginSignupOpen={setIsLoginSignupOpen} />}
+				</nav>
+			</header>
+		</>
 	)
 }
