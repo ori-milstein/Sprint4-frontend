@@ -6,7 +6,6 @@
     // flex: 1;
     gap: rem(32px);
     // overflow-y: hidden;
-
     // margin-inline-end: 1rem;
 
     input[type="radio"] {
@@ -22,10 +21,10 @@
         transition: transform 0.2s ease-in-out;
         scroll-behavior: smooth;
         gap: 3rem;
+        overflow: hidden;
+        overscroll-behavior: none;
 
-        &::-webkit-scrollbar {
-            display: none;
-        }
+        // scrollbar-width: none;
     }
 
     p {
