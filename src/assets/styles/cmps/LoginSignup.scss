@@ -1,0 +1,83 @@
+
+.login-signup-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 570px;
+    height: 470px;
+
+    border-radius: 12px;
+    background-color: white;
+
+    z-index: 20;
+
+    h1{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid lightgrey;
+        padding-bottom: 20px;
+        font-size: 16px;
+    }
+
+    form{
+        width: 100%;
+        display: flex;
+        padding-inline: 100px;
+        padding-bottom: 50px;
+        flex-direction: column;
+        gap: 20px;
+
+        button{
+            display: inline-block;
+            background: linear-gradient(90deg, #f54ea2, #ff7676); /* Gradient colors */
+            color: white; /* Text color */
+            font-size: 16px; /* Font size */
+            font-weight: bold; /* Make the text bold */
+            text-align: center; /* Center the text */
+            padding: 15px 30px; /* Padding for size */
+            border: none; /* Remove border */
+            border-radius: 30px; /* Rounded corners */
+            cursor: pointer; /* Pointer on hover */
+            transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effects */
+            text-decoration: none; /* Remove underline for links */
+        }
+        button:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+        }
+        button:active {
+            transform: scale(0.95); /* Slightly shrink on click */
+        }
+    }
+    
+    .form-group{
+        display: flex;
+        flex-direction: column;
+
+        label{
+            padding-bottom: 10px;
+            font-size: 16px;
+            span{
+                color: red;
+            }
+        }
+    }
+}
+
+.modal-backdrop{
+    background-color: rgb(34, 34, 34);
+    opacity: 0.4;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}

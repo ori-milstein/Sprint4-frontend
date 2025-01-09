@@ -1,13 +1,8 @@
 import { useState } from 'react'
 
-export function HeaderUserControls({setIsAuthMenuOpen}) { 
-
-    function onMenuOpen(){
-        setIsAuthMenuOpen(true)
-    }
-
+export function HeaderUserControls({ onToggleMenu }) {
     return (
-        <button className="user-controls" onClick={onMenuOpen}>
+        <button className="user-controls" onClick={onToggleMenu}>
             <div className="controls-container">
                 <svg className="user-controls-actions"
                     xmlns="http://www.w3.org/2000/svg"
@@ -29,8 +24,8 @@ export function HeaderUserControls({setIsAuthMenuOpen}) {
                         <path d="M2 16h28M2 24h28M2 8h28"></path>
                     </g>
                 </svg>
-                <svg className="user-controls-profile" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" 
-                style={{
+                <svg className="user-controls-profile" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
+                    style={{
                         display: 'block',
                         fill: 'currentcolor',
                         overflow: 'visible',
