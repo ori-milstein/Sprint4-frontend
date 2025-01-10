@@ -1,7 +1,10 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { DatePickerCmp } from './DatePickerCmp';
+import { GenericCmp } from './GenericCmp';
 
 export function HeaderFilter({ isExpanded, setIsExpanded }) {
     const isClicking = useRef(false)
+    const [isFilterOpen, setIsFilterOpen] = useState(false)
 
     useEffect(() => {
         // Scroll event handler
@@ -10,9 +13,7 @@ export function HeaderFilter({ isExpanded, setIsExpanded }) {
             if (isExpanded) {
                 setIsExpanded(false)
             }
-            
         }
-
         // Attach scroll event listener
         window.addEventListener('scroll', handleScroll)
 
@@ -32,6 +33,10 @@ export function HeaderFilter({ isExpanded, setIsExpanded }) {
         }, 300) // Adjust timeout as needed
     }
 
+
+    function toggleIsFilterOpen() {
+        setIsFilterOpen(!isFilterOpen)
+    }
     return (
         <>
             {isExpanded && (
@@ -44,20 +49,22 @@ export function HeaderFilter({ isExpanded, setIsExpanded }) {
                             placeholder="Search destinations"
                         ></input>
                     </div>
-                    <div className="filter-action-container">
+                    <div className="filter-action-container" onClick={toggleIsFilterOpen}>
                         <label htmlFor="filter-checkin" className="filter-label">Check in</label>
                         <input
                             id="filter-checkin"
                             className="filter-action filter-checkin"
                             placeholder="Add dates"
+                            disabled
                         ></input>
                     </div>
-                    <div className="filter-action-container">
-                        <label htmlFor="filter-checkout" className="filter-label">Check out</label>
+                    <div className="filter-action-container" onClick={toggleIsFilterOpen}>
+                        <label htmlFor="filter-checkout" className="filter-label" >Check out</label>
                         <input
                             id="filter-checkout"
                             className="filter-action filter-checkout"
                             placeholder="Add dates"
+                            disabled
                         ></input>
                     </div>
                     <div className="filter-action-container who">
@@ -82,37 +89,41 @@ export function HeaderFilter({ isExpanded, setIsExpanded }) {
                             <path fill="none" d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9"></path>
                         </svg>
                     </button>
+                    {isFilterOpen && <GenericCmp><DatePickerCmp /></GenericCmp>}
                 </form>
+
             )}
             {!isExpanded && (
-                <form
-                    className="filter-container not-expanded"
-                    onClick={handleClick}
-                >
-                    <div className="filter-action-container short anywhere">
-                        <label className="filter-label">Anywhere</label>
-                    </div>
-                    <div className="filter-action-container short anyweek">
-                        <label className="filter-label">Any week</label>
-                    </div>
-                    <div className="filter-action-container short who">
-                        <label className="filter-label add-guests">Add guests</label>
-                    </div>
-                    <button className="filter-search short-btn">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 32 32"
-                            width="13"
-                            height="13"
-                            stroke="white"
-                            strokeWidth="4"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                        >
-                            <path fill="none" d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9"></path>
-                        </svg>
-                    </button>
-                </form>
+                <React.Fragment>
+                    <form
+                        className="filter-container not-expanded"
+                        onClick={handleClick}
+                    >
+                        <div className="filter-action-container short anywhere">
+                            <label className="filter-label">Anywhere</label>
+                        </div>
+                        <div className="filter-action-container short anyweek">
+                            <label className="filter-label">Any week</label>
+                        </div>
+                        <div className="filter-action-container short who">
+                            <label className="filter-label add-guests">Add guests</label>
+                        </div>
+                        <button className="filter-search short-btn">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 32 32"
+                                width="13"
+                                height="13"
+                                stroke="white"
+                                strokeWidth="4"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                            >
+                                <path fill="none" d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9"></path>
+                            </svg>
+                        </button>
+                    </form>
+                </React.Fragment>
             )}
         </>
     )
