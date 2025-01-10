@@ -55,6 +55,10 @@
         button:active {
             transform: scale(0.95); /* Slightly shrink on click */
         }
+        input{
+            height: 30px;
+            border-color: lightgray;
+        }
     }
     
     .form-group{
