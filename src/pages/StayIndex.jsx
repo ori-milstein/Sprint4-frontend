@@ -17,16 +17,13 @@ export function StayIndex({ filterBy, setFilterBy }) {
     const stays = useSelector(storeState => storeState.stayModule.stays)
 
     useEffect(() => {
-        console.log('filterBy', filterBy)
         loadStays(filterBy)
     }, [filterBy])
 
     useEffect(() => {
-        console.log('filterBy', filterBy)
         renderFilterBar(true)
 
         return () => {
-            // console.log('variable')
             renderFilterBar(false)
         }
     }, [])

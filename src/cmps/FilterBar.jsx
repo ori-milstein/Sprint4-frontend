@@ -8,7 +8,6 @@ export function FilterSlider({ filters, onFilterChange, filterBy, onChange, filt
     const [isStart, setIsStart] = useState(true)
 
     useEffect(() => {
-        console.log('filters', filters)
         if (!filterItemsRef.current) return
         calcIsFullyScrolled()
 

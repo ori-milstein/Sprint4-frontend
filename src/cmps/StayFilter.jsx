@@ -6,14 +6,11 @@ export function StayFilter({ filterBy, setFilterBy }) {
 
     useEffect(() => {
         setFilterBy(filterToEdit)
-        console.log('filterToEdit', filterToEdit)
     }, [filterToEdit])
 
     function handleChange(ev) {
         const type = ev.target.type
-        console.log('type', type)
         const field = ev.target.name
-        console.log('field', field)
         let value
 
         switch (type) {
