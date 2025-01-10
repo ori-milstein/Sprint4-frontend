@@ -1,4 +1,6 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { DatePickerCmp } from './DatePickerCmp';
+import { GenericCmp } from './GenericCmp';
 
 export function HeaderFilter({ isExpanded, setIsExpanded, toggleIsFilterOpen, checkInDate, checkOutDate }) {
     const isClicking = useRef(false)

@@ -6,6 +6,8 @@ import { Provider } from 'react-redux'
 
 import * as serviceWorkerRegistration from './serviceWorkerRegistration'
 
+import '@fortawesome/fontawesome-free/css/all.min.css'
+
 import { store } from './store/store'
 import { RootCmp } from './RootCmp'
 
