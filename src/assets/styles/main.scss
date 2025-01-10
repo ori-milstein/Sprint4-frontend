@@ -19,6 +19,7 @@
 // @import "pages/HomePage";
 @import "pages/StayIndex";
 @import "pages/ReviewIndex";
+@import "pages/StayDetails";
 @import "pages/UserDetails";
 @import "pages/TaskDetails";
 
@@ -38,5 +39,5 @@
 @import "cmps/LoginSignup";
 
 
-// @import "cmps/StayList";
-// @import "cmps/StayPreview";
+@import "cmps/StayList";
+@import "cmps/StayPreview";

@@ -1,21 +1,26 @@
+import { Link } from 'react-router-dom'
+
 import { userService } from '../services/user'
 import { StayPreview } from './StayPreview'
 
-export function StayList({ stays, onRemoveStay, onUpdateStay }) {
+export function StayList({ stays, onRemoveStay, onUpdateStay, onToggleWishlist }) {
 
     function shouldShowActionBtns(stay) {
         const user = userService.getLoggedinUser()
-
         if (!user) return false
         if (user.isAdmin) return true
         return stay.owner?._id === user._id
     }
 
-    return <section>
-        <ul className="list">
+    if (!stays || !stays.length) return <div>No stays found</div>
+
+    return <section >
+        <ul className="stay-list">
             {stays.map(stay =>
                 <li key={stay._id}>
-                    <StayPreview stay={stay} />
+                    <Link to={`/stay/${stay._id}`} className="stay-link">
+                        <StayPreview stay={stay} onToggleWishlist={onToggleWishlist} />
+                    </Link>
                     {shouldShowActionBtns(stay) && <div className="actions">
                         <button onClick={() => onUpdateStay(stay)}>Edit</button>
                         <button onClick={() => onRemoveStay(stay._id)}>x</button>

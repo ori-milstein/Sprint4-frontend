@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useSelector } from 'react-redux'
+// import { useSelector } from 'react-redux'
 
 import { loadStays, addStay, updateStay, removeStay, addStayMsg } from '../store/actions/stay.actions'
 
@@ -11,13 +11,20 @@ import { StayList } from '../cmps/StayList'
 import { StayFilter } from '../cmps/StayFilter'
 
 export function StayIndex() {
-
+    const [stays, setStays] = useState([])
     const [filterBy, setFilterBy] = useState(stayService.getDefaultFilter())
-    const stays = useSelector(storeState => storeState.stayModule.stays)
+    // const stays = useSelector(storeState => storeState.stayModule.stays)
 
     useEffect(() => {
-        loadStays(filterBy)
+        loadStays()
     }, [filterBy])
+
+    useEffect(() => {
+        fetch('/data/stays.json')
+            .then(res => res.json())
+            .then(setStays)
+            .catch(err => console.error('Failed to load stays:', err));
+    }, [])
 
     async function onRemoveStay(stayId) {
         try {
@@ -52,6 +59,8 @@ export function StayIndex() {
             showErrorMsg('Cannot update stay')
         }
     }
+
+    // if (!stays || !stays.length) return <div>Loading...</div>
 
     return (
         <main className="stay-index">

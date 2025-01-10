@@ -1,0 +1,271 @@
+.stay-details {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+
+    .back-link {
+        display: inline-block;
+        margin-bottom: 20px;
+        color: $main-icon-color;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    stay-details-header {
+        margin-bottom: 20px;
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            color: #555;
+        }
+    }
+
+    .stay-images {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 8px;
+        position: relative;
+
+        .main-image {
+            grid-column: span 2 / span 2;
+            grid-row: span 4 / span 4;
+            grid-column-start: 2;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .side-top {
+            grid-row: span 2 / span 2;
+            grid-column-start: 4;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .side-middle {
+            grid-row: span 2 / span 2;
+            grid-column-start: 5;
+            border-top-right-radius: 8px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .side-bottom-image {
+            grid-row: span 2 / span 2;
+            grid-column-start: 4;
+            grid-row-start: 3;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .side-extra-container {
+            grid-row: span 2 / span 2;
+            grid-column-start: 5;
+            grid-row-start: 3;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .side-extra {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-bottom-right-radius: 8px;
+            }
+
+            .show-all-btn {
+                position: absolute;
+                bottom: 8px;
+                right: 10px;
+                background-color: rgba(0, 0, 0, 0.6);
+                color: #fff;
+                padding: 8px 10px;
+                z-index: 1;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.8);
+                }
+            }
+        }
+    }
+}
+
+.stay-details-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+
+    .stay-summary {
+        flex: 2;
+
+        h4 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+    }
+
+    .stay-host {
+        flex: 1;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        padding: 20px;
+
+        p {
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+
+        button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ff385c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #e0334f;
+            }
+        }
+    }
+}
+
+.stay-reserve {
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 20px auto;
+
+    h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 16px;
+
+        span {
+            font-size: 16px;
+            font-weight: normal;
+        }
+    }
+
+    .stay-reserve-dates {
+        display: flex;
+        justify-content: space-between;
+
+        div {
+            flex: 1;
+            margin-right: 8px;
+
+            label {
+                display: block;
+                font-size: 14px;
+                color: #555;
+                margin-bottom: 4px;
+            }
+
+            input {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+        }
+
+        div:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .stay-reserve-guests {
+        margin: 16px 0;
+
+        label {
+            display: block;
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 4px;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    }
+
+    .reserve-btn {
+        width: 100%;
+        background-color: #ff385c;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #e0314b;
+        }
+    }
+
+    p {
+        font-size: 14px;
+        color: #555;
+        text-align: center;
+        margin: 8px 0;
+    }
+
+    .stay-reserve-summary {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 16px;
+
+        hr {
+            width: 100%;
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 12px 0;
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+        }
+    }
+}
