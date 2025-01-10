@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-// import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 import { loadStays, addStay, updateStay, removeStay, addStayMsg } from '../store/actions/stay.actions'
 
@@ -10,15 +10,6 @@ import { userService } from '../services/user'
 import { StayList } from '../cmps/StayList'
 import { StayFilter } from '../cmps/StayFilter'
 
-<<<<<<< HEAD
-export function StayIndex() {
-    const [stays, setStays] = useState([])
-    const [filterBy, setFilterBy] = useState(stayService.getDefaultFilter())
-    // const stays = useSelector(storeState => storeState.stayModule.stays)
-
-    useEffect(() => {
-        loadStays()
-=======
 export function StayIndex({ filterBy, setFilterBy }) {
 
     // const [filterBy, setFilterBy] = useState(stayService.getDefaultFilter())
@@ -27,15 +18,14 @@ export function StayIndex({ filterBy, setFilterBy }) {
     useEffect(() => {
         console.log('filterBy', filterBy)
         loadStays(filterBy)
->>>>>>> 1739ea07bb8eda445f5d38b645d258d5607ef92a
     }, [filterBy])
 
-    useEffect(() => {
-        fetch('/data/stays.json')
-            .then(res => res.json())
-            .then(setStays)
-            .catch(err => console.error('Failed to load stays:', err));
-    }, [])
+    // useEffect(() => {
+    //     fetch('/data/stays.json')
+    //         .then(res => res.json())
+    //         .then(setStays)
+    //         .catch(err => console.error('Failed to load stays:', err));
+    // }, [])
 
     async function onRemoveStay(stayId) {
         try {
