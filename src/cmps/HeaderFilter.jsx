@@ -2,9 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import { DatePickerCmp } from './DatePickerCmp';
 import { GenericCmp } from './GenericCmp';
 
-export function HeaderFilter({ isExpanded, setIsExpanded }) {
+export function HeaderFilter({ isExpanded, setIsExpanded,toggleIsFilterOpen }) {
     const isClicking = useRef(false)
-    const [isFilterOpen, setIsFilterOpen] = useState(false)
 
     useEffect(() => {
         // Scroll event handler
@@ -33,10 +32,6 @@ export function HeaderFilter({ isExpanded, setIsExpanded }) {
         }, 300) // Adjust timeout as needed
     }
 
-
-    function toggleIsFilterOpen() {
-        setIsFilterOpen(!isFilterOpen)
-    }
     return (
         <>
             {isExpanded && (
@@ -89,7 +84,6 @@ export function HeaderFilter({ isExpanded, setIsExpanded }) {
                             <path fill="none" d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9"></path>
                         </svg>
                     </button>
-                    {isFilterOpen && <GenericCmp><DatePickerCmp /></GenericCmp>}
                 </form>
 
             )}

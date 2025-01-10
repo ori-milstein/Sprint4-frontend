@@ -6,6 +6,7 @@
     border-bottom: 1px solid lightgrey;
     display: flex;
     background-color: white;
+    z-index: 20;
 
     nav {
         display: flex;
@@ -210,6 +211,7 @@
             border-radius: 8px;
             box-shadow: 0 2px 16px #0000001f;
             width: 240px;
+            z-index: 1;
 
             display: flex;
             flex-direction: column;

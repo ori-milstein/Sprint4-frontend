@@ -23,6 +23,8 @@
 @import "pages/TaskDetails";
 
 // Components
+@import "cmps/GenericCmp";
+@import "cmps/DatePicker";
 @import "cmps/list";
 @import "cmps/preview";
 
@@ -36,7 +38,6 @@
 @import "cmps/ReviewPreview";
 
 @import "cmps/LoginSignup";
-@import "cmps/DatePicker";
 
 
 // @import "cmps/StayList";

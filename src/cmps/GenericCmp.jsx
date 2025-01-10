@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 
-export function Backdrop({
+export function GenericCmp({
     children,
     onClose,
-    opacity = 0.5,
     borderRadius = '32px',
-    width = 'auto',
-    height = 'auto',
+    width = '848px',
+    height = '511px',
     backgroundColor = 'white',
-    position = 'absolute',
+    position = 'fixed',
     top = '50%',
     left = '50%',
     transform = 'translate(-50%, -50%)',
@@ -26,7 +25,7 @@ export function Backdrop({
         setIsClosing(true);
         setTimeout(() => {
             onClose();
-        }, 300); // Match the animation duration
+        }, 300);
     }
 
     const blockStyle = {
@@ -44,16 +43,15 @@ export function Backdrop({
     };
 
     return (
-        <div 
-            className={`backdrop-container ${isClosing ? 'closing' : ''}`} 
-            onClick={handleClose} 
-            style={{ backgroundColor: `rgba(0, 0, 0, ${opacity})` }}
-        >
-            <div className="backdrop-content" onClick={handleClick}>
-                <div className="block" style={blockStyle}>
-                    {children}
-                </div>
+        <>
+            <div
+                className={`backdrop-container ${isClosing ? 'closing' : ''}`}
+                onClick={handleClose}
+            >
             </div>
-        </div>
+            <div className="block" style={blockStyle} onClick={handleClick}>
+                {children}
+            </div>
+        </>
     );
 }

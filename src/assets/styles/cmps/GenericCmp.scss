@@ -7,13 +7,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000; /* Ensure it appears above everything else */
-}
+    z-index: 10;
+    background-color: rgb(34, 34, 34);
+    opacity: 0.4;
 
-.backdrop-content {
-    position: relative;
-    background-color: white;
-    border-radius: 12px;
-    padding: 20px;
-    z-index: 1010; /* Ensure it's above the backdrop */
+}
+.block{
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
