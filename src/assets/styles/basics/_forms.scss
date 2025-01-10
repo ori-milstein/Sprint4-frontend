@@ -1,4 +1,4 @@
-button {
+.app-header button {
 	border: 0;
 	background-color: $clr1;
 	color: whitesmoke;
@@ -7,7 +7,7 @@ button {
 	cursor: pointer;
 }
 
-form > * {
+form>* {
 	display: block;
 	// width: 200px;
 	margin: 10px 0px;
@@ -19,6 +19,7 @@ form > * {
 	// text-decoration: underline;
 	transition: 0.5s;
 }
+
 .btn-link:hover {
 	background-color: $clr1;
 }
