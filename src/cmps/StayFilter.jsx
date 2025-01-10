@@ -58,9 +58,9 @@ export function StayFilter({ filterBy, setFilterBy }) {
                         { title: 'Trending', img: '../../src/assets/assets/icons/filter bar icons/asset 22.jpeg' },
                         { title: 'Treehouses', img: '../../src/assets/assets/icons/filter bar icons/asset 23.jpeg' },
                         { title: 'Luxe', img: '../../src/assets/assets/icons/filter bar icons/asset 24.jpeg' },
-                        { title: 'Luxe', img: '../../src/assets/assets/icons/filter bar icons/asset 25.jpeg' },
-                        { title: 'Luxe', img: '../../src/assets/assets/icons/filter bar icons/asset 26.jpeg' },
-                        { title: 'Luxe', img: '../../src/assets/assets/icons/filter bar icons/asset 27.jpeg' },
+                        { title: 'Top cities', img: '../../src/assets/assets/icons/filter bar icons/asset 25.jpeg' },
+                        { title: 'Tiny homes', img: '../../src/assets/assets/icons/filter bar icons/asset 26.jpeg' },
+                        { title: 'Islands', img: '../../src/assets/assets/icons/filter bar icons/asset 27.jpeg' },
                     ]}
                     onFilterChange={setFilterBy}
                     filterBy={filterBy}
