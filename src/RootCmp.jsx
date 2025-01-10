@@ -1,8 +1,6 @@
 import React from 'react'
 import { Routes, Route } from 'react-router'
 
-import { HomePage } from './pages/HomePage'
-import { AboutUs, AboutTeam, AboutVision } from './pages/AboutUs'
 import { StayIndex } from './pages/StayIndex.jsx'
 import { ReviewIndex } from './pages/ReviewIndex.jsx'
 import { ChatApp } from './pages/Chat.jsx'

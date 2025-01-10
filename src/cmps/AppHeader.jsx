@@ -20,6 +20,11 @@ export function AppHeader() {
 	const [isLoginSignupOpen, setIsLoginSignupOpen] = useState({ isOpen: false, action: null })
 	const [isFilterOpen, setIsFilterOpen] = useState(false)
 
+
+	const [checkInDate, setCheckInDate] = useState('');
+	const [checkOutDate, setCheckOutDate] = useState('');
+
+
 	function onToggleMenu() {
 		setIsAuthMenuOpen(!isAuthMenuOpen)
 	}
@@ -43,7 +48,13 @@ export function AppHeader() {
 
 	return (
 		<>
-			{isFilterOpen && isExpanded && <GenericCmp><DatePickerCmp /></GenericCmp>}
+			{isFilterOpen && isExpanded &&
+				<GenericCmp onClose={() => setIsExpanded(false)}>
+					<DatePickerCmp onClose={() => setIsExpanded(false)}
+						onCheckInChange={(date) => setCheckInDate(date)}
+						onCheckOutChange={(date) => setCheckOutDate(date)}
+					/></GenericCmp>
+			}
 			<header className="app-header full" onClick={isMenuOpen}>
 				{isLoginSignupOpen.isOpen && <div className='modal-backdrop'></div>}
 
@@ -52,7 +63,12 @@ export function AppHeader() {
 						<Logo />
 						<h1>airbnb</h1>
 					</NavLink>
-					<HeaderFilter isExpanded={isExpanded} setIsExpanded={setIsExpanded} toggleIsFilterOpen={toggleIsFilterOpen} />
+					<HeaderFilter isExpanded={isExpanded}
+						setIsExpanded={setIsExpanded}
+						toggleIsFilterOpen={toggleIsFilterOpen}
+						checkInDate={checkInDate}
+						checkOutDate={checkOutDate}
+					/>
 					{!isLoginSignupOpen.isOpen && <HeaderUserControls onToggleMenu={onToggleMenu} />}
 					{isAuthMenuOpen && <HeaderAuthMenu onToggleLoginSignupDialog={onToggleLoginSignupDialog} />}
 					{isLoginSignupOpen.isOpen && <LoginSignup isLoginSignupOpen={isLoginSignupOpen} setIsLoginSignupOpen={setIsLoginSignupOpen} />}
