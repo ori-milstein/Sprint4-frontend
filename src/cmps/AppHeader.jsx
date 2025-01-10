@@ -18,12 +18,12 @@ export function AppHeader() {
 	const [isExpanded, setIsExpanded] = useState(true)
 	const [isAuthMenuOpen, setIsAuthMenuOpen] = useState(false)
 	const [isLoginSignupOpen, setIsLoginSignupOpen] = useState({ isOpen: false, action: null })
-	const [isFilterOpen, setIsFilterOpen] = useState(false)
+	const [isDatePickerOpen, setIsFilterOpen] = useState(false)
 
 
 	const [checkInDate, setCheckInDate] = useState('');
 	const [checkOutDate, setCheckOutDate] = useState('');
-
+	const [guests, setGuests] = useState({ adults: 0, children: 0, infants: 0, pets: 0 })
 
 	function onToggleMenu() {
 		setIsAuthMenuOpen(!isAuthMenuOpen)
@@ -35,7 +35,7 @@ export function AppHeader() {
 	}
 
 	function toggleIsFilterOpen() {
-		setIsFilterOpen(!isFilterOpen)
+		setIsFilterOpen(!isDatePickerOpen)
 	}
 
 	function onToggleLoginSignupDialog(action) {
@@ -48,8 +48,8 @@ export function AppHeader() {
 
 	return (
 		<>
-			{isFilterOpen && isExpanded &&
-				<GenericCmp onClose={() => setIsExpanded(false)}>
+			{isDatePickerOpen && isExpanded &&
+				<GenericCmp onClose={() => setIsFilterOpen(false)}>
 					<DatePickerCmp onClose={() => setIsExpanded(false)}
 						onCheckInChange={(date) => setCheckInDate(date)}
 						onCheckOutChange={(date) => setCheckOutDate(date)}
@@ -68,6 +68,7 @@ export function AppHeader() {
 						toggleIsFilterOpen={toggleIsFilterOpen}
 						checkInDate={checkInDate}
 						checkOutDate={checkOutDate}
+						guests={guests}
 					/>
 					{!isLoginSignupOpen.isOpen && <HeaderUserControls onToggleMenu={onToggleMenu} />}
 					{isAuthMenuOpen && <HeaderAuthMenu onToggleLoginSignupDialog={onToggleLoginSignupDialog} />}

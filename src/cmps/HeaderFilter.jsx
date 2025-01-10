@@ -43,8 +43,7 @@ export function HeaderFilter({ isExpanded, setIsExpanded, toggleIsFilterOpen, ch
                         <label className="filter-label">Where</label>
                         <input
                             className="filter-action filter-where"
-                            value="Search destinations"
-                            disabled
+                            placeholder="Search destinations"
                         ></input>
                     </div>
                     <div className="filter-action-container" onClick={toggleIsFilterOpen}>
@@ -52,7 +51,6 @@ export function HeaderFilter({ isExpanded, setIsExpanded, toggleIsFilterOpen, ch
                         <input
                             className="filter-action filter-checkin"
                             value={formatDate(checkInDate) || 'Add Dates'}
-                            disabled
                         ></input>
                     </div>
                     <div className="filter-action-container" onClick={toggleIsFilterOpen}>
@@ -60,7 +58,7 @@ export function HeaderFilter({ isExpanded, setIsExpanded, toggleIsFilterOpen, ch
                         <input
                             className="filter-action filter-checkout"
                             value={formatDate(checkOutDate) || 'Add Dates'}
-                            disabled
+                            
                         ></input>
                     </div>
                     <div className="filter-action-container who">
@@ -68,7 +66,6 @@ export function HeaderFilter({ isExpanded, setIsExpanded, toggleIsFilterOpen, ch
                         <input
                             className="filter-action filter-who"
                             value="Add guests"
-                            disabled
                         ></input>
                     </div>
                     <button className="filter-search long-btn">
