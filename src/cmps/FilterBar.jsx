@@ -45,13 +45,20 @@ export function FilterSlider({ filters, onFilterChange, filterBy, onChange, filt
         >
             <button
                 onClick={() => onScrollFilters(-1)}
-                className={`filters-nav-btn prev-filters-btn ${!isStart ? 'shown' : ''}`}
+                // className={`
+                //     filters-nav-btn prev-filters-btn 
+                //     ${!isStart ? 'shown' : ''}`}
+                className={`
+                    filters-nav-btn prev-filters-btn 
+                    ${!isStart ? 'shown' : ''}`}
             >
+                <img src="../../src/assets/assets/icons/general icons/asset 151.svg" alt="previous" />
                 {/* <FaChevronLeft size={'.75rem'} /> */}
+
             </button>
             <div className='filter-items flex' ref={filterItemsRef}>
-                {filters.length
-                    ? filters.map(filter => (
+                {
+                    filters.map(filter => (
                         <label key={makeId()}>
                             <div
                             // className={`filter-widget ${filterBy.labels[0] === filter.title ? 'active' : ''}`}
@@ -71,20 +78,14 @@ export function FilterSlider({ filters, onFilterChange, filterBy, onChange, filt
                             </div>
                         </label>
                     ))
-                    : Array(20)
-                        .fill(undefined)
-                        .map((_, index) => (
-                            <div key={index} className='filter-widget filter-skeleton-wrapper'>
-                                <div className='filter-skeleton-img'></div>
-                                <div className='filter-skeleton-txt'></div>
-                            </div>
-                        ))}
+                }
             </div>
             <button
                 onClick={() => onScrollFilters(1)}
                 className={`filters-nav-btn next-filters-btn ${!isEnd ? 'shown' : ''}`}
             // className={`filters-nav-btn next-filters-btn`}
             >
+                <img src="../../src/assets/assets/icons/general icons/asset 152.svg" alt="next" />
                 {/* <FaChevronRight size={'.75rem'} /> */}
             </button>
         </section>
