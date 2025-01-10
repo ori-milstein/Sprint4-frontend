@@ -1,6 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router'
 import { useState } from 'react'
+import { useSelector } from 'react-redux'
 
 import { StayIndex } from './pages/StayIndex.jsx'
 import { ReviewIndex } from './pages/ReviewIndex.jsx'
@@ -17,15 +18,15 @@ import { LoginSignup } from './pages/LoginSignup.jsx'
 import { Login } from './pages/Login.jsx'
 import { Signup } from './pages/Signup.jsx'
 import { StayFilter } from './cmps/StayFilter.jsx'
-
 export function RootCmp() {
+    const isHomePage = useSelector(storeState => storeState.systemModule.isHomePage)
     const [filterBy, setFilterBy] = useState(stayService.getDefaultFilter())
 
     return (
         <div className="main-container">
             <section className="headers">
                 <AppHeader />
-                <StayFilter filterBy={filterBy} setFilterBy={setFilterBy} />
+                {isHomePage && <StayFilter filterBy={filterBy} setFilterBy={setFilterBy} />}
             </section>
             <UserMsg />
             <main>
