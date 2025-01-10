@@ -25,7 +25,7 @@ export function GenericCmp({
         setIsClosing(true);
         setTimeout(() => {
             onClose();
-        }, 300);
+        }, 100);
     }
 
     const blockStyle = {

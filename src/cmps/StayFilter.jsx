@@ -1,15 +1,19 @@
 import { useState, useEffect } from 'react'
+import { FilterSlider } from '../cmps/FilterBar'
 
 export function StayFilter({ filterBy, setFilterBy }) {
     const [filterToEdit, setFilterToEdit] = useState(structuredClone(filterBy))
 
     useEffect(() => {
         setFilterBy(filterToEdit)
+        console.log('filterToEdit', filterToEdit)
     }, [filterToEdit])
 
     function handleChange(ev) {
         const type = ev.target.type
+        console.log('type', type)
         const field = ev.target.name
+        console.log('field', field)
         let value
 
         switch (type) {
@@ -29,89 +33,41 @@ export function StayFilter({ filterBy, setFilterBy }) {
         setFilterToEdit({ ...filterToEdit, txt: '', minCapacity: '', maxPrice: '' })
     }
 
-    function clearSort() {
-        setFilterToEdit({ ...filterToEdit, sortField: '', sortDir: '' })
-    }
-
-    return <section className="stay-filter">
-        <h3>Filter:</h3>
-        <input
-            type="text"
-            name="txt"
-            value={filterToEdit.txt}
-            placeholder="Free text"
-            onChange={handleChange}
-            required
-        />
-        <input
-            type="number"
-            min="0"
-            name="minCapacity"
-            value={filterToEdit.minCapacity}
-            placeholder="Gusets"
-            onChange={handleChange}
-            required
-        />
-        <button
-            className="btn-clear"
-            onClick={clearFilter}>Clear</button>
-        <h3>Sort:</h3>
-        <div className="sort-field">
-            <label>
-                <span>Capacity</span>
-                <input
-                    type="radio"
-                    name="sortField"
-                    value="capacity"
-                    checked={filterToEdit.sortField === 'capacity'}
+    return (
+        // <section className="stay-filter">
+        <div className='filters main-layout'>
+            <div className='wrapper'>
+                <FilterSlider
+                    filters={[
+                        { title: 'OMG!', img: '../../src/assets/assets/icons/filter bar icons/asset 6.jpeg' },
+                        { title: 'Icons', img: '../../src/assets/assets/icons/filter bar icons/asset 7.webp' },
+                        { title: 'Castles', img: '../../src/assets/assets/icons/filter bar icons/asset 8.jpeg' },
+                        { title: 'Beahcfront', img: '../../src/assets/assets/icons/filter bar icons/asset 9.jpeg' },
+                        { title: 'Bed & breakfasts', img: '../../src/assets/assets/icons/filter bar icons/asset 10.jpeg' },
+                        { title: 'Desert', img: '../../src/assets/assets/icons/filter bar icons/asset 11.jpeg' },
+                        { title: 'Amazing views', img: '../../src/assets/assets/icons/filter bar icons/asset 12.jpeg' },
+                        { title: 'Amazing pools', img: '../../src/assets/assets/icons/filter bar icons/asset 13.jpeg' },
+                        { title: 'Mansions', img: '../../src/assets/assets/icons/filter bar icons/asset 14.jpeg' },
+                        { title: 'Cabins', img: '../../src/assets/assets/icons/filter bar icons/asset 15.jpeg' },
+                        { title: 'Countryside', img: '../../src/assets/assets/icons/filter bar icons/asset 16.jpeg' },
+                        { title: 'Lakefront', img: '../../src/assets/assets/icons/filter bar icons/asset 17.jpeg' },
+                        { title: 'Islands', img: '../../src/assets/assets/icons/filter bar icons/asset 18.jpeg' },
+                        { title: 'Design', img: '../../src/assets/assets/icons/filter bar icons/asset 19.jpeg' },
+                        { title: 'Off-the-grid', img: '../../src/assets/assets/icons/filter bar icons/asset 20.jpeg' },
+                        { title: 'Farms', img: '../../src/assets/assets/icons/filter bar icons/asset 21.jpeg' },
+                        { title: 'Trending', img: '../../src/assets/assets/icons/filter bar icons/asset 22.jpeg' },
+                        { title: 'Treehouses', img: '../../src/assets/assets/icons/filter bar icons/asset 23.jpeg' },
+                        { title: 'Luxe', img: '../../src/assets/assets/icons/filter bar icons/asset 24.jpeg' },
+                        { title: 'Top cities', img: '../../src/assets/assets/icons/filter bar icons/asset 25.jpeg' },
+                        { title: 'Tiny homes', img: '../../src/assets/assets/icons/filter bar icons/asset 26.jpeg' },
+                        { title: 'Islands', img: '../../src/assets/assets/icons/filter bar icons/asset 27.jpeg' },
+                    ]}
+                    onFilterChange={setFilterBy}
+                    filterBy={filterBy}
                     onChange={handleChange}
-                />
-            </label>
-            <label>
-                <span>Location</span>
-                <input
-                    type="radio"
-                    name="sortField"
-                    value="location"
-                    checked={filterToEdit.sortField === 'location'}
-                    onChange={handleChange}
-                />
-            </label>
-            <label>
-                <span>Owner</span>
-                <input
-                    type="radio"
-                    name="sortField"
-                    value="owner"
-                    checked={filterToEdit.sortField === 'owner'}
-                    onChange={handleChange}
-                />
-            </label>
+                    filterToEdit={filterToEdit} />
+            </div>
         </div>
-        <div className="sort-dir">
-            <label>
-                <span>Asce</span>
-                <input
-                    type="radio"
-                    name="sortDir"
-                    value="1"
-                    checked={filterToEdit.sortDir === 1}
-                    onChange={handleChange}
-                />
-            </label>
-            <label>
-                <span>Desc</span>
-                <input
-                    type="radio"
-                    name="sortDir"
-                    value="-1"
-                    onChange={handleChange}
-                    checked={filterToEdit.sortDir === -1}
-                />
-            </label>
-        </div>
-        <button
-            className="btn-clear"
-            onClick={clearSort}>Clear</button>
-    </section>
+        // </section >
+    )
 }

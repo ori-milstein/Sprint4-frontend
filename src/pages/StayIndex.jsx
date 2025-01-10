@@ -10,6 +10,7 @@ import { userService } from '../services/user'
 import { StayList } from '../cmps/StayList'
 import { StayFilter } from '../cmps/StayFilter'
 
+<<<<<<< HEAD
 export function StayIndex() {
     const [stays, setStays] = useState([])
     const [filterBy, setFilterBy] = useState(stayService.getDefaultFilter())
@@ -17,6 +18,16 @@ export function StayIndex() {
 
     useEffect(() => {
         loadStays()
+=======
+export function StayIndex({ filterBy, setFilterBy }) {
+
+    // const [filterBy, setFilterBy] = useState(stayService.getDefaultFilter())
+    const stays = useSelector(storeState => storeState.stayModule.stays)
+
+    useEffect(() => {
+        console.log('filterBy', filterBy)
+        loadStays(filterBy)
+>>>>>>> 1739ea07bb8eda445f5d38b645d258d5607ef92a
     }, [filterBy])
 
     useEffect(() => {
@@ -64,11 +75,9 @@ export function StayIndex() {
 
     return (
         <main className="stay-index">
-            <header>
-                <h2>Stays</h2>
-                {userService.getLoggedinUser() && <button onClick={onAddStay}>Add a Stay</button>}
-            </header>
-            <StayFilter filterBy={filterBy} setFilterBy={setFilterBy} />
+            {/* <StayFilter
+                filterBy={filterBy}
+                setFilterBy={setFilterBy} /> */}
             <StayList
                 stays={stays}
                 onRemoveStay={onRemoveStay}

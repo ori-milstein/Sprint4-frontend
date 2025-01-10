@@ -1,4 +1,4 @@
-export function HeaderAuthMenu({onToggleLoginSignupDialog}) {
+export function HeaderAuthMenu({ onToggleLoginSignupDialog }) {
     return (
         <div className="auth-menu">
             <label className="auth-menu-item login-action" onClick={() => onToggleLoginSignupDialog('login')}>Log in</label>

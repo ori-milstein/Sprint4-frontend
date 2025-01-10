@@ -1,0 +1,215 @@
+.filter-slider {
+    display: grid;
+    grid-auto-flow: column;
+    // gap: rem(32px);
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    .filter-items {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        overflow-x: scroll;
+        white-space: nowrap;
+        transition: transform 0.2s ease-in-out;
+        scroll-behavior: smooth;
+        gap: 3rem;
+
+        scrollbar-width: none;
+    }
+
+    p {
+        margin-block-start: rem(8px);
+        font-size: rem(12px);
+        line-height: rem(16px);
+        color: $main-writing-color;
+        font-weight: 500;
+    }
+
+    img {
+        width: rem(24px);
+    }
+
+    label {
+        cursor: pointer;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &:not(:hover, :focus) {
+            img {
+                filter: invert(39%) sepia(0%) saturate(233%) hue-rotate(267deg) brightness(101%) contrast(77%);
+            }
+
+            p {
+                color: $weaker-writing-color;
+            }
+        }
+    }
+
+
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        left: 10px;
+        top: 90px;
+        background: linear-gradient(to left, rgb(255 255 255 / 0), white 40px);
+        // background: red;
+        height: 60px;
+        width: 4rem;
+        pointer-events: none;
+        opacity: 0;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        right: 0px;
+        top: 90px;
+        background: linear-gradient(to right, #ffffff00, rgb(255, 255, 255/0), white 40px);
+        // background: red;
+        height: 60px;
+        width: 4rem;
+        pointer-events: none;
+    }
+
+    &.before-shown::before {
+        opacity: 1;
+    }
+
+    &.after-hidden::after {
+        opacity: 0;
+    }
+
+    .filters-nav-btn {
+        position: relative;
+        top: 20px;
+        cursor: pointer;
+        z-index: 3;
+        width: rem(32px);
+        height: rem(32px);
+        transform: translateY(-50%);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 55px;
+        border: 0.5px solid rgb(0 0 0/0.3);
+        background-color: #fff;
+        transition: transform 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+        opacity: 0;
+        pointer-events: none;
+
+        img {
+            width: rem(12px);
+
+        }
+
+        &:hover {
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        &.shown {
+            pointer-events: all;
+            opacity: 1;
+        }
+    }
+
+    .prev-filters-btn {
+        left: 0.5rem;
+    }
+
+    .next-filters-btn {
+        right: 0.5rem;
+    }
+
+    .filter-widget {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: 0.2s all cubic-bezier(0.075, 0.82, 0.165, 1);
+        position: relative;
+        padding: 1rem 0;
+        opacity: 0.8;
+
+        &::after {
+            content: '';
+            width: 100%;
+            position: absolute;
+            bottom: 0rem;
+            z-index: 2;
+            height: 2px;
+            opacity: 0;
+            transition: 0.2s all cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        &:hover,
+        &.active {
+            opacity: 1;
+
+            &::after {
+                opacity: 1;
+                background-color: $border-color;
+            }
+        }
+
+        img {
+            margin-bottom: 0.5rem;
+            max-width: 22px;
+        }
+
+        p {
+            margin-top: 0.25rem;
+            min-width: max-content;
+            color: $weaker-writing-color;
+            font-size: 0.85em;
+            line-height: 1;
+        }
+
+        &:hover,
+        &.active {
+            p {
+                color: $main-writing-color;
+            }
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+}
+
+.filters {
+
+
+    // .wrapper {
+    //     display: grid;
+    //     grid-template-columns: 1fr auto;
+    //     gap: 1.5rem;
+    //     align-items: center;
+    // }
+
+    .filter-button {
+        background-color: transparent;
+        cursor: pointer;
+        border: 1px solid $border-color;
+        border-radius: 12px;
+        margin: 0;
+        height: calc(100% - 2rem);
+        padding: 0 1rem;
+        font-size: 12px;
+        color: $main-writing-color;
+        font-weight: 600;
+        gap: 0.25rem;
+        flex: 1;
+    }
+}

@@ -1,7 +1,7 @@
 .app-header {
     box-sizing: border-box;
     top: 0;
-    position: sticky;
+    // position: sticky;
     min-height: 80px;
     border-bottom: 1px solid lightgrey;
     display: flex;
@@ -47,8 +47,7 @@
             bottom: 15px;
 
             height: 66px;
-            width: 700px;
-            // padding-inline: 30px;
+            width: 850px;
             outline: none;
             display: flex;
             align-items: center;
@@ -69,6 +68,13 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                input{
+                    font-size: 14px;
+                    width: max-content;
+                    font-weight: 500;
+                    color:rgb(106, 106, 106);
+                    cursor:pointer;
+                }
             }
 
             .filter-container {
@@ -94,6 +100,7 @@
 
             .filter-label {
                 font-weight: bold;
+                font-size: 12px;
             }
 
             .filter-action {
@@ -106,8 +113,9 @@
                 width: max-content;
                 height: auto;
                 font: inherit;
-                color: inherit;
+                color: lightgrey;
             }
+            
 
             .filter-action:focus {
                 outline: none;

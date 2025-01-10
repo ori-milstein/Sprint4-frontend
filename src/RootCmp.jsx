@@ -1,8 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router'
+import { useState } from 'react'
 
-import { HomePage } from './pages/HomePage'
-import { AboutUs, AboutTeam, AboutVision } from './pages/AboutUs'
 import { StayIndex } from './pages/StayIndex.jsx'
 import { ReviewIndex } from './pages/ReviewIndex.jsx'
 import { ChatApp } from './pages/Chat.jsx'
@@ -17,15 +16,21 @@ import { UserMsg } from './cmps/UserMsg.jsx'
 import { LoginSignup } from './pages/LoginSignup.jsx'
 import { Login } from './pages/Login.jsx'
 import { Signup } from './pages/Signup.jsx'
+import { StayFilter } from './cmps/StayFilter.jsx'
 
 export function RootCmp() {
+    const [filterBy, setFilterBy] = useState(stayService.getDefaultFilter())
+
     return (
         <div className="main-container">
-            <AppHeader />
+            <section className="headers">
+                <AppHeader />
+                <StayFilter filterBy={filterBy} setFilterBy={setFilterBy} />
+            </section>
             <UserMsg />
             <main>
                 <Routes>
-                    <Route path="/" element={<StayIndex />} />
+                    <Route path="/" element={<StayIndex filterBy={filterBy} setFilterBy={setFilterBy} />} />
                     <Route path="stay/:stayId" element={<StayDetails />} />
                     <Route path="user/:id" element={<UserDetails />} />
                     <Route path="review" element={<ReviewIndex />} />
