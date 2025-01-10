@@ -54,40 +54,40 @@
 
 
 
-    &::before {
-        content: '';
-        position: absolute;
-        z-index: 2;
-        left: 10px;
-        top: 90px;
-        background: linear-gradient(to left, rgb(255 255 255 / 0), white 40px);
-        // background: red;
-        height: 60px;
-        width: 4rem;
-        pointer-events: none;
-        opacity: 0;
-    }
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     z-index: 2;
+    //     left: 10px;
+    //     top: 90px;
+    //     background: linear-gradient(to left, rgb(255 255 255 / 0), white 40px);
+    //     // background: red;
+    //     height: 60px;
+    //     width: 4rem;
+    //     pointer-events: none;
+    //     opacity: 0;
+    // }
 
-    &::after {
-        content: '';
-        position: absolute;
-        z-index: 2;
-        right: 0px;
-        top: 90px;
-        background: linear-gradient(to right, #ffffff00, rgb(255, 255, 255/0), white 40px);
-        // background: red;
-        height: 60px;
-        width: 4rem;
-        pointer-events: none;
-    }
+    // &::after {
+    //     content: '';
+    //     position: absolute;
+    //     z-index: 2;
+    //     right: 0px;
+    //     top: 90px;
+    //     background: linear-gradient(to right, #ffffff00, rgb(255, 255, 255/0), white 40px);
+    //     // background: red;
+    //     height: 60px;
+    //     width: 4rem;
+    //     pointer-events: none;
+    // }
 
-    &.before-shown::before {
-        opacity: 1;
-    }
+    // &.before-shown::before {
+    //     opacity: 1;
+    // }
 
-    &.after-hidden::after {
-        opacity: 0;
-    }
+    // &.after-hidden::after {
+    //     opacity: 0;
+    // }
 
     .filters-nav-btn {
         position: relative;
@@ -138,8 +138,8 @@
         flex-direction: column;
         transition: 0.2s all cubic-bezier(0.075, 0.82, 0.165, 1);
         position: relative;
-        padding: 1rem 0;
-        opacity: 0.8;
+        // padding: 1rem 0;
+        // opacity: 0.8;
 
         &::after {
             content: '';
