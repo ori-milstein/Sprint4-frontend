@@ -1,0 +1,32 @@
+/* Backdrop container with black background and opacity */
+.backdrop-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+    z-index: 10; /* Ensure it's behind the modal block */
+    transition: opacity 0.3s ease-in-out; /* Add smooth fade-out transition */
+}
+
+.backdrop-container.closing {
+    opacity: 0; /* Fade out animation */
+}
+
+/* Modal block styles */
+.block {
+    position: fixed;
+    z-index: 20; /* Ensure it's above the backdrop */
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth opening/closing animation */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block.closing {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9); /* Shrink and fade out animation */
+}
