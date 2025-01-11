@@ -4,7 +4,7 @@ import { GenericCmp } from './GenericCmp';
 
 export function HeaderFilter({ isExpanded, setIsExpanded, toggleIsFilterOpen, checkInDate, checkOutDate }) {
     const isClicking = useRef(false)
-
+    console.log('Checkin', checkInDate, 'checkout', checkOutDate)
     useEffect(() => {
         // Scroll event handler
         const handleScroll = () => {
