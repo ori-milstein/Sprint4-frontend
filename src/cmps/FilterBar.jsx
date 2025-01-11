@@ -60,8 +60,8 @@ export function FilterSlider({ filters, onFilterChange, filterBy, onChange, filt
                     filters.map(filter => (
                         <label key={makeId()}>
                             <div
-                                // className={`filter-widget ${filterBy.labels[0] === filter.title ? 'active' : ''}`}
-                                className={`filter-widget `}
+                                className={`filter-widget ${filterToEdit.label === filter.title ? 'active' : ''}`}
+                            // className={`filter-widget `}
                             // onClick={() => onFilterChange(filter.title)}
                             // onClick={
                             // onChange}
