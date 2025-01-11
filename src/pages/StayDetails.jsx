@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-// import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service'
 // import { loadStay, addStayMsg } from '../store/actions/stay.actions'
-
+import { ReviewSection } from '../cmps/ReviewSection.jsx';
 
 export function StayDetails() {
   const { stayId } = useParams()
@@ -13,6 +13,9 @@ export function StayDetails() {
   // const stay = useSelector(storeState => storeState.stayModule.stay)
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null)
+
+  const appModal = useSelector((storeState) => storeState.systemModule.appModal)
+  const [isModalActive, setIsModalActive] = useState(false)
 
   // useEffect(() => {
   //   loadStay(stayId)
@@ -35,6 +38,12 @@ export function StayDetails() {
     }
     fetchStay();
   }, [stayId])
+
+  function handleShowMore(modalType) {
+    dispatch({ type: modalType })
+    setIsModalActive((prevModal) => !prevModal)
+    document.body.classList.add('modal-open')
+  }
 
   const onAddStayMsg = () => {
     try {
@@ -136,6 +145,7 @@ export function StayDetails() {
           <p>₪{stay.price * 5}</p>
         </div>
       </div>
+      <ReviewSection stay={stay} handleShowMore={handleShowMore} />
     </section>
   )
 }
