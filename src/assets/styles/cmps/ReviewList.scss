@@ -86,7 +86,7 @@
 
                 .years-ago {
 
-                    color: #717171;
+                    color: $main-writing-color;
                     line-height: rem(20px);
                     font-size: rem(14px);
 
@@ -94,8 +94,6 @@
                         font-size: rem(12px);
                     }
                 }
-
-
             }
 
             img {
@@ -117,6 +115,19 @@
                 width: rem(9px);
                 height: rem(9px);
             }
+        }
+
+        .dot {
+            margin-inline: rem(5px);
+        }
+
+        .date {
+            font-weight: 500;
+        }
+
+        .stayed {
+            font-weight: 400;
+            color: $weaker-writing-color;
         }
 
         .review-content {

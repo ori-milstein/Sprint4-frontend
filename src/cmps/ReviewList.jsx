@@ -6,7 +6,7 @@ export function ReviewList({ stay, onRemoveReview, isModalActive }) {
             {reviews.map((review, idx) => {
                 const reviewDate = new Date(review.at)
 
-                // const month = reviewDate.toLocaleString('default', { month: 'long' })
+                const month = reviewDate.toLocaleString('default', { month: 'long' })
                 const reviewYear = reviewDate.getFullYear()
                 const thisYear = new Date().getFullYear()
                 const yearsAgo = thisYear - reviewYear
@@ -22,7 +22,7 @@ export function ReviewList({ stay, onRemoveReview, isModalActive }) {
                                 <span className="years-ago">{`${yearsAgo} years on Airbnb`}</span>
                             </section>
                         </article>
-                        <article>
+                        <article className="flex">
                             <span className="stars">
                                 <img src='../../src/assets/assets/icons/general icons/asset 158.svg' />
                                 <img src='../../src/assets/assets/icons/general icons/asset 158.svg' />
@@ -30,6 +30,10 @@ export function ReviewList({ stay, onRemoveReview, isModalActive }) {
                                 <img src='../../src/assets/assets/icons/general icons/asset 158.svg' />
                                 <img src='../../src/assets/assets/icons/general icons/asset 158.svg' />
                             </span>
+                            <span className="dot">·</span>
+                            <span className="date">{month} {reviewYear}</span>
+                            <span className="dot">·</span>
+                            <span className="stayed">Stayed a few nights</span>
                         </article>
 
                         <article className="review-content">
