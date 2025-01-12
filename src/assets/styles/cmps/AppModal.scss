@@ -16,12 +16,21 @@
 .modal {
     background-color: white;
     position: absolute;
-    border-radius: rem(32px);
+    // border-radius: rem(32px);
     margin-block-start: rem(12px);
     padding-inline: rem(32px);
     padding-block: 16px;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.15);
     display: flex;
+    border-radius: .75rem;
+    width: fit-content;
+    max-height: 43.3125rem;
+    margin: rem(40px) auto rem(12px) auto;
+    background-color: #fff;
+    z-index: 210;
+    position: relative;
+    max-height: calc(100vh - rem(52px));
+    overflow: hidden;
 
     &.where-modal {
         width: rem(848px);
