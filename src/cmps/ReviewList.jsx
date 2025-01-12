@@ -5,11 +5,11 @@ export function ReviewList({ stay, onRemoveReview, isModalActive }) {
         <div className={`stay-review-list  ${isModalActive ? 'isModal' : ''}`}>
             {reviews.map((review, idx) => {
                 const reviewDate = new Date(review.at)
-
                 const month = reviewDate.toLocaleString('default', { month: 'long' })
                 const reviewYear = reviewDate.getFullYear()
                 const thisYear = new Date().getFullYear()
                 const yearsAgo = thisYear - reviewYear
+
                 return (
                     <section className='stay-review-preview' key={idx}>
 
@@ -25,10 +25,14 @@ export function ReviewList({ stay, onRemoveReview, isModalActive }) {
                         <article className="flex">
                             <span className="stars">
                                 <img src='../../src/assets/assets/icons/general icons/asset 158.svg' />
-                                <img src='../../src/assets/assets/icons/general icons/asset 158.svg' />
-                                <img src='../../src/assets/assets/icons/general icons/asset 158.svg' />
-                                <img src='../../src/assets/assets/icons/general icons/asset 158.svg' />
-                                <img src='../../src/assets/assets/icons/general icons/asset 158.svg' />
+                                <img src='../../src/assets/assets/icons/general icons/asset 158.svg'
+                                    className={(review.rate >= 2) ? '' : 'is-gray'} />
+                                <img src='../../src/assets/assets/icons/general icons/asset 158.svg'
+                                    className={(review.rate >= 3) ? '' : 'is-gray'} />
+                                <img src='../../src/assets/assets/icons/general icons/asset 158.svg'
+                                    className={(review.rate >= 4) ? '' : 'is-gray'} />
+                                <img src='../../src/assets/assets/icons/general icons/asset 158.svg'
+                                    className={(review.rate === 5) ? '' : 'is-gray'} />
                             </span>
                             <span className="dot">·</span>
                             <span className="date">{month} {reviewYear}</span>

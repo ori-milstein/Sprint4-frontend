@@ -114,6 +114,10 @@
             img {
                 width: rem(9px);
                 height: rem(9px);
+
+                &.is-gray {
+                    filter: invert(100%) sepia(0%) saturate(5888%) hue-rotate(275deg) brightness(126%) contrast(73%);
+                }
             }
         }
 
