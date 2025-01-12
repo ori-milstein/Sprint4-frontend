@@ -1,11 +1,11 @@
 .modal-reviews-container {
     width: rem(1032px);
     display: flex;
-    height: rem(629px);
+    // height: rem(629px);
 
     .modal-reviews-list {
         padding-inline: rem(8px);
-        overflow: auto;
+        // overflow: scroll;
         width: rem(605px);
 
         .review-search {

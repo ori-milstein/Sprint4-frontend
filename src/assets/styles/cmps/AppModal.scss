@@ -24,13 +24,13 @@
     display: flex;
     border-radius: .75rem;
     width: fit-content;
-    max-height: 43.3125rem;
+    // max-height: 43.3125rem;
     margin: rem(40px) auto rem(12px) auto;
     background-color: #fff;
     z-index: 210;
     position: relative;
-    max-height: calc(100vh - rem(52px));
-    overflow: hidden;
+    height: calc(100vh - rem(52px));
+    overflow: scroll;
 
     button {
         border: none;
