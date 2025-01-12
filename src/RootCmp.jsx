@@ -20,18 +20,17 @@ import { Signup } from './pages/Signup.jsx'
 import { StayFilter } from './cmps/StayFilter.jsx'
 export function RootCmp() {
     const isHomePage = useSelector(storeState => storeState.systemModule.isHomePage)
-    const [filterBy, setFilterBy] = useState(stayService.getDefaultFilter())
 
     return (
         <div className="main-container">
             <section className="headers">
-                <AppHeader />
-                {isHomePage && <StayFilter filterBy={filterBy} setFilterBy={setFilterBy} />}
+                <AppHeader/>
+                {isHomePage && <StayFilter/>}
             </section>
             <UserMsg />
             <main>
                 <Routes>
-                    <Route path="/" element={<StayIndex filterBy={filterBy} setFilterBy={setFilterBy} />} />
+                    <Route path="/" element={<StayIndex/>} />
                     <Route path="stay/:stayId" element={<StayDetails />} />
                     <Route path="user/:id" element={<UserDetails />} />
                     <Route path="review" element={<ReviewIndex />} />

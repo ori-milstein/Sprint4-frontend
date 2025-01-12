@@ -15,21 +15,23 @@ export const stayService = {
 window.cs = stayService
 
 
-async function query(filterBy = { txt: '', price: 0, label: '', sortField: '', sortDir: 1 }) {
-    console.log('filterBy from actions', filterBy)
+async function query(filterBy = { txt: '', price: 0, label: '', sortField: '', sortDir: 1, minCapacity: 0 }) {
     var stays = await storageService.query(STORAGE_KEY)
     const { txt, minCapacity, label } = filterBy
-
+    console.log('filterBy from actions', filterBy)
     if (txt) {
-        const regex = new RegExp(filterBy.txt, 'i')
-        stays = stays.filter(stay => regex.test(stay.loc.country) || regex.test(stay.loc.city))
+        const regex = new RegExp(txt, 'i')
+        stays = stays.filter(stay =>
+            regex.test(stay.loc.address) ||  // Match in full address
+            regex.test(stay.loc.country) || // Match in country
+            regex.test(stay.loc.city)       // Match in city
+        )
     }
     if (minCapacity) {
         stays = stays.filter(stay => stay.capacity >= minCapacity)
     }
 
     if (label) {
-
         stays = stays.filter(stay => stay.type === label)
     }
 

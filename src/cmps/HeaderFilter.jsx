@@ -1,7 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 
-export function HeaderFilter({ isExpanded, setIsExpanded, toggleIsFilterOpen, checkInDate, checkOutDate, guests, where }) {
+export function HeaderFilter({ isExpanded, setIsExpanded, toggleIsFilterOpen, checkInDate, checkOutDate, guests, where, setWhere, onSearchFromHeader }) {
     const isClicking = useRef(false)
+
     useEffect(() => {
         // Scroll event handler
         const handleScroll = () => {
@@ -29,13 +30,21 @@ export function HeaderFilter({ isExpanded, setIsExpanded, toggleIsFilterOpen, ch
         }, 300) // Adjust timeout as needed
     }
 
+    function handleWhereInputChange(ev) {
+        const { value } = ev.target;
+        setWhere(value)
+    }
+
+    function handleWhereClick() {
+        setWhere('')
+    }
+    
     function formatDate(date) {
         if (!date) return
         return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
     }
 
     function formGuests(guests) {
-
         let totalGuests = guests.adults + guests.children || 0
         let totalInfants = guests.infants || 0
         let totalPets = guests.pets || 0
@@ -45,7 +54,7 @@ export function HeaderFilter({ isExpanded, setIsExpanded, toggleIsFilterOpen, ch
         if (totalInfants > 0) result += `, ${totalInfants} infants`
 
         if (totalPets > 0) result += `, ${totalPets} pets`
-        
+
         return result;
 
     }
@@ -54,12 +63,15 @@ export function HeaderFilter({ isExpanded, setIsExpanded, toggleIsFilterOpen, ch
     return (
         <>
             {isExpanded && (
-                <form className="filter-container expanded">
+                <form className="filter-container expanded" onSubmit={onSearchFromHeader}>
                     <div className="filter-action-container" onClick={() => toggleIsFilterOpen('suggested-locations')}>
                         <label className="filter-label">Where</label>
                         <input
+                            onChange={handleWhereInputChange}
+                            onClick={handleWhereClick}
                             className="filter-action filter-where"
-                            placeholder={where || "Search destinations"}
+                            value={where}
+                            placeholder="Search destinations"
                         ></input>
                     </div>
                     <div className="filter-action-container" onClick={() => toggleIsFilterOpen('date-picker')}>
