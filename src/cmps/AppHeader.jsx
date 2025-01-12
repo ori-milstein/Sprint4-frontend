@@ -1,8 +1,5 @@
 import { Link, NavLink } from 'react-router-dom';
-import { useNavigate } from 'react-router';
 import { useSelector } from 'react-redux';
-import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service';
-import { logout } from '../store/actions/user.actions';
 import Logo from './Logo';
 import { HeaderFilter } from './HeaderFilter';
 import { useState } from 'react';
@@ -13,18 +10,21 @@ import { GenericCmp } from './GenericCmp';
 import { DatePickerCmp } from './DatePickerCmp';
 import { SuggestedLocations } from './SuggestedLocations';
 import { GuestSelector } from './GuestSelector';
+import { setFiterBy } from '../store/actions/stay.actions';
 
 
 export function AppHeader() {
 	const user = useSelector((storeState) => storeState.userModule.user);
-	const [isExpanded, setIsExpanded] = useState(true);
-	const [isAuthMenuOpen, setIsAuthMenuOpen] = useState(false);
-	const [isLoginSignupOpen, setIsLoginSignupOpen] = useState({ isOpen: false, action: null });
-	const [inputModal, setInputModal] = useState(null);
+	const filterBy = useSelector((storeState) => storeState.stayModule.filterBy)
 
-	const [checkInDate, setCheckInDate] = useState('');
-	const [checkOutDate, setCheckOutDate] = useState('');
-	const [guests, setGuests] = useState({ adults: 0, children: 0, infants: 0, pets: 0 });
+	const [isExpanded, setIsExpanded] = useState(true)
+	const [isAuthMenuOpen, setIsAuthMenuOpen] = useState(false)
+	const [isLoginSignupOpen, setIsLoginSignupOpen] = useState({ isOpen: false, action: null })
+	const [inputModal, setInputModal] = useState(null)
+
+	const [checkInDate, setCheckInDate] = useState('')
+	const [checkOutDate, setCheckOutDate] = useState('')
+	const [guests, setGuests] = useState({ adults: 0, children: 0, infants: 0, pets: 0 })
 	const [where, setWhere] = useState('');
 
 	function onToggleMenu() {
@@ -62,6 +62,16 @@ export function AppHeader() {
 		}))
 	}
 
+	function onSearchFromHeader(ev) {
+		ev.preventDefault()
+		const filterByToUpdate = {
+			txt: where,
+			minCapacity: 0
+		}
+		setInputModal(null)
+		setFiterBy(filterByToUpdate)
+	}
+
 	return (
 		<>
 			<header className="app-header full" onClick={isMenuOpen}>
@@ -80,6 +90,8 @@ export function AppHeader() {
 						checkOutDate={checkOutDate}
 						guests={guests}
 						where={where}
+						setWhere={setWhere}
+						onSearchFromHeader={onSearchFromHeader}
 					/>
 					{!isLoginSignupOpen.isOpen && <HeaderUserControls onToggleMenu={onToggleMenu} />}
 					{isAuthMenuOpen && <HeaderAuthMenu onToggleLoginSignupDialog={onToggleLoginSignupDialog} />}

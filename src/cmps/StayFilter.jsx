@@ -1,13 +1,12 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import { FilterSlider } from '../cmps/FilterBar'
+import { useSelector } from 'react-redux'
+import { setFiterBy } from '../store/actions/stay.actions'
 
-export function StayFilter({ filterBy, setFilterBy }) {
-    const [filterToEdit, setFilterToEdit] = useState(structuredClone(filterBy))
+export function StayFilter() {
+    const filterBy = useSelector((storeState) => storeState.stayModule.filterBy)
 
-    useEffect(() => {
-        setFilterBy(filterToEdit)
-    }, [filterToEdit])
-
+    // Modify the current filterBy and pass it to setFiterBy
     function handleChange(ev) {
         const type = ev.target.type
         const field = ev.target.name
@@ -17,23 +16,29 @@ export function StayFilter({ filterBy, setFilterBy }) {
             case 'text':
             case 'radio':
                 value = field === 'sortDir' ? +ev.target.value : ev.target.value
-                if (!filterToEdit.sortDir) filterToEdit.sortDir = 1
+                if (!filterBy.sortDir) filterBy.sortDir = 1
                 break
             case 'number':
                 value = +ev.target.value || ''
                 break
+            default:
+                return
         }
-        setFilterToEdit({ ...filterToEdit, [field]: value })
+
+        // Create a new filterBy object with the updated field
+        const updatedFilterBy = { ...filterBy, [field]: value }
+        setFiterBy(updatedFilterBy)
     }
 
     function clearFilter() {
-        setFilterToEdit({ ...filterToEdit, txt: '', minCapacity: '', maxPrice: '' })
+        // Reset specific fields to default values
+        const clearedFilterBy = { ...filterBy, txt: '', minCapacity: '', maxPrice: '' }
+        setFiterBy(clearedFilterBy)
     }
 
     return (
-        // <section className="stay-filter">
-        <div className='filters main-layout'>
-            <div className='wrapper'>
+        <div className="filters main-layout">
+            <div className="wrapper">
                 <FilterSlider
                     filters={[
                         { title: 'OMG!', img: '../../src/assets/assets/icons/filter bar icons/asset 6.jpeg' },
@@ -59,12 +64,11 @@ export function StayFilter({ filterBy, setFilterBy }) {
                         { title: 'Tiny homes', img: '../../src/assets/assets/icons/filter bar icons/asset 26.jpeg' },
                         { title: 'Islands', img: '../../src/assets/assets/icons/filter bar icons/asset 27.jpeg' },
                     ]}
-                    onFilterChange={setFilterBy}
+                    onFilterChange={(filter) => setFiterBy(filter)} // Pass directly to setFiterBy
                     filterBy={filterBy}
                     onChange={handleChange}
-                    filterToEdit={filterToEdit} />
+                />
             </div>
         </div>
-        // </section >
     )
 }

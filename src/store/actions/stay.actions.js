@@ -1,6 +1,6 @@
 import { stayService } from '../../services/stay'
 import { store } from '../store'
-import { ADD_STAY, REMOVE_STAY, SET_STAYS, SET_STAY, UPDATE_STAY, ADD_STAY_MSG } from '../reducers/stay.reducer'
+import { ADD_STAY, REMOVE_STAY, SET_STAYS, SET_STAY, UPDATE_STAY, ADD_STAY_MSG, SET_FILTER_BY } from '../reducers/stay.reducer'
 
 export async function loadStays(filterBy) {
     try {
@@ -66,6 +66,15 @@ export async function addStayMsg(stayId, txt) {
     }
 }
 
+export async function setFiterBy(filterBy) {
+    try {
+        return store.dispatch(setFilterBy(filterBy))
+    } catch (err) {
+        console.log('Cannot edit filter by object', err)
+        throw err
+    }
+}
+
 // Command Creators:
 function getCmdSetStays(stays) {
     return {
@@ -101,6 +110,12 @@ function getCmdAddStayMsg(msg) {
     return {
         type: ADD_STAY_MSG,
         msg
+    }
+}
+function setFilterBy(filterBy){
+    return {
+        type:SET_FILTER_BY,
+        filterBy
     }
 }
 
