@@ -1,10 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { DatePickerCmp } from './DatePickerCmp';
-import { GenericCmp } from './GenericCmp';
 
-export function HeaderFilter({ isExpanded, setIsExpanded, toggleIsFilterOpen, checkInDate, checkOutDate }) {
+export function HeaderFilter({ isExpanded, setIsExpanded, toggleIsFilterOpen, checkInDate, checkOutDate, guests, where }) {
     const isClicking = useRef(false)
-
     useEffect(() => {
         // Scroll event handler
         const handleScroll = () => {
@@ -32,42 +29,59 @@ export function HeaderFilter({ isExpanded, setIsExpanded, toggleIsFilterOpen, ch
         }, 300) // Adjust timeout as needed
     }
 
-    function formatDate(date){
-        if(!date) return
+    function formatDate(date) {
+        if (!date) return
         return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
     }
+
+    function formGuests(guests) {
+
+        let totalGuests = guests.adults + guests.children || 0
+        let totalInfants = guests.infants || 0
+        let totalPets = guests.pets || 0
+
+        let result = `${totalGuests} guests`
+
+        if (totalInfants > 0) result += `, ${totalInfants} infants`
+
+        if (totalPets > 0) result += `, ${totalPets} pets`
+        
+        return result;
+
+    }
+
 
     return (
         <>
             {isExpanded && (
                 <form className="filter-container expanded">
-                    <div className="filter-action-container">
+                    <div className="filter-action-container" onClick={() => toggleIsFilterOpen('suggested-locations')}>
                         <label className="filter-label">Where</label>
                         <input
                             className="filter-action filter-where"
-                            placeholder="Search destinations"
+                            placeholder={where || "Search destinations"}
                         ></input>
                     </div>
-                    <div className="filter-action-container" onClick={toggleIsFilterOpen}>
+                    <div className="filter-action-container" onClick={() => toggleIsFilterOpen('date-picker')}>
                         <label className="filter-label">Check in</label>
                         <input
                             className="filter-action filter-checkin"
                             value={formatDate(checkInDate) || 'Add Dates'}
                         ></input>
                     </div>
-                    <div className="filter-action-container" onClick={toggleIsFilterOpen}>
+                    <div className="filter-action-container" onClick={() => toggleIsFilterOpen('date-picker')}>
                         <label className="filter-label" >Check out</label>
                         <input
                             className="filter-action filter-checkout"
                             value={formatDate(checkOutDate) || 'Add Dates'}
-                            
+
                         ></input>
                     </div>
-                    <div className="filter-action-container who">
+                    <div className="filter-action-container who" onClick={() => toggleIsFilterOpen('guest-selector')}>
                         <label className="filter-label">Who</label>
                         <input
                             className="filter-action filter-who"
-                            value="Add guests"
+                            value={formGuests(guests) || "Add guests"}
                         ></input>
                     </div>
                     <button className="filter-search long-btn">

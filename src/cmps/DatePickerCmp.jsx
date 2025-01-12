@@ -4,7 +4,7 @@ import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css'; // Default theme
 
 export function DatePickerCmp({ onCheckInChange, onCheckOutChange }) {
-    function trimDate(date){
+    function trimDate(date) {
         return new Date(date.getFullYear(), date.getMonth(), date.getDate())
     }
     const [selectionRange, setSelectionRange] = useState({
@@ -13,25 +13,25 @@ export function DatePickerCmp({ onCheckInChange, onCheckOutChange }) {
         key: 'selection',
     })
 
-    const [currentStep, setCurrentStep] = useState('checkIn')
 
     const handleSelect = (ranges) => {
-        const {startDate, endDate} = ranges.selection
+        let { startDate, endDate } = ranges.selection
+        startDate = trimDate(startDate)
+        endDate = trimDate(endDate)
+
+        if (startDate > endDate) {
+            [startDate, endDate] = [endDate, startDate]
+        }
 
         setSelectionRange({
             ...ranges.selection,
-            startDate:trimDate(ranges.selection.startDate),
-            endDate:trimDate(ranges.selection.endDate)
+            startDate,
+            endDate,
         })
 
-        if (currentStep === 'checkIn'){
-            onCheckInChange(startDate)
-            setCurrentStep('checkOut')
-        }else {
-            onCheckOutChange(endDate)
-            setCurrentStep('checkIn')
-        }
-        
+        onCheckInChange(startDate)
+        onCheckOutChange(endDate)
+
     }
 
     return (
