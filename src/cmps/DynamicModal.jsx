@@ -14,7 +14,7 @@ export function ModalContent({ modalType, stay, onClose }) {
         // case SET_APP_MODAL_AMENITIES:
         // return <AmenitiesModal stay={ stay } />
         case SET_APP_MODAL_REVIEWS:
-            return <ReviewsModal stay={ stay } />
+            return <ReviewsModal stay={stay} isModalActive={true} />
         default: return
 
     }

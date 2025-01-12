@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { ReviewSection } from './ReviewSection'
+import { ReviewList } from './ReviewList'
 
-export function ReviewsModal({ stay }) {
+export function ReviewsModal({ stay, isModalActive }) {
     const [searchTerm, setSearchTerm] = useState('')
     const [filteredReviews, setFilteredReviews] = useState(stay.reviews)
     const [mentionCount, setMentionCount] = useState(0)
@@ -93,7 +93,7 @@ export function ReviewsModal({ stay }) {
                     )
                 })
                 } */}
-                <ReviewSection stay={stay} />
+                <ReviewList stay={stay} isModalActive={isModalActive} />
             </section>
         </section>
     )

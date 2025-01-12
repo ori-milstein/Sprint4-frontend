@@ -40,95 +40,112 @@
 
     }
 
-    .stay-review-list {
+}
 
-        display: flex;
-        flex-direction: column;
+.stay-review-list {
 
+    display: flex;
+    flex-direction: column;
+
+    &:not(.isModal) {
         // @include for-large-list {
         display: grid;
         grid-column-gap: rem(8px);
         grid-template-columns: repeat(2, minmax(rem(300px), 1fr));
         // }
+    }
 
-        .stay-review-preview {
-            margin-block-end: rem(40px);
-            padding-inline: rem(8px);
-            margin-inline-end: rem(94.6562px);
-            padding-block: 0;
-            // margin-inline-end: rem(89.1875px);
 
-            .review-user {
-                margin-block-end: rem(16px);
-                gap: rem(10px);
+    .stay-review-preview {
+        margin-block-end: rem(40px);
+        padding-inline: rem(8px);
+        margin-inline-end: rem(94.6562px);
+        padding-block: 0;
+        // margin-inline-end: rem(89.1875px);
+
+        .review-user {
+            margin-block-end: rem(16px);
+            gap: rem(10px);
+            display: flex;
+            align-items: center;
+
+            .review-user-details {
                 display: flex;
-                align-items: center;
+                gap: rem(2px);
+                flex-direction: column;
 
-                .review-user-details {
-                    display: flex;
-                    gap: rem(2px);
-                    flex-direction: column;
-
-                    h3 {
-                        font-weight: 500;
-                        font-size: rem(16px);
-                        line-height: rem(20px);
-                        color: #222;
-                        letter-spacing: 0;
-                        margin: 0;
-                        padding: 0;
-                    }
-
-                    span {
-
-                        color: #717171;
-                        line-height: rem(20px);
-                        font-size: rem(14px);
-                    }
+                h3 {
+                    font-weight: 500;
+                    font-size: rem(16px);
+                    line-height: rem(20px);
+                    color: #222;
+                    letter-spacing: 0;
+                    margin: 0;
+                    padding: 0;
                 }
 
-                img {
-                    border-radius: 50%;
-                    display: block;
-                    width: rem(48px);
-                    height: rem(48px);
+                span {
+
+                    color: #717171;
+                    line-height: rem(20px);
+                    font-size: rem(14px);
+
+                    &.isModal {
+                        font-size: rem(12px);
+                    }
                 }
             }
 
-            .review-content {
-                font-size: rem(16px);
+            img {
+                border-radius: 50%;
+                display: block;
+                width: rem(48px);
+                height: rem(48px);
+            }
+        }
 
-                section {
+        .review-content {
+            font-size: rem(16px);
+
+            section {
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                letter-spacing: 0;
+
+                div {
                     padding: 0;
+                    margin: 0;
+                    height: fit-content;
                     display: flex;
-                    flex-direction: column;
-                    letter-spacing: 0;
+                    align-items: center;
+                    margin-block-start: rem(8px);
+                    line-height: 1.5rem;
 
-                    div {
-                        padding: 0;
-                        margin: 0;
-                        height: fit-content;
-                        display: flex;
-                        align-items: center;
-                        margin-block-start: rem(8px);
-                        line-height: 1.5rem;
+                    display: -webkit-box;
+
+                    -webkit-box-orient: vertical;
+
+                    &:not(.isModal) {
                         overflow: hidden;
                         text-overflow: ellipsis;
-                        display: -webkit-box;
                         line-clamp: 3;
                         -webkit-line-clamp: 3;
-                        -webkit-box-orient: vertical;
+                    }
 
-                        img {
-                            width: rem(12px);
-                            height: rem(12px);
-                            margin-top: 3px;
-                            margin-left: 4px;
-                        }
+                    &.isModal {
+                        font-size: rem(14px);
+                    }
+
+                    img {
+                        width: rem(12px);
+                        height: rem(12px);
+                        margin-top: 3px;
+                        margin-left: 4px;
                     }
                 }
-
             }
+
         }
     }
 }

@@ -151,7 +151,7 @@ export function StayDetails() {
           <p>₪{stay.price * 5}</p>
         </div>
       </div>
-      <ReviewSection stay={stay} handleShowMore={handleShowMore} />
+      <ReviewSection stay={stay} handleShowMore={handleShowMore} isModalActive={isModalActive} />
     </section>
   )
 }
