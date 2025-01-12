@@ -17,7 +17,7 @@
 /* Modal block styles */
 .block {
     position: fixed;
-    z-index: 20; /* Ensure it's above the backdrop */
+    z-index: 1000; /* Ensure it's above the backdrop */
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth opening/closing animation */

@@ -1,12 +1,12 @@
 .app-header {
     box-sizing: border-box;
     top: 0;
-    // position: sticky;
+    position: sticky;
     min-height: 80px;
     border-bottom: 1px solid lightgrey;
     display: flex;
     background-color: white;
-    z-index: 20;
+    z-index: 1000;
 
     nav {
         display: flex;
