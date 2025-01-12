@@ -84,7 +84,7 @@
                     padding: 0;
                 }
 
-                span {
+                .years-ago {
 
                     color: #717171;
                     line-height: rem(20px);
@@ -94,6 +94,8 @@
                         font-size: rem(12px);
                     }
                 }
+
+
             }
 
             img {
@@ -101,6 +103,19 @@
                 display: block;
                 width: rem(48px);
                 height: rem(48px);
+            }
+        }
+
+        .stars {
+            display: flex;
+            gap: rem(1px);
+            align-items: center;
+            margin: 0;
+            padding: 0;
+
+            img {
+                width: rem(9px);
+                height: rem(9px);
             }
         }
 

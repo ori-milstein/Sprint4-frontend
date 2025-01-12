@@ -19,9 +19,19 @@ export function ReviewList({ stay, onRemoveReview, isModalActive }) {
                             </section>
                             <section className="review-user-details">
                                 <h3>{review.by.fullname}</h3>
-                                <span>{`${yearsAgo} years on Airbnb`}</span>
+                                <span className="years-ago">{`${yearsAgo} years on Airbnb`}</span>
                             </section>
                         </article>
+                        <article>
+                            <span className="stars">
+                                <img src='../../src/assets/assets/icons/general icons/asset 158.svg' />
+                                <img src='../../src/assets/assets/icons/general icons/asset 158.svg' />
+                                <img src='../../src/assets/assets/icons/general icons/asset 158.svg' />
+                                <img src='../../src/assets/assets/icons/general icons/asset 158.svg' />
+                                <img src='../../src/assets/assets/icons/general icons/asset 158.svg' />
+                            </span>
+                        </article>
+
                         <article className="review-content">
                             <section>
                                 <div className={isModalActive ? "isModal" : ""}>
