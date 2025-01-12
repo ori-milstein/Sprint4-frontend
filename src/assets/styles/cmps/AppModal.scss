@@ -32,6 +32,22 @@
     max-height: calc(100vh - rem(52px));
     overflow: hidden;
 
+    button {
+        border: none;
+        background-color: #fff;
+        border-radius: 50%;
+        width: rem(24px);
+        height: rem(24px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-inline-end: 1rem;
+
+        &:hover {
+            background-color: #B0B0B0;
+        }
+    }
+
     &.where-modal {
         width: rem(848px);
 

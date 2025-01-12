@@ -59,7 +59,7 @@ export function ReviewsModal({ stay, isModalActive }) {
                             onKeyPress={handleKeyPress}
                         />
                         {tempSearchTerm &&
-                            <button className='btn-clear-filter' onClick={handleClear}><img src='https://res.cloudinary.com/do0a92wpm/image/upload/v1699218785/close-filter_sjmrkr.svg' /></button>}
+                            <button className='btn-clear-filter' onClick={handleClear}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 3px; overflow: visible;" aria-hidden="true" role="presentation" focusable="false"><path d="m6 6 20 20M26 6 6 26"></path></svg></button>}
                     </div>
                 </section>
                 <div>
