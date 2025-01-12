@@ -77,7 +77,7 @@ FancyBox.propTypes = {
 }
 
 function Contacts() {
-    return <section style={{ height: '50vh', backgroundColor: 'pink' }}>
+    return <section style={{ height: '50dvh', backgroundColor: 'pink' }}>
         <h2>Contacts</h2>
         <p>Click me</p>
     </section>
@@ -93,7 +93,7 @@ function Projects() {
             {proj}
         </article>
     ))
-    return <section style={{ minHeight: '50vh', backgroundColor: 'lightblue' }}>
+    return <section style={{ minHeight: '50dvh', backgroundColor: 'lightblue' }}>
         <h2>Projects</h2>
         {projList}
         <button onClick={ev => {

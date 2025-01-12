@@ -29,7 +29,7 @@
     background-color: #fff;
     z-index: 210;
     position: relative;
-    height: calc(100vh - rem(52px));
+    height: calc(100dvh - rem(52px));
     overflow: scroll;
 
     button {
