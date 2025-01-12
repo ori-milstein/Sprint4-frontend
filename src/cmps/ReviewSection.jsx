@@ -1,5 +1,5 @@
-import { ReviewsModal } from "./RieviewsModal.jsx";
-// import { SET_APP_MODAL_REVIEWS } from "../store/reducers/system.reducer.js";
+import { ReviewsModal } from "./ReviewsModal.jsx";
+import { SET_APP_MODAL_REVIEWS } from "../store/reducers/system.reducer.js";
 
 export function ReviewSection({ stay, handleShowMore }) {
 
@@ -42,7 +42,7 @@ export function ReviewSection({ stay, handleShowMore }) {
                 })}
             </div>
             {/* <button> */}
-            <span className="button" onClick={() => handleShowMore(/*SET_APP_MODAL_REVIEWS*/)} >
+            <span className="button" onClick={() => handleShowMore(SET_APP_MODAL_REVIEWS)} >
                 Show all {stay.reviews.length} reviews
             </span>
             {/* </button> */}

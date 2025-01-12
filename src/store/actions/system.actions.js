@@ -9,3 +9,7 @@ export async function renderFilterBar(boolean) {
         throw err
     }
 }
+
+export function setAppModal(type) {
+    store.dispatch({ type })
+}

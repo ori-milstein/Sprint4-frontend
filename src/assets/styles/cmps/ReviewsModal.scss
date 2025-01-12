@@ -1,0 +1,140 @@
+.modal-reviews-container {
+    width: rem(1032px);
+    display: flex;
+    height: rem(629px);
+
+    .modal-reviews-list {
+        padding-inline: rem(8px);
+        overflow: auto;
+        width: rem(605px);
+
+        .review-search {
+            margin-top: rem(8px);
+            background-color: #f7f7f7;
+            height: rem(44px);
+            width: rem(557px);
+            box-shadow: inset 0 0 0 1px #B0B0B0;
+            border-radius: rem(100px);
+            display: flex;
+            align-items: center;
+            padding-left: 1rem;
+            margin-block-end: 1rem;
+
+            &:focus-within {
+                box-shadow: inset 0 0 0 2px #222222;
+                /* Change to your desired focus color */
+            }
+
+            button {
+                border: none;
+                background-color: #DDDDDD;
+                border-radius: 50%;
+                width: rem(20px);
+                height: rem(20px);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-inline-end: 1rem;
+
+                &:hover {
+                    background-color: #B0B0B0;
+                }
+
+                img {
+                    margin: 0;
+                    width: rem(10px);
+                    height: rem(10px);
+                }
+            }
+
+
+            img {
+                width: rem(16px);
+                height: rem(16px);
+                margin-inline-end: rem(5px);
+            }
+
+            input {
+                width: rem(497px);
+                height: rem(20px);
+                background-color: #f7f7f7;
+                border: none;
+                outline: none;
+                font-size: rem(14px);
+                font-family: Airbnb_Cereal-Book;
+
+            }
+        }
+
+        .reviews-mentioned {
+            color: #222222;
+            font-family: Airbnb_Cereal-Medium;
+            font-size: rem(14px);
+        }
+    }
+
+    .modal-reviews-score {
+        margin-top: rem(8px);
+        width: rem(426px);
+        display: flex;
+        height: rem(32px);
+        align-items: center;
+        font-size: rem(32px);
+        padding-inline: rem(24px);
+        gap: rem(12px);
+
+        img {
+            width: rem(24px);
+            height: rem(24px);
+        }
+    }
+
+    .modal-review-preview {
+
+        .modal-review-user {
+            display: flex;
+            align-items: center;
+            gap: rem(10px);
+            height: rem(42px);
+            margin-block-end: 1rem;
+
+            .review-user-details {
+                height: rem(42px);
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+
+                h3 {
+                    font-family: Airbnb_Cereal-Medium;
+                    font-weight: 400;
+                    height: rem(20px);
+                    margin-bottom: 0;
+                    font-size: 1rem;
+
+
+                }
+
+                span {
+                    height: rem(18px);
+                    font-family: Airbnb_Cereal-Book;
+                    color: #717171;
+                    font-size: rem(14px);
+                }
+            }
+        }
+
+        p {
+            font-size: rem(14px);
+            font-family: Airbnb_Cereal-Book;
+            font-weight: 100;
+            line-break: strict;
+            line-height: rem(24px);
+            margin-block-end: 2rem;
+        }
+
+        img {
+            width: rem(40px);
+            height: rem(40px);
+        }
+    }
+}

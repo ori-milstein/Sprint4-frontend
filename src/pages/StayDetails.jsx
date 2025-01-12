@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom'
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service'
 // import { loadStay, addStayMsg } from '../store/actions/stay.actions'
 import { ReviewSection } from '../cmps/ReviewSection.jsx';
+import { AppModal } from '../cmps/AppModal.jsx'
+import { useDispatch } from 'react-redux'
 
 export function StayDetails() {
   const { stayId } = useParams()
@@ -16,6 +18,7 @@ export function StayDetails() {
 
   const appModal = useSelector((storeState) => storeState.systemModule.appModal)
   const [isModalActive, setIsModalActive] = useState(false)
+  const dispatch = useDispatch()
 
   // useEffect(() => {
   //   loadStay(stayId)
@@ -59,6 +62,9 @@ export function StayDetails() {
 
   return (
     <section className="stay-details">
+      {appModal &&
+        <AppModal isModalActive={isModalActive} setIsModalActive={setIsModalActive} modalType={appModal} stay={stay} />}
+
       <Link className="back-link" to="/">
         Back to list
       </Link>
