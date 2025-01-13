@@ -22,6 +22,7 @@ export function stayReducer(state = initialState, action) {
             newState = { ...state, stays: action.stays }
             break
         case SET_STAY:
+            console.log('action stay',  action.stay )
             newState = { ...state, stay: action.stay }
             break
         case REMOVE_STAY:

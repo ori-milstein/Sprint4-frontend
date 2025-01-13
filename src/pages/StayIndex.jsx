@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
-import { useSelector } from 'react-redux'
 
 import { loadStays, addStay, updateStay, removeStay, addStayMsg } from '../store/actions/stay.actions'
 import { renderFilterBar } from '../store/actions/system.actions.js';
