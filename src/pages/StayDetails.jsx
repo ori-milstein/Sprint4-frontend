@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
 
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service'
 import { loadStay } from '../store/actions/stay.actions'
@@ -33,9 +32,6 @@ export function StayDetails() {
 
   return (
     <section className="stay-details">
-      <Link className="back-link" to="/">
-        Back to list
-      </Link>
       <div className="stay-details-header">
         <h1>{stay.name}</h1>
         <h3>

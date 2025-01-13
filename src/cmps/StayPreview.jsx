@@ -3,6 +3,8 @@ import { useState } from 'react'
 export function StayPreview({ stay }) {
     const [currentIndex, setCurrentIndex] = useState(0)
     const [isModalOpen, setIsModalOpen] = useState(false)
+    const [wishlistName, setWishlistName] = useState('')
+    const maxChars = 50
 
     function handleNext(ev) {
         ev.preventDefault()
@@ -34,6 +36,11 @@ export function StayPreview({ stay }) {
     function handleModalContentClick(ev) {
         ev.preventDefault()
         ev.stopPropagation()
+    }
+
+    function handleInputChange(ev) {
+        const value = ev.target.value.slice(0, maxChars)
+        setWishlistName(value)
     }
 
     return (
@@ -110,20 +117,36 @@ export function StayPreview({ stay }) {
                         className="modal-content"
                         onClick={handleModalContentClick}
                     >
-                        <button className="close-btn" onClick={handleModalClose}>
-                            &times;
-                        </button>
-                        <h2>Create Wishlist</h2>
+                        <div className="header-modal">
+                            <h2>Create Wishlist</h2>
+                            <button className="close-btn" onClick={handleModalClose}>
+                                &times;
+                            </button>
+                        </div>
                         <form>
-                            <input
-                                type="text"
-                                id="wishlist-name"
-                                maxLength="50"
-                                placeholder="Name"
-                            />
+                            <div class="input-wrapper">
+                                <input
+                                    type="text"
+                                    id="wishlist-name"
+                                    value={wishlistName}
+                                    onChange={handleInputChange}
+                                    placeholder="Name"
+                                />
+                                <small className="char-counter">
+                                    {wishlistName.length}/{maxChars} characters
+                                </small>
+                            </div>
                             <div className="modal-actions">
-                                <button type="button" class="clear-btn">Clear</button>
-                                <button type="submit" class="create-btn" disabled>Create</button>
+                                <button type="button" class="clear-btn" onClick={() => setWishlistName('')}>
+                                    Clear
+                                </button>
+                                <button
+                                    type="submit"
+                                    class="create-btn"
+                                    disabled={wishlistName.length === 0}
+                                >
+                                    Create
+                                </button>
                             </div>
                         </form>
                     </div>
