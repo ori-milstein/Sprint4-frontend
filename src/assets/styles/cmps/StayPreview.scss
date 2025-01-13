@@ -24,103 +24,341 @@
         .carousel-controls {
             position: absolute;
             top: 50%;
-            width: 98%;
+            width: 100%;
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            justify-content: center;
             transform: translateY(-50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
 
-            .prev-btn,
+            .prev-btn {
+                background-color: rgba(0, 0, 0, 0.5);
+                border: none;
+                color: #fff;
+                font-size: 14px;
+                padding: 8px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                left: 5%;
+
+                &:disabled {
+                    opacity: 0.5;
+                    cursor: not-allowed;
+                }
+
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.7);
+                }
+            }
+
             .next-btn {
                 background-color: rgba(0, 0, 0, 0.5);
                 border: none;
                 color: #fff;
                 font-size: 14px;
-                padding: 8px 12px;
+                padding: 8px;
                 cursor: pointer;
                 transition: background-color 0.3s ease;
-                border-radius: 5px;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                right: 5%;
+
+                &:disabled {
+                    opacity: 0.5;
+                    cursor: not-allowed;
+                }
+
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.7);
+                }
             }
         }
 
-        .wishlist-btn {
+        &:hover .carousel-controls {
+            opacity: 1;
+        }
+
+        .carousel-indicators {
             position: absolute;
-            top: 8px;
-            right: 8px;
-            background: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: black;
-            transition: all 0.3s ease;
+            bottom: 10px;
+            left: 50%;
+            display: flex;
+            gap: 5px;
+            transform: translateX(-50%);
 
-            &.wished {
-                color: red;
-            }
+            .indicator {
+                width: 8px;
+                height: 8px;
+                background-color: #e5e5e5;
+                border-radius: 50%;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
 
-            &:hover {
-                color: red;
-                transform: scale(1.1);
+                &.active {
+                    background-color: #000;
+                }
+
+                &:hover {
+                    background-color: #555;
+                }
             }
         }
     }
 
-    .info-container {
-        padding: 16px;
+    .wishlist-btn {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        color: white;
+        transition: all 0.3s ease;
 
-        .location-header {
+        &.wished {
+            color: white;
+        }
+
+        &:hover {
+            color: white;
+            transform: scale(1.1);
+        }
+    }
+}
+
+.info-container {
+    padding: 16px;
+
+    .location-header {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 4px;
+    }
+
+    .stay-name {
+        font-size: 18px;
+        font-weight: bold;
+        color: #222;
+        margin: 8px 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .stay-price {
+        font-size: 16px;
+        font-weight: bold;
+        color: black;
+        margin-bottom: 8px;
+
+        span {
             font-size: 14px;
-            color: #555;
-            margin-bottom: 4px;
-        }
-
-        .stay-name {
-            font-size: 18px;
-            font-weight: bold;
-            color: #222;
-            margin: 8px 0;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .stay-price {
-            font-size: 16px;
-            font-weight: bold;
             color: black;
-            margin-bottom: 8px;
-
-            span {
-                font-size: 14px;
-                color: black;
-                font-weight: normal;
-            }
+            font-weight: normal;
         }
+    }
 
-        .stay-rating {
+    .stay-rating {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 14px;
+        color: black;
+        margin: 8px 0;
+
+        span {
+            margin-left: 4px;
+            color: #222;
+            font-weight: bold;
+        }
+    }
+
+    .actions {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 16px;
+        background: #f9f9f9;
+        border-top: 1px solid #e5e5e5;
+
+    }
+}
+
+.wishlist-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: default;
+
+    .modal-content {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 600px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        position: relative;
+
+        .header-modal {
+            position: relative;
             display: flex;
             align-items: center;
-            gap: 5px;
-            font-size: 14px;
-            color: black;
-            margin: 8px 0;
+            justify-content: center;
+            padding: 5px;
+            margin-bottom: 30px;
 
-            span {
-                margin-left: 4px;
-                color: #222;
+            h2 {
+                margin: 0;
+                font-size: 18px;
                 font-weight: bold;
+                text-align: center;
+                color: #333;
+            }
+
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 20px;
+                width: calc(100% + 40px);
+                transform: translateX(-40px);
+                height: 1px;
+                background-color: #ccc;
             }
         }
 
-        .actions {
+        .close-btn {
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            width: 30px;
+            height: 30px;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            border-radius: 50%;
+            font-size: 25px;
+            color: #333;
+            cursor: pointer;
+
+            &:hover {
+
+                background: #e5e5e5;
+            }
+        }
+
+        form {
             display: flex;
-            justify-content: space-between;
-            padding: 8px 16px;
-            background: #f9f9f9;
-            border-top: 1px solid #e5e5e5;
+            flex-direction: column;
+            gap: 10px;
 
+            label {
+                font-size: 14px;
+                font-weight: 500;
+                color: #555;
+            }
 
-            .carousel-controls {
+            .input-wrapper {
+                position: relative;
+                width: 100%;
 
-                color: black;
+                input {
+                    padding: 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    font-size: 16px;
+                    outline: none;
+                    width: 100%;
+
+                    &:focus {
+                        border-color: black;
+                        box-shadow: 0 0 5px black;
+
+                    }
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -30px;
+                    left: 20px;
+                    width: calc(100% + 40px);
+                    transform: translateX(-40px);
+                    height: 1px;
+                    background-color: #ccc;
+                }
+            }
+
+            .char-counter {
+                font-size: 12px;
+                color: #6A6A6A;
+                text-align: right;
+                margin-top: 5px;
+            }
+
+            .modal-actions {
+                display: flex;
+                justify-content: space-between;
+                margin-top: auto;
+                padding-top: 20px;
+                align-items: center;
+
+                button {
+                    padding: 10px 20px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: background 0.3s ease;
+
+                    &.clear-btn {
+                        background: none;
+                        color: #333;
+
+                        &:hover {
+                            background: #e5e5e5;
+                        }
+                    }
+
+                    &.create-btn {
+                        background: #222222;
+                        color: #fff;
+                        opacity: 0.6;
+                        cursor: not-allowed;
+
+                        &:not(:disabled) {
+                            opacity: 1;
+                            cursor: pointer;
+
+                            &:hover {
+                                background: black;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

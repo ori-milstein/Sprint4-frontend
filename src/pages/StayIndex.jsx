@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 import { loadStays, addStay, updateStay, removeStay, addStayMsg } from '../store/actions/stay.actions'
 import { renderFilterBar } from '../store/actions/system.actions.js';
@@ -67,8 +68,6 @@ export function StayIndex() {
             showErrorMsg('Cannot update stay')
         }
     }
-
-    // if (!stays || !stays.length) return <div>Loading...</div>
 
     return (
         <main className="stay-index">
