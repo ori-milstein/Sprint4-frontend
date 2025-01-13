@@ -8,6 +8,8 @@ import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service'
 import { ReviewSection } from '../cmps/ReviewSection.jsx';
 import { AppModal } from '../cmps/AppModal.jsx'
 import { useDispatch } from 'react-redux'
+import { Amenities } from '../cmps/Amenities.jsx'
+
 
 export function StayDetails() {
   const { stayId } = useParams()
@@ -127,6 +129,8 @@ export function StayDetails() {
           <div className="stay-summary">
             <p>{stay.summary}</p>
           </div>
+          {stay.amenities &&
+            <Amenities />}
         </section>
 
         <div className="stay-reserve">
@@ -161,7 +165,8 @@ export function StayDetails() {
         </div>
       </div>
 
-      <ReviewSection stay={stay} handleShowMore={handleShowMore} isModalActive={isModalActive} />
+      {stay.reviews &&
+        <ReviewSection stay={stay} handleShowMore={handleShowMore} isModalActive={isModalActive} />}
     </section>
   )
 }
