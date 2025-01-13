@@ -68,12 +68,13 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                input{
+
+                input {
                     font-size: 14px;
                     width: max-content;
                     font-weight: 500;
-                    color:rgb(106, 106, 106);
-                    cursor:pointer;
+                    color: rgb(106, 106, 106);
+                    cursor: pointer;
                 }
             }
 
@@ -119,7 +120,7 @@
                 font: inherit;
                 color: lightgrey;
             }
-            
+
 
             .filter-action:focus {
                 outline: none;

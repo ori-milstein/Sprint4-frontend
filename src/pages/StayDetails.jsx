@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
@@ -25,21 +25,7 @@ export function StayDetails() {
   // }, [stayId])
 
   useEffect(() => {
-    async function fetchStay() {
-      try {
-        const response = await fetch('/data/stays.json')
-        if (!response.ok) throw new Error('Failed to fetch stays')
-        const stays = await response.json()
-        const foundStay = stays.find(stay => stay._id === stayId)
-        if (!foundStay) throw new Error('Stay not found')
-        setStay(foundStay)
-      } catch (err) {
-        setError(err.message)
-      } finally {
-        setIsLoading(false)
-      }
-    }
-    fetchStay();
+    loadStay(stayId)
   }, [stayId])
 
   function handleShowMore(modalType) {
@@ -57,8 +43,13 @@ export function StayDetails() {
     }
   }
 
-  if (isLoading) return <div>Loading...</div>
-  if (error) return <div>Error: {error}</div>
+  if (!stay) {
+    return (
+      <section className="stay-details">
+        <p>Loading stay details...</p>
+      </section>
+    )
+  }
 
   return (
     <section className="stay-details">

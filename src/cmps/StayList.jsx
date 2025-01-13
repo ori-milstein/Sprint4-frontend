@@ -12,7 +12,7 @@ export function StayList({ stays, onRemoveStay, onUpdateStay, onToggleWishlist }
         return stay.owner?._id === user._id
     }
 
-    if (!stays || !stays.length) return <div>No stays found</div>
+    if (!stays || !stays.length) return <div>Loading...</div>
 
     return <section >
         <ul className="stay-list">
