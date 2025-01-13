@@ -113,8 +113,6 @@
         flex-direction: row;
     }
 
-    .details-content {}
-
     h2 {
         margin: 0;
 
@@ -300,4 +298,12 @@
     font-weight: 500;
     line-height: 1.25rem;
     letter-spacing: normal;
+}
+
+.small-text {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.125rem;
+    letter-spacing: normal;
+    color: $weaker-writing-color;
 }
