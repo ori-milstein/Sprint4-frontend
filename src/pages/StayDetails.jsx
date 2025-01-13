@@ -13,8 +13,7 @@ import { Amenities } from '../cmps/Amenities.jsx'
 
 export function StayDetails() {
   const { stayId } = useParams()
-  const [stay, setStay] = useState(null)
-  // const stay = useSelector(storeState => storeState.stayModule.stay)
+  const stay = useSelector(storeState => storeState.stayModule.stay)
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null)
 
