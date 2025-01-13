@@ -116,7 +116,7 @@ export function StayDetails() {
             <p>{stay.summary}</p>
           </div>
           {stay.amenities &&
-            <Amenities />}
+            <Amenities stay={stay} />}
         </section>
 
         <div className="stay-reserve">

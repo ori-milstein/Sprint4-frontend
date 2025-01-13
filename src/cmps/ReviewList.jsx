@@ -1,3 +1,4 @@
+import { makeId } from "../services/util.service.js";
 export function ReviewList({ stay, onRemoveReview, isModalActive }) {
     const reviews = (isModalActive) ? stay.reviews : stay.reviews.slice(0, 6)
 
@@ -11,7 +12,7 @@ export function ReviewList({ stay, onRemoveReview, isModalActive }) {
                 const yearsAgo = thisYear - reviewYear
 
                 return (
-                    <section className='stay-review-preview' key={idx}>
+                    <section className='stay-review-preview' key={makeId()}>
 
                         <article className="review-user">
                             <section className="review-img-container">
