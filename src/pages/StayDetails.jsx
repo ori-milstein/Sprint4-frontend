@@ -65,15 +65,8 @@ export function StayDetails() {
       {appModal &&
         <AppModal isModalActive={isModalActive} setIsModalActive={setIsModalActive} modalType={appModal} stay={stay} />}
 
-      <Link className="back-link" to="/">
-        Back to list
-      </Link>
-      <div className="stay-details-header">
-        <h1>{stay.name}</h1>
-        <h3>
-          {stay.loc.city}, {stay.loc.country}
-        </h3>
-      </div>
+      <h1 className="stay-details-header">{stay.name}</h1>
+
       <div className="stay-images">
         {/* Main image */}
         <img
@@ -107,50 +100,67 @@ export function StayDetails() {
         </div>
       </div>
       <div className="stay-details-info">
-        <div className="stay-summary">
-          <h4>${stay.price} / night</h4>
-          <p>{stay.summary}</p>
-        </div>
-        <div className="stay-host">
-          <p>
-            <strong>Hosted by:</strong> {stay.host.fullname}
-          </p>
-          <p>
-            <strong>Check-in:</strong> Self Check-in available
-          </p>
-          <button onClick={onAddStayMsg}>Add Stay Message</button>
+        <section className='details-content'>
+
+          <section className='subtitles'>
+            <h2 className='subtitle'>
+              {stay.roomType} in {stay.loc.city}, {stay.loc.country}
+            </h2>
+            <h3 className='regular-text'>
+              {stay.capacity} guests
+            </h3>
+            <h4 className='bold-text reviews-summary'>
+              <img src='../../src/assets/assets/icons/general icons/asset 158.svg' />
+              {stay.reviews.length ? '5.0' : 'New'} · {stay.reviews.length} <a href="" className='nostyle underline'>reviews</a></h4>
+          </section>
+
+          <div className="stay-host">
+            <p>
+              <strong>Hosted by:</strong> {stay.host.fullname}
+            </p>
+            <p>
+              <strong>Check-in:</strong> Self Check-in available
+            </p>
+            <button onClick={onAddStayMsg}>Add Stay Message</button>
+          </div>
+
+          <div className="stay-summary">
+            <p>{stay.summary}</p>
+          </div>
+        </section>
+
+        <div className="stay-reserve">
+          <h2>₪{stay.price} <span>/ night</span></h2>
+          <div className="stay-reserve-dates">
+            <div>
+              <label>Check-in</label>
+              <input type="date" />
+            </div>
+            <div>
+              <label>Checkout</label>
+              <input type="date" />
+            </div>
+          </div>
+          <div className="stay-reserve-guests">
+            <label>Guests</label>
+            <select>
+              <option value="1">1 guest</option>
+              <option value="2">2 guests</option>
+              <option value="3">3 guests</option>
+            </select>
+          </div>
+          <button className="reserve-btn">Reserve</button>
+          <p>You won't be charged yet</p>
+          <div className="stay-reserve-summary">
+            <p>₪{stay.price} x 5 nights</p>
+            <p>₪{stay.price * 5}</p>
+            <hr />
+            <p>Total</p>
+            <p>₪{stay.price * 5}</p>
+          </div>
         </div>
       </div>
-      <div className="stay-reserve">
-        <h2>₪{stay.price} <span>/ night</span></h2>
-        <div className="stay-reserve-dates">
-          <div>
-            <label>Check-in</label>
-            <input type="date" />
-          </div>
-          <div>
-            <label>Checkout</label>
-            <input type="date" />
-          </div>
-        </div>
-        <div className="stay-reserve-guests">
-          <label>Guests</label>
-          <select>
-            <option value="1">1 guest</option>
-            <option value="2">2 guests</option>
-            <option value="3">3 guests</option>
-          </select>
-        </div>
-        <button className="reserve-btn">Reserve</button>
-        <p>You won't be charged yet</p>
-        <div className="stay-reserve-summary">
-          <p>₪{stay.price} x 5 nights</p>
-          <p>₪{stay.price * 5}</p>
-          <hr />
-          <p>Total</p>
-          <p>₪{stay.price * 5}</p>
-        </div>
-      </div>
+
       <ReviewSection stay={stay} handleShowMore={handleShowMore} isModalActive={isModalActive} />
     </section>
   )
