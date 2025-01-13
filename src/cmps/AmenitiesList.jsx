@@ -22,13 +22,15 @@ export function AmenitiesList({ stay, isModalActive }) {
         "Fire extinguisher",
     ]
 
-    const amenities = (isModalActive) ? amenitiesWithIcon : amenitiesWithIcon.slice(0, 10)
+    let amenitiesToRender = stay.amenities.filter(amenity => amenitiesWithIcon.includes(amenity))
+
+    amenitiesToRender = (isModalActive) ? amenitiesToRender : amenitiesToRender.slice(0, 10)
 
 
     return (
         <div className="amenities-list">
             <ul>
-                {amenities.map((amenity) => {
+                {amenitiesToRender.map((amenity) => {
                     return (
                         <li key={makeId()} className="amenity">
 
