@@ -19,7 +19,7 @@ export function AppHeader({ isHomepage }) {
 	const filterBy = useSelector((storeState) => storeState.stayModule.filterBy)
 	const stay = useSelector(storeState => storeState.stayModule.stay)
 
-	const [isExpanded, setIsExpanded] = useState(true)
+	const [isExpanded, setIsExpanded] = useState(false)
 	const [isAuthMenuOpen, setIsAuthMenuOpen] = useState(false)
 	const [isLoginSignupOpen, setIsLoginSignupOpen] = useState({ isOpen: false, action: null })
 	const [inputModal, setInputModal] = useState(null)
@@ -77,12 +77,12 @@ export function AppHeader({ isHomepage }) {
 	return (
 		<>
 			<div className="headers">
+				{isLoginSignupOpen.isOpen && <div className="modal-backdrop"></div>}
+
 				<header
 					className={`app-header full`}
 					onClick={isMenuOpen}
 				>
-					{isLoginSignupOpen.isOpen && <div className="modal-backdrop"></div>}
-
 					<nav className={`${isExpanded ? 'expand' : ''}`}>
 						<NavLink to="/" className="logo">
 							<Logo />
@@ -107,7 +107,10 @@ export function AppHeader({ isHomepage }) {
 					</nav>
 
 				</header >
-				<StayFilter></StayFilter>
+				{!isExpanded && isHomepage && (
+					<StayFilter />
+				)}
+
 			</div>
 			{inputModal && isExpanded && (
 				<>
