@@ -304,6 +304,7 @@
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.25rem;
+    color: $main-writing-color;
 }
 
 .bold-text {
@@ -311,6 +312,7 @@
     font-weight: 500;
     line-height: 1.25rem;
     letter-spacing: normal;
+    color: $main-writing-color;
 }
 
 .small-text {
@@ -319,4 +321,20 @@
     line-height: 1.125rem;
     letter-spacing: normal;
     color: $weaker-writing-color;
+}
+
+.regular-white-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: rem(48px);
+    background-color: white;
+    border: 1px solid #222222;
+    border-radius: rem(8px);
+    width: rem(192px);
+    font-size: rem(16px);
+    font-weight: 500;
+    color: $main-writing-color;
+    letter-spacing: normal;
+    cursor: pointer;
 }

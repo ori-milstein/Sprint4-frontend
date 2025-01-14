@@ -1,5 +1,9 @@
-.amenities .subtitle {
-    margin-bottom: 24px;
+.amenities {
+    margin-block: 48px;
+
+    .subtitle {
+        margin-bottom: 24px;
+    }
 }
 
 .amenities-list ul {
