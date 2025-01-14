@@ -1,5 +1,4 @@
-import { Link, NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { Link, NavLink, useNavigate, useLocation } from 'react-router-dom'; import { useSelector } from 'react-redux';
 import Logo from './Logo';
 import { HeaderFilter } from './HeaderFilter';
 import { useState } from 'react';
@@ -15,6 +14,9 @@ import { StayFilter } from './StayFilter';
 
 
 export function AppHeader({ isHomepage }) {
+	const navigate = useNavigate()
+	const location = useLocation()
+
 	const user = useSelector((storeState) => storeState.userModule.user);
 	const filterBy = useSelector((storeState) => storeState.stayModule.filterBy)
 	const stay = useSelector(storeState => storeState.stayModule.stay)
@@ -66,24 +68,31 @@ export function AppHeader({ isHomepage }) {
 
 	function onSearchFromHeader(ev) {
 		ev.preventDefault()
+
 		const filterByToUpdate = {
 			txt: where,
 			minCapacity: 0
 		}
+
+		setIsExpanded(false)
 		setInputModal(null)
 		setFiterBy(filterByToUpdate)
+
+		if (location.pathname.includes('stay')) {
+			navigate('/')
+		}
 	}
 
 	return (
 		<>
 			<div className="headers">
-				{isLoginSignupOpen.isOpen && <div className="modal-backdrop"></div>}
+				{isLoginSignupOpen.isOpen && <div className="modal-backdrop" />}
 
 				<header
 					className={`app-header full`}
 					onClick={isMenuOpen}
 				>
-					<nav className={`${isExpanded ? 'expand' : ''}`}>
+					<nav className={`${isExpanded ? 'expand' : ''} ${!isHomepage ? 'in-stay-details' : ''}`}>
 						<NavLink to="/" className="logo">
 							<Logo />
 							<h1>airbnb</h1>
