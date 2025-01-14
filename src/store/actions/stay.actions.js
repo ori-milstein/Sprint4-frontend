@@ -43,6 +43,17 @@ export async function addStay(stay) {
         throw err
     }
 }
+export async function clearStay() {
+    try {
+        const clearedStay = { stay: null }
+        const savedStay = await stayService.save(clearedStay)
+        store.dispatch(getCmdSetStay(savedStay))
+        return savedStay
+    } catch (err) {
+        console.error('Cannot clear stay', err);
+        throw err
+    }
+}
 
 export async function updateStay(stay) {
     try {
@@ -112,9 +123,9 @@ function getCmdAddStayMsg(msg) {
         msg
     }
 }
-function setFilterBy(filterBy){
+function setFilterBy(filterBy) {
     return {
-        type:SET_FILTER_BY,
+        type: SET_FILTER_BY,
         filterBy
     }
 }

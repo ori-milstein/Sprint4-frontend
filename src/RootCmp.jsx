@@ -23,14 +23,9 @@ export function RootCmp() {
 
     return (
         <div className="main-container">
-            <section className="headers">
-                <AppHeader/>
-                {isHomePage && <StayFilter/>}
-            </section>
-            <UserMsg />
             <main>
                 <Routes>
-                    <Route path="/" element={<StayIndex/>} />
+                    <Route path="/" element={<StayIndex />} />
                     <Route path="stay/:stayId" element={<StayDetails />} />
                     <Route path="user/:id" element={<UserDetails />} />
                     <Route path="review" element={<ReviewIndex />} />
