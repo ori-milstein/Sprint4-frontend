@@ -158,7 +158,11 @@
 
             &::after {
                 opacity: 1;
-                background-color: $border-color;
+                background-color: $main-writing-color;
+            }
+
+            img {
+                filter: none;
             }
         }
 
