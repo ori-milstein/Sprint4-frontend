@@ -9,6 +9,7 @@ import { ChatApp } from './pages/Chat.jsx'
 import { AdminIndex } from './pages/AdminIndex.jsx'
 
 import { StayDetails } from './pages/StayDetails'
+import { PhotosPage } from './pages/PhotosPage'
 import { UserDetails } from './pages/UserDetails'
 
 import { AppHeader } from './cmps/AppHeader'
@@ -24,14 +25,15 @@ export function RootCmp() {
     return (
         <div className="main-container">
             <section className="headers">
-                <AppHeader/>
-                {isHomePage && <StayFilter/>}
+                <AppHeader />
+                {isHomePage && <StayFilter />}
             </section>
             <UserMsg />
             <main>
                 <Routes>
-                    <Route path="/" element={<StayIndex/>} />
+                    <Route path="/" element={<StayIndex />} />
                     <Route path="stay/:stayId" element={<StayDetails />} />
+                    <Route path="/photos" element={<PhotosPage />} />
                     <Route path="user/:id" element={<UserDetails />} />
                     <Route path="review" element={<ReviewIndex />} />
                     <Route path="chat" element={<ChatApp />} />

@@ -1,0 +1,51 @@
+.photo-gallery-page {
+    padding: 20px;
+    text-align: center;
+
+    .back-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        padding: 10px 15px;
+        background-color: #ffffff;
+        border: none;
+        border-radius: 50%;
+        font-size: 16px;
+        left: 20px;
+        top: 20px;
+        color: #333;
+        cursor: pointer;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+
+        &:hover {
+            background-color: #eaeaea;
+        }
+
+        img {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+
+    .photo-gallery-title {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #333;
+    }
+
+    .photo-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
+
+        .photo-item {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+    }
+}
