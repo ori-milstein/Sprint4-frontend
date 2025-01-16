@@ -21,10 +21,15 @@ export function PhotosPage() {
                     alt="Back"
                 />
             </button>
-            <h1 className="photo-gallery-title"></h1>
+            {/* <h1 className="photo-gallery-title"></h1> */}
             <div className="photo-gallery">
                 {imgUrls.map((url, index) => (
-                    <img key={index} src={url} alt={`Photo ${index + 1}`} className="photo-item" />
+                    <img
+                        key={index}
+                        src={url}
+                        alt={`Photo ${index + 1}`}
+                        className={`photo-item div${(index % 5) + 1}`}
+                    />
                 ))}
             </div>
         </div>

@@ -34,6 +34,9 @@
             max-height: 100%;
             object-fit: cover;
 
+            &:hover {
+                filter: brightness(90%);
+            }
         }
 
         .main-image {

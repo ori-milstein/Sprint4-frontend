@@ -3,15 +3,16 @@
     text-align: center;
 
     .back-btn {
-        display: inline-flex;
+        display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 20px;
-        padding: 10px 15px;
         background-color: #ffffff;
         border: none;
+        margin-bottom: 30px;
         border-radius: 50%;
         font-size: 16px;
+        height: 30px;
+        width: 30px;
         left: 20px;
         top: 20px;
         color: #333;
@@ -25,27 +26,58 @@
         img {
             width: 16px;
             height: 16px;
+            margin-left: 3px;
+            display: block;
         }
-    }
-
-
-    .photo-gallery-title {
-        margin-bottom: 20px;
-        font-size: 24px;
-        color: #333;
     }
 
     .photo-gallery {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 10px;
+        grid-template-columns: repeat(6, 1fr);
+        // grid-template-rows: repeat(8, 1fr);
+        grid-template-rows: auto auto auto;
+        align-items: center;
+        gap: 8px;
 
         .photo-item {
+            object-fit: cover;
             width: 100%;
-            height: auto;
-            border-radius: 5px;
+            height: 100%;
             cursor: pointer;
 
+            &:hover {
+                filter: brightness(90%);
+            }
+        }
+
+        .div1 {
+            grid-column: span 2 / span 2;
+            grid-row: span 2 / span 2;
+            grid-column-start: 3;
+        }
+
+        .div2 {
+            grid-row: span 2 / span 2;
+            grid-column-start: 3;
+            grid-row-start: 3;
+        }
+
+        .div3 {
+            grid-row: span 2 / span 2;
+            grid-column-start: 4;
+            grid-row-start: 3;
+        }
+
+        .div4 {
+            grid-row: span 2 / span 2;
+            grid-column-start: 3;
+            grid-row-start: 5;
+        }
+
+        .div5 {
+            grid-row: span 2 / span 2;
+            grid-column-start: 4;
+            grid-row-start: 5;
         }
     }
 }
