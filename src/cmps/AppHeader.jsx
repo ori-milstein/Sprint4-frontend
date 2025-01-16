@@ -1,5 +1,4 @@
-import { Link, NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { Link, NavLink, useNavigate, useLocation } from 'react-router-dom'; import { useSelector } from 'react-redux';
 import Logo from './Logo';
 import { HeaderFilter } from './HeaderFilter';
 import { useState } from 'react';
@@ -11,13 +10,18 @@ import { DatePickerCmp } from './DatePickerCmp';
 import { SuggestedLocations } from './SuggestedLocations';
 import { GuestSelector } from './GuestSelector';
 import { setFiterBy } from '../store/actions/stay.actions';
+import { StayFilter } from './StayFilter';
 
 
-export function AppHeader() {
+export function AppHeader({ isHomepage }) {
+	const navigate = useNavigate()
+	const location = useLocation()
+
 	const user = useSelector((storeState) => storeState.userModule.user);
 	const filterBy = useSelector((storeState) => storeState.stayModule.filterBy)
+	const stay = useSelector(storeState => storeState.stayModule.stay)
 
-	const [isExpanded, setIsExpanded] = useState(true)
+	const [isExpanded, setIsExpanded] = useState(false)
 	const [isAuthMenuOpen, setIsAuthMenuOpen] = useState(false)
 	const [isLoginSignupOpen, setIsLoginSignupOpen] = useState({ isOpen: false, action: null })
 	const [inputModal, setInputModal] = useState(null)
@@ -25,10 +29,10 @@ export function AppHeader() {
 	const [checkInDate, setCheckInDate] = useState('')
 	const [checkOutDate, setCheckOutDate] = useState('')
 	const [guests, setGuests] = useState({ adults: 0, children: 0, infants: 0, pets: 0 })
-	const [where, setWhere] = useState('');
+	const [where, setWhere] = useState('')
 
 	function onToggleMenu() {
-		setIsAuthMenuOpen(!isAuthMenuOpen);
+		setIsAuthMenuOpen(!isAuthMenuOpen)
 	}
 
 	function isMenuOpen() {
@@ -64,42 +68,59 @@ export function AppHeader() {
 
 	function onSearchFromHeader(ev) {
 		ev.preventDefault()
+
 		const filterByToUpdate = {
 			txt: where,
 			minCapacity: 0
 		}
+
+		setIsExpanded(false)
 		setInputModal(null)
 		setFiterBy(filterByToUpdate)
+
+		if (location.pathname.includes('stay')) {
+			navigate('/')
+		}
 	}
 
 	return (
 		<>
-			<header className="app-header full" onClick={isMenuOpen}>
-				{isLoginSignupOpen.isOpen && <div className="modal-backdrop"></div>}
+			<div className="headers">
+				{isLoginSignupOpen.isOpen && <div className="modal-backdrop" />}
 
-				<nav className={isExpanded ? 'expand' : ''}>
-					<NavLink to="/" className="logo">
-						<Logo />
-						<h1>airbnb</h1>
-					</NavLink>
-					<HeaderFilter
-						isExpanded={isExpanded}
-						setIsExpanded={setIsExpanded}
-						toggleIsFilterOpen={toggleIsFilterOpen}
-						checkInDate={checkInDate}
-						checkOutDate={checkOutDate}
-						guests={guests}
-						where={where}
-						setWhere={setWhere}
-						onSearchFromHeader={onSearchFromHeader}
-					/>
-					{!isLoginSignupOpen.isOpen && <HeaderUserControls onToggleMenu={onToggleMenu} />}
-					{isAuthMenuOpen && <HeaderAuthMenu onToggleLoginSignupDialog={onToggleLoginSignupDialog} />}
-					{isLoginSignupOpen.isOpen && (
-						<LoginSignup isLoginSignupOpen={isLoginSignupOpen} setIsLoginSignupOpen={setIsLoginSignupOpen} />
-					)}
-				</nav>
-			</header>
+				<header
+					className={`app-header full`}
+					onClick={isMenuOpen}
+				>
+					<nav className={`${isExpanded ? 'expand' : ''} ${!isHomepage ? 'in-stay-details' : ''}`}>
+						<NavLink to="/" className="logo">
+							<Logo />
+							<h1>airbnb</h1>
+						</NavLink>
+						<HeaderFilter
+							isExpanded={isExpanded}
+							setIsExpanded={setIsExpanded}
+							toggleIsFilterOpen={toggleIsFilterOpen}
+							checkInDate={checkInDate}
+							checkOutDate={checkOutDate}
+							guests={guests}
+							where={where}
+							setWhere={setWhere}
+							onSearchFromHeader={onSearchFromHeader}
+						/>
+						{!isLoginSignupOpen.isOpen && <HeaderUserControls onToggleMenu={onToggleMenu} />}
+						{isAuthMenuOpen && <HeaderAuthMenu onToggleLoginSignupDialog={onToggleLoginSignupDialog} />}
+						{isLoginSignupOpen.isOpen && (
+							<LoginSignup isLoginSignupOpen={isLoginSignupOpen} setIsLoginSignupOpen={setIsLoginSignupOpen} />
+						)}
+					</nav>
+
+				</header >
+				{!isExpanded && isHomepage && (
+					<StayFilter />
+				)}
+
+			</div>
 			{inputModal && isExpanded && (
 				<>
 					{inputModal === 'date-picker' && (
@@ -130,8 +151,8 @@ export function AppHeader() {
 						</GenericCmp>
 					)}
 				</>
-			)}
-
+			)
+			}
 		</>
 	);
 }
