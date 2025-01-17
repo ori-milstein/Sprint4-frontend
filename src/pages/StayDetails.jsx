@@ -10,6 +10,7 @@ import { ReviewSection } from '../cmps/ReviewSection.jsx';
 import { AppModal } from '../cmps/AppModal.jsx'
 import { useDispatch } from 'react-redux'
 import { Amenities } from '../cmps/Amenities.jsx'
+import { Reserve } from '../cmps/Reserve.jsx'
 
 
 export function StayDetails() {
@@ -123,36 +124,7 @@ export function StayDetails() {
           </section>
 
           <div className="stay-reserve-container">
-            <div className="stay-reserve">
-              <h2>₪{stay.price} <span> night</span></h2>
-              <div className="stay-reserve-dates">
-                <div>
-                  <label>Check-in</label>
-                  <input type="date" />
-                </div>
-                <div>
-                  <label>Checkout</label>
-                  <input type="date" />
-                </div>
-              </div>
-              <div className="stay-reserve-guests">
-                <label>Guests</label>
-                <select>
-                  <option value="1">1 guest</option>
-                  <option value="2">2 guests</option>
-                  <option value="3">3 guests</option>
-                </select>
-              </div>
-              <button className="reserve-btn">Reserve</button>
-              <p>You won't be charged yet</p>
-              <div className="stay-reserve-summary">
-                <p>₪{stay.price} x 5 nights</p>
-                <p>₪{stay.price * 5}</p>
-                <hr />
-                <p>Total</p>
-                <p>₪{stay.price * 5}</p>
-              </div>
-            </div>
+              <Reserve/>
           </div>
         </div>
 
