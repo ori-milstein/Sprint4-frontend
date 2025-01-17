@@ -63,6 +63,9 @@ export function PhotosPage() {
                     <button className="close-btn" onClick={closeModal}>
                         <span>X</span> Close
                     </button>
+                    <div className="image-counter">
+                        {currentImageIndex + 1} / {imgUrls.length}
+                    </div>
                     <div className="modal-content">
                         <img
                             src={imgUrls[currentImageIndex]}
@@ -70,10 +73,20 @@ export function PhotosPage() {
                         />
                     </div>
                     <button className="navigation prev" onClick={navigatePrev}>
-                        &#8249; {/* Left arrow */}
+                        {/* Left arrow */}
+                        <img
+                            src="/src/assets/icons/chevron_left_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
+                            className="icon"
+                            alt="Left arrow"
+                        />
                     </button>
                     <button className="navigation next" onClick={navigateNext}>
-                        &#8250; {/* Right arrow */}
+                        {/* Right arrow */}
+                        <img
+                            src="/src/assets/icons/chevron_right_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
+                            className="icon"
+                            alt="Right arrow"
+                        />
                     </button>
                 </div>
             )}
