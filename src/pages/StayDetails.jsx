@@ -130,7 +130,7 @@ export function StayDetails() {
           </div>
         </div>
         <DetailsMap />
-        {stay.reviews &&
+        {stay.reviews.length > 0 &&
           <ReviewSection stay={stay} handleShowMore={handleShowMore} isModalActive={isModalActive} setReviewIdxToScroll={setReviewIdxToScroll} />}
       </section>
     </>
