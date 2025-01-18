@@ -1,23 +1,36 @@
+import { useState } from 'react'
+import DatePicker from 'react-datepicker'
 import { useSelector } from 'react-redux'
+import { DatePickerCmp } from './DatePickerCmp'
 
 export function Reserve() {
     const stay = useSelector(storeState => storeState.stayModule.stay)
+    const [isDatePickerOpen, setIsDatePickerOpen] = useState(false)
+
+    function toggleIsDatePickerOpen() {
+        setIsDatePickerOpen(!isDatePickerOpen)
+    }
 
     return (
         < div className="stay-reserve" >
             <h2>₪{stay.price} <span> night</span></h2>
             <div className="stay-reserve-dates">
-                <div className='check-in-container'>
+                {isDatePickerOpen && <div className="date-picker-reserve-container">
+                    <DatePickerCmp />
+                    <button className="close" onClick={toggleIsDatePickerOpen}>Close</button>
+                </div>}
+                <div className={`check-in-container ${isDatePickerOpen ? 'open' : ''}`} onClick={toggleIsDatePickerOpen}>
                     <label className='reserve-labels'>CHECK-IN</label>
-                    <div className="checkin-date"></div>
+                    <div className="checkin-date info-date">Add date</div>
+
                 </div>
-                <div className='check-out-container'>
+                <div className={`check-out-container ${isDatePickerOpen ? 'open' : ''}`} onClick={toggleIsDatePickerOpen}>
                     <label className='reserve-labels'>CHECKOUT</label>
-                    <div className="checkout-date"></div>
+                    <div className="checkout-date  info-date">Add date</div>
                 </div>
                 <div className="stay-reserve-guests">
                     <label className='reserve-labels'>GUESTS</label>
-                    <div className="guests-number"></div>
+                    <div className="guests-number">{stay.capacity}</div>
                 </div>
             </div>
             <button className="reserve-btn">Reserve</button>
