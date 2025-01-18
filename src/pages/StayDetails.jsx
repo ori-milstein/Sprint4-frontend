@@ -11,6 +11,7 @@ import { AppModal } from '../cmps/AppModal.jsx'
 import { useDispatch } from 'react-redux'
 import { Amenities } from '../cmps/Amenities.jsx'
 import { Reserve } from '../cmps/Reserve.jsx'
+import { DetailsMap } from '../cmps/DetailsMap.tsx'
 
 
 export function StayDetails() {
@@ -125,10 +126,10 @@ export function StayDetails() {
           </section>
 
           <div className="stay-reserve-container">
-              <Reserve/>
+            <Reserve />
           </div>
         </div>
-
+        <DetailsMap />
         {stay.reviews &&
           <ReviewSection stay={stay} handleShowMore={handleShowMore} isModalActive={isModalActive} setReviewIdxToScroll={setReviewIdxToScroll} />}
       </section>
