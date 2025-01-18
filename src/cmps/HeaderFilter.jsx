@@ -1,9 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
 
-export function HeaderFilter({ isExpanded, setIsExpanded, toggleIsFilterOpen, checkInDate, checkOutDate, guests, where, setWhere, onSearchFromHeader }) {
+export function HeaderFilter({ isExpanded, setIsExpanded, toggleIsFilterOpen, checkInDate, checkOutDate, guests, where, setWhere, isHomepage, onSearchFromHeader }) {
     const isClicking = useRef(false)
     const stay = useSelector(storeState => storeState.stayModule.stay)
+    const filterBy = useSelector((storeState) => storeState.stayModule.filterBy)
 
     useEffect(() => {
         // Scroll event handler
@@ -40,7 +41,7 @@ export function HeaderFilter({ isExpanded, setIsExpanded, toggleIsFilterOpen, ch
     function handleWhereClick() {
         setWhere('')
     }
-    
+
     function formatDate(date) {
         if (!date) return
         return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
@@ -123,13 +124,17 @@ export function HeaderFilter({ isExpanded, setIsExpanded, toggleIsFilterOpen, ch
                         onClick={handleClick}
                     >
                         <div className="filter-action-container short anywhere">
-                            <label className="filter-label"> {stay ? `${stay.loc.city}, ${stay.loc.country}` : "Anywhere"}</label>
+                            <label className="filter-label">
+                                {!isHomepage && `${stay?.loc.city}, ${stay?.loc.country}` || filterBy?.txt || 'Anywhere'}
+                            </label>
                         </div>
                         <div className="filter-action-container short anyweek">
                             <label className="filter-label">Any week</label>
                         </div>
                         <div className="filter-action-container short who">
-                            <label className="filter-label add-guests">Add guests</label>
+                            <label className="filter-label add-guests">
+                            { filterBy?.minCapacity + ' guests' || 'Add guests'}
+                            </label>
                         </div>
                         <button className="filter-search short-btn">
                             <svg
