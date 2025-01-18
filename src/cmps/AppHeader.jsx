@@ -68,20 +68,23 @@ export function AppHeader({ isHomepage }) {
 
 	function onSearchFromHeader(ev) {
 		ev.preventDefault()
-
+	
 		const filterByToUpdate = {
 			txt: where,
-			minCapacity: 0
+			minCapacity: 0,
+			checkInDate,
+			checkOutDate
 		}
-
+	
 		setIsExpanded(false)
 		setInputModal(null)
 		setFiterBy(filterByToUpdate)
-
+	
 		if (location.pathname.includes('stay')) {
 			navigate('/')
 		}
 	}
+	
 
 	return (
 		<>
