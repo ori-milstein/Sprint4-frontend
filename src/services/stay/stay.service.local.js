@@ -300,10 +300,7 @@ function _createStays() {
             ],
             "likedByUsers": [],
             "labels": [
-                "Bed & breakfasts",
-                "Icons",
-                "Countryside",
-                "Castles"
+                "Islands"
             ],
             "equipment": {
                 "bedsNum": 3,
@@ -427,10 +424,7 @@ function _createStays() {
             ],
             "likedByUsers": [],
             "labels": [
-                "Icons",
-                "Islands",
-                "Treehouses",
-                "Tiny homes"
+                "Amazing views"
             ],
             "equipment": {
                 "bedsNum": 1,
@@ -751,10 +745,7 @@ function _createStays() {
             ],
             "likedByUsers": [],
             "labels": [
-                "Mansions",
-                "Off-the-grid",
-                "Treehouses",
-                "Design"
+                "Desert"
             ],
             "equipment": {
                 "bedsNum": 3,
@@ -1055,10 +1046,7 @@ function _createStays() {
             ],
             "likedByUsers": [],
             "labels": [
-                "Beachfront",
-                "Islands",
-                "Design",
-                "Countryside"
+                "Design"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -1156,10 +1144,7 @@ function _createStays() {
             ],
             "likedByUsers": [],
             "labels": [
-                "Mansions",
-                "Tiny homes",
-                "Countryside",
-                "Beachfront"
+                "Farms"
             ],
             "equipment": {
                 "bedsNum": 1,
@@ -1450,10 +1435,7 @@ function _createStays() {
             ],
             "likedByUsers": [],
             "labels": [
-                "Luxe",
-                "Mansions",
-                "Trending",
-                "Farms"
+                "Off-the-grid"
             ],
             "equipment": {
                 "bedsNum": 3,
@@ -1753,10 +1735,7 @@ function _createStays() {
             ],
             "likedByUsers": [],
             "labels": [
-                "Bed & breakfasts",
-                "Castles",
-                "Luxe",
-                "OMG!"
+                "Trending"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -2060,10 +2039,7 @@ function _createStays() {
             ],
             "likedByUsers": [],
             "labels": [
-                "Countryside",
-                "Desert",
-                "Off-the-grid",
-                "OMG!"
+                "Treehouses"
             ],
             "equipment": {
                 "bedsNum": 1,
@@ -2198,10 +2174,7 @@ function _createStays() {
             ],
             "likedByUsers": [],
             "labels": [
-                "Off-the-grid",
-                "Treehouses",
-                "Bed & breakfasts",
-                "Islands"
+                "Tiny homes"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -2501,10 +2474,7 @@ function _createStays() {
             ],
             "likedByUsers": [],
             "labels": [
-                "Countryside",
-                "Amazing pools",
-                "Mansions",
-                "Beachfront"
+                "Amazing pools"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -2564,10 +2534,7 @@ function _createStays() {
             "reviews": [],
             "likedByUsers": [],
             "labels": [
-                "Trending",
-                "Mansions",
-                "Icons",
-                "Beachfront"
+                "Amazing pools"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -2627,10 +2594,7 @@ function _createStays() {
             "reviews": [],
             "likedByUsers": [],
             "labels": [
-                "Off-the-grid",
-                "Tiny homes",
-                "Beachfront",
-                "Farms"
+                "Trending"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -2694,10 +2658,7 @@ function _createStays() {
             "reviews": [],
             "likedByUsers": [],
             "labels": [
-                "Amazing views",
-                "Design",
-                "Lakefront",
-                "Treehouses"
+                "Bed & breakfasts"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -2769,10 +2730,7 @@ function _createStays() {
             "reviews": [],
             "likedByUsers": [],
             "labels": [
-                "OMG!",
-                "Desert",
-                "Design",
-                "Mansions"
+                "Design"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -2840,10 +2798,7 @@ function _createStays() {
             "reviews": [],
             "likedByUsers": [],
             "labels": [
-                "Islands",
-                "Farms",
-                "Countryside",
-                "Cabins"
+                "Trending"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -2911,10 +2866,7 @@ function _createStays() {
             "reviews": [],
             "likedByUsers": [],
             "labels": [
-                "Design",
-                "Desert",
-                "Top cities",
-                "Luxe"
+                "Beachfront"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -2970,10 +2922,7 @@ function _createStays() {
             "reviews": [],
             "likedByUsers": [],
             "labels": [
-                "Off-the-grid",
-                "Mansions",
-                "Amazing views",
-                "Cabins"
+                "Top cities"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -3033,10 +2982,7 @@ function _createStays() {
             "reviews": [],
             "likedByUsers": [],
             "labels": [
-                "Icons",
-                "Lakefront",
-                "Farms",
-                "Islands"
+                "Beachfront"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -3108,10 +3054,7 @@ function _createStays() {
             "reviews": [],
             "likedByUsers": [],
             "labels": [
-                "Countryside",
-                "Treehouses",
-                "Design",
-                "Off-the-grid"
+                "OMG!"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -3171,10 +3114,7 @@ function _createStays() {
             "reviews": [],
             "likedByUsers": [],
             "labels": [
-                "Icons",
-                "Trending",
-                "Amazing pools",
-                "Desert"
+                "Countryside"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -3230,10 +3170,7 @@ function _createStays() {
             "reviews": [],
             "likedByUsers": [],
             "labels": [
-                "Off-the-grid",
-                "Desert",
-                "Beachfront",
-                "Trending"
+                "Islands"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -3293,10 +3230,7 @@ function _createStays() {
             "reviews": [],
             "likedByUsers": [],
             "labels": [
-                "Beachfront",
-                "Off-the-grid",
-                "Cabins",
-                "Trending"
+                "Luxe"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -3368,10 +3302,7 @@ function _createStays() {
             "reviews": [],
             "likedByUsers": [],
             "labels": [
-                "Luxe",
-                "Treehouses",
-                "Tiny homes",
-                "Farms"
+                "Trending"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -3439,10 +3370,7 @@ function _createStays() {
             "reviews": [],
             "likedByUsers": [],
             "labels": [
-                "Beachfront",
-                "Treehouses",
-                "Mansions",
-                "Trending"
+                "Luxe"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -3506,10 +3434,7 @@ function _createStays() {
             "reviews": [],
             "likedByUsers": [],
             "labels": [
-                "Farms",
-                "Luxe",
-                "Countryside",
-                "Amazing views"
+                "OMG!"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -3573,10 +3498,7 @@ function _createStays() {
             "reviews": [],
             "likedByUsers": [],
             "labels": [
-                "Treehouses",
-                "Top cities",
-                "Farms",
-                "Desert"
+                "Cabins"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -3640,10 +3562,7 @@ function _createStays() {
             "reviews": [],
             "likedByUsers": [],
             "labels": [
-                "Treehouses",
-                "OMG!",
-                "Mansions",
-                "Amazing pools"
+                "Beachfront"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -3707,10 +3626,7 @@ function _createStays() {
             "reviews": [],
             "likedByUsers": [],
             "labels": [
-                "Bed & breakfasts",
-                "Top cities",
-                "Farms",
-                "Tiny homes"
+                "Islands"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -3766,9 +3682,6 @@ function _createStays() {
             "reviews": [],
             "likedByUsers": [],
             "labels": [
-                "Top cities",
-                "Trending",
-                "Islands",
                 "Farms"
             ],
             "equipment": {
@@ -3837,10 +3750,7 @@ function _createStays() {
             "reviews": [],
             "likedByUsers": [],
             "labels": [
-                "Design",
-                "Countryside",
-                "Icons",
-                "Bed & breakfasts"
+                "Luxe"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -3908,10 +3818,7 @@ function _createStays() {
             "reviews": [],
             "likedByUsers": [],
             "labels": [
-                "Off-the-grid",
-                "Lakefront",
-                "Beachfront",
-                "Mansions"
+                "Trending"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -3979,10 +3886,7 @@ function _createStays() {
             "reviews": [],
             "likedByUsers": [],
             "labels": [
-                "Castles",
-                "Tiny homes",
-                "Countryside",
-                "Off-the-grid"
+                "Farms"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -4042,10 +3946,7 @@ function _createStays() {
             "reviews": [],
             "likedByUsers": [],
             "labels": [
-                "Cabins",
-                "Desert",
-                "Countryside",
-                "Tiny homes"
+                "Cabins"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -4101,10 +4002,7 @@ function _createStays() {
             "reviews": [],
             "likedByUsers": [],
             "labels": [
-                "Design",
-                "Treehouses",
-                "Amazing pools",
-                "Islands"
+                "Mansions"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -4168,10 +4066,7 @@ function _createStays() {
             "reviews": [],
             "likedByUsers": [],
             "labels": [
-                "Icons",
-                "Off-the-grid",
-                "Islands",
-                "Bed & breakfasts"
+                "Amazing pools"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -4227,10 +4122,7 @@ function _createStays() {
             "reviews": [],
             "likedByUsers": [],
             "labels": [
-                "Tiny homes",
-                "Islands",
-                "Mansions",
-                "Farms"
+                "Icons"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -4290,10 +4182,7 @@ function _createStays() {
             "reviews": [],
             "likedByUsers": [],
             "labels": [
-                "OMG!",
-                "Tiny homes",
-                "Islands",
-                "Trending"
+                "Off-the-grid"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -4361,10 +4250,7 @@ function _createStays() {
             "reviews": [],
             "likedByUsers": [],
             "labels": [
-                "Farms",
-                "Icons",
-                "Design",
-                "Trending"
+                "Cabins"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -4436,10 +4322,7 @@ function _createStays() {
             "reviews": [],
             "likedByUsers": [],
             "labels": [
-                "Islands",
-                "Farms",
-                "Beachfront",
-                "Top cities"
+                "Desert"
             ],
             "equipment": {
                 "bedsNum": 2,
@@ -4511,10 +4394,7 @@ function _createStays() {
             "reviews": [],
             "likedByUsers": [],
             "labels": [
-                "Bed & breakfasts",
-                "Design",
-                "Luxe",
-                "Mansions"
+                "Castles"
             ],
             "equipment": {
                 "bedsNum": 2,
