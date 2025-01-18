@@ -102,7 +102,7 @@ export function StayDetails() {
                 {stay.roomType} in {stay.loc.city}, {stay.loc.country}
               </h2>
               <h3 className='regular-text'>
-                {stay.capacity} guests
+                {stay.capacity} guests  · {stay.equipment.bedroomNum} bedrooms  ·  {stay.equipment.bedsNum} beds  ·  {stay.equipment.bathNum} baths
               </h3>
               <h4 className='bold-text reviews-summary'>
                 <img src='../../src/assets/assets/icons/general icons/asset 158.svg' />
