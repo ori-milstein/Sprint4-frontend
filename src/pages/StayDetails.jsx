@@ -11,7 +11,7 @@ import { AppModal } from '../cmps/AppModal.jsx'
 import { useDispatch } from 'react-redux'
 import { Amenities } from '../cmps/Amenities.jsx'
 import { Reserve } from '../cmps/Reserve.jsx'
-import { DetailsMap } from '../cmps/DetailsMap.tsx'
+import { LocationDetails } from '../cmps/LocationDetails.jsx'
 import { SET_APP_MODAL_REVIEWS } from "../store/reducers/system.reducer.js"
 
 
@@ -133,7 +133,7 @@ export function StayDetails() {
             <Reserve />
           </div>
         </div>
-        <DetailsMap />
+        <LocationDetails stay={stay} />
         {stay.reviews.length > 0 &&
           <ReviewSection stay={stay} handleShowMore={handleShowMore} isModalActive={isModalActive} setReviewIdxToScroll={setReviewIdxToScroll} />}
       </section>
