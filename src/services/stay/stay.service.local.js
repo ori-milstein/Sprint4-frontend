@@ -23,8 +23,8 @@ async function query(filterBy = { txt: '', price: 0, label: '', sortField: '', s
     if (txt) {
         const regex = new RegExp(txt, 'i')
         stays = stays.filter(stay =>
-            regex.test(stay.loc.address) || 
-            regex.test(stay.loc.country) || 
+            regex.test(stay.loc.address) ||
+            regex.test(stay.loc.country) ||
             regex.test(stay.loc.city)
         )
     }
@@ -34,7 +34,7 @@ async function query(filterBy = { txt: '', price: 0, label: '', sortField: '', s
     }
 
     if (label) {
-        stays = stays.filter(stay => stay.type === label)
+        stays = stays.filter(stay => stay.labels.includes(label))
     }
 
     if (checkInDate && checkOutDate) {
