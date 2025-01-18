@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import { ReviewList } from './ReviewList'
 
-export function ReviewsModal({ stay, isModalActive }) {
+export function ReviewsModal({ stay, isModalActive, reviewIdxToScroll }) {
     const [searchTerm, setSearchTerm] = useState('')
     const [filteredReviews, setFilteredReviews] = useState(stay.reviews)
     const [mentionCount, setMentionCount] = useState(0)
     const [mention, setMention] = useState('')
     const [tempSearchTerm, setTempSearchTerm] = useState('')
     const [isNoResult, setIsNoResult] = useState(true);
-
+    console.log('reviewIdxToScroll', reviewIdxToScroll)
 
     const handleSearch = () => {
         const lowerCaseSearchTerm = tempSearchTerm.toLowerCase()
@@ -93,7 +93,7 @@ export function ReviewsModal({ stay, isModalActive }) {
                     )
                 })
                 } */}
-                <ReviewList stay={stay} isModalActive={isModalActive} />
+                <ReviewList stay={stay} isModalActive={isModalActive} reviewIdxToScroll={reviewIdxToScroll} />
             </section>
         </section>
     )

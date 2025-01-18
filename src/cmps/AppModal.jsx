@@ -3,7 +3,7 @@ import { CLOSE_APP_MODAL, REMOVE_FOCUSED_MODAL } from '../store/reducers/system.
 import { ModalContent } from './DynamicModal'
 import { useClickOutside } from '../customHooks/useCloseModule.jsx'
 
-export function AppModal({ stay, modalType, isModalActive, setIsModalActive, modalHeaderContent }) {
+export function AppModal({ stay, modalType, isModalActive, setIsModalActive, modalHeaderContent, reviewIdxToScroll }) {
     const modalRef = useClickOutside(onModalClickOutside)
     const dispatch = useDispatch()
 
@@ -37,7 +37,7 @@ export function AppModal({ stay, modalType, isModalActive, setIsModalActive, mod
                             {modalHeaderContent}
                         </div>
                         <div className="modal-content">
-                            <ModalContent stay={stay} modalType={modalType} onClose={onClose} />
+                            <ModalContent stay={stay} modalType={modalType} onClose={onClose} reviewIdxToScroll={reviewIdxToScroll} />
                         </div>
 
                     </div>

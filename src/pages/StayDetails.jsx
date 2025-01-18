@@ -22,6 +22,7 @@ export function StayDetails() {
   const appModal = useSelector((storeState) => storeState.systemModule.appModal)
   const [isModalActive, setIsModalActive] = useState(false)
   const dispatch = useDispatch()
+  const [reviewIdxToScroll, setReviewIdxToScroll] = useState(0)
 
   useEffect(() => {
     loadStay(stayId)
@@ -55,7 +56,7 @@ export function StayDetails() {
       <AppHeader isHomepage={false}></AppHeader>
       <section className="stay-details">
         {appModal &&
-          <AppModal isModalActive={isModalActive} setIsModalActive={setIsModalActive} modalType={appModal} stay={stay} />}
+          <AppModal isModalActive={isModalActive} setIsModalActive={setIsModalActive} modalType={appModal} stay={stay} reviewIdxToScroll={reviewIdxToScroll} />}
 
         <h1 className="stay-details-header">{stay.name}</h1>
 
@@ -129,7 +130,7 @@ export function StayDetails() {
         </div>
 
         {stay.reviews &&
-          <ReviewSection stay={stay} handleShowMore={handleShowMore} isModalActive={isModalActive} />}
+          <ReviewSection stay={stay} handleShowMore={handleShowMore} isModalActive={isModalActive} setReviewIdxToScroll={setReviewIdxToScroll} />}
       </section>
     </>
   )

@@ -1,6 +1,14 @@
+import { use, useEffect } from "react";
 import { makeId } from "../services/util.service.js";
-export function ReviewList({ stay, onRemoveReview, isModalActive }) {
+import { SET_APP_MODAL_REVIEWS } from "../store/reducers/system.reducer.js";
+
+export function ReviewList({ stay, handleShowMore, isModalActive, setReviewIdxToScroll, reviewIdxToScroll }) {
     const reviews = (isModalActive) ? stay.reviews : stay.reviews.slice(0, 6)
+    useEffect(() => {
+        if (!isModalActive) return
+        const reviewEl = document.querySelector('.stay-review-preview.' + CSS.escape(`${reviewIdxToScroll}`))
+        reviewEl.scrollIntoView({ behavior: 'instant', block: 'start' })
+    }, [])
 
     return (
         <div className={`stay-review-list  ${isModalActive ? 'isModal' : ''}`}>
@@ -12,7 +20,7 @@ export function ReviewList({ stay, onRemoveReview, isModalActive }) {
                 const yearsAgo = thisYear - reviewYear
 
                 return (
-                    <section className='stay-review-preview' key={makeId()}>
+                    <section className={`stay-review-preview ${(idx <= 5) ? `${idx}` : ''}`} key={makeId()}>
 
                         <article className="review-user">
                             <section className="review-img-container">
@@ -46,11 +54,21 @@ export function ReviewList({ stay, onRemoveReview, isModalActive }) {
                                 <div className={isModalActive ? "isModal" : ""}>
                                     {review.txt}
                                 </div>
+                                {!isModalActive &&
+                                    <div>
+                                        <a className="bold-text nostyle underline"
+                                            onClick={() => {
+                                                setReviewIdxToScroll(idx)
+                                                handleShowMore(SET_APP_MODAL_REVIEWS)
+                                            }}>
+                                            Show More
+                                        </a>
+                                    </div>}
                             </section>
                         </article>
                     </section>
                 )
             })}
-        </div>
+        </div >
     )
 }
