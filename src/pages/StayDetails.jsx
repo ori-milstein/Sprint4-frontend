@@ -12,6 +12,7 @@ import { useDispatch } from 'react-redux'
 import { Amenities } from '../cmps/Amenities.jsx'
 import { Reserve } from '../cmps/Reserve.jsx'
 import { DetailsMap } from '../cmps/DetailsMap.tsx'
+import { SET_APP_MODAL_REVIEWS } from "../store/reducers/system.reducer.js"
 
 
 export function StayDetails() {
@@ -105,7 +106,10 @@ export function StayDetails() {
               </h3>
               <h4 className='bold-text reviews-summary'>
                 <img src='../../src/assets/assets/icons/general icons/asset 158.svg' />
-                {stay.reviews.length ? '5.0' : 'New'} · {stay.reviews.length} <a href="" className='nostyle underline'>reviews</a></h4>
+                <span>{stay.reviews.length ? '5.0' : 'New'} · </span>
+                {stay.reviews.length > 0 &&
+                  <a className='nostyle underline' onClick={() => { handleShowMore(SET_APP_MODAL_REVIEWS) }}>{stay.reviews.length} reviews</a>}
+              </h4>
             </section>
 
             <div className="stay-host">

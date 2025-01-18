@@ -6,6 +6,7 @@ export function ReviewList({ stay, handleShowMore, isModalActive, setReviewIdxTo
     const reviews = (isModalActive) ? stay.reviews : stay.reviews.slice(0, 6)
     useEffect(() => {
         if (!isModalActive) return
+        if (reviewIdxToScroll === 0) return
         const reviewEl = document.querySelector('.stay-review-preview.' + CSS.escape(`${reviewIdxToScroll}`))
         reviewEl.scrollIntoView({ behavior: 'instant', block: 'start' })
     }, [])
