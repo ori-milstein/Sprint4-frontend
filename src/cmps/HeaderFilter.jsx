@@ -1,7 +1,9 @@
 import React, { useEffect, useRef } from 'react';
+import { useSelector } from 'react-redux';
 
 export function HeaderFilter({ isExpanded, setIsExpanded, toggleIsFilterOpen, checkInDate, checkOutDate, guests, where, setWhere, onSearchFromHeader }) {
     const isClicking = useRef(false)
+    const stay = useSelector(storeState => storeState.stayModule.stay)
 
     useEffect(() => {
         // Scroll event handler
@@ -121,7 +123,7 @@ export function HeaderFilter({ isExpanded, setIsExpanded, toggleIsFilterOpen, ch
                         onClick={handleClick}
                     >
                         <div className="filter-action-container short anywhere">
-                            <label className="filter-label">Anywhere</label>
+                            <label className="filter-label"> {stay ? `${stay.loc.city}, ${stay.loc.country}` : "Anywhere"}</label>
                         </div>
                         <div className="filter-action-container short anyweek">
                             <label className="filter-label">Any week</label>

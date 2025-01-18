@@ -14,19 +14,21 @@ export const stayService = {
 }
 window.cs = stayService
 
-
-async function query(filterBy = { txt: '', price: 0, label: '', sortField: '', sortDir: 1, minCapacity: 0 }) {
+async function query(filterBy = { txt: '', price: 0, label: '', sortField: '', sortDir: 1, minCapacity: 0, checkInDate: null, checkOutDate: null }) {
     var stays = await storageService.query(STORAGE_KEY)
-    const { txt, minCapacity, label } = filterBy
+    const { txt, minCapacity, label, checkInDate, checkOutDate } = filterBy
+
     console.log('filterBy from actions', filterBy)
+
     if (txt) {
         const regex = new RegExp(txt, 'i')
         stays = stays.filter(stay =>
-            regex.test(stay.loc.address) ||  // Match in full address
-            regex.test(stay.loc.country) || // Match in country
-            regex.test(stay.loc.city)       // Match in city
+            regex.test(stay.loc.address) || 
+            regex.test(stay.loc.country) || 
+            regex.test(stay.loc.city)
         )
     }
+
     if (minCapacity) {
         stays = stays.filter(stay => stay.capacity >= minCapacity)
     }
@@ -35,7 +37,20 @@ async function query(filterBy = { txt: '', price: 0, label: '', sortField: '', s
         stays = stays.filter(stay => stay.type === label)
     }
 
-    // stays = stays.map(({ _id, vendor, price, capacity, owner }) => ({ _id, vendor, price, capacity, owner }))
+    if (checkInDate && checkOutDate) {
+        stays = stays.filter(stay => {
+            return !stay.reservedDates.some(range => {
+                const rangeStart = new Date(range.start).getTime()
+                const rangeEnd = new Date(range.end).getTime()
+                const checkIn = new Date(checkInDate).getTime()
+                const checkOut = new Date(checkOutDate).getTime()
+
+                // Check if there is any overlap
+                return !(checkOut <= rangeStart || checkIn >= rangeEnd)
+            })
+        })
+    }
+
     return stays
 }
 
@@ -294,7 +309,25 @@ function _createStays() {
                 "bedsNum": 3,
                 "bathNum": 2,
                 "bedroomNum": 2
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-01-03",
+                    "end": "2025-01-10"
+                },
+                {
+                    "start": "2025-01-23",
+                    "end": "2025-01-30"
+                },
+                {
+                    "start": "2025-03-31",
+                    "end": "2025-04-02"
+                },
+                {
+                    "start": "2025-01-23",
+                    "end": "2025-01-30"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaf9",
@@ -403,7 +436,29 @@ function _createStays() {
                 "bedsNum": 1,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-02-08",
+                    "end": "2025-02-11"
+                },
+                {
+                    "start": "2025-02-08",
+                    "end": "2025-02-12"
+                },
+                {
+                    "start": "2025-03-12",
+                    "end": "2025-03-19"
+                },
+                {
+                    "start": "2025-01-07",
+                    "end": "2025-01-11"
+                },
+                {
+                    "start": "2025-01-30",
+                    "end": "2025-02-02"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaafa",
@@ -705,7 +760,21 @@ function _createStays() {
                 "bedsNum": 3,
                 "bathNum": 1,
                 "bedroomNum": 2
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-01-18",
+                    "end": "2025-01-23"
+                },
+                {
+                    "start": "2025-03-14",
+                    "end": "2025-03-16"
+                },
+                {
+                    "start": "2025-02-05",
+                    "end": "2025-02-08"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaafb",
@@ -995,7 +1064,25 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-04-03",
+                    "end": "2025-04-09"
+                },
+                {
+                    "start": "2025-01-01",
+                    "end": "2025-01-06"
+                },
+                {
+                    "start": "2025-02-21",
+                    "end": "2025-02-24"
+                },
+                {
+                    "start": "2025-03-26",
+                    "end": "2025-03-28"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaafc",
@@ -1078,7 +1165,13 @@ function _createStays() {
                 "bedsNum": 1,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-02-08",
+                    "end": "2025-02-11"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaafd",
@@ -1366,7 +1459,13 @@ function _createStays() {
                 "bedsNum": 3,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-04-01",
+                    "end": "2025-04-03"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaafe",
@@ -1663,7 +1762,13 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-04-07",
+                    "end": "2025-04-13"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaff",
@@ -1964,7 +2069,21 @@ function _createStays() {
                 "bedsNum": 1,
                 "bathNum": 1,
                 "bedroomNum": 0
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-03-13",
+                    "end": "2025-03-19"
+                },
+                {
+                    "start": "2025-02-09",
+                    "end": "2025-02-10"
+                },
+                {
+                    "start": "2025-01-20",
+                    "end": "2025-01-27"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aab00",
@@ -2088,7 +2207,29 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-04-05",
+                    "end": "2025-04-09"
+                },
+                {
+                    "start": "2025-01-24",
+                    "end": "2025-01-26"
+                },
+                {
+                    "start": "2025-02-08",
+                    "end": "2025-02-10"
+                },
+                {
+                    "start": "2025-03-24",
+                    "end": "2025-03-26"
+                },
+                {
+                    "start": "2025-02-13",
+                    "end": "2025-02-18"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aab01",
@@ -2369,7 +2510,17 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-01-13",
+                    "end": "2025-01-16"
+                },
+                {
+                    "start": "2025-02-20",
+                    "end": "2025-02-22"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaf10",
@@ -2422,7 +2573,17 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-02-20",
+                    "end": "2025-02-21"
+                },
+                {
+                    "start": "2025-04-01",
+                    "end": "2025-04-02"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaf11",
@@ -2475,7 +2636,21 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-02-01",
+                    "end": "2025-02-07"
+                },
+                {
+                    "start": "2025-01-06",
+                    "end": "2025-01-10"
+                },
+                {
+                    "start": "2025-02-18",
+                    "end": "2025-02-22"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaf12",
@@ -2528,7 +2703,29 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-03-28",
+                    "end": "2025-03-31"
+                },
+                {
+                    "start": "2025-03-19",
+                    "end": "2025-03-25"
+                },
+                {
+                    "start": "2025-02-28",
+                    "end": "2025-03-01"
+                },
+                {
+                    "start": "2025-02-06",
+                    "end": "2025-02-13"
+                },
+                {
+                    "start": "2025-02-02",
+                    "end": "2025-02-09"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaf13",
@@ -2581,7 +2778,25 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-01-22",
+                    "end": "2025-01-25"
+                },
+                {
+                    "start": "2025-01-07",
+                    "end": "2025-01-13"
+                },
+                {
+                    "start": "2025-02-08",
+                    "end": "2025-02-13"
+                },
+                {
+                    "start": "2025-03-20",
+                    "end": "2025-03-25"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaf14",
@@ -2634,7 +2849,25 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-01-28",
+                    "end": "2025-02-01"
+                },
+                {
+                    "start": "2025-02-18",
+                    "end": "2025-02-25"
+                },
+                {
+                    "start": "2025-04-01",
+                    "end": "2025-04-02"
+                },
+                {
+                    "start": "2025-02-20",
+                    "end": "2025-02-22"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaf15",
@@ -2687,7 +2920,13 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-03-26",
+                    "end": "2025-03-31"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaf16",
@@ -2740,7 +2979,17 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-01-08",
+                    "end": "2025-01-15"
+                },
+                {
+                    "start": "2025-03-15",
+                    "end": "2025-03-22"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaf17",
@@ -2793,7 +3042,29 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-01-27",
+                    "end": "2025-02-03"
+                },
+                {
+                    "start": "2025-04-09",
+                    "end": "2025-04-14"
+                },
+                {
+                    "start": "2025-02-12",
+                    "end": "2025-02-19"
+                },
+                {
+                    "start": "2025-03-29",
+                    "end": "2025-04-05"
+                },
+                {
+                    "start": "2025-02-23",
+                    "end": "2025-03-01"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaf18",
@@ -2846,7 +3117,17 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-03-01",
+                    "end": "2025-03-03"
+                },
+                {
+                    "start": "2025-04-05",
+                    "end": "2025-04-11"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaf19",
@@ -2899,7 +3180,13 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-03-04",
+                    "end": "2025-03-09"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaf20",
@@ -2952,7 +3239,17 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-02-26",
+                    "end": "2025-02-27"
+                },
+                {
+                    "start": "2025-02-19",
+                    "end": "2025-02-23"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaf21",
@@ -3005,7 +3302,29 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-02-12",
+                    "end": "2025-02-16"
+                },
+                {
+                    "start": "2025-01-19",
+                    "end": "2025-01-22"
+                },
+                {
+                    "start": "2025-01-03",
+                    "end": "2025-01-06"
+                },
+                {
+                    "start": "2025-03-13",
+                    "end": "2025-03-15"
+                },
+                {
+                    "start": "2025-01-09",
+                    "end": "2025-01-11"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaf22",
@@ -3058,7 +3377,25 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-02-21",
+                    "end": "2025-02-24"
+                },
+                {
+                    "start": "2025-04-09",
+                    "end": "2025-04-14"
+                },
+                {
+                    "start": "2025-01-23",
+                    "end": "2025-01-30"
+                },
+                {
+                    "start": "2025-01-15",
+                    "end": "2025-01-21"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaf23",
@@ -3111,7 +3448,21 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-04-09",
+                    "end": "2025-04-13"
+                },
+                {
+                    "start": "2025-03-29",
+                    "end": "2025-04-01"
+                },
+                {
+                    "start": "2025-01-30",
+                    "end": "2025-02-01"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaf24",
@@ -3164,7 +3515,21 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-02-17",
+                    "end": "2025-02-24"
+                },
+                {
+                    "start": "2025-03-19",
+                    "end": "2025-03-20"
+                },
+                {
+                    "start": "2025-01-23",
+                    "end": "2025-01-26"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaf25",
@@ -3217,7 +3582,21 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-03-05",
+                    "end": "2025-03-12"
+                },
+                {
+                    "start": "2025-01-31",
+                    "end": "2025-02-04"
+                },
+                {
+                    "start": "2025-02-15",
+                    "end": "2025-02-21"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaf26",
@@ -3270,7 +3649,21 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-01-07",
+                    "end": "2025-01-14"
+                },
+                {
+                    "start": "2025-03-28",
+                    "end": "2025-04-02"
+                },
+                {
+                    "start": "2025-02-23",
+                    "end": "2025-02-27"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaf27",
@@ -3323,7 +3716,13 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-02-24",
+                    "end": "2025-02-26"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaf28",
@@ -3376,7 +3775,25 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-02-20",
+                    "end": "2025-02-21"
+                },
+                {
+                    "start": "2025-03-05",
+                    "end": "2025-03-07"
+                },
+                {
+                    "start": "2025-03-15",
+                    "end": "2025-03-18"
+                },
+                {
+                    "start": "2025-03-27",
+                    "end": "2025-04-02"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaf29",
@@ -3429,7 +3846,25 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-03-19",
+                    "end": "2025-03-21"
+                },
+                {
+                    "start": "2025-03-12",
+                    "end": "2025-03-14"
+                },
+                {
+                    "start": "2025-02-13",
+                    "end": "2025-02-18"
+                },
+                {
+                    "start": "2025-01-26",
+                    "end": "2025-01-31"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaf30",
@@ -3482,7 +3917,25 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-03-31",
+                    "end": "2025-04-04"
+                },
+                {
+                    "start": "2025-02-14",
+                    "end": "2025-02-16"
+                },
+                {
+                    "start": "2025-01-02",
+                    "end": "2025-01-05"
+                },
+                {
+                    "start": "2025-02-06",
+                    "end": "2025-02-13"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaf31",
@@ -3535,7 +3988,17 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-03-29",
+                    "end": "2025-04-03"
+                },
+                {
+                    "start": "2025-02-02",
+                    "end": "2025-02-08"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaf32",
@@ -3588,7 +4051,13 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-02-18",
+                    "end": "2025-02-24"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaf33",
@@ -3641,7 +4110,21 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-02-14",
+                    "end": "2025-02-20"
+                },
+                {
+                    "start": "2025-02-11",
+                    "end": "2025-02-13"
+                },
+                {
+                    "start": "2025-04-06",
+                    "end": "2025-04-12"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaf34",
@@ -3694,7 +4177,13 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-02-18",
+                    "end": "2025-02-21"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaf35",
@@ -3747,7 +4236,17 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-01-11",
+                    "end": "2025-01-17"
+                },
+                {
+                    "start": "2025-04-08",
+                    "end": "2025-04-13"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaf36",
@@ -3800,7 +4299,25 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-01-09",
+                    "end": "2025-01-13"
+                },
+                {
+                    "start": "2025-01-06",
+                    "end": "2025-01-08"
+                },
+                {
+                    "start": "2025-02-15",
+                    "end": "2025-02-19"
+                },
+                {
+                    "start": "2025-03-09",
+                    "end": "2025-03-14"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaf37",
@@ -3853,7 +4370,29 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-02-08",
+                    "end": "2025-02-12"
+                },
+                {
+                    "start": "2025-02-25",
+                    "end": "2025-02-27"
+                },
+                {
+                    "start": "2025-02-14",
+                    "end": "2025-02-15"
+                },
+                {
+                    "start": "2025-03-13",
+                    "end": "2025-03-14"
+                },
+                {
+                    "start": "2025-02-23",
+                    "end": "2025-02-26"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaf38",
@@ -3906,7 +4445,29 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-04-03",
+                    "end": "2025-04-07"
+                },
+                {
+                    "start": "2025-04-02",
+                    "end": "2025-04-03"
+                },
+                {
+                    "start": "2025-03-16",
+                    "end": "2025-03-22"
+                },
+                {
+                    "start": "2025-02-02",
+                    "end": "2025-02-05"
+                },
+                {
+                    "start": "2025-02-14",
+                    "end": "2025-02-20"
+                }
+            ]
         },
         {
             "_id": "622f337a75c7d36e498aaaf39",
@@ -3959,7 +4520,13 @@ function _createStays() {
                 "bedsNum": 2,
                 "bathNum": 1,
                 "bedroomNum": 1
-            }
+            },
+            "reservedDates": [
+                {
+                    "start": "2025-03-31",
+                    "end": "2025-04-07"
+                }
+            ]
         }
     ]
     saveToStorage(STORAGE_KEY, stays)
