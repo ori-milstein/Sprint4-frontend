@@ -79,6 +79,7 @@ export function HeaderFilter({ isExpanded, setIsExpanded, toggleIsFilterOpen, ch
                         <input
                             className="filter-action filter-checkin"
                             value={formatDate(checkInDate) || 'Add Dates'}
+                            required
                         ></input>
                     </div>
                     <div className="filter-action-container" onClick={() => toggleIsFilterOpen('date-picker')}>
@@ -86,7 +87,7 @@ export function HeaderFilter({ isExpanded, setIsExpanded, toggleIsFilterOpen, ch
                         <input
                             className="filter-action filter-checkout"
                             value={formatDate(checkOutDate) || 'Add Dates'}
-
+                            required
                         ></input>
                     </div>
                     <div className="filter-action-container who" onClick={() => toggleIsFilterOpen('guest-selector')}>
