@@ -92,7 +92,7 @@ function _createStays() {
     stays = [
         {
             "_id": "622f337a75c7d36e498aaaf8",
-            "name": "Westin Kaanapali KORVN 2BR",
+            "name": "Siam Stay",
             "type": "National parks",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436852/y3scgbn8d6evumdpwdp4.jpg",
@@ -175,9 +175,9 @@ function _createStays() {
                 "description": "Adventurous couple loves to travel :)"
             },
             "loc": {
-                "country": "United States",
+                "country": "Thailand",
                 "countryCode": "US",
-                "city": "Maui",
+                "city": "Bangkok",
                 "address": "Lahaina, HI, United States",
                 "lat": -156.6917,
                 "lan": 20.93792
@@ -298,7 +298,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaf9",
-            "name": "Belle chambre \u00e0 c\u00f4t\u00e9 Metro Papineau",
+            "name": "Harbour Haven",
             "type": "Campers",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436937/mkbcjfockxezgrvimska.jpg",
@@ -339,9 +339,9 @@ function _createStays() {
                 "description": ""
             },
             "loc": {
-                "country": "Canada",
+                "country": "Australia",
                 "countryCode": "CA",
-                "city": "Montreal",
+                "city": "Sydney",
                 "address": "Montr\u00e9al, QC, Canada",
                 "lat": -73.54985,
                 "lan": 45.52797
@@ -407,7 +407,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaafa",
-            "name": "M&M Space MM2  Apartamento no centro da cidade",
+            "name": "Pharaoh's Palace",
             "type": "Campers",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437308/p80ndulkcghpcfsnvjdo.jpg",
@@ -487,9 +487,9 @@ function _createStays() {
                 "description": "Simples, muito comunicativa, mas de elevado sentido de responsabilidade, de organiza\u00e7\u00e3o e de confian\u00e7a.\r\nGosto muito de contacto humano, sem o qual n\u00e3o me sinto est\u00e1vel. Adoro conhecer pessoas de culturas diferentes.\r\nFa\u00e7o v\u00e1rias viagens, mas de curta dura\u00e7\u00e3o, pois tenho necessidade de sentir o lar e a fam\u00edlia. Por ser assim, tento fazer tudo para que os meus hospedes se sintam confort\u00e1veis como em suas casas."
             },
             "loc": {
-                "country": "Portugal",
+                "country": "Egypt",
                 "countryCode": "PT",
-                "city": "Porto",
+                "city": "Cairo",
                 "address": "Porto, Porto, Portugal",
                 "lat": -8.60154,
                 "lan": 41.14834
@@ -709,7 +709,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaafb",
-            "name": "Fresh and modern 1BR in Bed-Stuy",
+            "name": "Palm Jumeirah Retreat",
             "type": "National parks",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437310/tus71yfpnvgulenrli6a.jpg",
@@ -755,9 +755,9 @@ function _createStays() {
                 "description": "I'm a journalist from Texas and my husband is an artist from the Ukraine by way of Kansas City. We recently welcomed our son into the world. (Don't worry, he sleeps all night.)  We love exploring New York, especially Brooklyn, from the Brooklyn Flea to tiny taco joints to the Botanic Gardens to performance art in Bushwick storefronts (really). We've both spent a lot of time in the South, so hospitality is second nature to us. "
             },
             "loc": {
-                "country": "United States",
+                "country": "UAE",
                 "countryCode": "US",
-                "city": "New York",
+                "city": "Dubai",
                 "address": "Brooklyn, NY, United States",
                 "lat": -73.92922,
                 "lan": 40.68683
@@ -1000,7 +1000,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaafc",
-            "name": "Habitaci\u00f3n centro de Barcelona",
+            "name": "Burj Khalifa View",
             "type": "Shared homes",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436334/nqgdwv3ljfkrbvynoetv.jpg",
@@ -1037,9 +1037,9 @@ function _createStays() {
                 "description": ""
             },
             "loc": {
-                "country": "Spain",
+                "country": "UAE",
                 "countryCode": "ES",
-                "city": "Barcelona",
+                "city": "Dubai",
                 "address": "Barcelona, Catalunya, Spain",
                 "lat": 2.16685,
                 "lan": 41.38371
@@ -1082,7 +1082,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaafd",
-            "name": "DOUBLE ROOM IN THE HEART OF BCN",
+            "name": "Colosseum Retreat",
             "type": "Amazing views",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437330/mmhkmfvg8o3freucyekc.jpg",
@@ -1126,9 +1126,9 @@ function _createStays() {
                 "description": "Mi nombre es Isabel, pero me llamo Isa. Nac\u00ed en Vigo (Galicia). Con 20 a\u00f1os me fu\u00ed a vivir a Madrid con intenci\u00f3n de ser actriz; ahora resido en Barcelona desde los 28. Soy una joven de 43 a\u00f1os, cantante de Jazz. Me gusta salir, pero tambi\u00e9n quedarme en casa a leer o ver alguna buena pel\u00edcula.\r\nHe compartido piso muchos a\u00f1os, pero estas ser\u00e1n mis primeras experiencias como anfitriona.\r\n\r\n\u00a1Sed bienvenidos!\r\n"
             },
             "loc": {
-                "country": "Spain",
+                "country": "Italy",
                 "countryCode": "ES",
-                "city": "Barcelona",
+                "city": "Rome",
                 "address": "Barcelona, Catalonia, Spain",
                 "lat": 2.17561,
                 "lan": 41.38701
@@ -1369,7 +1369,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaafe",
-            "name": "Home, Sweet, Harlem. Welcome!",
+            "name": "Copacabana Charm",
             "type": "Beach",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg",
@@ -1422,9 +1422,9 @@ function _createStays() {
                 "description": "Welcome Everyone! Thank you for stopping by. \r\n\r\nI was born and raised in Manhattan and I am here to help  share the New York City Experience with others through Airbnb!  I am easy to connect with and very reachable and always willing to interact with people. \r\n\r\nI am big on cleanliness and hospitality. I strive on making Guests feel as comfortable as possible. \r\n\r\nI hope you would like to get a chance to visit my location and enjoy the hosting I provide. If you have any questions/ comments, feel free to contact me. \r\n"
             },
             "loc": {
-                "country": "United States",
+                "country": "Brazil",
                 "countryCode": "US",
-                "city": "New York",
+                "city": "Rio de Janeiro",
                 "address": "New York, NY, United States",
                 "lat": -73.93955,
                 "lan": 40.79733
@@ -1667,7 +1667,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaff",
-            "name": "Hero\u00edsmo IV",
+            "name": "Copacabana Charm",
             "type": "Castles",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437308/p80ndulkcghpcfsnvjdo.jpg",
@@ -1724,9 +1724,9 @@ function _createStays() {
                 "description": "Welcome!\r\nThe apartments has all the things to provide you a perfect days in Porto. It is located in a very central area, inside a typical oporto building. \r\nI will give you lots of informations about Porto, my personal tips, and I'll always be available to help you with anything. All I want is for you to go home knowing Porto and inevitably loving the city! :)\r\n\r\n"
             },
             "loc": {
-                "country": "Portugal",
+                "country": "Brazil",
                 "countryCode": "PT",
-                "city": "Porto",
+                "city": "Rio de Janeiro",
                 "address": "Porto, Porto, Portugal",
                 "lat": -8.59275,
                 "lan": 41.1462
@@ -1969,7 +1969,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aab00",
-            "name": "Monte dos Burgos - Cosy Room",
+            "name": "Eiffel Retreat",
             "type": "Campers",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437250/o8uutj3t2bvfafvxkr9j.jpg",
@@ -2014,9 +2014,9 @@ function _createStays() {
                 "description": ""
             },
             "loc": {
-                "country": "Portugal",
+                "country": "France",
                 "countryCode": "PT",
-                "city": "Porto",
+                "city": "Paris",
                 "address": "Porto, Porto District, Portugal",
                 "lat": -8.63082,
                 "lan": 41.18075
@@ -2092,7 +2092,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aab01",
-            "name": "Nice Cosy Room In Taksim",
+            "name": "Sugarloaf Suite",
             "type": "Islands",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436376/phpltehcr6uq9lh5jlax.jpg",
@@ -2129,9 +2129,9 @@ function _createStays() {
                 "description": "I live alone in Taksim area and i work at bar.\r\nI like meet new friends from all of the world.\r\nI like to Travel a lot ofcourse if i have free time :) East Asia , Sun , Sea , Sand , Movie  :) "
             },
             "loc": {
-                "country": "Turkey",
+                "country": "Brazil",
                 "countryCode": "TR",
-                "city": "Istanbul",
+                "city": "Rio de Janeiro",
                 "address": "Taksim, Cihangir, Istanbul , Beyo\u011flu, Turkey",
                 "lat": 28.98648,
                 "lan": 41.03376
@@ -2372,7 +2372,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaf10",
-            "name": "New Stay 1",
+            "name": "Ipanema Escape",
             "type": "Hotel",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437250/o8uutj3t2bvfafvxkr9j.jpg",
@@ -2402,9 +2402,9 @@ function _createStays() {
                 "isSuperhost": false
             },
             "loc": {
-                "country": "Country",
+                "country": "Brazil",
                 "countryCode": "XX",
-                "city": "City",
+                "city": "Rio de Janeiro",
                 "address": "123 Example Street",
                 "lat": 0.0,
                 "lan": 0.0
@@ -2422,7 +2422,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaf11",
-            "name": "New Stay 2",
+            "name": "Table Mountain Retreat",
             "type": "Hotel",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436281/doubvhbpwjfx81yfzpxq.jpg",
@@ -2452,9 +2452,9 @@ function _createStays() {
                 "isSuperhost": false
             },
             "loc": {
-                "country": "Country",
+                "country": "South Africa",
                 "countryCode": "XX",
-                "city": "City",
+                "city": "Cape Town",
                 "address": "123 Example Street",
                 "lat": 0.0,
                 "lan": 0.0
@@ -2472,7 +2472,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaf12",
-            "name": "New Stay 3",
+            "name": "Pyramids View",
             "type": "Hotel",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436334/nqgdwv3ljfkrbvynoetv.jpg",
@@ -2502,9 +2502,9 @@ function _createStays() {
                 "isSuperhost": false
             },
             "loc": {
-                "country": "Country",
+                "country": "Egypt",
                 "countryCode": "XX",
-                "city": "City",
+                "city": "Cairo",
                 "address": "123 Example Street",
                 "lat": 0.0,
                 "lan": 0.0
@@ -2522,7 +2522,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaf13",
-            "name": "New Stay 4",
+            "name": "Opera House Hideout",
             "type": "Hotel",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437017/gjyzgdjngyrhfrj2loxz.jpg",
@@ -2552,9 +2552,9 @@ function _createStays() {
                 "isSuperhost": false
             },
             "loc": {
-                "country": "Country",
+                "country": "Australia",
                 "countryCode": "XX",
-                "city": "City",
+                "city": "Sydney",
                 "address": "123 Example Street",
                 "lat": 0.0,
                 "lan": 0.0
@@ -2572,7 +2572,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaf14",
-            "name": "New Stay 5",
+            "name": "Ipanema Escape",
             "type": "Hotel",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436481/tqwkxtbalipudzhivoag.jpg",
@@ -2602,9 +2602,9 @@ function _createStays() {
                 "isSuperhost": false
             },
             "loc": {
-                "country": "Country",
+                "country": "Brazil",
                 "countryCode": "XX",
-                "city": "City",
+                "city": "Rio de Janeiro",
                 "address": "123 Example Street",
                 "lat": 0.0,
                 "lan": 0.0
@@ -2622,7 +2622,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaf15",
-            "name": "New Stay 6",
+            "name": "Harbour Haven",
             "type": "Hotel",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436553/hbkx9lwxjd0wabqk0bmo.jpg",
@@ -2652,9 +2652,9 @@ function _createStays() {
                 "isSuperhost": false
             },
             "loc": {
-                "country": "Country",
+                "country": "Australia",
                 "countryCode": "XX",
-                "city": "City",
+                "city": "Sydney",
                 "address": "123 Example Street",
                 "lat": 0.0,
                 "lan": 0.0
@@ -2672,7 +2672,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaf16",
-            "name": "New Stay 7",
+            "name": "Trevi Fountain Stay",
             "type": "Hotel",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436861/xrxhgsif3ekhxgn8irlm.jpg",
@@ -2702,9 +2702,9 @@ function _createStays() {
                 "isSuperhost": false
             },
             "loc": {
-                "country": "Country",
+                "country": "Italy",
                 "countryCode": "XX",
-                "city": "City",
+                "city": "Rome",
                 "address": "123 Example Street",
                 "lat": 0.0,
                 "lan": 0.0
@@ -2722,7 +2722,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaf17",
-            "name": "New Stay 8",
+            "name": "Opera House Hideout",
             "type": "Hotel",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437045/dmquvficldi8ssfdlrrx.jpg",
@@ -2752,9 +2752,9 @@ function _createStays() {
                 "isSuperhost": false
             },
             "loc": {
-                "country": "Country",
+                "country": "Australia",
                 "countryCode": "XX",
-                "city": "City",
+                "city": "Sydney",
                 "address": "123 Example Street",
                 "lat": 0.0,
                 "lan": 0.0
@@ -2772,7 +2772,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaf18",
-            "name": "New Stay 9",
+            "name": "Asakusa Escape",
             "type": "Hotel",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436855/khyvb5q3yzcqaoscuppz.jpg",
@@ -2802,9 +2802,9 @@ function _createStays() {
                 "isSuperhost": false
             },
             "loc": {
-                "country": "Country",
+                "country": "Japan",
                 "countryCode": "XX",
-                "city": "City",
+                "city": "Tokyo",
                 "address": "123 Example Street",
                 "lat": 0.0,
                 "lan": 0.0
@@ -2822,7 +2822,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaf19",
-            "name": "New Stay 10",
+            "name": "Desert Oasis",
             "type": "Hotel",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436993/yzxnnw83e9qyas022au4.jpg",
@@ -2852,9 +2852,9 @@ function _createStays() {
                 "isSuperhost": false
             },
             "loc": {
-                "country": "Country",
+                "country": "UAE",
                 "countryCode": "XX",
-                "city": "City",
+                "city": "Dubai",
                 "address": "123 Example Street",
                 "lat": 0.0,
                 "lan": 0.0
@@ -2872,7 +2872,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaf20",
-            "name": "New Stay 11",
+            "name": "Brooklyn Charm",
             "type": "Hotel",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436852/y3scgbn8d6evumdpwdp4.jpg",
@@ -2902,9 +2902,9 @@ function _createStays() {
                 "isSuperhost": false
             },
             "loc": {
-                "country": "Country",
+                "country": "USA",
                 "countryCode": "XX",
-                "city": "City",
+                "city": "New York",
                 "address": "123 Example Street",
                 "lat": 0.0,
                 "lan": 0.0
@@ -2922,7 +2922,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaf21",
-            "name": "New Stay 12",
+            "name": "Grand Palace Escape",
             "type": "Hotel",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436376/phpltehcr6uq9lh5jlax.jpg",
@@ -2952,9 +2952,9 @@ function _createStays() {
                 "isSuperhost": false
             },
             "loc": {
-                "country": "Country",
+                "country": "Thailand",
                 "countryCode": "XX",
-                "city": "City",
+                "city": "Bangkok",
                 "address": "123 Example Street",
                 "lat": 0.0,
                 "lan": 0.0
@@ -2972,7 +2972,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaf22",
-            "name": "New Stay 13",
+            "name": "Trevi Fountain Stay",
             "type": "Hotel",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437033/rhw6gycttaimzocc1poz.jpg",
@@ -3002,9 +3002,9 @@ function _createStays() {
                 "isSuperhost": false
             },
             "loc": {
-                "country": "Country",
+                "country": "Italy",
                 "countryCode": "XX",
-                "city": "City",
+                "city": "Rome",
                 "address": "123 Example Street",
                 "lat": 0.0,
                 "lan": 0.0
@@ -3022,7 +3022,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaf23",
-            "name": "New Stay 14",
+            "name": "Louvre Loft",
             "type": "Hotel",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437310/tus71yfpnvgulenrli6a.jpg",
@@ -3052,9 +3052,9 @@ function _createStays() {
                 "isSuperhost": false
             },
             "loc": {
-                "country": "Country",
+                "country": "France",
                 "countryCode": "XX",
-                "city": "City",
+                "city": "Paris",
                 "address": "123 Example Street",
                 "lat": 0.0,
                 "lan": 0.0
@@ -3072,7 +3072,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaf24",
-            "name": "New Stay 15",
+            "name": "Sugarloaf Suite",
             "type": "Hotel",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437327/epcnh2tzpafwmvi3srcp.jpg",
@@ -3102,9 +3102,9 @@ function _createStays() {
                 "isSuperhost": false
             },
             "loc": {
-                "country": "Country",
+                "country": "Brazil",
                 "countryCode": "XX",
-                "city": "City",
+                "city": "Rio de Janeiro",
                 "address": "123 Example Street",
                 "lat": 0.0,
                 "lan": 0.0
@@ -3122,7 +3122,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaf25",
-            "name": "New Stay 16",
+            "name": "Eiffel Retreat",
             "type": "Hotel",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437040/oarfkdxx7gyyvcynvwko.jpg",
@@ -3152,9 +3152,9 @@ function _createStays() {
                 "isSuperhost": false
             },
             "loc": {
-                "country": "Country",
+                "country": "France",
                 "countryCode": "XX",
-                "city": "City",
+                "city": "Paris",
                 "address": "123 Example Street",
                 "lat": 0.0,
                 "lan": 0.0
@@ -3172,7 +3172,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaf26",
-            "name": "New Stay 17",
+            "name": "Opera House Hideout",
             "type": "Hotel",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436571/fvqbazrysqpymjlhhdqu.jpg",
@@ -3202,9 +3202,9 @@ function _createStays() {
                 "isSuperhost": false
             },
             "loc": {
-                "country": "Country",
+                "country": "Australia",
                 "countryCode": "XX",
-                "city": "City",
+                "city": "Sydney",
                 "address": "123 Example Street",
                 "lat": 0.0,
                 "lan": 0.0
@@ -3222,7 +3222,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaf27",
-            "name": "New Stay 18",
+            "name": "Sugarloaf Suite",
             "type": "Hotel",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg",
@@ -3252,9 +3252,9 @@ function _createStays() {
                 "isSuperhost": false
             },
             "loc": {
-                "country": "Country",
+                "country": "Brazil",
                 "countryCode": "XX",
-                "city": "City",
+                "city": "Rio de Janeiro",
                 "address": "123 Example Street",
                 "lat": 0.0,
                 "lan": 0.0
@@ -3272,7 +3272,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaf28",
-            "name": "New Stay 19",
+            "name": "Nile Serenity",
             "type": "Hotel",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436553/hbkx9lwxjd0wabqk0bmo.jpg",
@@ -3302,9 +3302,9 @@ function _createStays() {
                 "isSuperhost": false
             },
             "loc": {
-                "country": "Country",
+                "country": "Egypt",
                 "countryCode": "XX",
-                "city": "City",
+                "city": "Cairo",
                 "address": "123 Example Street",
                 "lat": 0.0,
                 "lan": 0.0
@@ -3322,7 +3322,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaf29",
-            "name": "New Stay 20",
+            "name": "Times Square Suite",
             "type": "Hotel",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437330/mmhkmfvg8o3freucyekc.jpg",
@@ -3352,9 +3352,9 @@ function _createStays() {
                 "isSuperhost": false
             },
             "loc": {
-                "country": "Country",
+                "country": "USA",
                 "countryCode": "XX",
-                "city": "City",
+                "city": "New York",
                 "address": "123 Example Street",
                 "lat": 0.0,
                 "lan": 0.0
@@ -3372,7 +3372,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaf30",
-            "name": "New Stay 21",
+            "name": "Opera House Hideout",
             "type": "Hotel",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436937/mkbcjfockxezgrvimska.jpg",
@@ -3402,9 +3402,9 @@ function _createStays() {
                 "isSuperhost": false
             },
             "loc": {
-                "country": "Country",
+                "country": "Australia",
                 "countryCode": "XX",
-                "city": "City",
+                "city": "Sydney",
                 "address": "123 Example Street",
                 "lat": 0.0,
                 "lan": 0.0
@@ -3422,7 +3422,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaf31",
-            "name": "New Stay 22",
+            "name": "Burj Khalifa View",
             "type": "Hotel",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436281/doubvhbpwjfx81yfzpxq.jpg",
@@ -3452,9 +3452,9 @@ function _createStays() {
                 "isSuperhost": false
             },
             "loc": {
-                "country": "Country",
+                "country": "UAE",
                 "countryCode": "XX",
-                "city": "City",
+                "city": "Dubai",
                 "address": "123 Example Street",
                 "lat": 0.0,
                 "lan": 0.0
@@ -3472,7 +3472,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaf32",
-            "name": "New Stay 23",
+            "name": "Colosseum Retreat",
             "type": "Hotel",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436952/aef9ajipinpjhkley1e3.jpg",
@@ -3502,9 +3502,9 @@ function _createStays() {
                 "isSuperhost": false
             },
             "loc": {
-                "country": "Country",
+                "country": "Italy",
                 "countryCode": "XX",
-                "city": "City",
+                "city": "Rome",
                 "address": "123 Example Street",
                 "lat": 0.0,
                 "lan": 0.0
@@ -3522,7 +3522,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaf33",
-            "name": "New Stay 24",
+            "name": "Times Square Suite",
             "type": "Hotel",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436571/fvqbazrysqpymjlhhdqu.jpg",
@@ -3552,9 +3552,9 @@ function _createStays() {
                 "isSuperhost": false
             },
             "loc": {
-                "country": "Country",
+                "country": "USA",
                 "countryCode": "XX",
-                "city": "City",
+                "city": "New York",
                 "address": "123 Example Street",
                 "lat": 0.0,
                 "lan": 0.0
@@ -3572,7 +3572,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaf34",
-            "name": "New Stay 25",
+            "name": "Safari Haven",
             "type": "Hotel",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437308/p80ndulkcghpcfsnvjdo.jpg",
@@ -3602,9 +3602,9 @@ function _createStays() {
                 "isSuperhost": false
             },
             "loc": {
-                "country": "Country",
+                "country": "South Africa",
                 "countryCode": "XX",
-                "city": "City",
+                "city": "Cape Town",
                 "address": "123 Example Street",
                 "lat": 0.0,
                 "lan": 0.0
@@ -3622,7 +3622,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaf35",
-            "name": "New Stay 26",
+            "name": "Asakusa Escape",
             "type": "Hotel",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436236/ctnbnqazpqhotjcauqwp.jpg",
@@ -3652,9 +3652,9 @@ function _createStays() {
                 "isSuperhost": false
             },
             "loc": {
-                "country": "Country",
+                "country": "Japan",
                 "countryCode": "XX",
-                "city": "City",
+                "city": "Tokyo",
                 "address": "123 Example Street",
                 "lat": 0.0,
                 "lan": 0.0
@@ -3672,7 +3672,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaf36",
-            "name": "New Stay 27",
+            "name": "Grand Palace Escape",
             "type": "Hotel",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436952/aef9ajipinpjhkley1e3.jpg",
@@ -3702,9 +3702,9 @@ function _createStays() {
                 "isSuperhost": false
             },
             "loc": {
-                "country": "Country",
+                "country": "Thailand",
                 "countryCode": "XX",
-                "city": "City",
+                "city": "Bangkok",
                 "address": "123 Example Street",
                 "lat": 0.0,
                 "lan": 0.0
@@ -3722,7 +3722,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaf37",
-            "name": "New Stay 28",
+            "name": "Colosseum Retreat",
             "type": "Hotel",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436821/b4ejulqdhsvyseyfnfr0.jpg",
@@ -3752,9 +3752,9 @@ function _createStays() {
                 "isSuperhost": false
             },
             "loc": {
-                "country": "Country",
+                "country": "Italy",
                 "countryCode": "XX",
-                "city": "City",
+                "city": "Rome",
                 "address": "123 Example Street",
                 "lat": 0.0,
                 "lan": 0.0
@@ -3772,7 +3772,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaf38",
-            "name": "New Stay 29",
+            "name": "Eiffel Retreat",
             "type": "Hotel",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436571/fvqbazrysqpymjlhhdqu.jpg",
@@ -3802,9 +3802,9 @@ function _createStays() {
                 "isSuperhost": false
             },
             "loc": {
-                "country": "Country",
+                "country": "France",
                 "countryCode": "XX",
-                "city": "City",
+                "city": "Paris",
                 "address": "123 Example Street",
                 "lat": 0.0,
                 "lan": 0.0
@@ -3822,7 +3822,7 @@ function _createStays() {
         },
         {
             "_id": "622f337a75c7d36e498aaaf39",
-            "name": "New Stay 30",
+            "name": "Sakura Stay",
             "type": "Hotel",
             "imgUrls": [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436481/tqwkxtbalipudzhivoag.jpg",
@@ -3852,9 +3852,9 @@ function _createStays() {
                 "isSuperhost": false
             },
             "loc": {
-                "country": "Country",
+                "country": "Japan",
                 "countryCode": "XX",
-                "city": "City",
+                "city": "Tokyo",
                 "address": "123 Example Street",
                 "lat": 0.0,
                 "lan": 0.0
@@ -3871,6 +3871,5 @@ function _createStays() {
             }
         }
     ]
-
     saveToStorage(STORAGE_KEY, stays)
 }
