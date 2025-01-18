@@ -66,12 +66,16 @@ export function AppHeader({ isHomepage }) {
 		}))
 	}
 
+	function getTotalGuests() {
+		return guests.adults + guests.children + guests.infants + guests.pets;
+	}
+
 	function onSearchFromHeader(ev) {
 		ev.preventDefault()
 	
 		const filterByToUpdate = {
 			txt: where,
-			minCapacity: 0,
+			minCapacity: getTotalGuests(),
 			checkInDate,
 			checkOutDate
 		}
@@ -109,6 +113,7 @@ export function AppHeader({ isHomepage }) {
 							guests={guests}
 							where={where}
 							setWhere={setWhere}
+							isHomepage={isHomepage}
 							onSearchFromHeader={onSearchFromHeader}
 						/>
 						{!isLoginSignupOpen.isOpen && <HeaderUserControls onToggleMenu={onToggleMenu} />}
