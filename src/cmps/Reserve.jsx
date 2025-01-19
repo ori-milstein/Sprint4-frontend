@@ -8,7 +8,6 @@ export function Reserve() {
     const [isDatePickerOpen, setIsDatePickerOpen] = useState(false)
     const filterBy = useSelector((storeState) => storeState.stayModule.filterBy)
 
-    console.log('filter by in details:', filterBy)
     function toggleIsDatePickerOpen() {
         setIsDatePickerOpen(!isDatePickerOpen)
     }
@@ -19,7 +18,7 @@ export function Reserve() {
             day: 'numeric',
             year: 'numeric',
         }).format(new Date(date));
-    };
+    }
 
     return (
         < div className="stay-reserve" >

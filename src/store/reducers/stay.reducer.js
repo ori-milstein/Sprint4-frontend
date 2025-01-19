@@ -41,7 +41,19 @@ export function stayReducer(state = initialState, action) {
             newState = { ...state, stay: { ...state.stay, msgs: [...state.stay.msgs || [], action.msg] } }
             break
         case SET_FILTER_BY:
-            newState = { ...state, filterBy: { ...state.filterBy, ...action.filterBy } }
+            const updatedFilterBy = {
+                ...state.filterBy,
+                ...action.filterBy, // Merge the incoming updates
+            }
+                    
+            // Save to localStorage for persistence
+            localStorage.setItem('filterBy', JSON.stringify(updatedFilterBy))
+        
+            // Update state with the new filterBy
+            newState = {
+                ...state,
+                filterBy: updatedFilterBy,
+            }
         default:
     }
     return newState

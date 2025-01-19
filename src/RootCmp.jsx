@@ -10,7 +10,6 @@ import { AdminIndex } from './pages/AdminIndex.jsx'
 
 import { StayDetails } from './pages/StayDetails'
 import { UserDetails } from './pages/UserDetails'
-import { PhotosPage } from './pages/PhotosPage'
 import { AppHeader } from './cmps/AppHeader'
 import { AppFooter } from './cmps/AppFooter'
 import { UserMsg } from './cmps/UserMsg.jsx'

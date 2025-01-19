@@ -79,56 +79,56 @@ export function StayDetails() {
             stay={stay}
           />}
 
-        <h1 className="stay-details-header">{stay.name}</h1>
+          <h1 className="stay-details-header">{stay.name}</h1>
 
-        <div className="stay-images">
-          {/* Main image */}
-          <img
-            className="main-image"
-            src={stay.imgUrls[0]}
-            alt="Main Stay Image"
-            onClick={handleImgShowAllPhotos}
-          />
-          {/* Side images */}
-          <img
-            className="side-top"
-            src={stay.imgUrls[1]}
-            alt="Side Top Image"
-            onClick={handleImgShowAllPhotos}
-          />
-          <img
-            className="side-middle"
-            src={stay.imgUrls[2]}
-            alt="Side Middle Image"
-            onClick={handleImgShowAllPhotos}
-          />
-          <img
-            className="side-bottom-image"
-            src={stay.imgUrls[3]}
-            alt="Side Bottom Image"
-            onClick={handleImgShowAllPhotos}
-          />
-          <div className="side-extra-container">
+          <div className="stay-images">
+            {/* Main image */}
             <img
-              className="side-extra"
-              src={stay.imgUrls[4]}
-              alt="Side Extra Image"
+              className="main-image"
+              src={stay.imgUrls[0]}
+              alt="Main Stay Image"
               onClick={handleImgShowAllPhotos}
             />
-            <button className={`show-all-btn ${isClicked ? 'clicked' : ''}`}
-              onClick={handleShowAllPhotos}
-            >
+            {/* Side images */}
+            <img
+              className="side-top"
+              src={stay.imgUrls[1]}
+              alt="Side Top Image"
+              onClick={handleImgShowAllPhotos}
+            />
+            <img
+              className="side-middle"
+              src={stay.imgUrls[2]}
+              alt="Side Middle Image"
+              onClick={handleImgShowAllPhotos}
+            />
+            <img
+              className="side-bottom-image"
+              src={stay.imgUrls[3]}
+              alt="Side Bottom Image"
+              onClick={handleImgShowAllPhotos}
+            />
+            <div className="side-extra-container">
               <img
-                src="/src/assets/icons/apps_24dp_000000_FILL0_wght400_GRAD0_opsz24.png"
-                className="icon"
-                alt="Show All Photos"
+                className="side-extra"
+                src={stay.imgUrls[4]}
+                alt="Side Extra Image"
+                onClick={handleImgShowAllPhotos}
               />
-              Show all photos
-            </button>
+              <button className={`show-all-btn ${isClicked ? 'clicked' : ''}`}
+                onClick={handleShowAllPhotos}
+              >
+                <img
+                  src="/src/assets/icons/apps_24dp_000000_FILL0_wght400_GRAD0_opsz24.png"
+                  className="icon"
+                  alt="Show All Photos"
+                />
+                Show all photos
+              </button>
+            </div>
           </div>
-        </div>
-        <div className="stay-details-info">
-          <section className='details-content'>
+          <div className="stay-details-info">
+            <section className='details-content'>
 
             <section className='subtitles'>
               <h2 className='subtitle'>
@@ -176,12 +176,12 @@ export function StayDetails() {
               {/* <button onClick={onAddStayMsg}>Add Stay Message</button> */}
             </div>
 
-            <div className="stay-summary">
-              <p>{stay.summary}</p>
-            </div>
-            {stay.amenities &&
-              <Amenities stay={stay} />}
-          </section>
+              <div className="stay-summary">
+                <p>{stay.summary}</p>
+              </div>
+              {stay.amenities &&
+                <Amenities stay={stay} />}
+            </section>
 
           <div className="stay-reserve-container">
             <Reserve />
