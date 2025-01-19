@@ -3,21 +3,6 @@
     margin-bottom: rem(48px);
     max-width: 1120px;
 
-    .button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: rem(48px);
-        background-color: white;
-        border: 1px solid #222222;
-        border-radius: rem(8px);
-        width: rem(192px);
-        font-size: rem(16px);
-        font-weight: 500;
-        color: $main-writing-color;
-        letter-spacing: normal;
-        cursor: pointer;
-    }
 
 
     .stay-review-header {

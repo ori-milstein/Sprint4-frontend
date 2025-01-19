@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 
-import { loadStays, addStay, updateStay, removeStay, addStayMsg } from '../store/actions/stay.actions'
+import { loadStays, addStay, updateStay, removeStay, addStayMsg, clearStay } from '../store/actions/stay.actions'
 import { renderFilterBar } from '../store/actions/system.actions.js';
 
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service'
@@ -10,10 +10,11 @@ import { userService } from '../services/user'
 
 import { StayList } from '../cmps/StayList'
 import { StayFilter } from '../cmps/StayFilter'
+import { AppHeader } from '../cmps/AppHeader.jsx';
 
 export function StayIndex() {
     const stays = useSelector(storeState => storeState.stayModule.stays)
-	const filterBy = useSelector((storeState) => storeState.stayModule.filterBy)
+    const filterBy = useSelector((storeState) => storeState.stayModule.filterBy)
 
     useEffect(() => {
         loadStays(filterBy)
@@ -26,13 +27,6 @@ export function StayIndex() {
             renderFilterBar(false)
         }
     }, [])
-
-    // useEffect(() => {
-    //     fetch('/data/stays.json')
-    //         .then(res => res.json())
-    //         .then(setStays)
-    //         .catch(err => console.error('Failed to load stays:', err));
-    // }, [])
 
     async function onRemoveStay(stayId) {
         try {
@@ -69,14 +63,14 @@ export function StayIndex() {
     }
 
     return (
-        <main className="stay-index">
-            {/* <StayFilter
-                filterBy={filterBy}
-                setFilterBy={setFilterBy} /> */}
-            <StayList
-                stays={stays}
-                onRemoveStay={onRemoveStay}
-                onUpdateStay={onUpdateStay} />
-        </main>
+        <>
+            <AppHeader isHomepage={true}></AppHeader>
+            <main className="stay-index">
+                <StayList
+                    stays={stays}
+                    onRemoveStay={onRemoveStay}
+                    onUpdateStay={onUpdateStay} />
+            </main>
+        </>
     )
 }

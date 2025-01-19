@@ -11,7 +11,7 @@ import { AdminIndex } from './pages/AdminIndex.jsx'
 import { StayDetails } from './pages/StayDetails'
 import { PhotosPage } from './pages/PhotosPage'
 import { UserDetails } from './pages/UserDetails'
-
+import { PhotosPage } from './pages/PhotosPage'
 import { AppHeader } from './cmps/AppHeader'
 import { AppFooter } from './cmps/AppFooter'
 import { UserMsg } from './cmps/UserMsg.jsx'
@@ -24,11 +24,6 @@ export function RootCmp() {
 
     return (
         <div className="main-container">
-            <section className="headers">
-                <AppHeader />
-                {isHomePage && <StayFilter />}
-            </section>
-            <UserMsg />
             <main>
                 <Routes>
                     <Route path="/" element={<StayIndex />} />

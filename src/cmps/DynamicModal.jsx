@@ -1,7 +1,7 @@
 import { SET_APP_MODAL_REVIEWS } from "../store/reducers/system.reducer.js";
 import { ReviewsModal } from "./ReviewsModal.jsx";
 
-export function ModalContent({ modalType, stay, onClose }) {
+export function ModalContent({ modalType, stay, onClose, reviewIdxToScroll }) {
 
     switch (modalType) {
 
@@ -14,7 +14,7 @@ export function ModalContent({ modalType, stay, onClose }) {
         // case SET_APP_MODAL_AMENITIES:
         // return <AmenitiesModal stay={ stay } />
         case SET_APP_MODAL_REVIEWS:
-            return <ReviewsModal stay={stay} isModalActive={true} />
+            return <ReviewsModal stay={stay} isModalActive={true} reviewIdxToScroll={reviewIdxToScroll} />
         default: return
 
     }

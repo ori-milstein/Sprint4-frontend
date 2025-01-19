@@ -2,7 +2,7 @@ import { ReviewsModal } from "./ReviewsModal.jsx";
 import { SET_APP_MODAL_REVIEWS } from "../store/reducers/system.reducer.js";
 import { ReviewList } from "./ReviewList.jsx";
 
-export function ReviewSection({ stay, handleShowMore, isModalActive }) {
+export function ReviewSection({ stay, handleShowMore, isModalActive, setReviewIdxToScroll }) {
     return (
         <div className="stay-review-container">
             <section className="stay-review-header">
@@ -10,9 +10,9 @@ export function ReviewSection({ stay, handleShowMore, isModalActive }) {
                 <p>5.0 · {stay.reviews.length} reviews</p>
             </section>
 
-            <ReviewList stay={stay} isModalActive={isModalActive} />
+            <ReviewList stay={stay} isModalActive={isModalActive} handleShowMore={handleShowMore} setReviewIdxToScroll={setReviewIdxToScroll} />
             {/* <button> */}
-            <span className="button" onClick={() => handleShowMore(SET_APP_MODAL_REVIEWS)} >
+            <span className="regular-white-btn" onClick={() => handleShowMore(SET_APP_MODAL_REVIEWS)} >
                 Show all {stay.reviews.length} reviews
             </span>
             {/* </button> */}

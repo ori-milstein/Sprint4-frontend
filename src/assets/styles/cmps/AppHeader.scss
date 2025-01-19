@@ -1,12 +1,14 @@
 .app-header {
     box-sizing: border-box;
-    top: 0;
-    position: sticky;
     min-height: 80px;
     border-bottom: 1px solid lightgrey;
     display: flex;
     background-color: white;
     z-index: 1000;
+
+    .in-stay-details {
+        margin-inline: 210px;
+    }
 
     nav {
         display: flex;
@@ -132,7 +134,6 @@
 
             .filter-search {
                 border-radius: 50%;
-                position: absolute;
                 background-color: #ff385c;
                 right: 10px;
                 stroke: white;
@@ -165,6 +166,7 @@
                     color: #707070;
                     font-size: 14px;
                     line-break: strict;
+                    
                 }
             }
 
@@ -179,7 +181,7 @@
         }
 
         .not-expanded {
-            width: 380px;
+            width: max-content;
             padding-left: 20px;
             height: 48px;
         }
@@ -247,4 +249,14 @@
     nav.expand {
         height: 168px;
     }
+}
+.modal-backdrop {
+    background-color: rgb(34, 34, 34);
+    opacity: 0.4;
+    width: 100vw;
+    height: 100dvh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
