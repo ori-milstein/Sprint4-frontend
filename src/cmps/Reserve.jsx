@@ -1,15 +1,25 @@
 import { useState } from 'react'
-import DatePicker from 'react-datepicker'
 import { useSelector } from 'react-redux'
 import { DatePickerCmp } from './DatePickerCmp'
 
 export function Reserve() {
+
     const stay = useSelector(storeState => storeState.stayModule.stay)
     const [isDatePickerOpen, setIsDatePickerOpen] = useState(false)
+    const filterBy = useSelector((storeState) => storeState.stayModule.filterBy)
 
+    console.log('filter by in details:', filterBy)
     function toggleIsDatePickerOpen() {
         setIsDatePickerOpen(!isDatePickerOpen)
     }
+
+    const formatDate = (date) => {
+        return new Intl.DateTimeFormat('en-US', {
+            month: 'short',
+            day: 'numeric',
+            year: 'numeric',
+        }).format(new Date(date));
+    };
 
     return (
         < div className="stay-reserve" >
@@ -21,16 +31,20 @@ export function Reserve() {
                 </div>}
                 <div className={`check-in-container ${isDatePickerOpen ? 'open' : ''}`} onClick={toggleIsDatePickerOpen}>
                     <label className='reserve-labels'>CHECK-IN</label>
-                    <div className="checkin-date info-date">Add date</div>
+                    <div className="checkout-date info-date">
+                        {filterBy.checkInDate ? formatDate(filterBy.checkInDate) : 'Add date'}
+                    </div>
 
                 </div>
                 <div className={`check-out-container ${isDatePickerOpen ? 'open' : ''}`} onClick={toggleIsDatePickerOpen}>
                     <label className='reserve-labels'>CHECKOUT</label>
-                    <div className="checkout-date  info-date">Add date</div>
+                    <div className="checkout-date info-date">
+                        {filterBy.checkOutDate ? formatDate(filterBy.checkOutDate) : 'Add date'}
+                    </div>
                 </div>
                 <div className="stay-reserve-guests">
                     <label className='reserve-labels'>GUESTS</label>
-                    <div className="guests-number">{stay.capacity}</div>
+                    <div className="guests-number">{filterBy.minCapacity}</div>
                 </div>
             </div>
             <button className="reserve-btn">Reserve</button>
