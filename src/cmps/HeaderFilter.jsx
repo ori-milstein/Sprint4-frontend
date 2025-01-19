@@ -133,7 +133,7 @@ export function HeaderFilter({ isExpanded, setIsExpanded, toggleIsFilterOpen, ch
                         </div>
                         <div className="filter-action-container short who">
                             <label className="filter-label add-guests">
-                            { filterBy?.minCapacity + ' guests' || 'Add guests'}
+                            {filterBy.minCapacity ? `${filterBy.minCapacity} guests` : 'Add guests'}
                             </label>
                         </div>
                         <button className="filter-search short-btn">
