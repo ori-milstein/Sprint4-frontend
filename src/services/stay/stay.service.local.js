@@ -194,8 +194,8 @@ function _createStays() {
                 "countryCode": "US",
                 "city": "Bangkok",
                 "address": "Lahaina, HI, United States",
-                "lat": -156.6917,
-                "lan": 20.93792
+                "lat": 48.85661400,
+                "lan": 2.35222190
             },
             "reviews": [
                 {
@@ -373,8 +373,8 @@ function _createStays() {
                 "countryCode": "CA",
                 "city": "Sydney",
                 "address": "Montr\u00e9al, QC, Canada",
-                "lat": -73.54985,
-                "lan": 45.52797
+                "lat": 51.509865,
+                "lan": -0.118092
             },
             "reviews": [
                 {
