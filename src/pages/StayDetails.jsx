@@ -69,11 +69,15 @@ export function StayDetails() {
   }
 
   return (
-    <><AppHeader isHomepage={false}></AppHeader>
-      <div className="stay-container">
-        <section className="stay-details">
-          {appModal &&
-            <AppModal isModalActive={isModalActive} setIsModalActive={setIsModalActive} modalType={appModal} stay={stay} />}
+    <div className="stay-container">
+      <section className="stay-details">
+        {appModal &&
+          <AppModal
+            isModalActive={isModalActive}
+            setIsModalActive={setIsModalActive}
+            modalType={appModal}
+            stay={stay}
+          />}
 
           <h1 className="stay-details-header">{stay.name}</h1>
 
@@ -126,52 +130,51 @@ export function StayDetails() {
           <div className="stay-details-info">
             <section className='details-content'>
 
-              <section className='subtitles'>
-                <h2 className='subtitle'>
-                  {stay.roomType} in {stay.loc.city}, {stay.loc.country}
-                </h2>
-                <h3 className='regular-text'>
-                  {stay.capacity} guests  · {stay.equipment.bedroomNum} bedrooms  ·  {stay.equipment.bedsNum} beds  ·  {stay.equipment.bathNum} baths
-                </h3>
-                <h4 className='bold-text reviews-summary'>
-                  <img src='../../src/assets/assets/icons/general icons/asset 158.svg' />
-                  <span>{stay.reviews.length ? '5.0' : 'New'} · </span>
-                  {stay.reviews.length > 0 &&
-                    <a className='nostyle underline' onClick={() => { handleShowMore(SET_APP_MODAL_REVIEWS) }}>{stay.reviews.length} reviews</a>}
-                </h4>
-                <hr className="divider" />
-              </section>
+            <section className='subtitles'>
+              <h2 className='subtitle'>
+                {stay.roomType} in {stay.loc.city}, {stay.loc.country}
+              </h2>
+              <h3 className='regular-text'>
+                {stay.capacity} guests  · {stay.equipment.bedroomNum} bedrooms  ·  {stay.equipment.bedsNum} beds  ·  {stay.equipment.bathNum} baths
+              </h3>
+              <h4 className='bold-text reviews-summary'>
+                <img src='../../src/assets/assets/icons/general icons/asset 158.svg' />
+                <span>{stay.reviews.length ? '5.0' : 'New'} · </span>
+                {stay.reviews.length > 0 &&
+                  <a className='nostyle underline' onClick={() => { handleShowMore(SET_APP_MODAL_REVIEWS) }}>{stay.reviews.length} reviews</a>}
+              </h4>
+            </section>
 
-              <div className="stay-host">
+            <div className="stay-host">
 
-                <div className="host-picture">
-                  <img
-                    src={stay.host.imgUrl || stay.host.thumbnailUrl}
-                    alt={`Picture of ${stay.host.fullname}`}
-                  />
-                </div>
-                <div className="host-details">
-                  <p>
-                    <strong>Hosted by:</strong> <span>{stay.host.fullname}</span>
-                  </p>
-                  <p>
-                    <strong>Location:</strong> <span>{stay.host.location}</span>
-                  </p>
-                  <p>
-                    <strong>Response Time:</strong> <span>{stay.host.responseTime}</span>
-                  </p>
-                  <hr className="divider" />
-                  {stay.host.isSuperhost && (
-                    <p className="superhost">
-                      <span>🌟 Superhost</span>
-                    </p>
-                  )}
-                  <p>
-                    <strong>About the Host:</strong> <span>{stay.host.description}</span>
-                  </p>
-                </div>
-                <button onClick={onAddStayMsg}>Add Stay Message</button>
+              <div className="host-picture">
+                <img
+                  src={stay.host.imgUrl || stay.host.thumbnailUrl}
+                  alt={`Picture of ${stay.host.fullname}`}
+                />
               </div>
+              <div className="host-details">
+                <p>
+                  <strong>Hosted by:</strong> <span>{stay.host.fullname}</span>
+                </p>
+                <p>
+                  <strong>Location:</strong> <span>{stay.host.location}</span>
+                </p>
+                <p>
+                  <strong>Response Time:</strong> <span>{stay.host.responseTime}</span>
+                </p>
+                <hr className="divider" />
+                {stay.host.isSuperhost && (
+                  <p className="superhost">
+                    <span>🌟 Superhost</span>
+                  </p>
+                )}
+                <p>
+                  <strong>About the Host:</strong> <span>{stay.host.description}</span>
+                </p>
+              </div>
+              {/* <button onClick={onAddStayMsg}>Add Stay Message</button> */}
+            </div>
 
               <div className="stay-summary">
                 <p>{stay.summary}</p>
@@ -180,15 +183,14 @@ export function StayDetails() {
                 <Amenities stay={stay} />}
             </section>
 
-            <div className="stay-reserve-container">
-              <Reserve />
-            </div>
+          <div className="stay-reserve-container">
+            <Reserve />
           </div>
-          <LocationDetails stay={stay} />
-          <ReviewSection stay={stay} handleShowMore={handleShowMore} isModalActive={isModalActive} setReviewIdxToScroll={setReviewIdxToScroll} />
-        </section>
-      </div>
-    </>
+        </div>
+        <LocationDetails stay={stay} />
+        <ReviewSection stay={stay} handleShowMore={handleShowMore} isModalActive={isModalActive} setReviewIdxToScroll={setReviewIdxToScroll} />
+      </section>
+    </div>
   )
 
 }
