@@ -72,7 +72,12 @@ export function StayDetails() {
     <div className="stay-container">
       <section className="stay-details">
         {appModal &&
-          <AppModal isModalActive={isModalActive} setIsModalActive={setIsModalActive} modalType={appModal} stay={stay} />}
+          <AppModal
+            isModalActive={isModalActive}
+            setIsModalActive={setIsModalActive}
+            modalType={appModal}
+            stay={stay}
+          />}
 
         <h1 className="stay-details-header">{stay.name}</h1>
 
@@ -138,12 +143,11 @@ export function StayDetails() {
                 {stay.reviews.length > 0 &&
                   <a className='nostyle underline' onClick={() => { handleShowMore(SET_APP_MODAL_REVIEWS) }}>{stay.reviews.length} reviews</a>}
               </h4>
-              <hr className="divider" />
             </section>
 
             <div className="stay-host">
- 
-            <div className="host-picture">
+
+              <div className="host-picture">
                 <img
                   src={stay.host.imgUrl || stay.host.thumbnailUrl}
                   alt={`Picture of ${stay.host.fullname}`}
@@ -169,7 +173,7 @@ export function StayDetails() {
                   <strong>About the Host:</strong> <span>{stay.host.description}</span>
                 </p>
               </div>
-              <button onClick={onAddStayMsg}>Add Stay Message</button>
+              {/* <button onClick={onAddStayMsg}>Add Stay Message</button> */}
             </div>
 
             <div className="stay-summary">
@@ -180,7 +184,7 @@ export function StayDetails() {
           </section>
 
           <div className="stay-reserve-container">
-          <Reserve />
+            <Reserve />
           </div>
         </div>
         <LocationDetails stay={stay} />
