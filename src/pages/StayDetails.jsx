@@ -142,8 +142,8 @@ export function StayDetails() {
             </section>
 
             <div className="stay-host">
- 
-            <div className="host-picture">
+
+              <div className="host-picture">
                 <img
                   src={stay.host.imgUrl || stay.host.thumbnailUrl}
                   alt={`Picture of ${stay.host.fullname}`}
@@ -180,7 +180,7 @@ export function StayDetails() {
           </section>
 
           <div className="stay-reserve-container">
-          <Reserve />
+            <Reserve />
           </div>
         </div>
         <LocationDetails stay={stay} />
