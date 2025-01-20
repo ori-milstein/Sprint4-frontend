@@ -9,6 +9,7 @@ import { ChatApp } from './pages/Chat.jsx'
 import { AdminIndex } from './pages/AdminIndex.jsx'
 
 import { StayDetails } from './pages/StayDetails'
+import { PhotosPage } from './pages/PhotosPage'
 import { UserDetails } from './pages/UserDetails'
 import { AppHeader } from './cmps/AppHeader'
 import { AppFooter } from './cmps/AppFooter'
