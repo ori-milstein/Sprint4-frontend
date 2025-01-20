@@ -1,5 +1,5 @@
 .stay-details {
-    margin-inline: 300px;
+    margin-inline: 380px;
     position: relative;
 
     .back-link {
@@ -34,35 +34,35 @@
             width: 100%;
             height: 100%;
             object-fit: cover; /* Ensures the image fits its cell */
-            border-radius: 8px;
         }
 
         .main-image {
             grid-column: 1/3;
             grid-row: 1/-1;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
         }
 
         .side-bottom-image {
-
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-
+        .side-middle{
+            border-top-right-radius: 8px;
+        }
+        .side-extra {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-bottom-right-radius: 8px;
+        }
         .side-extra-container {
-
             position: relative;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-
-            .side-extra {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-bottom-right-radius: 8px;
-            }
 
             .show-all-btn {
                 position: absolute;
