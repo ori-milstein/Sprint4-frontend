@@ -7,7 +7,7 @@
     z-index: 1000;
 
     .in-stay-details {
-        margin-inline: 210px;
+        margin-inline: 300px;
     }
 
     nav {
@@ -259,4 +259,8 @@
     top: 0;
     left: 0;
     z-index: 1;
+}
+
+.stay-images{
+    display: grid;
 }
