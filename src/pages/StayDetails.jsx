@@ -85,15 +85,14 @@ export function StayDetails() {
             src={stay.imgUrls[3]}
             alt="Side Bottom Image"
           />
-          <div className="side-extra-container">
-            <img
-              className="side-extra"
-              src={stay.imgUrls[4]}
-              alt="Side Extra Image"
-            />
-            <button className="show-all-btn">Show all photos</button>
-          </div>
+          <img
+            className="side-extra"
+            src={stay.imgUrls[4]}
+            alt="Side Extra Image"
+          />
         </div>
+        {/* <button className="show-all-btn">Show all photos</button> */}
+
         <div className="stay-details-info">
           <section className='details-content'>
 
