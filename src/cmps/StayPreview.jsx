@@ -6,10 +6,12 @@ export function StayPreview({ stay }) {
     const [wishlistName, setWishlistName] = useState('')
     const maxChars = 50
 
+
     function formatDateRange(startDate, endDate) {
-        const options = { year: 'numeric', month: 'short', day: 'numeric' }
+        if (!startDate || !endDate) return ''
+        const options = { month: 'short', day: 'numeric' }
         const start = new Intl.DateTimeFormat('en-US', options).format(new Date(startDate))
-        const end = new Intl.DateTimeFormat('en-US', options).format(new Date(endDate))
+        const end = new Intl.DateTimeFormat('en-US', { day: 'numeric' }).format(new Date(endDate))
         return `${start} - ${end}`
     }
 
@@ -48,6 +50,11 @@ export function StayPreview({ stay }) {
     function handleInputChange(ev) {
         const value = ev.target.value.slice(0, maxChars)
         setWishlistName(value)
+    }
+
+    function calculateAverageRating(reviews) {
+        const total = reviews.reduce((sum, review) => sum + review.rate, 0)
+        return (total / reviews.length).toFixed(2)
     }
 
     return (
@@ -102,23 +109,27 @@ export function StayPreview({ stay }) {
                     <header className="location-header">
                         <span>{stay.loc.city}, {stay.loc.country}</span>
                         {stay.reviews && stay.reviews.length > 0 && (
-                            <span className="stay-rating">
-                                <i className="fas fa-star"></i> {calculateAverageRating(stay.reviews)}
-                            </span>
+                            <p className="stay-rating">
+                                <i className="fas fa-star"></i>
+                                <span>
+                                    {calculateAverageRating(stay.reviews)}
+                                </span>
+                            </p>
                         )}
                     </header>
 
-                    <h3 className="stay-name">{stay.name}</h3>
+                    <h3 className="stay-name"> {stay.name} </h3>
                     <p className="stay-dates">
                         {console.log('Reserved Dates:', stay.reservedDates)}
-                        {stay.reservedDates?.length > 0
-                            ? stay.reservedDates.map((range, idx) => (
-                                <span key={idx}>
+                        {stay.reservedDates?.length > 0 ? (
+                            stay.reservedDates.map((range, idx) => (
+                                <span key={idx} className="date-range">
                                     {formatDateRange(range.start, range.end)}
-                                    {idx < stay.reservedDates.length - 1 && ', '}
                                 </span>
                             ))
-                            : 'Dates not available'}
+                        ) : (
+                            <span>No Dates Available</span>
+                        )}
                     </p>
                     <p className="stay-price">
                         ${stay.price} <span>night</span>
@@ -176,9 +187,4 @@ export function StayPreview({ stay }) {
             )}
         </>
     )
-}
-
-function calculateAverageRating(reviews) {
-    const total = reviews.reduce((sum, review) => sum + review.rate, 0)
-    return (total / reviews.length).toFixed(2)
 }

@@ -132,6 +132,7 @@
 
     .info-container {
         padding: 10px;
+        margin: 0px -10px;
         display: flex;
         flex-direction: column;
 
@@ -178,14 +179,15 @@
             display: flex;
             align-items: center;
             gap: 4px;
-            font-size: 14px;
+            font-size: 12px;
+            margin: 0;
             font-weight: bold;
             color: #222;
 
             span {
-                margin-left: 4px;
-                color: #222;
-                font-weight: bold;
+                font-size: 14px;
+                color: #000;
+                font-weight: normal;
             }
         }
 
@@ -261,7 +263,7 @@
             border: none;
             border-radius: 50%;
             font-size: 25px;
-            color: #333;
+            color: #222222;
             cursor: pointer;
 
             &:hover {
@@ -296,20 +298,19 @@
                     &:focus {
                         border-color: black;
                         box-shadow: 0 0 5px black;
-
                     }
                 }
-            }
 
-            &::after {
-                content: '';
-                position: absolute;
-                bottom: -30px;
-                left: 20px;
-                width: calc(100% + 40px);
-                transform: translateX(-40px);
-                height: 1px;
-                background-color: #ccc;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -30px;
+                    left: 20px;
+                    width: calc(100% + 40px);
+                    transform: translateX(-40px);
+                    height: 1px;
+                    background-color: #ccc;
+                }
             }
 
             .char-counter {
@@ -325,38 +326,38 @@
                 margin-top: auto;
                 padding-top: 20px;
                 align-items: center;
+            }
 
-                button {
-                    padding: 10px 20px;
-                    font-size: 14px;
-                    font-weight: bold;
-                    border: none;
-                    border-radius: 5px;
-                    cursor: pointer;
-                    transition: background 0.3s ease;
+            button {
+                padding: 10px 20px;
+                font-size: 14px;
+                font-weight: bold;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background 0.3s ease;
 
-                    &.clear-btn {
-                        background: none;
-                        color: #333;
+                &.clear-btn {
+                    background: none;
+                    color: #222222;
+                }
+
+                &:hover {
+                    background: #e5e5e5;
+                }
+
+                &.create-btn {
+                    background: #222222;
+                    color: #FFFFFF;
+                    opacity: 0.6;
+                    cursor: not-allowed;
+
+                    &:not(:disabled) {
+                        opacity: 1;
+                        cursor: pointer;
 
                         &:hover {
-                            background: #e5e5e5;
-                        }
-                    }
-
-                    &.create-btn {
-                        background: #222222;
-                        color: #fff;
-                        opacity: 0.6;
-                        cursor: not-allowed;
-
-                        &:not(:disabled) {
-                            opacity: 1;
-                            cursor: pointer;
-
-                            &:hover {
-                                background: black;
-                            }
+                            background: black;
                         }
                     }
                 }
