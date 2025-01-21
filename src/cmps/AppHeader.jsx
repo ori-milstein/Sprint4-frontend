@@ -11,6 +11,7 @@ import { SuggestedLocations } from './SuggestedLocations';
 import { GuestSelector } from './GuestSelector';
 import { setFiterBy } from '../store/actions/stay.actions';
 import { StayFilter } from './StayFilter';
+import { stayService } from '../services/stay';
 
 
 export function AppHeader({ isHomepage }) {
@@ -28,7 +29,7 @@ export function AppHeader({ isHomepage }) {
 
 	const [checkInDate, setCheckInDate] = useState('')
 	const [checkOutDate, setCheckOutDate] = useState('')
-	const [guests, setGuests] = useState({ adults: 0, children: 0, infants: 0, pets: 0 })
+	const [guests, setGuests] = useState({ adults: 1, children: 0, infants: 0, pets: 0 })
 	const [where, setWhere] = useState('')
 
 	function onToggleMenu() {
@@ -89,6 +90,12 @@ export function AppHeader({ isHomepage }) {
 		}
 	}
 	
+	async function onLogoClick(){
+		console.log('click on logo')
+		setIsExpanded(false)
+		const filterByToUpdate = stayService.getDefaultFilter()
+		await setFiterBy(filterByToUpdate)
+	}
 
 	return (
 		<>
@@ -100,8 +107,8 @@ export function AppHeader({ isHomepage }) {
 					onClick={isMenuOpen}
 				>
 					<nav className={`${isExpanded ? 'expand' : ''} ${!isHomepage ? 'in-stay-details' : ''}`}>
-						<NavLink to="/" className="logo">
-							<Logo />
+						<NavLink to="/" className="logo"  onClick={onLogoClick}>
+							<Logo/>
 							<h1>airbnb</h1>
 						</NavLink>
 						<HeaderFilter

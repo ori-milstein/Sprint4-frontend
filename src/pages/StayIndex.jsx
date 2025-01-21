@@ -9,7 +9,6 @@ import { stayService } from '../services/stay/'
 import { userService } from '../services/user'
 
 import { StayList } from '../cmps/StayList'
-import { StayFilter } from '../cmps/StayFilter'
 import { AppHeader } from '../cmps/AppHeader.jsx';
 
 export function StayIndex() {
@@ -22,7 +21,7 @@ export function StayIndex() {
 
     useEffect(() => {
         renderFilterBar(true)
-
+        
         return () => {
             renderFilterBar(false)
         }
