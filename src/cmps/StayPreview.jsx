@@ -142,7 +142,7 @@ export function StayPreview({ stay }) {
                         )}
                     </p>
                     <p className="stay-price">
-                        ${stay.price} <span>night</span>
+                        ₪{stay.price} <span>night</span>
                     </p>
                 </div>
             </article>
