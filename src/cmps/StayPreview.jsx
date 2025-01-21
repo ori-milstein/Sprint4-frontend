@@ -9,10 +9,22 @@ export function StayPreview({ stay }) {
 
     function formatDateRange(startDate, endDate) {
         if (!startDate || !endDate) return ''
-        const options = { month: 'short', day: 'numeric' }
-        const start = new Intl.DateTimeFormat('en-US', options).format(new Date(startDate))
-        const end = new Intl.DateTimeFormat('en-US', { day: 'numeric' }).format(new Date(endDate))
-        return `${start} - ${end}`
+
+        const start = new Date(startDate)
+        const end = new Date(endDate)
+
+        const optionsStart = { month: 'short', day: 'numeric' }
+        const optionsEndSameMonth = { day: 'numeric' }
+        const optionsEndDifferentMonth = { month: 'short', day: 'numeric' }
+
+        const formattedStart = new Intl.DateTimeFormat('en-US', optionsStart).format(start)
+
+        const formattedEnd =
+            start.getMonth() === end.getMonth()
+                ? new Intl.DateTimeFormat('en-US', optionsEndSameMonth).format(end)
+                : new Intl.DateTimeFormat('en-US', optionsEndDifferentMonth).format(end)
+
+        return `${formattedStart} - ${formattedEnd}`
     }
 
     function handleNext(ev) {
@@ -120,7 +132,6 @@ export function StayPreview({ stay }) {
 
                     <h3 className="stay-name"> {stay.name} </h3>
                     <p className="stay-dates">
-                        {console.log('Reserved Dates:', stay.reservedDates)}
                         {stay.reservedDates?.length > 0 ? (
                             stay.reservedDates.map((range, idx) => (
                                 <span key={idx} className="date-range">
