@@ -42,11 +42,11 @@
                 border: none;
                 justify-content: center;
                 align-items: center;
-                width: 32px;
-                height: 32px;
+                width: 31px;
+                height: 31px;
                 border-radius: 50%;
                 background: none;
-                background-color: rgba(255, 255, 255, 0.9);
+                background-color: rgba(255, 255, 255, 0.8);
                 box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
                 cursor: pointer;
                 transition: background-color 0.3s ease, transform 0.2s ease;
@@ -90,19 +90,19 @@
             transform: translateX(-50%);
 
             .indicator {
-                width: 7px;
-                height: 7px;
-                background-color: #e5e5e5;
+                width: 6px;
+                height: 6px;
+                background-color: #bdbaba;
                 border-radius: 50%;
                 cursor: pointer;
                 transition: background-color 0.3s ease;
 
                 &.active {
-                    background-color: black;
+                    background-color: white;
                 }
 
                 &:hover {
-                    background-color: black;
+                    background-color: white;
                 }
             }
         }

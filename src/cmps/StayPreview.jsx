@@ -6,7 +6,6 @@ export function StayPreview({ stay }) {
     const [wishlistName, setWishlistName] = useState('')
     const maxChars = 50
 
-
     function formatDateRange(startDate, endDate) {
         if (!startDate || !endDate) return ''
 
