@@ -88,15 +88,11 @@
 .stay-details-info {
     display: grid;
     padding-top: 26px;
-    grid-template-columns: 0.6fr 0.4fr;
-    gap: 20px;
+    // grid-template-columns: 0.6fr 0.4fr;
+    gap: 5%;
     width: 100%;
 
     position: relative;
-
-    @media (min-width: 768px) {
-        flex-direction: row;
-    }
 
     h2 {
         margin: 0;
@@ -139,11 +135,8 @@
     }
 
     .stay-host {
-        flex: 1;
-        background-color: #f9f9f9;
         border-radius: 10px;
         margin-top: 10px;
-        padding: 20px;
 
         p {
             font-size: 1rem;
@@ -181,7 +174,6 @@
     box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px 0px;
 
     width: 372px;
-    // margin: 20px auto;
     height: max-content;
 
     position: sticky;

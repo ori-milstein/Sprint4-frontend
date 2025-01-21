@@ -113,12 +113,9 @@ export function StayDetails() {
 
             <div className="stay-host">
               <p>
-                <strong>Hosted by:</strong> {stay.host.fullname}
+                <strong>Hosted by {stay.host.fullname}</strong> 
               </p>
-              <p>
-                <strong>Check-in:</strong> Self Check-in available
-              </p>
-              <button onClick={onAddStayMsg}>Add Stay Message</button>
+              {/* <button onClick={onAddStayMsg}>Add Stay Message</button> */}
             </div>
 
             <div className="stay-summary">
