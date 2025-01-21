@@ -112,6 +112,9 @@ export function StayDetails() {
             </section>
 
             <div className="stay-host">
+              <div className="host-image">
+                <img src={stay.host.pictureUrl} alt="" />
+              </div>
               <p>
                 <strong>Hosted by {stay.host.fullname}</strong> 
               </p>
