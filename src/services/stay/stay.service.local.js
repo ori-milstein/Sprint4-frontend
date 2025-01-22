@@ -18,7 +18,7 @@ async function query(filterBy = { txt: '', price: 0, label: '', sortField: '', s
     var stays = await storageService.query(STORAGE_KEY)
     const { txt, minCapacity, label, checkInDate, checkOutDate } = filterBy
 
-    console.log('filterBy from actions', filterBy)
+    console.log('filterBy in query', filterBy)
 
     if (txt) {
         const regex = new RegExp(txt, 'i')

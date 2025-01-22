@@ -2,14 +2,19 @@ import React, { useState } from 'react';
 import { DateRangePicker } from 'react-date-range';
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css'; // Default theme
+import { useSelector } from 'react-redux';
 
 export function DatePickerCmp({ onCheckInChange, onCheckOutChange }) {
+
+    const filterBy = useSelector((storeState) => storeState.stayModule.filterBy)
+
     function trimDate(date) {
         return new Date(date.getFullYear(), date.getMonth(), date.getDate())
     }
+    
     const [selectionRange, setSelectionRange] = useState({
-        startDate: trimDate(new Date()),
-        endDate: trimDate(new Date()),
+        startDate: filterBy.checkInDate ? new Date(filterBy.checkInDate) : trimDate(new Date()),
+        endDate: filterBy.checkOutDate ? new Date(filterBy.checkOutDate) : trimDate(new Date()),
         key: 'selection',
     })
 
@@ -48,5 +53,5 @@ export function DatePickerCmp({ onCheckInChange, onCheckOutChange }) {
                 minDate={new Date()}
             />
         </div>
-    );
+    )
 }
