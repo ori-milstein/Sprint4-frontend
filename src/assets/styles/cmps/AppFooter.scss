@@ -1,26 +1,59 @@
-.app-footer{
+.app-footer {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-
-    min-height: 3.5rem;
-
-    padding: rem(10px) 1rem;
-    background-color: $clr4;
+    text-align: center;
+    padding: 0.7rem 5rem;
+    background-color: #f8f8f8;
+    border-top: 1px solid #ddd;
+    font-size: 0.9rem;
+    position: relative;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
 
     p {
+        color: #222222;
+        text-align: left;
         margin: 0;
-    }
-    
-    span {
-        font-size: .8em;
-        
-        &.local-services {
-            color: $clr1;
+        line-height: 1.6;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+
+        a {
+            color: #222222;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
-        
-        &.remote-services {
-            color: $clr5;
+    }
+
+    .footer-right {
+        display: flex;
+        font-size: 0.9rem;
+        gap: 1rem;
+        align-items: center;
+
+        span {
+            cursor: default;
+        }
+
+        .clickable {
+            color: #222222;
+            cursor: pointer;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .dropdown {
+            cursor: pointer;
         }
     }
 }
