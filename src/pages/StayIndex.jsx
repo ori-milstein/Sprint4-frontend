@@ -24,7 +24,7 @@ export function StayIndex() {
 
     useEffect(() => {
         renderFilterBar(true)
-
+        
         return () => {
             renderFilterBar(false)
         }

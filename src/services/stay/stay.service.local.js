@@ -18,7 +18,7 @@ async function query(filterBy = { txt: '', price: 0, label: '', sortField: '', s
     var stays = await storageService.query(STORAGE_KEY)
     const { txt, minCapacity, label, checkInDate, checkOutDate } = filterBy
 
-    console.log('filterBy from actions', filterBy)
+    console.log('filterBy in query', filterBy)
 
     if (txt) {
         const regex = new RegExp(txt, 'i')
@@ -184,7 +184,7 @@ function _createStays() {
                 "location": "Eureka, California, United States",
                 "responseTime": "within an hour",
                 "thumbnailUrl": "https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_small",
-                "pictureUrl": "https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_medium",
+                "pictureUrl": "https://randomuser.me/api/portraits/men/1.jpg",
                 "isSuperhost": true,
                 "id": "36133410",
                 "description": "Adventurous couple loves to travel :)"
@@ -203,7 +203,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3407e36c59e6164fc004",
                         "fullname": "Kiesha",
-                        "imgUrl": "https://robohash.org/10711825?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/1.jpg",
                         "id": "10711825"
                     },
                     "txt": "I had a great experience working with Patty and Peter.  Both were very attentive in sorting out the booking details and following up directly when I had questions.  I rented a 2 bedroom unit at the Westin Villas  in Maui and both the unit and property was absolutely amazing.  I think we had the best unit on the resort complete with 2 outdoor patios with direct access  to  the  beach.  I would HIGHLY recommend renting with Patty and Peter.",
@@ -214,7 +214,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3403e36c59e6164fb204",
                         "fullname": "Chris",
-                        "imgUrl": "https://robohash.org/70072865?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/2.jpg",
                         "id": "70072865"
                     },
                     "txt": "Peter quickly responded to any questions I had before, and during the trip. Will use again, highly recommend. ",
@@ -225,7 +225,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3405e36c59e6164fb703",
                         "fullname": "Kim",
-                        "imgUrl": "https://robohash.org/71179725?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/2.jpg",
                         "id": "71179725"
                     },
                     "txt": "We had the perfect location for a room, first floor right in front of the pool. The resort is beautiful, and the staff is so friendly! I enjoyed it so much, we talked about buying a timeshare ourselves.",
@@ -236,7 +236,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3404e36c59e6164fb37f",
                         "fullname": "Tracy",
-                        "imgUrl": "https://robohash.org/65593239?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/3.jpg",
                         "id": "65593239"
                     },
                     "txt": "Beautiful location. Patty & Peter were super helpful and easy to work with!",
@@ -247,7 +247,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3403e36c59e6164fb105",
                         "fullname": "Duyen",
-                        "imgUrl": "https://robohash.org/26215688?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/3.jpg",
                         "id": "26215688"
                     },
                     "txt": "Great spot for the kids and family and close to beach and everything at the resort. We will definitely be back.",
@@ -258,7 +258,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3402e36c59e6164fabbe",
                         "fullname": "Binh",
-                        "imgUrl": "https://robohash.org/117390236?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/4.jpg",
                         "id": "117390236"
                     },
                     "txt": "The unit and the Westin offer variety of amenities you can possibly ask for. Sofa beds are very comfortable to sleep in. But there is charge for ocean view upgrade. Overall, I highly recommend to book with Patty and Peter. ",
@@ -269,7 +269,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3404e36c59e6164fb4af",
                         "fullname": "Samy",
-                        "imgUrl": "https://robohash.org/15143517?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/4.jpg",
                         "id": "15143517"
                     },
                     "txt": "We spent a great week at Patty and Peter's place. The place was exactly as shown in the pictures, very comfortable, nice view, with all amenities. The resort is great with several pools, a long beach, many restaurants, and of course a lot of great activities all around.",
@@ -280,7 +280,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3405e36c59e6164fb87b",
                         "fullname": "Breanne",
-                        "imgUrl": "https://robohash.org/78173091?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/5.jpg",
                         "id": "78173091"
                     },
                     "txt": "This place was perfect for my family. We had plenty of room to spread out and the service could not have been any better",
@@ -291,7 +291,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3405e36c59e6164fb713",
                         "fullname": "Kimberly",
-                        "imgUrl": "https://robohash.org/100535039?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/5.jpg",
                         "id": "100535039"
                     },
                     "txt": "We love Westin Kaanapalli",
@@ -351,7 +351,7 @@ function _createStays() {
                 "fullname": "Angel",
                 "location": "Montreal, Qu\u00e9bec, Canada",
                 "thumbnailUrl": "https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small",
-                "pictureUrl": "https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_x_medium",
+                "pictureUrl": "https://randomuser.me/api/portraits/men/1.jpg",
                 "isSuperhost": false,
                 "id": "80344827",
                 "description": ""
@@ -370,7 +370,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3407e36c59e6164fc058",
                         "fullname": "Rowan",
-                        "imgUrl": "https://robohash.org/81703602?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/1.jpg",
                         "id": "81703602"
                     },
                     "txt": "The place was great, as was the host! I would recommend staying here.",
@@ -381,7 +381,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3403e36c59e6164fb274",
                         "fullname": "Adriana",
-                        "imgUrl": "https://robohash.org/64310987?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/2.jpg",
                         "id": "64310987"
                     },
                     "txt": "J'ai ador\u00e9 rester l\u00e0. Tr\u00e8s acceuillant.",
@@ -392,7 +392,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3405e36c59e6164fb87c",
                         "fullname": "Emma",
-                        "imgUrl": "https://robohash.org/23709900?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/2.jpg",
                         "id": "23709900"
                     },
                     "txt": "Angel est un h\u00f4te tr\u00e8s sympa et arrangeant ! L'appartement est agr\u00e9able \u00e0 vivre et propre. Proche du m\u00e9tro et du centre ville. Nous avons pass\u00e9 un tr\u00e8s bon s\u00e9jour !",
@@ -403,7 +403,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3408e36c59e6164fc082",
                         "fullname": "Jeffery",
-                        "imgUrl": "https://robohash.org/44882622?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/3.jpg",
                         "id": "44882622"
                     },
                     "txt": "Angel was warm and welcoming and has a beautiful apartment. I'd recommend his place to anyone visiting downtown Montreal!",
@@ -502,7 +502,7 @@ function _createStays() {
                 "location": "Porto, Porto District, Portugal",
                 "responseTime": "within an hour",
                 "thumbnailUrl": "https://a0.muscache.com/im/pictures/c9b876fc-b30e-4951-8f88-af9add00939e.jpg?aki_policy=profile_small",
-                "pictureUrl": "https://a0.muscache.com/im/pictures/c9b876fc-b30e-4951-8f88-af9add00939e.jpg?aki_policy=profile_x_medium",
+                "pictureUrl": "https://randomuser.me/api/portraits/women/3.jpg",
                 "isSuperhost": true,
                 "id": "78704763",
                 "description": "Simples, muito comunicativa, mas de elevado sentido de responsabilidade, de organiza\u00e7\u00e3o e de confian\u00e7a.\r\nGosto muito de contacto humano, sem o qual n\u00e3o me sinto est\u00e1vel. Adoro conhecer pessoas de culturas diferentes.\r\nFa\u00e7o v\u00e1rias viagens, mas de curta dura\u00e7\u00e3o, pois tenho necessidade de sentir o lar e a fam\u00edlia. Por ser assim, tento fazer tudo para que os meus hospedes se sintam confort\u00e1veis como em suas casas."
@@ -521,7 +521,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3403e36c59e6164fb090",
                         "fullname": "Lina & Alexis",
-                        "imgUrl": "https://robohash.org/19177194?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/4.jpg",
                         "id": "19177194"
                     },
                     "txt": "Mes parents ont pass\u00e9 un excellent s\u00e9jour \u00e0 Porto dans l'appartement de Maria qui est bien \u00e9quip\u00e9, confortable et tr\u00e8s propre. Il est situ\u00e9 au coeur du centre ville et tout est accessible \u00e0 pied. Si vous venez en voiture, pr\u00e9voir de se garer dans le parking souterrain payant juste \u00e0 c\u00f4t\u00e9. Mes parents remercient chaudement Maria et son mari qui ont \u00e9t\u00e9 adorables, notamment par leur accueil chaleureux.",
@@ -532,7 +532,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3404e36c59e6164fb4e7",
                         "fullname": "Mario R.",
-                        "imgUrl": "https://robohash.org/81211152?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/4.jpg",
                         "id": "81211152"
                     },
                     "txt": "El apartamento es perfecto para una  estancia, esta perfectamente dotado para cubrir las necesidades de un viaje de recreo, situado perfectamente para acceder a pie a las zonas m\u00e1s interesantes de Oporto. Mar\u00eda una perfecta anfitriona que te facilitar\u00e1 una inolvidable estancia en Oporto. Ha sido una gran experiencia.",
@@ -543,7 +543,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3403e36c59e6164fb110",
                         "fullname": "Patricia",
-                        "imgUrl": "https://robohash.org/16580426?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/5.jpg",
                         "id": "16580426"
                     },
                     "txt": "Thierry, Patricia, Ana\u00efs et Manon,\r\nMaria et son mari nous attendaient avec gentillesse et sourires, Maria a toujours r\u00e9pondu \u00e0 mes mails et SMS en cours de voyage.   Ils nous ont aid\u00e9 \u00e0 monter les valises, Il y avait une bouteille d'eau au frais, tr\u00e8s appr\u00e9ciable ainsi que des petits g\u00e2teaux et une bouteille de vin dans le frigo...L'appartement \u00e9tait tr\u00e8s propre rien ne manquait, conforme \u00e0 la description, bien situ\u00e9, nous avons tout fait \u00e0 pieds ...Tr\u00e8s \u00e0 l'\u00e9coute de nos demandes Maria et son mari sont charmants, nous nous sommes sentis en famille, nous reviendrons et je recommande fortement ce logement ...Nous avons pu appr\u00e9cier notre s\u00e9jour sans tracas.  ",
@@ -554,7 +554,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3401e36c59e6164fab5b",
                         "fullname": "Ingrid",
-                        "imgUrl": "https://robohash.org/40501338?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/5.jpg",
                         "id": "40501338"
                     },
                     "txt": "Thanks Maria for your warm welcome. The appartement was really clean. It has everything that we needed for our stay and is really well located. It was easy to park for free near the appartement. Thanks!",
@@ -565,7 +565,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3403e36c59e6164fb27c",
                         "fullname": "Marie Odile",
-                        "imgUrl": "https://robohash.org/110925120?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/1.jpg",
                         "id": "110925120"
                     },
                     "txt": "L appartement de Maria est tres bien situe, propre et surtout tres calme. Il ne manque rien . Maria nous a tres bien recus . Je recommande cet appartement.",
@@ -576,7 +576,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3407e36c59e6164fbd3c",
                         "fullname": "Anne",
-                        "imgUrl": "https://robohash.org/23040000?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/1.jpg",
                         "id": "23040000"
                     },
                     "txt": "Maria is a great host and we loved this apartment! It was bright, clean, airy and well-equipped and Maria gave us a thorough introduction to how everything worked. The bed was comfortable (it is not made for tall people though) and nights were quiet as both living room and bedroom are facing the backyard, not the street. Only in the morning we could not sleep in as there was loud construction noise during the day. The metro station is only a few minutes walk away and the city center is at walking distance. We also got a sweet welcome with Portuguese wine.",
@@ -587,7 +587,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3407e36c59e6164fbd39",
                         "fullname": "Armelle",
-                        "imgUrl": "https://robohash.org/113337848?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/2.jpg",
                         "id": "113337848"
                     },
                     "txt": "Appartement tr\u00e8s bien situ\u00e9, tout le vieux porto se fait \u00e0 pied. Tr\u00e8s propre, ind\u00e9pendant et fonctionnel. Metro au pied en venant de l'a\u00e9roport, ligne directe 15 minutes environ.\nRestaurants et \u00e9piceries typiques au pied de l'immeuble. Climatisation et t\u00e9l\u00e9 dans toutes les pi\u00e8ces, calme et quartier pittoresque. \u00c0 recommander pour 3 ou 4. Accueil simple, gentil et efficace comme Maria la propri\u00e9taire.\n",
@@ -598,7 +598,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3406e36c59e6164fbc52",
                         "fullname": "Domingo",
-                        "imgUrl": "https://robohash.org/114367498?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/2.jpg",
                         "id": "114367498"
                     },
                     "txt": "apartamento bien situado, agradable, bonito, muy limpio y con una anfitriona maravillosa dispuesta a resolver cualquier inconveniente que se pueda presentar. lo recomiendo sin lugar a dudas.\ngracias Mariapor su gentileza",
@@ -609,7 +609,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3406e36c59e6164fbb3f",
                         "fullname": "Estelle",
-                        "imgUrl": "https://robohash.org/123999116?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/3.jpg",
                         "id": "123999116"
                     },
                     "txt": "Appartement tr\u00e8s propre et tr\u00e8s bien situ\u00e9, bien agenc\u00e9. Quartier tr\u00e8s vivant mais appartement calme car ne donne pas sur la rue. Nous avons pass\u00e9 un tr\u00e8s bon s\u00e9jour chez Maria qui nous a tr\u00e8s bien accueilli.",
@@ -620,7 +620,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3403e36c59e6164fb06f",
                         "fullname": "Alfredo Julio Leandro",
-                        "imgUrl": "https://robohash.org/148979666?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/3.jpg",
                         "id": "148979666"
                     },
                     "txt": "Apartamento agradable, muy limpio y muy bien equipado, en zona tranquila pero accesible para llegar a todos lados de a pie. Maria y Arturo nos recibieron con un rico vino del Douro y galletitas y muy buenas recomendaciones para pasear y comer.",
@@ -631,7 +631,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3405e36c59e6164fb78f",
                         "fullname": "Nataliia",
-                        "imgUrl": "https://robohash.org/137603514?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/4.jpg",
                         "id": "137603514"
                     },
                     "txt": "\u041d\u0430\u043c \u043e\u0447\u0435\u043d\u044c \u043f\u043e\u043d\u0440\u0430\u0432\u0438\u043b\u0430\u0441\u044c \u043a\u0432\u0430\u0440\u0442\u0438\u0440\u0430,\u0441\u0432\u0435\u0442\u043b\u0430\u044f,\u0443\u044e\u0442\u043d\u0430\u044f,\u043d\u0430 3-\u043c \u044d\u0442\u0430\u0436\u0435,\u0441 \u0431\u043e\u043b\u044c\u0448\u0438\u043c \u0431\u0430\u043b\u043a\u043e\u043d\u043e\u043c,\u0432 \u043a\u0432\u0430\u0440\u0442\u0438\u0440\u0435 \u0435\u0441\u0442\u044c \u0432\u0441\u0435 \u0441\u0430\u043c\u043e\u0435 \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u043e\u0435,\u0441\u0442\u0438\u0440\u0430\u043b\u044c\u043d\u0430\u044f \u043c\u0430\u0448\u0438\u043d\u0430,\u0443\u0442\u044e\u0433,\u043a\u0440\u043e\u0432\u0430\u0442\u0438 \u043e\u0447\u0435\u043d\u044c \u0443\u0434\u043e\u0431\u043d\u044b\u0435,\u043a\u0440\u0430\u0441\u0438\u0432\u043e\u0435 \u043f\u043e\u0441\u0442\u0435\u043b\u044c\u043d\u043e\u0435 \u0431\u0435\u043b\u044c\u0435,\u0432\u0441\u044f \u043e\u0431\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u0432 \u043a\u0432\u0430\u0440\u0442\u0438\u0440\u0435 \u0441\u0434\u0435\u043b\u0430\u043d\u0430 \u0441 \u0434\u0443\u0448\u043e\u0439,\u0432\u0441\u0435 \u0432\u0440\u0435\u043c\u044f \u043f\u0440\u0438\u0431\u044b\u0432\u0430\u043d\u0438\u044f \u0447\u0443\u0432\u0441\u0442\u0432\u043e\u0432\u0430\u043b\u0438 \u0441\u0435\u0431\u044f \u043a\u0430\u043a \u0434\u043e\u043c\u0430.\n\u041c\u0430\u0440\u0438\u044f \u043f\u043e \u043f\u0440\u0438\u0435\u0437\u0434\u0443 \u043f\u043e\u0434\u0430\u0440\u0438\u043b\u0430 \u043d\u0430\u043c \u0431\u0443\u0442\u044b\u043b\u043a\u0443 \u0432\u0438\u043d\u0430 \u0438\u0437 \u0434\u043e\u043b\u0438\u043d\u044b \u0440\u0435\u043a\u0438 \u0414\u043e\u0440\u0443,\u0438\u0437 \u043a\u0440\u0430\u0441\u0438\u0432\u044b\u0445 \u0431\u043e\u043a\u0430\u043b\u043e\u0432 \u043c\u044b \u0435\u0433\u043e \u0441 \u0443\u0434\u043e\u0432\u043e\u043b\u044c\u0441\u0442\u0432\u0438\u0435\u043c \u0432\u044b\u043f\u0438\u043b\u0438,\u0441\u043f\u0430\u0441\u0438\u0431\u043e \u0437\u0430 \u043f\u0440\u0435\u0437\u0435\u043d\u0442.\n\u0412 \u044d\u0442\u043e\u0439 \u043c\u0430\u043b\u0435\u043d\u044c\u043a\u043e\u0439 \u0443\u044e\u0442\u043d\u043e\u0439 \u043a\u0432\u0430\u0440\u0442\u0438\u0440\u0435 -3 \u0442\u0435\u043b\u0435\u0432\u0438\u0437\u043e\u0440\u0430!!!!\u0421\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0431\u044b\u043b\u043e \u043d\u0435\u043a\u043e\u0433\u0434\u0430,\u043d\u0430\u0441\u043b\u0430\u0436\u0434\u0430\u043b\u0438\u0441\u044c \u043a\u0440\u0430\u0441\u0438\u0432\u044b\u043c \u0433\u043e\u0440\u043e\u0434\u043e\u043c \u0438 \u043e\u043a\u0440\u0435\u0441\u0442\u043d\u043e\u0441\u0442\u044f\u043c\u0438 \u041f\u043e\u0440\u0442\u0443.",
@@ -642,7 +642,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3402e36c59e6164fad62",
                         "fullname": "Liz",
-                        "imgUrl": "https://robohash.org/144054479?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/4.jpg",
                         "id": "144054479"
                     },
                     "txt": "Muy contentos con todo. El piso estaba bastante cerca del centro, Maria y su marido estaban incluso antes de la hora de nuestra llegada. El piso esta muy bien equipado: cafetera, botiqu\u00edn, lavadora etc. Super super limpio todo y las camas muy comodas y acogedores. Y al ser un piso interior, no se oia nada de ruido. Recomendable!",
@@ -653,7 +653,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3403e36c59e6164fb1c3",
                         "fullname": "Ariadne",
-                        "imgUrl": "https://robohash.org/151785573?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/5.jpg",
                         "id": "151785573"
                     },
                     "txt": "Eu e minha amiga ficamos um m\u00eas no apartamento e foi uma otima experiencia!\nMuito bem localizado, perto de tudo! N\u00e3o tivemos nenhuma dificuldade em encontrar o local, que fica a minutos da esta\u00e7\u00e3o do metr\u00f4 e \u00e9 muito perto da regi\u00e3o central.\n\u00d3tima infraestrutura, limpeza e organiza\u00e7\u00e3o.\nFomos muito bem recebidas e bem auxiliadas pela Maria, que com certeza \u00e9 uma \u00f3tima anfitri\u00e3!\nRecomendo muito a estadia, n\u00e3o poderia ter sido melhor!",
@@ -664,7 +664,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3404e36c59e6164fb5f5",
                         "fullname": "Bruno",
-                        "imgUrl": "https://robohash.org/169584809?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/5.jpg",
                         "id": "169584809"
                     },
                     "txt": "Respostas sempre r\u00e1pidas; excelente recep\u00e7\u00e3o ; sempre simp\u00e1tica e dispon\u00edvel.",
@@ -675,7 +675,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3402e36c59e6164fad10",
                         "fullname": "Jo\u00e3o",
-                        "imgUrl": "https://robohash.org/43281546?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/1.jpg",
                         "id": "43281546"
                     },
                     "txt": "Clean, quiet and centrally located. Very welcoming host as well.",
@@ -686,7 +686,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3408e36c59e6164fc075",
                         "fullname": "Alcides",
-                        "imgUrl": "https://robohash.org/22956972?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/1.jpg",
                         "id": "22956972"
                     },
                     "txt": "O Espa\u00e7o de Maria \u00e9 de extremo bom gosto. Tudo extremamente limpo, pratico e organizado nos m\u00ednimos detalhes.  Boa localiza\u00e7\u00e3o perto de tudo.  Sem falar na Simpatia e disponibilidade da Maria que com suas dicas tornou nossa estadia em Porto melhor do que esper\u00e1vamos. Recomendad\u00edssimo !",
@@ -697,7 +697,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3406e36c59e6164fbad8",
                         "fullname": "Miguel Angel",
-                        "imgUrl": "https://robohash.org/3708225?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/2.jpg",
                         "id": "3708225"
                     },
                     "txt": "Alojamiento coqueto y acogedor, muy limpio y bien ubicado, tiene 2 habitaciones y todo lo necesario para poder pasar unos d\u00edas en Oporto, buena ubicaci\u00f3n cerca de Sta Catarina. Nos ha gustado mucho la estancia, la atenci\u00f3n de Mar\u00eda inmejorable. Muchas gracias por su atenci\u00f3n y amabilidad",
@@ -708,7 +708,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3407e36c59e6164fbede",
                         "fullname": "Alessandro",
-                        "imgUrl": "https://robohash.org/38271990?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/2.jpg",
                         "id": "38271990"
                     },
                     "txt": "buena ubicaci\u00f3n, piso acogedor, reformado, excelente servicio y recomendaciones",
@@ -773,7 +773,7 @@ function _createStays() {
                 "location": "New York, New York, United States",
                 "responseTime": "within an hour",
                 "thumbnailUrl": "https://a0.muscache.com/im/users/6334250/profile_pic/1368287493/original.jpg?aki_policy=profile_small",
-                "pictureUrl": "https://a0.muscache.com/im/users/6334250/profile_pic/1368287493/original.jpg?aki_policy=profile_x_medium",
+                "pictureUrl": "https://randomuser.me/api/portraits/men/3.jpg",
                 "isSuperhost": true,
                 "id": "6334250",
                 "description": "I'm a journalist from Texas and my husband is an artist from the Ukraine by way of Kansas City. We recently welcomed our son into the world. (Don't worry, he sleeps all night.)  We love exploring New York, especially Brooklyn, from the Brooklyn Flea to tiny taco joints to the Botanic Gardens to performance art in Bushwick storefronts (really). We've both spent a lot of time in the South, so hospitality is second nature to us. "
@@ -792,7 +792,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3407e36c59e6164fbfd2",
                         "fullname": "Nicolas",
-                        "imgUrl": "https://robohash.org/4523027?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/3.jpg",
                         "id": "4523027"
                     },
                     "txt": "Shaila's place is amazing! It's new, it's clean and it's big! And Shaila is very accommodating, we found everything we needed (cooking, coffee) and more. Given that we were the first guests she hosted through airbnb I can say that she did an amazing job! \r\n",
@@ -803,7 +803,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3403e36c59e6164fb048",
                         "fullname": "Jeff",
-                        "imgUrl": "https://robohash.org/6443424?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/4.jpg",
                         "id": "6443424"
                     },
                     "txt": "Great, quiet place to stay. It is great having Shaila just upstairs to answer any questions, and especially to give great tips on places to go. ",
@@ -814,7 +814,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3406e36c59e6164fba55",
                         "fullname": "Carla",
-                        "imgUrl": "https://robohash.org/6121036?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/4.jpg",
                         "id": "6121036"
                     },
                     "txt": "Shaila and Alex are wonderful hosts really, they helped us every time we needed with directions, the internet, the supermarket, the post office !!! (thank you guys !!!).The place and the neighbord are great, 8 blocks far from the apartment you have the subway and 30 min. later you are in the island, we moved early in the morning, late at night (sometimes we came back at 2am) and everything turned out great.Definetly I would come back to their apartment, It's bigger than ours in Argentina !!! I look forward to stay there again and, next time, go out with you guys and have a beer or anything.\r\nBye !!! - Guido and Carla - ",
@@ -825,7 +825,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3407e36c59e6164fbf76",
                         "fullname": "Dan",
-                        "imgUrl": "https://robohash.org/6460525?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/5.jpg",
                         "id": "6460525"
                     },
                     "txt": "Shaila and Alex were incredibly accommodating and me and my girlfriend enjoyed our stay thoroughly. Highly recommended. The place was very private and homely. I didn't really know anything about New York and was nervous about staying in bed stuy but it was safe and friendly everywhere I went. Very easy to get to the airport and manhattan by train.",
@@ -836,7 +836,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3407e36c59e6164fbe9d",
                         "fullname": "Ariane",
-                        "imgUrl": "https://robohash.org/6825718?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/5.jpg",
                         "id": "6825718"
                     },
                     "txt": "Great place to stay in Brooklyn! Alex gave us a really useful list of nice restaurants and coffee places near the place (We are very happy to have discovered, the restaurant \"Saraghina\", thanks to Alex's map!).  The apartment is vast, furnished with taste and very convenient. We highly recommend!",
@@ -847,7 +847,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3402e36c59e6164fad91",
                         "fullname": "Ilka",
-                        "imgUrl": "https://robohash.org/5823882?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/1.jpg",
                         "id": "5823882"
                     },
                     "txt": "I can recommend to everyone to come to this beautiful apartment, Shaila and Alex are great hosts and the neighbourhood is very friendly everywhere we go.\r\nIt really felt like home.",
@@ -858,7 +858,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3401e36c59e6164fab81",
                         "fullname": "Kristy",
-                        "imgUrl": "https://robohash.org/5729991?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/1.jpg",
                         "id": "5729991"
                     },
                     "txt": "My sister and I loved staying here! The apartment is very spacious and recently renovated so it looks amazing. The kitchen has everything you need with Alex and Shalia stocking it with a few basics. The neighbourhood is a little shabby, especially compared to the home we stayed in. We were told by some people in Manhattan that the neighbour of Bed-Stuy used to be very dangerous and just to be careful walking around at night. Walking from the subway after dark was a little daunting but we remained safe. We did catch a cab a few times from Manhattan as it was very late. Overall, it was a positive experience with Alex and Shalia being very helpful, even going out of their way to let us store our luggage at Shalia's work the day we were to fly out. They were great hosts.",
@@ -869,7 +869,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3405e36c59e6164fb785",
                         "fullname": "Barbara",
-                        "imgUrl": "https://robohash.org/6063814?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/2.jpg",
                         "id": "6063814"
                     },
                     "txt": "We just met Alex when we checked in, but anyhow he had been a very friendly and helpful host. He was reachable anytime and answered my mails prompt.\r\nThe apartment was great! It was really beautiful and big. It has a perfectly equipped kitchen and there are also a few basics for breakfast and cooking. The bed is very comfortable. It is not that soundproofed as we are accustomed to (the steps from upstairs waked me every day - my son slept well, he did not hear it), but I think that is normal for american houses. But apart from this it is very quiet.\r\nThe neighbourhood is great! It is very authentic, people are friendly and helpful if required, no problems even late at night. We loved staying there!\r\nIn any case: apartment, host and neighbourhood are high recommended! If we are in New York again, we certainly return to this place!",
@@ -880,7 +880,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3404e36c59e6164fb515",
                         "fullname": "Gloria",
-                        "imgUrl": "https://robohash.org/97251?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/2.jpg",
                         "id": "97251"
                     },
                     "txt": "Hello! \n\nWe just spent 5 days in the big apple and we drove in to this Brooklyn location.  The host where incredibly attentive and just wonderful, the apartment spotless, hip & modern and really comfortable. \n\nDo not be intimidated by the transitioning neighborhood as we encountered that many residents are very friendly and helpful (directions) and this particular street has a real interest in making a real change hence empowering their community.\n\nThe subway is a little ways (12 to 15 min.) walk. We would use our vehicle to drive to the subway station (there are two corresponding)  and park nearby to facilitate the to and from.  If you need quick access to the subway at all hours of the day and night this may not be the place for you.\n\nThe apt. is an excellent value  for the money (as per  many  manhattan locations offer around  the same nightly  $$ rate but have to share their apt ).\n\n\n\n",
@@ -891,7 +891,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3403e36c59e6164fb079",
                         "fullname": "Javier",
-                        "imgUrl": "https://robohash.org/7055720?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/3.jpg",
                         "id": "7055720"
                     },
                     "txt": "We really had a wonderful time in NYC thanks to Alex\u2019s house. It\u2019s just as big, beautiful and clean as it seems in the pictures. Alex has an incredible apartment in the basement that makes you feel like home after being out all day knowing the big city. All the furniture and the kitchen appliances are new.\r\n\r\nThe location is perfect for visiting Brooklyn and Manhattan (only 15-20 to Brooklyn Bridge and South Manhattan or 25-30 min to Times Square in the underground).\r\n\r\nAlso, Alex gave us some good advices the first day for having all we needed in the neighbourhood. Don\u2019t miss Saraghina\u2019s brunch (10 minutes walking from the house)! He even let us to keep our luggage in the house until we left to the airport in the evening on our last day in the city.",
@@ -902,7 +902,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3402e36c59e6164fabc4",
                         "fullname": "Ivan",
-                        "imgUrl": "https://robohash.org/8866660?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/3.jpg",
                         "id": "8866660"
                     },
                     "txt": "The appartment was really clean, pretty spacious and kitchen was very well equipped! Its totally in line with all the information posted. \r\n\r\nAlex was very nice host, even allowed us to keep the luggage  after check out as we had a flight in the evening. Thank you once again for that! \r\n\r\nThe neighboorhood itself was safe, we had no issues at all, however I`d prefer staying   in Brooklyn districts closer to Manhattan area next time as  we were travelling to Midtown up to 1h. Being a citizen of the huge city too (Moscow, Russia) , underground is not our favorite place to be  :) \r\n\r\nOverall , it was a great stay. \r\n\r\n\r\n\r\n",
@@ -913,7 +913,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3402e36c59e6164fada2",
                         "fullname": "India",
-                        "imgUrl": "https://robohash.org/228580?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/4.jpg",
                         "id": "228580"
                     },
                     "txt": "Communication with Alex was spot on.  He happily answered any questions and made it easy for me to arrive late at night and went above and beyond to help me have a good stay. \r\nThe apartment has been tastefully refurbished.  Extremely clean, and with all you could need for cooking.  The bed is so comfy.  The apartment is peaceful at night and I slept so well.   Some noise travels from Alex' apartment upstairs but it is only a little during the day.\r\nThe area is a bit out of the main hub of Williamsburg and Bushwick but everything is easily accessible with a short walk or the subway about 8 mins walk away.\r\nAlex left me a list of great stores, cafes and restaurants in the immediate area.  \r\nSome people may be concerned about the area at face value as it is a white minority but I felt safe at all times.  People seemed friendly.\r\n\r\n",
@@ -924,7 +924,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3406e36c59e6164fb9f9",
                         "fullname": "Pamela",
-                        "imgUrl": "https://robohash.org/8145538?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/4.jpg",
                         "id": "8145538"
                     },
                     "txt": "Was an amazing stay, we charm your apartment and were very friendly. Thank you for all your attentions.",
@@ -935,7 +935,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3402e36c59e6164fae8c",
                         "fullname": "Lindsay",
-                        "imgUrl": "https://robohash.org/979464?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/5.jpg",
                         "id": "979464"
                     },
                     "txt": "Shaila and Alex are wonderful hosts - very accommodating, friendly, and easy to communicate with. We found it fairly easy to get around the city from Bed-Stuy, even with the weekend subway schedule. The apartment is lovely, bright, and very clean, and overall it was a pleasure to stay for a few nights. It's been recently renovated and thoughtfully decorated - we felt quite comfortable during our stay and appreciated the art and other nice touches throughout. I'd highly recommend staying with Shaila and Alex.",
@@ -946,7 +946,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3407e36c59e6164fbf31",
                         "fullname": "Nadia",
-                        "imgUrl": "https://robohash.org/1133198?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/5.jpg",
                         "id": "1133198"
                     },
                     "txt": "Great apartment, really spacious & has a lovely homely feel to it. Alex & Shaila were very helpful & welcoming, bed was really comfortable, good transport links, only a 20 min subway ride into manhattan, the area is really nice & quiet, unlike manhattan.\r\n\r\nThanks Alex & Shaila for having us ! Enjoy the Gin !! ",
@@ -957,7 +957,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3407e36c59e6164fbdab",
                         "fullname": "Barbara",
-                        "imgUrl": "https://robohash.org/8310069?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/1.jpg",
                         "id": "8310069"
                     },
                     "txt": "The apartment is spacious and well furnished, the kitchen very well equipped and the bed very confortable. Sheila and alex were friendly and the comunication with them was easy.the neighborhood is very nice with typical town house, and very quite. Also the people Who lives there was very kind and helped us on many occasion. \nDefinitely raccommend you to spend your holidays in NY in the lovely apartment of sheila&alex! ",
@@ -968,7 +968,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3404e36c59e6164fb2c1",
                         "fullname": "Chris",
-                        "imgUrl": "https://robohash.org/9935301?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/1.jpg",
                         "id": "9935301"
                     },
                     "txt": "We had a great time staying with Alex & Shaila. The apartment is just as depicted in the photos. Lots of space and very comfortable.  The house is located really close to buses and subway which was very convenient. The neighbourhood is fine with a couple of nice places to eat nearby.\r\n\r\nShaila and alex were really friendly and easy to communicate with if needed.  \r\n\r\nWe stayed for 2 months and would recommend it to others who are looking for a place in Brooklyn.",
@@ -979,7 +979,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3405e36c59e6164fb8fc",
                         "fullname": "Melody",
-                        "imgUrl": "https://robohash.org/11278447?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/2.jpg",
                         "id": "11278447"
                     },
                     "txt": "Upon arriving, Alex was very helpful giving directions to the location. , he gave us a brief overview of everything, and let us settle in. It was a very cozy place to come back to after long days out exploring New York. The subways are very close. We preferred heading up to broadway to catch our trains (Depending where we were going) only because it was much more pleasant on sunny days to be above grounds if we could. It was great to have all amenities available, and at such a reasonable price.The only thing I will mention is that if you do plan on sleeping in- it might not happen as they do have a newborn who you can sometimes hear in the morning if you are a light sleeper.\r\nOverall,  I would recommend you stay at Alex & Shailas airbnb! It was a great and pleasant environment.",
@@ -990,7 +990,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3404e36c59e6164fb41e",
                         "fullname": "Carlos",
-                        "imgUrl": "https://robohash.org/13281573?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/2.jpg",
                         "id": "13281573"
                     },
                     "txt": "We felt very happy those days at the home of Alex and Shaila. It is a very warm and comfortable place, it was like being at home.",
@@ -1001,7 +1001,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3403e36c59e6164fb087",
                         "fullname": "Sergei",
-                        "imgUrl": "https://robohash.org/13487808?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/3.jpg",
                         "id": "13487808"
                     },
                     "txt": "Great host. Very clean, nice place and friendly people. Thanks again!",
@@ -1057,7 +1057,7 @@ function _createStays() {
                 "fullname": "Mari\u00e1n",
                 "location": "Barcelona, Catalonia, Spain",
                 "thumbnailUrl": "https://a0.muscache.com/im/users/31635864/profile_pic/1429604852/original.jpg?aki_policy=profile_small",
-                "pictureUrl": "https://a0.muscache.com/im/users/31635864/profile_pic/1429604852/original.jpg?aki_policy=profile_x_medium",
+                "pictureUrl": "https://randomuser.me/api/portraits/women/3.jpg",
                 "isSuperhost": false,
                 "id": "31635864",
                 "description": ""
@@ -1076,7 +1076,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3407e36c59e6164fbebb",
                         "fullname": "Rafaela",
-                        "imgUrl": "https://robohash.org/65117711?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/4.jpg",
                         "id": "65117711"
                     },
                     "txt": "Host: Marian gave us a warm welcome and treated us kindly from the very beginning. She offered us help, told us what to visit and even put water, milk and orange juice in the fridge! We could have breakfast at her place which was perfect because she has a little sweet balcony! \r\nLocation: calmly situated in a side street, very near to the Placa Catalunya, the Rambla and the gothic area of Barcelona (very beautiful:)) so you have the old cultural center as well as all the restaurants and bars just nearby.\r\nHouse/Room: the appartment is not a huge, but I think you have everything you need (beautiful sitting room, balcony, kitchen) in it. You have to share the appartment with Marian so pay attention and don't be too loud in the evening!!\r\ndisadvantage: the heat is terrible in summer and there is no air-condition..\r\n\r\nI would overall recommend it to everybody!! But if you want to party and stay up late, take a hostel or another appartment.",
@@ -1087,7 +1087,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3403e36c59e6164faf56",
                         "fullname": "Pauline",
-                        "imgUrl": "https://robohash.org/50303773?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/4.jpg",
                         "id": "50303773"
                     },
                     "txt": "Nous avons pass\u00e9 un bon s\u00e9jour, l'appartement est tr\u00e8s bien situ\u00e9. La chambre est agr\u00e9able et plus grande que sur la photo. Seul point n\u00e9gatif pas de volets dans la chambre. ",
@@ -1150,7 +1150,7 @@ function _createStays() {
                 "location": "Barcelona, Catalonia, Spain",
                 "responseTime": "within an hour",
                 "thumbnailUrl": "https://a0.muscache.com/im/pictures/72a579ce-37d7-466e-9c25-9876ee8de037.jpg?aki_policy=profile_small",
-                "pictureUrl": "https://a0.muscache.com/im/pictures/72a579ce-37d7-466e-9c25-9876ee8de037.jpg?aki_policy=profile_x_medium",
+                "pictureUrl": "https://randomuser.me/api/portraits/men/5.jpg",
                 "isSuperhost": false,
                 "id": "35858044",
                 "description": "Mi nombre es Isabel, pero me llamo Isa. Nac\u00ed en Vigo (Galicia). Con 20 a\u00f1os me fu\u00ed a vivir a Madrid con intenci\u00f3n de ser actriz; ahora resido en Barcelona desde los 28. Soy una joven de 43 a\u00f1os, cantante de Jazz. Me gusta salir, pero tambi\u00e9n quedarme en casa a leer o ver alguna buena pel\u00edcula.\r\nHe compartido piso muchos a\u00f1os, pero estas ser\u00e1n mis primeras experiencias como anfitriona.\r\n\r\n\u00a1Sed bienvenidos!\r\n"
@@ -1169,7 +1169,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3405e36c59e6164fb95e",
                         "fullname": "Pierre",
-                        "imgUrl": "https://robohash.org/58999873?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/5.jpg",
                         "id": "58999873"
                     },
                     "txt": "Una instancia muy c\u00e9ntrica en uno de estos edificios antiguos del Barri Gotic. No es poco haber conseguido estar en el centro de Barcelona en la misma semana del Mobile World Congress. Isabel es un encanto de anfitri\u00f3n.",
@@ -1180,7 +1180,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3403e36c59e6164fafa6",
                         "fullname": "Isabelle",
-                        "imgUrl": "https://robohash.org/26247027?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/1.jpg",
                         "id": "26247027"
                     },
                     "txt": "The host canceled this reservation 2 days before arrival. This is an automated posting.",
@@ -1191,7 +1191,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3406e36c59e6164fbaf2",
                         "fullname": "H\u00e9l\u00e8ne",
-                        "imgUrl": "https://robohash.org/46103953?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/1.jpg",
                         "id": "46103953"
                     },
                     "txt": "Chambre tr\u00e8s bien situ\u00e9e et h\u00f4tesse tr\u00e8s sympathique. Merci encore Isabel pour l'accueil !",
@@ -1202,7 +1202,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3407e36c59e6164fbdc3",
                         "fullname": "Daniel",
-                        "imgUrl": "https://robohash.org/25801559?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/2.jpg",
                         "id": "25801559"
                     },
                     "txt": "Sheets weren't clean... Shower has very low water pressure. Room is only good for sleeping. It's in a good location but that's about it. Isabel could've provided more information about what's around the house during check in... Overall just decent enough to sleep",
@@ -1213,7 +1213,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3401e36c59e6164fabad",
                         "fullname": "Maria Isabel",
-                        "imgUrl": "https://robohash.org/60712702?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/2.jpg",
                         "id": "60712702"
                     },
                     "txt": "Isabel est accueillante. L'appartement est charmant, correspond aux images. Tr\u00e8s bien situ\u00e9, \u00e0 c\u00f4t\u00e9 de Palau de la musica, dans un vieil immeuble plein de charme un peu d\u00e9suet. Amateurs de confort et d\u00e9cor \"tendance\" s'abstenir. Chez Isabel on se trouve dans une authentique ambiance d'artiste. Merci beaucoup, je garderai le souvenir de cet accueil li\u00e9 aux souvenirs de Barcelone.",
@@ -1224,7 +1224,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3405e36c59e6164fb967",
                         "fullname": "Aitana",
-                        "imgUrl": "https://robohash.org/53206905?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/3.jpg",
                         "id": "53206905"
                     },
                     "txt": "Es un piso con mucho encanto, muy tranquilo y en un lugar inmejorable. La anfitriona, Isabel, es amable y facilitadora. El piso es una construcci\u00f3n antigua, lo que le da un ambiente genial pero tambi\u00e9n hace que el agua de la ducha salga con poqu\u00edsima presi\u00f3n y sea un poco inc\u00f3modo a veces. A parte de esto, si tuviese que poner alguna queja ser\u00eda la hora del chekout, ya que las diez de la ma\u00f1ana me parece un poco pronto. \r\nEn conjunto tuvimos una muy buena experiencia y repetir\u00edamos sin duda.",
@@ -1235,7 +1235,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3406e36c59e6164fbb88",
                         "fullname": "Valentina",
-                        "imgUrl": "https://robohash.org/69740054?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/3.jpg",
                         "id": "69740054"
                     },
                     "txt": "Isabel was a wonderful host even if she was not there. She was in touch with me by mobile constantly. Thank you so much!\r\nThe house it's nice and was very clean and quite in the night.Perfect location. All you need for few days in Barcelona!",
@@ -1246,7 +1246,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3405e36c59e6164fb715",
                         "fullname": "Jeremy",
-                        "imgUrl": "https://robohash.org/53581405?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/4.jpg",
                         "id": "53581405"
                     },
                     "txt": "Isabel's place was perfect. It was cozy, clean and quiet. She was a very gracious host and was always there to answer my questions about getting around Barcelona. ",
@@ -1257,7 +1257,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3403e36c59e6164fb0b2",
                         "fullname": "Mei-Lin",
-                        "imgUrl": "https://robohash.org/40994614?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/4.jpg",
                         "id": "40994614"
                     },
                     "txt": "Great room with lots of sunlight in a charming apartment. Fantastic location.",
@@ -1268,7 +1268,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3403e36c59e6164fb1f7",
                         "fullname": "Taneli",
-                        "imgUrl": "https://robohash.org/8010736?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/5.jpg",
                         "id": "8010736"
                     },
                     "txt": "Isa was a kind and gracious host with a lovely appartment in a centric and vibrant area. We loved our stay and surely will visit again.",
@@ -1279,7 +1279,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3404e36c59e6164fb623",
                         "fullname": "Natasha",
-                        "imgUrl": "https://robohash.org/25592253?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/5.jpg",
                         "id": "25592253"
                     },
                     "txt": "SUPER cute place with lots of charm!! Perfect for my first trip to Barcelona:) Amazing location! Gracias Isabel for helping me find last minute accommodations! \r\n",
@@ -1290,7 +1290,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3407e36c59e6164fc013",
                         "fullname": "Elizabeth",
-                        "imgUrl": "https://robohash.org/78467282?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/1.jpg",
                         "id": "78467282"
                     },
                     "txt": "Isabel was a great host. She met me at the local bar where she worked and took me to her home a street away. The flight of stairs up to here place was a bit daunting but I can see why she lives up there.. It was beautiful! The room and whole place was clean, tidy and very welcoming. I saw Isabel twice, when I arrived and when I left, but it was perfect. \n\nThe facilities were great. The pressure in the shower was weak but it didn't bother me one bit. It is a bit noisy being in the heart of the city, but I can imagine it would be anywhere in this area. It was lovely to have a balcony, and the location was very convenient. Thanks.x",
@@ -1301,7 +1301,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3403e36c59e6164fb0af",
                         "fullname": "Monika",
-                        "imgUrl": "https://robohash.org/11966400?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/1.jpg",
                         "id": "11966400"
                     },
                     "txt": "Isabel was good host. Location is perfect.",
@@ -1312,7 +1312,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3403e36c59e6164fb23a",
                         "fullname": "Margaux",
-                        "imgUrl": "https://robohash.org/78589438?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/2.jpg",
                         "id": "78589438"
                     },
                     "txt": "Super piso, super barrio! \r\nThe guest welcomed us well.",
@@ -1323,7 +1323,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3403e36c59e6164fb21c",
                         "fullname": "Elisabeth",
-                        "imgUrl": "https://robohash.org/4965921?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/2.jpg",
                         "id": "4965921"
                     },
                     "txt": "It was really nice to stay at Isabels place. She is very uncomplicated and nice and the flat is super located for exploring bcn. For me it was perfect!:)",
@@ -1334,7 +1334,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3407e36c59e6164fbd7f",
                         "fullname": "Ingrid",
-                        "imgUrl": "https://robohash.org/6058273?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/3.jpg",
                         "id": "6058273"
                     },
                     "txt": "IT was the perfect stay to Discover the city-a super location with sometimes noisy tourists (even we we're tourists but hopefully not so noisy) but that's part of the location i guess :-). We loved the colourful house and we Will Be go back for a next stay. thank you!",
@@ -1345,7 +1345,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3403e36c59e6164fb1ac",
                         "fullname": "Liliane",
-                        "imgUrl": "https://robohash.org/27060110?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/3.jpg",
                         "id": "27060110"
                     },
                     "txt": "Isa is a very lovely, sensitive, artistic and gorgeous person. She is respectful of one's privacy but always ready to give support when asked upon. Be it in spoken or written form I always got my answers from her within no times. She also proofed to be very flexible in terms of arrival and departure times which I appreciated a great deal. If you are a fan of jazz music (like I am), make sure to double check ahead of time about her current concert dates so as not to miss your hostess on stage like I did (grumble ;-)).\n\nThe room I occupied was the smaller one of two that Isabel rents out. So if her flat is fully rented out there can be a maximum of 4 guests plus your hostess in the flat, which can cause some bathroom jam, especially during the hot and humid summer times, when the need for a cool shower is inherent to everyone's desire. \nMy room was as depicted. If you plan on using it for double occupancy, I recommend taking Isa's larger room (unless the two of you are very much in love and want to cuddle up close ;-)). Also, if you need a table for writing, ask for the larger room as well, which comes along with one.\nThe flat itself is absolutely enchanting and furnished with love and an artistic eye to details. It's location is a dream for touristic explorations with anything within walking distance. \nTherefore, I can easily recommend both Isabel and her flat to anyone wishing to immerge himself into the local customs and get a good doze of what it is like \"to live like a true Barcelonian\".  \n\nQuerida Isa, muchas gracias por tu hospedalid g\u00e9nial! Volver\u00e9 a ciencia cierta!\nSaludos y besos\nLiliana",
@@ -1356,7 +1356,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3405e36c59e6164fb8e1",
                         "fullname": "Murat",
-                        "imgUrl": "https://robohash.org/35246459?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/4.jpg",
                         "id": "35246459"
                     },
                     "txt": "The apartment is very centrally located, in the heart of the gothic part of the city and a couple of blocks from the Placa de Catalunya which makes transportation and sightseeing very easy. It's a 20 minute walk from the beach which is a plus. It's located in a very old building on the top floor, so it is rather stuffy and warm in the apartment. The room overlooks a very narrow street/alley so it's rather dark and it's easy to hear the noise coming from the street and the neighboring apartments. There are a few other rooms in the house that are being rented out, so other people will be staying in the house which makes it a necessity to lock the room when you leave the apartment. \n\nIt's important to note that this place has a very strict check out time. On our last day, we had an evening flight but had to check out in the morning. When we asked if we could check out late, Isa told us to take our stuff to the train station and use the lockers there, but the train station does not have lockers. We ended up renting a locker  at a place called \"Barcelona lockers\". That, I would say changed all the plans for the last day. \n\n",
@@ -1367,7 +1367,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3406e36c59e6164fbcb4",
                         "fullname": "Mina",
-                        "imgUrl": "https://robohash.org/121053?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/4.jpg",
                         "id": "121053"
                     },
                     "txt": "I was happy to experience Isabels home as described here. It was spacious, bright and original, with lovely colours and beautiful artwork surrounding me in every room. Isabel is a creative, sensitive and respectful person, with an open mind- yet she has the necessary boundaries that are required to organize an environment where so many different people are going to stay and hopefully enjoy. \nThe street itself is very lively, but the noises didn't bother me at all as i could easily block them out with earplugs. The location could not have been more sentral, still it's on \"the right side\" of the Rambla, where you can find more independent shops, restaurants, cafes and bars compared to the same leveled streets towards Raval. It is an old and very charming building, so if you want an minimalistic experience with cold, stainless steel and elevators this is not the place for you! And perhaps you are not the right person for this place either ;) I had to leave earlier due to illness, and was so sorry i couldn't stay throughout the whole month as planned. Hope to be seeing Isabel and her welcoming surroundings again one day ",
@@ -1378,7 +1378,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3405e36c59e6164fb85f",
                         "fullname": "Jessy",
-                        "imgUrl": "https://robohash.org/2935800?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/5.jpg",
                         "id": "2935800"
                     },
                     "txt": "Isabel was an amazing host. She is incredible and super considerate. The apartment was by no means the best location in Barcelona, I walked everywhere and never needed a map or a taxi. Arriving late at night was always fine and there was never any disturbing street noise. The block is super cute with awesome little shops that are open during the day. Best neighborhood to be in and incredible city ! Much\u00edsima gracias Isabel, estas invitada a visitar Los \u00c1ngeles, todo fue incre\u00edble !\u2764\ufe0f",
@@ -1450,7 +1450,7 @@ function _createStays() {
                 "location": "New York, New York, United States",
                 "responseTime": "within a few hours",
                 "thumbnailUrl": "https://a0.muscache.com/im/pictures/61b62b90-e38b-4609-a3c4-ff5ff06b5c08.jpg?aki_policy=profile_small",
-                "pictureUrl": "https://a0.muscache.com/im/pictures/61b62b90-e38b-4609-a3c4-ff5ff06b5c08.jpg?aki_policy=profile_x_medium",
+                "pictureUrl": "https://randomuser.me/api/portraits/women/5.jpg",
                 "isSuperhost": false,
                 "id": "24800102",
                 "description": "Welcome Everyone! Thank you for stopping by. \r\n\r\nI was born and raised in Manhattan and I am here to help  share the New York City Experience with others through Airbnb!  I am easy to connect with and very reachable and always willing to interact with people. \r\n\r\nI am big on cleanliness and hospitality. I strive on making Guests feel as comfortable as possible. \r\n\r\nI hope you would like to get a chance to visit my location and enjoy the hosting I provide. If you have any questions/ comments, feel free to contact me. \r\n"
@@ -1469,7 +1469,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3405e36c59e6164fb8b4",
                         "fullname": "Christine",
-                        "imgUrl": "https://robohash.org/47877926?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/1.jpg",
                         "id": "47877926"
                     },
                     "txt": "Kevin was very welcoming and thorough with all information. The description of the property was accurate. It's also near the MTA if you want to get to another part of the city. Kevin got in touch before I arrived, and his brother was there to meet me and show me where everything was, which was great. Last but not least, he had provided a great information on the local area with recommendations for places to eat, etc., which I found really useful.\r\n",
@@ -1480,7 +1480,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3407e36c59e6164fbdb9",
                         "fullname": "Hector",
-                        "imgUrl": "https://robohash.org/36832696?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/1.jpg",
                         "id": "36832696"
                     },
                     "txt": "Kevin was nice. And he was very responsive via text, which I appreciate. The listing is in East Harlem, which isn't for everyone. The area is not very posh, but, for me, it feels like home, so I tend to stay there whenever I go to New York. The listing description was accurate enough, with respect to the way the apartment looks. If you can't deal with noise at night, however, this might not be the place for you. The neighbors were surprisingly noisy in the wee hours of the night and virtually silent during the day. This apartment is close to the subway, which was very useful.",
@@ -1491,7 +1491,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3407e36c59e6164fbdca",
                         "fullname": "Jaime",
-                        "imgUrl": "https://robohash.org/37244180?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/2.jpg",
                         "id": "37244180"
                     },
                     "txt": "Kevin was very helpful and communicative during the whole time. The apartment is very nice, and within walking distance to the subway. Would definitely stay there again.",
@@ -1502,7 +1502,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3402e36c59e6164fae69",
                         "fullname": "Anan",
-                        "imgUrl": "https://robohash.org/30380132?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/2.jpg",
                         "id": "30380132"
                     },
                     "txt": "I had a wonderful stay at Kevin's apartment. The apartment is very close to the six train line. Everything in the apartment was spotless clean. I definitely recommend this apartment to others. Thank you Kevin for hosting me!",
@@ -1513,7 +1513,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3407e36c59e6164fbf23",
                         "fullname": "Yamilis",
-                        "imgUrl": "https://robohash.org/5684819?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/3.jpg",
                         "id": "5684819"
                     },
                     "txt": "Kevin fue excelente anfitri\u00f3n. Se mantuvo en contacto con nosotros y fue muy comprensivo a\u00fan cuando llegamos m\u00e1s tarde de la hora acordada para el check in porque nos perdimos en el subway. Tambi\u00e9n fue muy comprensivo para acordar el check out de acuerdo a la hora que fue m\u00e1s conveniente para nosotros, a\u00fan cuando tambi\u00e9n se nos hizo tarde. Nos provey\u00f3 de un matress de aire para nuestra amiga que vino de M.A. y se qued\u00f3 una noche con nosotros. El barrio nos pareci\u00f3 bien, no tuvimos ning\u00fan incidente. Muchos puertorique\u00f1os y Dominicanos, as\u00ed que nos sentimos como en casa. Todo fue muy c\u00f3modo y limpio. Los vecinos hicieron mucho ruido en las noches, pero no fue problema para nosotros. Una sugerencia ser\u00eda poner un espejo de cuerpo completo en alguna parte del apartento. En resumen, el apartamento fue perfecto para nosotros, nos volver\u00edamos a quedar y claro que lo recomendar\u00eda! Muchas Gracias Kevin por tu ayuda!",
@@ -1524,7 +1524,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3405e36c59e6164fb6a4",
                         "fullname": "Leonam",
-                        "imgUrl": "https://robohash.org/44604680?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/3.jpg",
                         "id": "44604680"
                     },
                     "txt": "Kevin was really thoughtful about everything. He gave me all information needed while staying on his house. The house was very clean.",
@@ -1535,7 +1535,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3407e36c59e6164fc063",
                         "fullname": "Amy",
-                        "imgUrl": "https://robohash.org/4923470?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/4.jpg",
                         "id": "4923470"
                     },
                     "txt": "Kevin is a really nice host, flexible and very responsive. The apartment is a 4th-floor walk up, well-maintained and exactly as advertised in the listing. The apartment has all the basic things--it's especially nice to have a kitchen and comfy sofa. There's no TV and wifi, but you probably don't need it anyway since you are here to see New York city! It is just a short 5-min walk from the subway station, so very convenient. Street noise is not a problem although you can hear the neighbors at times (the kids next door can be noisy). East Harlem is a bustling Latino neighborhood with many local eateries and shops. The food selection is supposed to be great (too bad we didn't get to try any). There is a grocery store right outside the building. There're always locals hanging out in front but we were never bothered. All and all, a good choice if you are looking to stay in this part of the city.",
@@ -1546,7 +1546,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3401e36c59e6164fab7d",
                         "fullname": "Vlad",
-                        "imgUrl": "https://robohash.org/61270769?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/4.jpg",
                         "id": "61270769"
                     },
                     "txt": "Kevin was an excellent host. Everything was absolutely as described. The apartment is lovely and very clean. There are numerous windows in every room and there is plenty of light! Would definitely stay again!",
@@ -1557,7 +1557,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3407e36c59e6164fbe7b",
                         "fullname": "Derick",
-                        "imgUrl": "https://robohash.org/63351088?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/5.jpg",
                         "id": "63351088"
                     },
                     "txt": "Great experience, we enjoyed ourselves for the night we stayed, only issue really were the neighbors being loud all night made it hard to sleep.",
@@ -1568,7 +1568,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3407e36c59e6164fbefb",
                         "fullname": "Derek",
-                        "imgUrl": "https://robohash.org/794527?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/5.jpg",
                         "id": "794527"
                     },
                     "txt": "Kevin's place is exactly as other reviewers describe it:  nice and clean, spacious and very convenient as a base to explore and enjoy NYC. \r\n\r\nThe Neighborhood is definitely classic East Harlem.  Very real NYC vibe. Not a tourist area.  \r\n\r\nThe neighbors are noisy sometimes, so if you are a light sleeper, that could be a problem. But I didn't have any trouble. \r\n\r\nIt would have been nice to have wireless, but I didn't come to NYC to play online, so I didn't mind that too much.  \r\n\r\nKevin was a very nice, responsive host! ",
@@ -1579,7 +1579,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3404e36c59e6164fb484",
                         "fullname": "Shiann",
-                        "imgUrl": "https://robohash.org/26290842?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/1.jpg",
                         "id": "26290842"
                     },
                     "txt": "Kevin made my friend and I feel really welcomed. The apartment was very clean!",
@@ -1590,7 +1590,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3403e36c59e6164fb208",
                         "fullname": "Stephanie",
-                        "imgUrl": "https://robohash.org/73751485?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/1.jpg",
                         "id": "73751485"
                     },
                     "txt": "Me and my husband stayed in the apartment this was our first time using this site and Kevin made us feel like we are regulars. We stayed one night and it was wonderful. Kevin contacted us right away and was really good with getting us whatever we need to stay there. The area is the only bad thing but when we went in the apartment you really forget about the outside.",
@@ -1601,7 +1601,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3404e36c59e6164fb52c",
                         "fullname": "Virginie",
-                        "imgUrl": "https://robohash.org/8842288?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/2.jpg",
                         "id": "8842288"
                     },
                     "txt": "Kevin is easy to get in touch with and waited for us to arrive Even if it was already late in the evening. He even asked if everything was fine during our stay.\nThe appartment is perfectly situated to visit Manhattan island. Just note the neighbours are noisy if it is important to you.",
@@ -1612,7 +1612,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3405e36c59e6164fb803",
                         "fullname": "Ada",
-                        "imgUrl": "https://robohash.org/65358522?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/2.jpg",
                         "id": "65358522"
                     },
                     "txt": "Kevin was absolutely wonderful. He was very responsive and communicative and I could tell he takes great pride in being an exceptional host. His place was exactly as described, as shown in the pictures and also very clean. The neighborhood is great and the room is a great price for someone looking to stay in the city and explore. It's right next to the trains, neighborhood gems but also commonly known stores for anyone who isn't familiar with the area. ",
@@ -1623,7 +1623,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3406e36c59e6164fbc21",
                         "fullname": "Fernando",
-                        "imgUrl": "https://robohash.org/75294316?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/3.jpg",
                         "id": "75294316"
                     },
                     "txt": "everything was correct , very good condition to this price",
@@ -1634,7 +1634,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3407e36c59e6164fbdfe",
                         "fullname": "Francesca",
-                        "imgUrl": "https://robohash.org/56355386?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/3.jpg",
                         "id": "56355386"
                     },
                     "txt": "This is my first time using Airbnb. Kevin responded quickly to my inquiry about booking his apartment. Once booked he was very easy to reach via phone or text if I needed to. His one bedroom apartment was very clean and nicely furnished. It is central to a lot of restaurants and neighborhood shopping should you need something and a couple blocks from the subway and buses. Kevin was a great host. He was there to greet me, show me around the apartment and tell me a bit about the area. He also has maps and booklets about what to visit while in New York City. There is wifi in the apartment which is great. Kevin checked in with me just to make sure everything was ok during my trip. I had a wonderful stay at his apartment and would book it again! ",
@@ -1645,7 +1645,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3404e36c59e6164fb4de",
                         "fullname": "Alex",
-                        "imgUrl": "https://robohash.org/45975680?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/4.jpg",
                         "id": "45975680"
                     },
                     "txt": "Kevin was a phenomenal host, he was very accommodating about arrival and check out times and provided me with a ton of useful information to navigate the area and make my stay as pleasant as possible. The apartment is two blocks from the subway and easy to navigate from. I would definitely recommend staying at Kevin's for all those considering a trip to New York.",
@@ -1656,7 +1656,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3407e36c59e6164fbd08",
                         "fullname": "Johanna",
-                        "imgUrl": "https://robohash.org/75777207?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/4.jpg",
                         "id": "75777207"
                     },
                     "txt": "The apartment is as described. Kevin is very pleasant and was kind to helped me bring my belongings to the apartment. The apartment is cozy in a great location. I will definitely be using this apartment again",
@@ -1667,7 +1667,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3405e36c59e6164fb7a6",
                         "fullname": "Bandele",
-                        "imgUrl": "https://robohash.org/5357325?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/5.jpg",
                         "id": "5357325"
                     },
                     "txt": "Kevin's a great guy, but if you're looking for a hotel-like experience, this is NOT it... This however, IS a genuine NYC experience. Noisy & inconsiderate neighbors, dirty streets, dangerous vibes... All in all your safe, and anyone you actually talk to will be cool... Kevin was also very considerate and did everything he could to add comfort to my stay, he even warned me of the noisy neighbors in advance... This place is good for people who already know NYC, and need an affordable, SHORT-TERM (like 1-2days), place to crash uptown...",
@@ -1678,7 +1678,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3405e36c59e6164fb80a",
                         "fullname": "Bryan",
-                        "imgUrl": "https://robohash.org/73430217?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/5.jpg",
                         "id": "73430217"
                     },
                     "txt": "This place was cozy, comfortable and very clean. The AC was very helpful during the heat waves. Good shower and great WiFi connection as well.",
@@ -1754,7 +1754,7 @@ function _createStays() {
                 "location": "Porto, Porto District, Portugal",
                 "responseTime": "within a day",
                 "thumbnailUrl": "https://a0.muscache.com/im/pictures/f3e85f0c-e28d-4698-9da9-2f203aea1f3d.jpg?aki_policy=profile_small",
-                "pictureUrl": "https://a0.muscache.com/im/pictures/f3e85f0c-e28d-4698-9da9-2f203aea1f3d.jpg?aki_policy=profile_x_medium",
+                "pictureUrl": "https://randomuser.me/api/portraits/men/1.jpg",
                 "isSuperhost": true,
                 "id": "9320470",
                 "description": "Welcome!\r\nThe apartments has all the things to provide you a perfect days in Porto. It is located in a very central area, inside a typical oporto building. \r\nI will give you lots of informations about Porto, my personal tips, and I'll always be available to help you with anything. All I want is for you to go home knowing Porto and inevitably loving the city! :)\r\n\r\n"
@@ -1773,7 +1773,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3404e36c59e6164fb449",
                         "fullname": "Tejovra",
-                        "imgUrl": "https://robohash.org/41111599?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/1.jpg",
                         "id": "41111599"
                     },
                     "txt": "Nuno and Francisca were extremely kind and helpful people. They made us feel very welcome and the house is surprisingly spacious. The wifi connection did struggle in our room but maybe we just had bad luck. They were even kind enough to extend our stay last minute. The service was top quality and the shower was amazing. Highly recommend staying here.",
@@ -1784,7 +1784,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3403e36c59e6164fafcc",
                         "fullname": "Sara",
-                        "imgUrl": "https://robohash.org/52749020?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/2.jpg",
                         "id": "52749020"
                     },
                     "txt": "Muito simp\u00e1ticos e atenciosos. O apartamento \u00e9 muito confort\u00e1vel e com pequenos detalhes que fazem a diferen\u00e7a. Muito perto do metro, o que \u00e9 \u00f3ptimo para desloca\u00e7\u00f5es necess\u00e1rias.",
@@ -1795,7 +1795,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3403e36c59e6164faf68",
                         "fullname": "Jennifer",
-                        "imgUrl": "https://robohash.org/55700681?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/2.jpg",
                         "id": "55700681"
                     },
                     "txt": "Bonjour, Notre s\u00e9jour a \u00e9t\u00e9 tr\u00e8s agr\u00e9able. Nous avons \u00e9t\u00e9 tr\u00e8s bien accueillies. Nuno nous a donn\u00e9 de nombreux conseils, lieux de visites... Le logement \u00e9tait \u00e9galement tr\u00e8s bien. Nous avons vraiment pu profiter de Porto. Le m\u00e9tro est tout proche du logement. C'\u00e9tait vraiment un tr\u00e8s bon s\u00e9jour. Merci encore. ",
@@ -1806,7 +1806,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3404e36c59e6164fb5b1",
                         "fullname": "Irune",
-                        "imgUrl": "https://robohash.org/13478831?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/3.jpg",
                         "id": "13478831"
                     },
                     "txt": "Our stay at Hero\u00edsmo IV was the perfect Airbnb experience. When we got there, Francisca was waiting for us. She was extremely nice and accommodating, she showed us the apartment and gave us a map of the city and plenty of tips about what to visit, where to eat, etc. The apartment is really small but has absolutely everything you need. It's clean, new, has a really nice kitchen, a very comfortable bed and is near the city center (we walked everyday). I highly recommend staying at Nuno's place. \u00a1Gracias por todo, Francisca! Porto is a beautiful city, we hope to come back soon!",
@@ -1817,7 +1817,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3403e36c59e6164fb0c1",
                         "fullname": "Marlene",
-                        "imgUrl": "https://robohash.org/61125497?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/3.jpg",
                         "id": "61125497"
                     },
                     "txt": "A nice litte appartement. We arrived very late but were kindly greeted by the host. She showed us arround and gave us very useful tips (where to go/ where to eat/ etc.). The appartement is located directly to a metro station and has a Lidl and other grocery stores very near by.  It was a perfect stay!",
@@ -1828,7 +1828,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3402e36c59e6164fae67",
                         "fullname": "\u0415\u043b\u0438\u0437\u0430\u0432\u0435\u0442\u0430",
-                        "imgUrl": "https://robohash.org/20996941?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/4.jpg",
                         "id": "20996941"
                     },
                     "txt": "\u041a\u0432\u0430\u0440\u0442\u0438\u0440\u0430 \u043d\u0435 \u0431\u043e\u043b\u044c\u0448\u0430\u044f \u0438 \u043e\u0447\u0435\u043d\u044c \u0443\u044e\u0442\u043d\u0430\u044f. \u0412 \u043d\u0435\u0439 \u0435\u0441\u0442\u044c \u0432\u0441\u0435 \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u043e\u0435. \u041e\u0442\u043b\u0438\u0447\u043d\u043e\u0435 \u0440\u0430\u0441\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0440\u044f\u0434\u043e\u043c \u0441 \u043c\u0435\u0442\u0440\u043e. \u042f \u043f\u043e\u043b\u0443\u0447\u0438\u043b\u0430 \u043c\u043d\u043e\u0433\u043e \u043f\u043e\u043b\u0435\u0437\u043d\u043e\u0439 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u0438 \u043f\u0440\u0438 \u0437\u0430\u0441\u0435\u043b\u0435\u043d\u0438\u0438. \u0412\u043e \u0432\u0440\u0435\u043c\u044f \u0441\u0438\u043b\u044c\u043d\u043e\u0433\u043e \u0434\u043e\u0436\u0434\u044f \u0432 \u043d\u0435\u0439 \u0441\u044b\u0440\u043e, \u043d\u043e \u044d\u0442\u043e \u043d\u0435 \u0438\u0441\u043f\u043e\u0440\u0442\u0438\u043b\u043e \u043e\u0442\u0434\u044b\u0445.",
@@ -1839,7 +1839,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3404e36c59e6164fb3e7",
                         "fullname": "Teresa",
-                        "imgUrl": "https://robohash.org/5868654?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/4.jpg",
                         "id": "5868654"
                     },
                     "txt": "Desde o primeiro contacto, a comunica\u00e7\u00e3o foi muito f\u00e1cil e clara. Colocaram \u00e0 nossa disposi\u00e7\u00e3o uma s\u00e9rie de hip\u00f3teses de transporte a partir do aeroporto, bem como a possibilidade de termos em casa cabazes de alimentos. Assim que chegamos, com toda a sua simpatia, tinhamos a Mariana \u00e0 nossa espera, recebeu-nos explicando os v\u00e1rios  pontos importantes para quem chega: locais a visitar, restaurantes, transportes...\r\nGost\u00e1mos muito do espa\u00e7o, do Porto, fazemos quest\u00e3o de voltar em breve. Local excelente!",
@@ -1850,7 +1850,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3407e36c59e6164fbf5b",
                         "fullname": "Joyce",
-                        "imgUrl": "https://robohash.org/39810791?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/5.jpg",
                         "id": "39810791"
                     },
                     "txt": "Francisca was very friendly and was waiting for us, she took the time to explain us everything about the flat, she even let us good adresses of restaurants, coffees and places to visit in Porto.\r\nThe flat is 10 minutes by foot from the center, with no stairs to climb, good for our heavy luggages! It is very calm and we even had a table outside where we took our breakfasts. The flat is tiny but very functional, clean, and well equipped.\r\nIt is perfect for a short time in Porto.",
@@ -1861,7 +1861,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3406e36c59e6164fbaad",
                         "fullname": "Jess",
-                        "imgUrl": "https://robohash.org/35186577?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/5.jpg",
                         "id": "35186577"
                     },
                     "txt": "The apartment is great value for money and the location is fantastic. We arrived before the check in time but were greeted promptly and could leave our luggage to explore the city straight away. Francisca gave us a lot of good advice and recommendations for the city, which was very helpful. ",
@@ -1872,7 +1872,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3402e36c59e6164faeed",
                         "fullname": "Jennifer",
-                        "imgUrl": "https://robohash.org/34970659?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/1.jpg",
                         "id": "34970659"
                     },
                     "txt": "Thank you for hosting us Nuno. Our trip was perfect. The host was very kind. And the apartment is beautiful, near the center and is well think : it has everything for a few days.",
@@ -1883,7 +1883,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3401e36c59e6164fab65",
                         "fullname": "Joana",
-                        "imgUrl": "https://robohash.org/60496781?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/1.jpg",
                         "id": "60496781"
                     },
                     "txt": "Est\u00fadio muito simp\u00e1tico e limpo. Ideal para uma ou duas pessoas, para explorar o Porto durante um par de dias. Esta\u00e7\u00e3o de metro \u00e0 porta. Perto da zona hist\u00f3rica do Porto \u2014 faz-se bem a p\u00e9. Pastelaria ideal para pequeno almo\u00e7o mesmo \u00e0 porta.",
@@ -1894,7 +1894,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3405e36c59e6164fb749",
                         "fullname": "Nicolas",
-                        "imgUrl": "https://robohash.org/106998486?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/2.jpg",
                         "id": "106998486"
                     },
                     "txt": "L'emplacement est parfait, dans un quartier calme et \u00e0 proximit\u00e9 imm\u00e9diate du m\u00e9tro et du centre-ville. Seul b\u00e9mol: l'absence d'eau chaude \u00e0 la douche (un seul ballon d'eau chaude disponible pour plusieurs appartements), franchement regrettable en plein coeur de l'hiver. Ce qui du coup entra\u00eene un rapport qualit\u00e9-prix un peu cher",
@@ -1905,7 +1905,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3403e36c59e6164fb10c",
                         "fullname": "Marina",
-                        "imgUrl": "https://robohash.org/115887917?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/2.jpg",
                         "id": "115887917"
                     },
                     "txt": "El apartamento esta genial, es peque\u00f1o pero tiene todo lo necesario, cama super grande y c\u00f3moda, el apartamento est\u00e1 en general como nuevo y se ve exactamente como las fotos, estaba todo suuuuper limpio y tienen un radiador que calienta el habit\u00e1culo en muy poco tiempo. Nos recibi\u00f3 Rita, y de maravilla, nos dio un mont\u00f3n de informaci\u00f3n sobre Porto en un momento y nos dej\u00f3 un mont\u00f3n de mapas e info \u00fatil. la zona es tranquila y tiene un montos de aparcamiento seguro en la misma calle. Aun que no est\u00e1 en el mismo centro de la ciudad se llega a el en un paseo de poco m\u00e1s de 10 mins, adem\u00e1s en la misma puerta hay una parada de metro. Ha sido una experiencia genial quedarnos aqu\u00ed para visitar la ciudad. Muchas gracias por la amabilidad, si volvemos a la ciudad no dudar\u00edamos en volver a quedarnos aqu\u00ed.",
@@ -1916,7 +1916,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3402e36c59e6164fad5b",
                         "fullname": "Diogo",
-                        "imgUrl": "https://robohash.org/122269906?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/3.jpg",
                         "id": "122269906"
                     },
                     "txt": "Gostamos muito do espaco, pequeno mas muito agradavel. Excelente para passar apenas uns dias. Obrigada ao Nuno que esperou por nos ate tarde e que ainda tirou um tempinho para nos explicar e dar umas dicas sobre a cidade! Aconselho!",
@@ -1927,7 +1927,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3405e36c59e6164fb79e",
                         "fullname": "Anastasia",
-                        "imgUrl": "https://robohash.org/9456078?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/3.jpg",
                         "id": "9456078"
                     },
                     "txt": "\u041d\u0435\u0431\u043e\u043b\u044c\u0448\u0430\u044f, \u043d\u043e \u043e\u0447\u0435\u043d\u044c \u0443\u044e\u0442\u043d\u0430\u044f \u043a\u0432\u0430\u0440\u0442\u0438\u0440\u043a\u0430 \u0441\u043e \u0432\u0441\u0435\u043c \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u044b\u043c! \u0417\u0430\u0432\u0442\u0440\u0430\u043a\u0430\u0442\u044c \u043d\u0430 \u0441\u0432\u0435\u0436\u0435\u043c \u0432\u043e\u0437\u0434\u0443\u0445\u0435 \u043e\u0447\u0435\u043d\u044c \u043f\u0440\u0438\u044f\u0442\u043d\u043e, \u0432 \u043a\u0443\u0445\u043d\u0435 \u043c\u043e\u0436\u043d\u043e \u043f\u0440\u0438\u0433\u043e\u0442\u043e\u0432\u0438\u0442\u044c \u0432\u0441\u0435, \u0447\u0442\u043e \u0437\u0430\u0445\u043e\u0447\u0435\u0448\u044c! \u041e\u0447\u0435\u043d\u044c \u0433\u043e\u0441\u0442\u0435\u043f\u0440\u0438\u0438\u043c\u043d\u0430\u044f \u0445\u043e\u0437\u044f\u0439\u043a\u0430, \u0440\u0430\u0441\u0441\u043a\u0430\u0437\u0430\u043b\u0430 \u043c\u043d\u043e\u0433\u043e \u0438\u043d\u0442\u0435\u0440\u0435\u0441\u043d\u043e\u0433\u043e \u043e \u043c\u0435\u0441\u0442\u0430\u0445 \u043f\u043e\u0431\u043b\u0438\u0437\u043e\u0441\u0442\u0438 \u0438 \u0432 \u0433\u043e\u0440\u043e\u0434\u0435!",
@@ -1938,7 +1938,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3401e36c59e6164fab70",
                         "fullname": "Raphael",
-                        "imgUrl": "https://robohash.org/32418543?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/4.jpg",
                         "id": "32418543"
                     },
                     "txt": "Excelente Studio, muito bem localizado e com todas as comodidades necess\u00e1rias para uma pequena estadia.",
@@ -1949,7 +1949,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3406e36c59e6164fbc99",
                         "fullname": "Judith",
-                        "imgUrl": "https://robohash.org/47537690?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/4.jpg",
                         "id": "47537690"
                     },
                     "txt": "The flat is situated right next to a metro station. Also perfect, if you arrive by car - free parking just in front. 15 mins walk to downtown but lot of cheap cafes and restaurants full of locals around.\nThe check-in was perfect. We got lots of information, what to do/see/where to eat. Thanks for that. \nThe Apartement is very small but for a short city visit, big enough. If you stay for a week or so, I would recommend a larger Apartement.  ",
@@ -1960,7 +1960,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3405e36c59e6164fb694",
                         "fullname": "Marta",
-                        "imgUrl": "https://robohash.org/20010340?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/5.jpg",
                         "id": "20010340"
                     },
                     "txt": "Fant\u00e1stica estancia en Oporto. Apartamento peque\u00f1o pero suficiente para pasar unos d\u00edas en  Oporto una pareja. Situado un poco a las afueras pero muy buena comunicaci\u00f3n  con el centro (parada de metro y autob\u00fas enfrente del apartamento).\nAtenci\u00f3n inmejorable del anfitri\u00f3n, respondiendo muy r\u00e1pido a nuestras consultas y gestionando nuestra llegada. El \u00fanico fallo es que la lavadora no se pod\u00eda utilizar. Muy recomendable para pasar unos d\u00edas en Oporto relaci\u00f3n calidad-precio.\n",
@@ -1971,7 +1971,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3402e36c59e6164fadc4",
                         "fullname": "Aron",
-                        "imgUrl": "https://robohash.org/31601157?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/5.jpg",
                         "id": "31601157"
                     },
                     "txt": "We had a very nice welcome where we received tips about the neighbourhood. Those we tried turned out excellent. It's a 15 to 20 minute walk to the centre, the room is small but it has everything you need and is well maintained. Very close to the subway, a small outdoor area where you can sit. \nTip: sandwiches (pork with cheese) from casa guedes",
@@ -1982,7 +1982,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3406e36c59e6164fba79",
                         "fullname": "M\u00e1rcio",
-                        "imgUrl": "https://robohash.org/50134628?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/1.jpg",
                         "id": "50134628"
                     },
                     "txt": "Excelente rela\u00e7\u00e3o pre\u00e7o qualidade, muito boa comodidade e excelentes acessos. Muitas op\u00e7\u00f5es para as refei\u00e7\u00f5es por perto e metro \u00e0 porta. Recomendo.",
@@ -2046,7 +2046,7 @@ function _createStays() {
                 "location": "Senhora da Hora, Porto, Portugal",
                 "responseTime": "a few days or more",
                 "thumbnailUrl": "https://a0.muscache.com/im/pictures/87b9ccba-154a-4546-8cbe-8bdb25ddb36c.jpg?aki_policy=profile_small",
-                "pictureUrl": "https://a0.muscache.com/im/pictures/87b9ccba-154a-4546-8cbe-8bdb25ddb36c.jpg?aki_policy=profile_x_medium",
+                "pictureUrl": "https://randomuser.me/api/portraits/women/1.jpg",
                 "isSuperhost": false,
                 "id": "80558077",
                 "description": ""
@@ -2065,7 +2065,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3402e36c59e6164fad68",
                         "fullname": "Celeste",
-                        "imgUrl": "https://robohash.org/38181630?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/2.jpg",
                         "id": "38181630"
                     },
                     "txt": "We had a very nice stay in the house and felt at home. The room is big and light, we had a private bathroom, could use the kitchen and the nice garden. Patricia picked us up at the station of the metro, the bus is near. Patricia and Chris are very open and welcoming people, we talked about Portugal, Fado, Porto ... Also, they gave us several tips to see in Porto. When we are in Porto again we will come back!! We really recommand to stay here. Thanks Patricia and Casimiro!",
@@ -2076,7 +2076,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3402e36c59e6164fadf0",
                         "fullname": "Martin",
-                        "imgUrl": "https://robohash.org/32511082?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/2.jpg",
                         "id": "32511082"
                     },
                     "txt": "Patricia and Chris has been wonderful hosts. They help us very much with all questions we had. We enjoyed our stay very much.",
@@ -2087,7 +2087,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3402e36c59e6164faedf",
                         "fullname": "Sandra",
-                        "imgUrl": "https://robohash.org/66617047?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/3.jpg",
                         "id": "66617047"
                     },
                     "txt": "Une chambre tr\u00e8s spacieuse et une salle de bain priv\u00e9e : au top ! \r\nChristian et Patricia ont \u00e9t\u00e9 tr\u00e8s accueillants et nous nous sommes tout de suite sentis comme chez nous ! ",
@@ -2098,7 +2098,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3404e36c59e6164fb3ed",
                         "fullname": "Erika",
-                        "imgUrl": "https://robohash.org/78636529?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/3.jpg",
                         "id": "78636529"
                     },
                     "txt": "Des h\u00f4tes tr\u00e8s accueillant et \u00e0 l'\u00e9coute de leurs invit\u00e9s! De supers adresses \u00e0 conseiller. \r\nUne maison d\u00e9cor\u00e9e avec go\u00fbt et avec une sublime salle de bain priv\u00e9e.\r\nLe centre est tr\u00e8s facile d'acc\u00e8s en bus car inaccessible en voiture. \r\nTr\u00e8s facile de se garer dans la rue de nos h\u00f4tes.\r\nUn excellent rapport qualit\u00e9 prix!",
@@ -2109,7 +2109,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3405e36c59e6164fb9bd",
                         "fullname": "Guy",
-                        "imgUrl": "https://robohash.org/88496638?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/4.jpg",
                         "id": "88496638"
                     },
                     "txt": "Patricia et Casimir ont \u00e9t\u00e9 tr\u00e8s accueillants et nous ont donn\u00e9 toutes les informations pratiques pour se rendre au centre de Porto en bus. La chambre est spacieuse et la salle de bain priv\u00e9e est juste \u00e0 cot\u00e9. Le quartier est tr\u00e8s calme et le s\u00e9jour \u00e9tait tr\u00e8s agr\u00e9able.",
@@ -2165,7 +2165,7 @@ function _createStays() {
                 "location": "Istanbul",
                 "responseTime": "within an hour",
                 "thumbnailUrl": "https://a0.muscache.com/im/pictures/user/6bf03261-e7ac-4e0e-8121-3828612bbb6a.jpg?aki_policy=profile_small",
-                "pictureUrl": "https://a0.muscache.com/im/pictures/user/6bf03261-e7ac-4e0e-8121-3828612bbb6a.jpg?aki_policy=profile_x_medium",
+                "pictureUrl": "https://randomuser.me/api/portraits/women/4.jpg",
                 "isSuperhost": true,
                 "id": "5823933",
                 "description": "I live alone in Taksim area and i work at bar.\r\nI like meet new friends from all of the world.\r\nI like to Travel a lot ofcourse if i have free time :) East Asia , Sun , Sea , Sand , Movie  :) "
@@ -2184,7 +2184,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3406e36c59e6164fbcc7",
                         "fullname": "Quentin",
-                        "imgUrl": "https://robohash.org/12424603?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/5.jpg",
                         "id": "12424603"
                     },
                     "txt": "I greatly appreciated both the location of the place (very central) and the appartment per se (clean and comfortable, with a very cosy room and with Wi-Fi). \r\n\r\nNihat was perfect host, quite welcoming and helpful about places to go (or avoid) and things to do in town. \r\n\r\nHos\u00e7a kal!\r\n\r\n\r\n",
@@ -2195,7 +2195,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3405e36c59e6164fb7f6",
                         "fullname": "Steve",
-                        "imgUrl": "https://robohash.org/10300292?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/5.jpg",
                         "id": "10300292"
                     },
                     "txt": "Nice room in a flat well located. Nihat is very nce and helpful. Good experience.",
@@ -2206,7 +2206,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3404e36c59e6164fb624",
                         "fullname": "Jess",
-                        "imgUrl": "https://robohash.org/8641944?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/1.jpg",
                         "id": "8641944"
                     },
                     "txt": "We had a fantastic stay in this charming apartment. The location was perfect and Nihat welcomed us even when we made a late reservation and arrived early. He works at a bar no far from there- a great place to have a drink after seeing the sites! I highly recommend this place!",
@@ -2217,7 +2217,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3406e36c59e6164fbcb6",
                         "fullname": "Irina",
-                        "imgUrl": "https://robohash.org/42110174?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/1.jpg",
                         "id": "42110174"
                     },
                     "txt": "The flat is clean and and very good located, 3 minutes walk to Taksim Square. The bedroom is quiet at night, even though there is a crowded area next to the flat. Nihat was always extremely quick in answering our emails and let us feel comfortable. He is really kind and discrete, we met him few times cause he works in the evening. ",
@@ -2228,7 +2228,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3402e36c59e6164fae1a",
                         "fullname": "Matthew",
-                        "imgUrl": "https://robohash.org/40562632?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/2.jpg",
                         "id": "40562632"
                     },
                     "txt": "Nihat went out of his way to accommodate our very early arrival and some unforeseeable challenges.  A great host!",
@@ -2239,7 +2239,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3407e36c59e6164fc03f",
                         "fullname": "Valon",
-                        "imgUrl": "https://robohash.org/47981428?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/2.jpg",
                         "id": "47981428"
                     },
                     "txt": "Nice place and host, very good location :)",
@@ -2250,7 +2250,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3405e36c59e6164fb7a0",
                         "fullname": "Amanda",
-                        "imgUrl": "https://robohash.org/29625938?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/3.jpg",
                         "id": "29625938"
                     },
                     "txt": "Everything was great about the room and the location.",
@@ -2261,7 +2261,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3404e36c59e6164fb3fe",
                         "fullname": "Mathieu & Hilal",
-                        "imgUrl": "https://robohash.org/50390021?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/3.jpg",
                         "id": "50390021"
                     },
                     "txt": "The stay at Nihat's place was really pleasant. The apartment is very clean and confortable, and located in a very vibrant and animated neighborhood with many restaurants, cafes, bars, shops just nearby. Just a 5 min walk to the Taksim Metro station makes it easy to access any other parts of the city pretty quickly. Nihat was also a great and welcoming host. We totally recommend this place for your stay in Istanbul, especially if you want to experience the local life to the fullest ! ",
@@ -2272,7 +2272,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3403e36c59e6164fb225",
                         "fullname": "Christie",
-                        "imgUrl": "https://robohash.org/48957037?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/4.jpg",
                         "id": "48957037"
                     },
                     "txt": "The host canceled this reservation 30 days before arrival. This is an automated posting.",
@@ -2283,7 +2283,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3402e36c59e6164fad81",
                         "fullname": "Vanessa",
-                        "imgUrl": "https://robohash.org/551888?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/4.jpg",
                         "id": "551888"
                     },
                     "txt": "I stayed at Nihat's for a week. It was exactly as the pics, very nice room. A little bit cold but he offers heating and AC. The apt is cozy and central, close to nice restaurants and bars. Have in mind is on the 4th fl no elevator. Nihat is a very easygoing guy who's open to help with any question or tip about the city. Totally recommend! thanks Nihat! ",
@@ -2294,7 +2294,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3404e36c59e6164fb2d1",
                         "fullname": "Florentin",
-                        "imgUrl": "https://robohash.org/75066050?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/5.jpg",
                         "id": "75066050"
                     },
                     "txt": "Nihat is a very nice host, he is very helpful and creates an agreeable atmosphere inside the flat. Thank you :)",
@@ -2305,7 +2305,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3402e36c59e6164fae29",
                         "fullname": "Harshak",
-                        "imgUrl": "https://robohash.org/19784722?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/5.jpg",
                         "id": "19784722"
                     },
                     "txt": "Nice cozy place very close to Taksim Square. Nihat is helpful and informative.",
@@ -2316,7 +2316,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3406e36c59e6164fbc70",
                         "fullname": "Haytham",
-                        "imgUrl": "https://robohash.org/10741329?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/1.jpg",
                         "id": "10741329"
                     },
                     "txt": "nice apartment with good location. the room was clean and neat. Nihat was helpful and supportive. totally recommend his accommodation",
@@ -2327,7 +2327,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3404e36c59e6164fb5fd",
                         "fullname": "Vural",
-                        "imgUrl": "https://robohash.org/14053758?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/1.jpg",
                         "id": "14053758"
                     },
                     "txt": "Nihat is a very friendly host and makes you really feel comfortable. I have had a great stay and recommend it to anyone who wants to stay very central (Cihangir), the hip and modern part of the city with cozy venues and great cafes just a 3min walk. The place is very close to Taksim Square, etc...everything as described in the prior conments. I will definitely come again! Cheers vural",
@@ -2338,7 +2338,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3406e36c59e6164fba05",
                         "fullname": "Wasseem",
-                        "imgUrl": "https://robohash.org/2072593?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/2.jpg",
                         "id": "2072593"
                     },
                     "txt": "I totally recommend this place. Great experience staying at Nihat\u2019s apartment. To start with, Nihat is a wonderful friendly person who I was happy to meet. He was very friendly at house, and we had the chance to spend time together outside. Staying with him reflects the true meaning of this website, which is living as a local with a local person. Thank you Nihat. \nRegarding the apartment, it is exactly as described. The room is nice and bed is comfortable. It was clean and well prepared for us. \nRegarding the neighborhood, it is very close to Taksim square and Istiklal Street with few minutes walk. As normal as it is in Istanbul, there is a short hill you need to walk to get to the square, which was totally fine with us. \n\nIn general, next time I visit Istanbul I would first check the availability with Nihat before searching others.",
@@ -2349,7 +2349,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3402e36c59e6164fac4c",
                         "fullname": "Mr Joseph",
-                        "imgUrl": "https://robohash.org/10668432?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/2.jpg",
                         "id": "10668432"
                     },
                     "txt": "Nihat was an amazing host. He picked me up from the bus stop, gave me some great tips on what to do in Istanbul and just an all round great guy. If you're looking for somewhere close to Taksim then Nihat's place is great. Highly recommend him! Thanks Nihat.",
@@ -2360,7 +2360,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3405e36c59e6164fb8b8",
                         "fullname": "G\u00f6k\u00e7e",
-                        "imgUrl": "https://robohash.org/64172965?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/3.jpg",
                         "id": "64172965"
                     },
                     "txt": "Nihat is so hospitable person. Me and My boyfriend stayed 6 days in Nihat's place and everything was perfect. Nihat is so tactful person despite he was working so hard, he all the time asked us 'do we need anything?' he was so clean and his house is exactly same with the pictures.\nI'm highly recommend his place! \nthank you Nihat!",
@@ -2371,7 +2371,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3405e36c59e6164fb952",
                         "fullname": "Bruno",
-                        "imgUrl": "https://robohash.org/6316350?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/3.jpg",
                         "id": "6316350"
                     },
                     "txt": "Very helping and welcoming host. Perfect location for a few days in Istanbul.",
@@ -2382,7 +2382,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3405e36c59e6164fb73d",
                         "fullname": "Vichapas",
-                        "imgUrl": "https://robohash.org/68234834?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/men/4.jpg",
                         "id": "68234834"
                     },
                     "txt": "Nihat was very nice, polite and very helpful to us. He let us drop our baggages off in the morning and left them for a little longer when we checked out. The location is great as it is near Taksim Square. There are local grocery shops nearby if you want to buy some food or snacks.",
@@ -2393,7 +2393,7 @@ function _createStays() {
                     "by": {
                         "_id": "622f3403e36c59e6164fb0fe",
                         "fullname": "Show",
-                        "imgUrl": "https://robohash.org/107816748?set=set1",
+                        "imgUrl": "https://randomuser.me/api/portraits/women/4.jpg",
                         "id": "107816748"
                     },
                     "txt": "Nihat is very nice host, and came to wait for me in the shuttle bus station near Taksim squre, His house is very convenient for travel. He is very experirenced and warm host, the room super clean and warm, and house has everything, next time i will choose his house again in istanbul. miss you nihat. see you next time.",
@@ -2444,7 +2444,7 @@ function _createStays() {
                 "location": "Somewhere, Earth",
                 "responseTime": "within a day",
                 "thumbnailUrl": "http://example.com/host.jpg",
-                "pictureUrl": "http://example.com/host.jpg",
+                "pictureUrl": "https://randomuser.me/api/portraits/men/5.jpg",
                 "isSuperhost": false
             },
             "loc": {
@@ -2500,7 +2500,7 @@ function _createStays() {
                 "location": "Somewhere, Earth",
                 "responseTime": "within a day",
                 "thumbnailUrl": "http://example.com/host.jpg",
-                "pictureUrl": "http://example.com/host.jpg",
+                "pictureUrl": "https://randomuser.me/api/portraits/women/5.jpg",
                 "isSuperhost": false
             },
             "loc": {
@@ -2556,7 +2556,7 @@ function _createStays() {
                 "location": "Somewhere, Earth",
                 "responseTime": "within a day",
                 "thumbnailUrl": "http://example.com/host.jpg",
-                "pictureUrl": "http://example.com/host.jpg",
+                "pictureUrl": "https://randomuser.me/api/portraits/men/1.jpg",
                 "isSuperhost": false
             },
             "loc": {
@@ -2612,7 +2612,7 @@ function _createStays() {
                 "location": "Somewhere, Earth",
                 "responseTime": "within a day",
                 "thumbnailUrl": "http://example.com/host.jpg",
-                "pictureUrl": "http://example.com/host.jpg",
+                "pictureUrl": "https://randomuser.me/api/portraits/women/1.jpg",
                 "isSuperhost": false
             },
             "loc": {
@@ -2668,7 +2668,7 @@ function _createStays() {
                 "location": "Somewhere, Earth",
                 "responseTime": "within a day",
                 "thumbnailUrl": "http://example.com/host.jpg",
-                "pictureUrl": "http://example.com/host.jpg",
+                "pictureUrl": "https://randomuser.me/api/portraits/men/2.jpg",
                 "isSuperhost": false
             },
             "loc": {
@@ -2724,7 +2724,7 @@ function _createStays() {
                 "location": "Somewhere, Earth",
                 "responseTime": "within a day",
                 "thumbnailUrl": "http://example.com/host.jpg",
-                "pictureUrl": "http://example.com/host.jpg",
+                "pictureUrl": "https://randomuser.me/api/portraits/women/2.jpg",
                 "isSuperhost": false
             },
             "loc": {
@@ -2780,7 +2780,7 @@ function _createStays() {
                 "location": "Somewhere, Earth",
                 "responseTime": "within a day",
                 "thumbnailUrl": "http://example.com/host.jpg",
-                "pictureUrl": "http://example.com/host.jpg",
+                "pictureUrl": "https://randomuser.me/api/portraits/men/3.jpg",
                 "isSuperhost": false
             },
             "loc": {
@@ -2836,7 +2836,7 @@ function _createStays() {
                 "location": "Somewhere, Earth",
                 "responseTime": "within a day",
                 "thumbnailUrl": "http://example.com/host.jpg",
-                "pictureUrl": "http://example.com/host.jpg",
+                "pictureUrl": "https://randomuser.me/api/portraits/women/3.jpg",
                 "isSuperhost": false
             },
             "loc": {
@@ -2892,7 +2892,7 @@ function _createStays() {
                 "location": "Somewhere, Earth",
                 "responseTime": "within a day",
                 "thumbnailUrl": "http://example.com/host.jpg",
-                "pictureUrl": "http://example.com/host.jpg",
+                "pictureUrl": "https://randomuser.me/api/portraits/men/4.jpg",
                 "isSuperhost": false
             },
             "loc": {
@@ -2948,7 +2948,7 @@ function _createStays() {
                 "location": "Somewhere, Earth",
                 "responseTime": "within a day",
                 "thumbnailUrl": "http://example.com/host.jpg",
-                "pictureUrl": "http://example.com/host.jpg",
+                "pictureUrl": "https://randomuser.me/api/portraits/women/4.jpg",
                 "isSuperhost": false
             },
             "loc": {
@@ -3004,7 +3004,7 @@ function _createStays() {
                 "location": "Somewhere, Earth",
                 "responseTime": "within a day",
                 "thumbnailUrl": "http://example.com/host.jpg",
-                "pictureUrl": "http://example.com/host.jpg",
+                "pictureUrl": "https://randomuser.me/api/portraits/men/5.jpg",
                 "isSuperhost": false
             },
             "loc": {
@@ -3060,7 +3060,7 @@ function _createStays() {
                 "location": "Somewhere, Earth",
                 "responseTime": "within a day",
                 "thumbnailUrl": "http://example.com/host.jpg",
-                "pictureUrl": "http://example.com/host.jpg",
+                "pictureUrl": "https://randomuser.me/api/portraits/women/5.jpg",
                 "isSuperhost": false
             },
             "loc": {
@@ -3116,7 +3116,7 @@ function _createStays() {
                 "location": "Somewhere, Earth",
                 "responseTime": "within a day",
                 "thumbnailUrl": "http://example.com/host.jpg",
-                "pictureUrl": "http://example.com/host.jpg",
+                "pictureUrl": "https://randomuser.me/api/portraits/men/1.jpg",
                 "isSuperhost": false
             },
             "loc": {
@@ -3172,7 +3172,7 @@ function _createStays() {
                 "location": "Somewhere, Earth",
                 "responseTime": "within a day",
                 "thumbnailUrl": "http://example.com/host.jpg",
-                "pictureUrl": "http://example.com/host.jpg",
+                "pictureUrl": "https://randomuser.me/api/portraits/women/1.jpg",
                 "isSuperhost": false
             },
             "loc": {
@@ -3228,7 +3228,7 @@ function _createStays() {
                 "location": "Somewhere, Earth",
                 "responseTime": "within a day",
                 "thumbnailUrl": "http://example.com/host.jpg",
-                "pictureUrl": "http://example.com/host.jpg",
+                "pictureUrl": "https://randomuser.me/api/portraits/men/2.jpg",
                 "isSuperhost": false
             },
             "loc": {
@@ -3284,7 +3284,7 @@ function _createStays() {
                 "location": "Somewhere, Earth",
                 "responseTime": "within a day",
                 "thumbnailUrl": "http://example.com/host.jpg",
-                "pictureUrl": "http://example.com/host.jpg",
+                "pictureUrl": "https://randomuser.me/api/portraits/women/2.jpg",
                 "isSuperhost": false
             },
             "loc": {
@@ -3340,7 +3340,7 @@ function _createStays() {
                 "location": "Somewhere, Earth",
                 "responseTime": "within a day",
                 "thumbnailUrl": "http://example.com/host.jpg",
-                "pictureUrl": "http://example.com/host.jpg",
+                "pictureUrl": "https://randomuser.me/api/portraits/men/3.jpg",
                 "isSuperhost": false
             },
             "loc": {
@@ -3396,7 +3396,7 @@ function _createStays() {
                 "location": "Somewhere, Earth",
                 "responseTime": "within a day",
                 "thumbnailUrl": "http://example.com/host.jpg",
-                "pictureUrl": "http://example.com/host.jpg",
+                "pictureUrl": "https://randomuser.me/api/portraits/women/3.jpg",
                 "isSuperhost": false
             },
             "loc": {
@@ -3452,7 +3452,7 @@ function _createStays() {
                 "location": "Somewhere, Earth",
                 "responseTime": "within a day",
                 "thumbnailUrl": "http://example.com/host.jpg",
-                "pictureUrl": "http://example.com/host.jpg",
+                "pictureUrl": "https://randomuser.me/api/portraits/men/4.jpg",
                 "isSuperhost": false
             },
             "loc": {
@@ -3508,7 +3508,7 @@ function _createStays() {
                 "location": "Somewhere, Earth",
                 "responseTime": "within a day",
                 "thumbnailUrl": "http://example.com/host.jpg",
-                "pictureUrl": "http://example.com/host.jpg",
+                "pictureUrl": "https://randomuser.me/api/portraits/women/4.jpg",
                 "isSuperhost": false
             },
             "loc": {
@@ -3564,7 +3564,7 @@ function _createStays() {
                 "location": "Somewhere, Earth",
                 "responseTime": "within a day",
                 "thumbnailUrl": "http://example.com/host.jpg",
-                "pictureUrl": "http://example.com/host.jpg",
+                "pictureUrl": "https://randomuser.me/api/portraits/men/5.jpg",
                 "isSuperhost": false
             },
             "loc": {
@@ -3620,7 +3620,7 @@ function _createStays() {
                 "location": "Somewhere, Earth",
                 "responseTime": "within a day",
                 "thumbnailUrl": "http://example.com/host.jpg",
-                "pictureUrl": "http://example.com/host.jpg",
+                "pictureUrl": "https://randomuser.me/api/portraits/women/5.jpg",
                 "isSuperhost": false
             },
             "loc": {
@@ -3676,7 +3676,7 @@ function _createStays() {
                 "location": "Somewhere, Earth",
                 "responseTime": "within a day",
                 "thumbnailUrl": "http://example.com/host.jpg",
-                "pictureUrl": "http://example.com/host.jpg",
+                "pictureUrl": "https://randomuser.me/api/portraits/men/1.jpg",
                 "isSuperhost": false
             },
             "loc": {
@@ -3732,7 +3732,7 @@ function _createStays() {
                 "location": "Somewhere, Earth",
                 "responseTime": "within a day",
                 "thumbnailUrl": "http://example.com/host.jpg",
-                "pictureUrl": "http://example.com/host.jpg",
+                "pictureUrl": "https://randomuser.me/api/portraits/women/1.jpg",
                 "isSuperhost": false
             },
             "loc": {
@@ -3788,7 +3788,7 @@ function _createStays() {
                 "location": "Somewhere, Earth",
                 "responseTime": "within a day",
                 "thumbnailUrl": "http://example.com/host.jpg",
-                "pictureUrl": "http://example.com/host.jpg",
+                "pictureUrl": "https://randomuser.me/api/portraits/men/2.jpg",
                 "isSuperhost": false
             },
             "loc": {
@@ -3844,7 +3844,7 @@ function _createStays() {
                 "location": "Somewhere, Earth",
                 "responseTime": "within a day",
                 "thumbnailUrl": "http://example.com/host.jpg",
-                "pictureUrl": "http://example.com/host.jpg",
+                "pictureUrl": "https://randomuser.me/api/portraits/women/2.jpg",
                 "isSuperhost": false
             },
             "loc": {
@@ -3900,7 +3900,7 @@ function _createStays() {
                 "location": "Somewhere, Earth",
                 "responseTime": "within a day",
                 "thumbnailUrl": "http://example.com/host.jpg",
-                "pictureUrl": "http://example.com/host.jpg",
+                "pictureUrl": "https://randomuser.me/api/portraits/men/3.jpg",
                 "isSuperhost": false
             },
             "loc": {
@@ -3956,7 +3956,7 @@ function _createStays() {
                 "location": "Somewhere, Earth",
                 "responseTime": "within a day",
                 "thumbnailUrl": "http://example.com/host.jpg",
-                "pictureUrl": "http://example.com/host.jpg",
+                "pictureUrl": "https://randomuser.me/api/portraits/women/3.jpg",
                 "isSuperhost": false
             },
             "loc": {
@@ -4012,7 +4012,7 @@ function _createStays() {
                 "location": "Somewhere, Earth",
                 "responseTime": "within a day",
                 "thumbnailUrl": "http://example.com/host.jpg",
-                "pictureUrl": "http://example.com/host.jpg",
+                "pictureUrl": "https://randomuser.me/api/portraits/men/4.jpg",
                 "isSuperhost": false
             },
             "loc": {
@@ -4068,7 +4068,7 @@ function _createStays() {
                 "location": "Somewhere, Earth",
                 "responseTime": "within a day",
                 "thumbnailUrl": "http://example.com/host.jpg",
-                "pictureUrl": "http://example.com/host.jpg",
+                "pictureUrl": "https://randomuser.me/api/portraits/women/4.jpg",
                 "isSuperhost": false
             },
             "loc": {

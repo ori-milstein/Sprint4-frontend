@@ -45,6 +45,7 @@ export function stayReducer(state = initialState, action) {
                 ...state.filterBy,
                 ...action.filterBy, // Merge the incoming updates
             }
+            console.log('updated filter by in store', action.filterBy)
                     
             // Save to localStorage for persistence
             localStorage.setItem('filterBy', JSON.stringify(updatedFilterBy))

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { DatePickerCmp } from './DatePickerCmp'
+import { setFiterBy } from '../store/actions/stay.actions';
 
 export function Reserve() {
 
@@ -8,8 +9,36 @@ export function Reserve() {
     const [isDatePickerOpen, setIsDatePickerOpen] = useState(false)
     const filterBy = useSelector((storeState) => storeState.stayModule.filterBy)
 
+    const [checkInDate, setCheckInDate] = useState(filterBy.checkInDate || null);
+    const [checkOutDate, setCheckOutDate] = useState(filterBy.checkOutDate || null);
+
     function toggleIsDatePickerOpen() {
         setIsDatePickerOpen(!isDatePickerOpen)
+    }
+
+    function onChangeCheckIn(checkInFromDatePicker) {
+        console.log('changing check in to', checkInFromDatePicker)
+        setCheckInDate(checkInFromDatePicker)
+        updateFilterBy(checkInFromDatePicker, checkOutDate);
+
+    }
+
+    function onChangeCheckOut(checkOutFromDatePicker) {
+        console.log('changing check out to', checkOutFromDatePicker)
+        setCheckOutDate(checkOutFromDatePicker)
+        updateFilterBy(checkInDate, checkOutFromDatePicker);
+
+    }
+
+    async function updateFilterBy(newCheckInDate, newCheckOutDate) {
+        const updatedFilterBy = {
+            ...filterBy,
+            checkInDate: newCheckInDate,
+            checkOutDate: newCheckOutDate,
+        }
+
+        await setFiterBy(updatedFilterBy)
+
     }
 
     const formatDate = (date) => {
@@ -25,7 +54,10 @@ export function Reserve() {
             <h2>₪{stay.price} <span> night</span></h2>
             <div className="stay-reserve-dates">
                 {isDatePickerOpen && <div className="date-picker-reserve-container">
-                    <DatePickerCmp />
+                    <DatePickerCmp
+                        onCheckInChange={onChangeCheckIn}
+                        onCheckOutChange={onChangeCheckOut}
+                    />
                     <button className="close" onClick={toggleIsDatePickerOpen}>Close</button>
                 </div>}
                 <div className={`check-in-container ${isDatePickerOpen ? 'open' : ''}`} onClick={toggleIsDatePickerOpen}>

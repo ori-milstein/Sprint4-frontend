@@ -22,18 +22,15 @@ function getEmptyStay() {
 }
 
 function getDefaultFilter() {
-    const savedFilter = localStorage.getItem('filterBy')
-    return savedFilter
-        ? JSON.parse(savedFilter)
-        : {
-              txt: '',
-              minCapacity: 0,
-              label: '',
-              sortField: '',
-              sortDir: '',
-              checkInDate: null, // Default value for check-in date
-              checkOutDate: null, // Default value for check-out date
-          }
+    return {
+        txt: '',
+        minCapacity: 1,
+        label: '',
+        sortField: '',
+        sortDir: '',
+        checkInDate: null, // Default value for check-in date
+        checkOutDate: null, // Default value for check-out date
+    }
 }
 
 const service = VITE_LOCAL === 'true' ? local : remote

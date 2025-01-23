@@ -3,11 +3,12 @@
     min-height: 80px;
     border-bottom: 1px solid lightgrey;
     display: flex;
+    // align-items: center;
     background-color: white;
     z-index: 1000;
 
     .in-stay-details {
-        margin-inline: 210px;
+        margin-inline: 380px;
     }
 
     nav {
