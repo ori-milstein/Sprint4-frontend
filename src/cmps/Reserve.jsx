@@ -26,7 +26,7 @@ export function Reserve() {
         const days = getNumberOfDays(checkInDate, checkOutDate);
         if (days > 0) {
             console.log('stayPrice', stayPrice)
-            setTotalPrice(days * +stayPrice + 31);
+            setTotalPrice(days * +stayPrice);
         } else {
             console.log('in else')
             setTotalPrice(0)
@@ -138,10 +138,9 @@ export function Reserve() {
                 <hr />
                 <div className="total-reserve-price">
                     <p>Total</p>
-                    <p>₪ {parsePrice(totalPrice, 'string')}</p>
+                    <p>₪ {parsePrice(totalPrice + 31, 'string')}</p>
                 </div>
             </div>
         </div >
     )
-
 }
