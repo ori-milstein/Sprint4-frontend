@@ -6,6 +6,26 @@ export function StayPreview({ stay }) {
     const [wishlistName, setWishlistName] = useState('')
     const maxChars = 50
 
+    function formatDateRange(startDate, endDate) {
+        if (!startDate || !endDate) return ''
+
+        const start = new Date(startDate)
+        const end = new Date(endDate)
+
+        const optionsStart = { month: 'short', day: 'numeric' }
+        const optionsEndSameMonth = { day: 'numeric' }
+        const optionsEndDifferentMonth = { month: 'short', day: 'numeric' }
+
+        const formattedStart = new Intl.DateTimeFormat('en-US', optionsStart).format(start)
+
+        const formattedEnd =
+            start.getMonth() === end.getMonth()
+                ? new Intl.DateTimeFormat('en-US', optionsEndSameMonth).format(end)
+                : new Intl.DateTimeFormat('en-US', optionsEndDifferentMonth).format(end)
+
+        return `${formattedStart} - ${formattedEnd}`
+    }
+
     function handleNext(ev) {
         ev.preventDefault()
         ev.stopPropagation()
@@ -41,6 +61,11 @@ export function StayPreview({ stay }) {
     function handleInputChange(ev) {
         const value = ev.target.value.slice(0, maxChars)
         setWishlistName(value)
+    }
+
+    function calculateAverageRating(reviews) {
+        const total = reviews.reduce((sum, review) => sum + review.rate, 0)
+        return (total / reviews.length).toFixed(2)
     }
 
     return (
@@ -80,30 +105,45 @@ export function StayPreview({ stay }) {
                                     <span
                                         key={idx}
                                         className={`indicator ${currentIndex === idx ? 'active' : ''}`}
-                                        onClick={() => setCurrentIndex(idx)}
+                                        onClick={(ev) => {
+                                            ev.preventDefault()
+                                            ev.stopPropagation()
+                                            setCurrentIndex(idx)
+                                        }}
                                     ></span>
                                 ))}
                             </div>
                         </>
                     )}
                 </div>
-
                 <div className="info-container">
                     <header className="location-header">
                         <span>{stay.loc.city}, {stay.loc.country}</span>
+                        {stay.reviews && stay.reviews.length > 0 && (
+                            <p className="stay-rating">
+                                <i className="fas fa-star"></i>
+                                <span>
+                                    {calculateAverageRating(stay.reviews)}
+                                </span>
+                            </p>
+                        )}
                     </header>
 
-                    <h3 className="stay-name">{stay.name}</h3>
-
-                    <p className="stay-price">
-                        <span>${stay.price}</span> night
+                    <h3 className="stay-name"> {stay.name} </h3>
+                    <p className="stay-dates">
+                        {stay.reservedDates?.length > 0 ? (
+                            stay.reservedDates.map((range, idx) => (
+                                <span key={idx} className="date-range">
+                                    {formatDateRange(range.start, range.end)}
+                                </span>
+                            ))
+                        ) : (
+                            <span>No Dates Available</span>
+                        )}
                     </p>
-
-                    {stay.reviews && stay.reviews.length > 0 && (
-                        <p className="stay-rating">
-                            <i className="fas fa-star"></i> {calculateAverageRating(stay.reviews)}
-                        </p>
-                    )}
+                    <p className="stay-price">
+                        ₪{stay.price} <span>night</span>
+                    </p>
                 </div>
             </article>
 
@@ -137,7 +177,10 @@ export function StayPreview({ stay }) {
                                 </small>
                             </div>
                             <div className="modal-actions">
-                                <button type="button" class="clear-btn" onClick={() => setWishlistName('')}>
+                                <button type="button"
+                                    class="clear-btn"
+                                    onClick={() => setWishlistName('')}
+                                >
                                     Clear
                                 </button>
                                 <button
@@ -154,9 +197,4 @@ export function StayPreview({ stay }) {
             )}
         </>
     )
-}
-
-function calculateAverageRating(reviews) {
-    const total = reviews.reduce((sum, review) => sum + review.rate, 0)
-    return (total / reviews.length).toFixed(2)
 }

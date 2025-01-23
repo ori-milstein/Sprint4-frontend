@@ -312,18 +312,6 @@ function _createStays() {
                     "start": "2025-01-03",
                     "end": "2025-01-10"
                 },
-                {
-                    "start": "2025-01-23",
-                    "end": "2025-01-30"
-                },
-                {
-                    "start": "2025-03-31",
-                    "end": "2025-04-02"
-                },
-                {
-                    "start": "2025-01-23",
-                    "end": "2025-01-30"
-                }
             ]
         },
         {
@@ -337,7 +325,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437327/epcnh2tzpafwmvi3srcp.jpg"
             ],
-            "price": 30,
+            "price": '2,000',
             "summary": "Chambre dans un bel appartement moderne avec balcon, ascenseur et terrasse. Private room in a beautiful modern apartment  with balcony, elevator and patio. La chambre est ferm\u00e9e avec une lit double. Vous aurez acc\u00e8s \u00e0 une salle de bain avec une douche, terrasse. L'appartement est climatis\u00e9.  Votre chambre est \u00e9quip\u00e9 d'une connexion Wi-Fi illimit\u00e9. Vous serez proche du centre ville, au pied du pont Jacques Cartier et \u00e0 distance de marche de toutes les commodit\u00e9s (m\u00e9tro, supermarch\u00e9, pharmacie",
             "capacity": 2,
             "amenities": [
@@ -436,22 +424,6 @@ function _createStays() {
                     "start": "2025-02-08",
                     "end": "2025-02-11"
                 },
-                {
-                    "start": "2025-02-08",
-                    "end": "2025-02-12"
-                },
-                {
-                    "start": "2025-03-12",
-                    "end": "2025-03-19"
-                },
-                {
-                    "start": "2025-01-07",
-                    "end": "2025-01-11"
-                },
-                {
-                    "start": "2025-01-30",
-                    "end": "2025-02-02"
-                }
             ]
         },
         {
@@ -465,7 +437,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436553/hbkx9lwxjd0wabqk0bmo.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436912/xle8ueqxjeazbs4bp09p.jpg"
             ],
-            "price": 65,
+            "price": '1,340',
             "summary": "O apartamento fica perto de arte e cultura e dos mais belos monumentos da cidade. Belos jardins e paisagens da cidade e do rio Douro ficam perto e podem ser apreciadas.  Existem restaurantes t\u00edpicos e de comida internacional ao redor do apartamento.   O espa\u00e7o fica numa rua t\u00edpica da cidade, cheia da sua magia e magnetismo e \u00e9 muito pratico e confort\u00e1vel. O espa\u00e7o \u00e9 excelente para quem pretende visitar e conhecer a zona hist\u00f3rica e tur\u00edstica do Porto. Transportes p\u00fablicos ficam pr\u00f3ximos.",
             "capacity": 4,
             "amenities": [
@@ -754,17 +726,9 @@ function _createStays() {
             },
             "reservedDates": [
                 {
-                    "start": "2025-01-18",
-                    "end": "2025-01-23"
-                },
-                {
                     "start": "2025-03-14",
                     "end": "2025-03-16"
                 },
-                {
-                    "start": "2025-02-05",
-                    "end": "2025-02-08"
-                }
             ]
         },
         {
@@ -778,7 +742,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436334/nqgdwv3ljfkrbvynoetv.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436983/pivldxmrxssnhyzixhes.jpg"
             ],
-            "price": 79,
+            "price": '1,955',
             "summary": "A spacious, art-filled one-bedroom apartment near the express train (28 minutes to Times Square) and a Citibike station. Sample Bed-Stuy life at a nearby French restaurant,  a sunny Haitian cafe, a boutique grocery and more. We do NOT discriminate based on race, religion or sexual orientation.",
             "capacity": 2,
             "amenities": [
@@ -1058,18 +1022,6 @@ function _createStays() {
                     "start": "2025-04-03",
                     "end": "2025-04-09"
                 },
-                {
-                    "start": "2025-01-01",
-                    "end": "2025-01-06"
-                },
-                {
-                    "start": "2025-02-21",
-                    "end": "2025-02-24"
-                },
-                {
-                    "start": "2025-03-26",
-                    "end": "2025-03-28"
-                }
             ]
         },
         {
@@ -1083,7 +1035,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436460/qi3vkpts37b4k0dedosc.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437017/gjyzgdjngyrhfrj2loxz.jpg"
             ],
-            "price": 40,
+            "price": '3,000',
             "summary": "Mi piso est\u00e1 en el centro de Barcelona. Cerca del metro, las ramblas, los museos, el Portal del \u00c1ngel, Plaza Catalu\u00f1a. Mi alojamiento es bueno para turistas, aventureros, y viajeros de negocios....y tiene ascensor.",
             "capacity": 2,
             "amenities": [
@@ -1169,7 +1121,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437250/o8uutj3t2bvfafvxkr9j.jpg"
             ],
-            "price": 25,
+            "price": '2,456',
             "summary": "Lit room with balcony. The apartment is in the center, just meters from the Palau de la Musica Catalana. Well connected, a few minutes from Las Ramblas and the Born. Very close to the beach and Ciutadella Park",
             "capacity": 2,
             "amenities": [
@@ -1460,7 +1412,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436334/nqgdwv3ljfkrbvynoetv.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436481/tqwkxtbalipudzhivoag.jpg"
             ],
-            "price": 110,
+            "price": '1,110',
             "summary": "Welcome! Upgrades Added as of January 2018 This listing is located in the Spanish Harlem Section of Manhattan. I offer a cozy apartment that has great transportation in and out the city! The area has a lot of ethnic restaurants and a lot of local, active residents. This residence is great for a quick, inexpensive stay in New York whether its for business, travel, or personal purposes. I am glad to welcome all guests!",
             "capacity": 3,
             "amenities": [
@@ -1760,7 +1712,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436453/ndl8odasqgnyquvsbalp.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436460/qi3vkpts37b4k0dedosc.jpg"
             ],
-            "price": 29,
+            "price": 870,
             "summary": "If the dates you wish are not available, we have other options in the same location. You can find them on my profile. My goal is for you to have your days with the most comfort i can propose. I want you to taste all the feelings in Porto, as our food, as our best places, our best pointviews. I just love to help you enjoying this beautiful city :)",
             "capacity": 2,
             "amenities": [
@@ -2048,17 +2000,9 @@ function _createStays() {
             },
             "reservedDates": [
                 {
-                    "start": "2025-03-13",
-                    "end": "2025-03-19"
-                },
-                {
-                    "start": "2025-02-09",
-                    "end": "2025-02-10"
-                },
-                {
                     "start": "2025-01-20",
                     "end": "2025-01-27"
-                }
+                },
             ]
         },
         {
@@ -2072,7 +2016,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437045/dmquvficldi8ssfdlrrx.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436390/om97cgufeacwlric2r5w.jpg"
             ],
-            "price": 26,
+            "price": '3,458',
             "summary": "The neighbourhood is a quiet, family residential area, 20 minutes by bus from the historic center of Porto and 20 minutes from the beach (Matosinhos - where you may eat very GOOD fish!). You will love to stay in a very spacious, familiar and bright room, where you can enjoy a large and flowery garden, comfortable kitchen and laundry with washer and dryer machine. My space is good for couples, solo adventures, and business travelers!",
             "capacity": 2,
             "amenities": [
@@ -2186,22 +2130,6 @@ function _createStays() {
                     "start": "2025-04-05",
                     "end": "2025-04-09"
                 },
-                {
-                    "start": "2025-01-24",
-                    "end": "2025-01-26"
-                },
-                {
-                    "start": "2025-02-08",
-                    "end": "2025-02-10"
-                },
-                {
-                    "start": "2025-03-24",
-                    "end": "2025-03-26"
-                },
-                {
-                    "start": "2025-02-13",
-                    "end": "2025-02-18"
-                }
             ]
         },
         {
@@ -2215,7 +2143,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436460/qi3vkpts37b4k0dedosc.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436993/yzxnnw83e9qyas022au4.jpg"
             ],
-            "price": 105,
+            "price": '2,990',
             "summary": "Welcome if you want to stay at a cozy flat with local experience.:) It is in the center of Istanbul.The neighborhood is safe and close to attractions.Transportation is easy. I will help you always.",
             "capacity": 2,
             "amenities": [
@@ -2483,13 +2411,9 @@ function _createStays() {
             },
             "reservedDates": [
                 {
-                    "start": "2025-01-13",
-                    "end": "2025-01-16"
-                },
-                {
                     "start": "2025-02-20",
                     "end": "2025-02-22"
-                }
+                },
             ]
         },
         {
@@ -2503,7 +2427,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437168/vbmfmdmwrxt7xfwbsw7c.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436376/phpltehcr6uq9lh5jlax.jpg"
             ],
-            "price": 100,
+            "price": '1,827',
             "summary": "Description for New Stay 1",
             "capacity": 4,
             "amenities": [
@@ -2546,10 +2470,6 @@ function _createStays() {
                     "start": "2025-02-20",
                     "end": "2025-02-21"
                 },
-                {
-                    "start": "2025-04-01",
-                    "end": "2025-04-02"
-                }
             ]
         },
         {
@@ -2563,7 +2483,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436571/fvqbazrysqpymjlhhdqu.jpg"
             ],
-            "price": 101,
+            "price": '3,500',
             "summary": "Description for New Stay 2",
             "capacity": 4,
             "amenities": [
@@ -2603,17 +2523,9 @@ function _createStays() {
             },
             "reservedDates": [
                 {
-                    "start": "2025-02-01",
-                    "end": "2025-02-07"
-                },
-                {
                     "start": "2025-01-06",
                     "end": "2025-01-10"
                 },
-                {
-                    "start": "2025-02-18",
-                    "end": "2025-02-22"
-                }
             ]
         },
         {
@@ -2627,7 +2539,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436993/yzxnnw83e9qyas022au4.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436952/aef9ajipinpjhkley1e3.jpg"
             ],
-            "price": 102,
+            "price": 996,
             "summary": "Description for New Stay 3",
             "capacity": 4,
             "amenities": [
@@ -2670,22 +2582,6 @@ function _createStays() {
                     "start": "2025-03-28",
                     "end": "2025-03-31"
                 },
-                {
-                    "start": "2025-03-19",
-                    "end": "2025-03-25"
-                },
-                {
-                    "start": "2025-02-28",
-                    "end": "2025-03-01"
-                },
-                {
-                    "start": "2025-02-06",
-                    "end": "2025-02-13"
-                },
-                {
-                    "start": "2025-02-02",
-                    "end": "2025-02-09"
-                }
             ]
         },
         {
@@ -2699,7 +2595,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436460/qi3vkpts37b4k0dedosc.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436823/af6elioxovkhvp6cg1un.jpg"
             ],
-            "price": 103,
+            "price": '2,090',
             "summary": "Description for New Stay 4",
             "capacity": 4,
             "amenities": [
@@ -2742,18 +2638,6 @@ function _createStays() {
                     "start": "2025-01-22",
                     "end": "2025-01-25"
                 },
-                {
-                    "start": "2025-01-07",
-                    "end": "2025-01-13"
-                },
-                {
-                    "start": "2025-02-08",
-                    "end": "2025-02-13"
-                },
-                {
-                    "start": "2025-03-20",
-                    "end": "2025-03-25"
-                }
             ]
         },
         {
@@ -2767,7 +2651,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436937/mkbcjfockxezgrvimska.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436821/b4ejulqdhsvyseyfnfr0.jpg"
             ],
-            "price": 104,
+            "price": '3,105',
             "summary": "Description for New Stay 5",
             "capacity": 4,
             "amenities": [
@@ -2807,21 +2691,9 @@ function _createStays() {
             },
             "reservedDates": [
                 {
-                    "start": "2025-01-28",
-                    "end": "2025-02-01"
-                },
-                {
                     "start": "2025-02-18",
                     "end": "2025-02-25"
                 },
-                {
-                    "start": "2025-04-01",
-                    "end": "2025-04-02"
-                },
-                {
-                    "start": "2025-02-20",
-                    "end": "2025-02-22"
-                }
             ]
         },
         {
@@ -2835,7 +2707,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437033/rhw6gycttaimzocc1poz.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437017/gjyzgdjngyrhfrj2loxz.jpg"
             ],
-            "price": 105,
+            "price": '2,255',
             "summary": "Description for New Stay 6",
             "capacity": 4,
             "amenities": [
@@ -2891,7 +2763,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436376/phpltehcr6uq9lh5jlax.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg"
             ],
-            "price": 106,
+            "price": '2,162',
             "summary": "Description for New Stay 7",
             "capacity": 4,
             "amenities": [
@@ -2934,10 +2806,6 @@ function _createStays() {
                     "start": "2025-01-08",
                     "end": "2025-01-15"
                 },
-                {
-                    "start": "2025-03-15",
-                    "end": "2025-03-22"
-                }
             ]
         },
         {
@@ -2951,7 +2819,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436861/xrxhgsif3ekhxgn8irlm.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436481/tqwkxtbalipudzhivoag.jpg"
             ],
-            "price": 107,
+            "price": 750,
             "summary": "Description for New Stay 8",
             "capacity": 4,
             "amenities": [
@@ -2994,22 +2862,6 @@ function _createStays() {
                     "start": "2025-01-27",
                     "end": "2025-02-03"
                 },
-                {
-                    "start": "2025-04-09",
-                    "end": "2025-04-14"
-                },
-                {
-                    "start": "2025-02-12",
-                    "end": "2025-02-19"
-                },
-                {
-                    "start": "2025-03-29",
-                    "end": "2025-04-05"
-                },
-                {
-                    "start": "2025-02-23",
-                    "end": "2025-03-01"
-                }
             ]
         },
         {
@@ -3023,7 +2875,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437040/oarfkdxx7gyyvcynvwko.jpg"
             ],
-            "price": 108,
+            "price": '5,014',
             "summary": "Description for New Stay 9",
             "capacity": 4,
             "amenities": [
@@ -3063,13 +2915,9 @@ function _createStays() {
             },
             "reservedDates": [
                 {
-                    "start": "2025-03-01",
-                    "end": "2025-03-03"
-                },
-                {
                     "start": "2025-04-05",
                     "end": "2025-04-11"
-                }
+                },
             ]
         },
         {
@@ -3083,7 +2931,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437241/wt0seud4ot4cmdrztdzz.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436394/kscsvxyn0uro9tjhefeb.jpg"
             ],
-            "price": 109,
+            "price": '1,038',
             "summary": "Description for New Stay 10",
             "capacity": 4,
             "amenities": [
@@ -3139,7 +2987,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437308/p80ndulkcghpcfsnvjdo.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436376/phpltehcr6uq9lh5jlax.jpg"
             ],
-            "price": 110,
+            "price": '8,715',
             "summary": "Description for New Stay 11",
             "capacity": 4,
             "amenities": [
@@ -3179,13 +3027,9 @@ function _createStays() {
             },
             "reservedDates": [
                 {
-                    "start": "2025-02-26",
-                    "end": "2025-02-27"
-                },
-                {
                     "start": "2025-02-19",
                     "end": "2025-02-23"
-                }
+                },
             ]
         },
         {
@@ -3199,7 +3043,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436823/af6elioxovkhvp6cg1un.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437310/tus71yfpnvgulenrli6a.jpg"
             ],
-            "price": 111,
+            "price": '4,072',
             "summary": "Description for New Stay 12",
             "capacity": 4,
             "amenities": [
@@ -3239,25 +3083,9 @@ function _createStays() {
             },
             "reservedDates": [
                 {
-                    "start": "2025-02-12",
-                    "end": "2025-02-16"
-                },
-                {
-                    "start": "2025-01-19",
-                    "end": "2025-01-22"
-                },
-                {
-                    "start": "2025-01-03",
-                    "end": "2025-01-06"
-                },
-                {
                     "start": "2025-03-13",
                     "end": "2025-03-15"
                 },
-                {
-                    "start": "2025-01-09",
-                    "end": "2025-01-11"
-                }
             ]
         },
         {
@@ -3271,7 +3099,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436861/xrxhgsif3ekhxgn8irlm.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg"
             ],
-            "price": 112,
+            "price": 926,
             "summary": "Description for New Stay 13",
             "capacity": 4,
             "amenities": [
@@ -3311,21 +3139,9 @@ function _createStays() {
             },
             "reservedDates": [
                 {
-                    "start": "2025-02-21",
-                    "end": "2025-02-24"
-                },
-                {
                     "start": "2025-04-09",
                     "end": "2025-04-14"
                 },
-                {
-                    "start": "2025-01-23",
-                    "end": "2025-01-30"
-                },
-                {
-                    "start": "2025-01-15",
-                    "end": "2025-01-21"
-                }
             ]
         },
         {
@@ -3339,7 +3155,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437250/o8uutj3t2bvfafvxkr9j.jpg"
             ],
-            "price": 113,
+            "price": '5,282',
             "summary": "Description for New Stay 14",
             "capacity": 4,
             "amenities": [
@@ -3379,17 +3195,9 @@ function _createStays() {
             },
             "reservedDates": [
                 {
-                    "start": "2025-04-09",
-                    "end": "2025-04-13"
-                },
-                {
-                    "start": "2025-03-29",
-                    "end": "2025-04-01"
-                },
-                {
                     "start": "2025-01-30",
                     "end": "2025-02-01"
-                }
+                },
             ]
         },
         {
@@ -3403,7 +3211,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436334/nqgdwv3ljfkrbvynoetv.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436993/yzxnnw83e9qyas022au4.jpg"
             ],
-            "price": 114,
+            "price": '1,238',
             "summary": "Description for New Stay 15",
             "capacity": 4,
             "amenities": [
@@ -3446,14 +3254,6 @@ function _createStays() {
                     "start": "2025-02-17",
                     "end": "2025-02-24"
                 },
-                {
-                    "start": "2025-03-19",
-                    "end": "2025-03-20"
-                },
-                {
-                    "start": "2025-01-23",
-                    "end": "2025-01-26"
-                }
             ]
         },
         {
@@ -3467,7 +3267,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437308/p80ndulkcghpcfsnvjdo.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436334/nqgdwv3ljfkrbvynoetv.jpg"
             ],
-            "price": 115,
+            "price": '1,398',
             "summary": "Description for New Stay 16",
             "capacity": 4,
             "amenities": [
@@ -3507,17 +3307,9 @@ function _createStays() {
             },
             "reservedDates": [
                 {
-                    "start": "2025-03-05",
-                    "end": "2025-03-12"
-                },
-                {
                     "start": "2025-01-31",
                     "end": "2025-02-04"
                 },
-                {
-                    "start": "2025-02-15",
-                    "end": "2025-02-21"
-                }
             ]
         },
         {
@@ -3531,7 +3323,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436556/mb70fifvvpvde8jub5cg.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437310/tus71yfpnvgulenrli6a.jpg"
             ],
-            "price": 116,
+            "price": 394,
             "summary": "Description for New Stay 17",
             "capacity": 4,
             "amenities": [
@@ -3571,17 +3363,9 @@ function _createStays() {
             },
             "reservedDates": [
                 {
-                    "start": "2025-01-07",
-                    "end": "2025-01-14"
-                },
-                {
-                    "start": "2025-03-28",
-                    "end": "2025-04-02"
-                },
-                {
                     "start": "2025-02-23",
                     "end": "2025-02-27"
-                }
+                },
             ]
         },
         {
@@ -3595,7 +3379,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437327/epcnh2tzpafwmvi3srcp.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436261/hwqt72njlhf9hkqou9ka.jpg"
             ],
-            "price": 117,
+            "price": 735,
             "summary": "Description for New Stay 18",
             "capacity": 4,
             "amenities": [
@@ -3651,7 +3435,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437330/mmhkmfvg8o3freucyekc.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436556/mb70fifvvpvde8jub5cg.jpg"
             ],
-            "price": 118,
+            "price": '1,587',
             "summary": "Description for New Stay 19",
             "capacity": 4,
             "amenities": [
@@ -3691,21 +3475,9 @@ function _createStays() {
             },
             "reservedDates": [
                 {
-                    "start": "2025-02-20",
-                    "end": "2025-02-21"
-                },
-                {
-                    "start": "2025-03-05",
-                    "end": "2025-03-07"
-                },
-                {
-                    "start": "2025-03-15",
-                    "end": "2025-03-18"
-                },
-                {
                     "start": "2025-03-27",
                     "end": "2025-04-02"
-                }
+                },
             ]
         },
         {
@@ -3719,7 +3491,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436390/om97cgufeacwlric2r5w.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436937/mkbcjfockxezgrvimska.jpg"
             ],
-            "price": 119,
+            "price": '1,195',
             "summary": "Description for New Stay 20",
             "capacity": 4,
             "amenities": [
@@ -3762,18 +3534,6 @@ function _createStays() {
                     "start": "2025-03-19",
                     "end": "2025-03-21"
                 },
-                {
-                    "start": "2025-03-12",
-                    "end": "2025-03-14"
-                },
-                {
-                    "start": "2025-02-13",
-                    "end": "2025-02-18"
-                },
-                {
-                    "start": "2025-01-26",
-                    "end": "2025-01-31"
-                }
             ]
         },
         {
@@ -3787,7 +3547,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437327/epcnh2tzpafwmvi3srcp.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436390/om97cgufeacwlric2r5w.jpg"
             ],
-            "price": 120,
+            "price": 519,
             "summary": "Description for New Stay 21",
             "capacity": 4,
             "amenities": [
@@ -3827,21 +3587,9 @@ function _createStays() {
             },
             "reservedDates": [
                 {
-                    "start": "2025-03-31",
-                    "end": "2025-04-04"
-                },
-                {
                     "start": "2025-02-14",
                     "end": "2025-02-16"
                 },
-                {
-                    "start": "2025-01-02",
-                    "end": "2025-01-05"
-                },
-                {
-                    "start": "2025-02-06",
-                    "end": "2025-02-13"
-                }
             ]
         },
         {
@@ -3855,7 +3603,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436334/nqgdwv3ljfkrbvynoetv.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437308/p80ndulkcghpcfsnvjdo.jpg"
             ],
-            "price": 121,
+            "price": 389,
             "summary": "Description for New Stay 22",
             "capacity": 4,
             "amenities": [
@@ -3898,10 +3646,6 @@ function _createStays() {
                     "start": "2025-03-29",
                     "end": "2025-04-03"
                 },
-                {
-                    "start": "2025-02-02",
-                    "end": "2025-02-08"
-                }
             ]
         },
         {
@@ -3915,7 +3659,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436571/fvqbazrysqpymjlhhdqu.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437033/rhw6gycttaimzocc1poz.jpg"
             ],
-            "price": 122,
+            "price": 626,
             "summary": "Description for New Stay 23",
             "capacity": 4,
             "amenities": [
@@ -3971,7 +3715,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436855/khyvb5q3yzcqaoscuppz.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437045/dmquvficldi8ssfdlrrx.jpg"
             ],
-            "price": 123,
+            "price": '8,218',
             "summary": "Description for New Stay 24",
             "capacity": 4,
             "amenities": [
@@ -4011,17 +3755,9 @@ function _createStays() {
             },
             "reservedDates": [
                 {
-                    "start": "2025-02-14",
-                    "end": "2025-02-20"
-                },
-                {
-                    "start": "2025-02-11",
-                    "end": "2025-02-13"
-                },
-                {
                     "start": "2025-04-06",
                     "end": "2025-04-12"
-                }
+                },
             ]
         },
         {
@@ -4035,7 +3771,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436281/doubvhbpwjfx81yfzpxq.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436453/ndl8odasqgnyquvsbalp.jpg"
             ],
-            "price": 124,
+            "price": 636,
             "summary": "Description for New Stay 25",
             "capacity": 4,
             "amenities": [
@@ -4091,7 +3827,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436867/yocip4igdbruuh2grzpf.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436983/pivldxmrxssnhyzixhes.jpg"
             ],
-            "price": 125,
+            "price": 441,
             "summary": "Description for New Stay 26",
             "capacity": 4,
             "amenities": [
@@ -4134,10 +3870,6 @@ function _createStays() {
                     "start": "2025-01-11",
                     "end": "2025-01-17"
                 },
-                {
-                    "start": "2025-04-08",
-                    "end": "2025-04-13"
-                }
             ]
         },
         {
@@ -4151,7 +3883,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437045/dmquvficldi8ssfdlrrx.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436453/ndl8odasqgnyquvsbalp.jpg"
             ],
-            "price": 126,
+            "price": '1,298',
             "summary": "Description for New Stay 27",
             "capacity": 4,
             "amenities": [
@@ -4191,21 +3923,9 @@ function _createStays() {
             },
             "reservedDates": [
                 {
-                    "start": "2025-01-09",
-                    "end": "2025-01-13"
+                    "start": "2025-07-09",
+                    "end": "2025-07-13"
                 },
-                {
-                    "start": "2025-01-06",
-                    "end": "2025-01-08"
-                },
-                {
-                    "start": "2025-02-15",
-                    "end": "2025-02-19"
-                },
-                {
-                    "start": "2025-03-09",
-                    "end": "2025-03-14"
-                }
             ]
         },
         {
@@ -4219,7 +3939,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436855/khyvb5q3yzcqaoscuppz.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg"
             ],
-            "price": 127,
+            "price": 216,
             "summary": "Description for New Stay 28",
             "capacity": 4,
             "amenities": [
@@ -4259,25 +3979,9 @@ function _createStays() {
             },
             "reservedDates": [
                 {
-                    "start": "2025-02-08",
-                    "end": "2025-02-12"
+                    "start": "2025-09-23",
+                    "end": "2025-09-26"
                 },
-                {
-                    "start": "2025-02-25",
-                    "end": "2025-02-27"
-                },
-                {
-                    "start": "2025-02-14",
-                    "end": "2025-02-15"
-                },
-                {
-                    "start": "2025-03-13",
-                    "end": "2025-03-14"
-                },
-                {
-                    "start": "2025-02-23",
-                    "end": "2025-02-26"
-                }
             ]
         },
         {
@@ -4291,7 +3995,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437308/p80ndulkcghpcfsnvjdo.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg"
             ],
-            "price": 128,
+            "price": '2,068',
             "summary": "Description for New Stay 29",
             "capacity": 4,
             "amenities": [
@@ -4331,25 +4035,9 @@ function _createStays() {
             },
             "reservedDates": [
                 {
-                    "start": "2025-04-03",
-                    "end": "2025-04-07"
+                    "start": "2025-10-14",
+                    "end": "2025-10-20"
                 },
-                {
-                    "start": "2025-04-02",
-                    "end": "2025-04-03"
-                },
-                {
-                    "start": "2025-03-16",
-                    "end": "2025-03-22"
-                },
-                {
-                    "start": "2025-02-02",
-                    "end": "2025-02-05"
-                },
-                {
-                    "start": "2025-02-14",
-                    "end": "2025-02-20"
-                }
             ]
         },
         {
@@ -4363,7 +4051,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436453/ndl8odasqgnyquvsbalp.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436937/mkbcjfockxezgrvimska.jpg"
             ],
-            "price": 129,
+            "price": 303,
             "summary": "Description for New Stay 30",
             "capacity": 4,
             "amenities": [
@@ -4403,9 +4091,9 @@ function _createStays() {
             },
             "reservedDates": [
                 {
-                    "start": "2025-03-31",
-                    "end": "2025-04-07"
-                }
+                    "start": "2025-08-31",
+                    "end": "2025-09-07"
+                },
             ]
         }
     ]
