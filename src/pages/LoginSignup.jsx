@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { login, signup } from '../store/actions/user.actions'
 
 export function LoginSignup({ isLoginSignupOpen, setIsLoginSignupOpen }) {
+    const [isLoginFailed, setIsLoginFailed] = useState(false)
+
     const [caredentials, setCaredentials] = useState({
         username: '',
         password: '',
@@ -20,7 +22,11 @@ export function LoginSignup({ isLoginSignupOpen, setIsLoginSignupOpen }) {
         ev.preventDefault();
         if (isLoginSignupOpen.action === 'login') {
             console.log('Logging in with:', caredentials.username, caredentials.password)
-            login(caredentials)
+            try{
+                login(caredentials)
+            }catch{
+                setIsLoginFailed(true)
+            }
         } else if (isLoginSignupOpen.action === 'signup') {
             signup(caredentials)
             console.log('Signing up with:', caredentials.username, caredentials.password, caredentials.fullname)
@@ -35,6 +41,7 @@ export function LoginSignup({ isLoginSignupOpen, setIsLoginSignupOpen }) {
         <div className="login-signup-page" onClick={handleClick}>
             <h1 style={{paddingTop: isLoginSignupOpen.action === 'signup' ? '20px' : '0'}}>{isLoginSignupOpen.action === 'login' ? 'Login' : 'Signup'}</h1>
             <form onSubmit={handleSubmit}>
+                {isLoginFailed && <p className="failed-login-err">Operation failed, please try again</p>}
                 <div className="form-group">
                     <label htmlFor="username"><span>* </span>Username:</label>
                     <input
