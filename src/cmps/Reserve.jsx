@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import { DatePickerCmp } from './DatePickerCmp'
 import { setFiterBy } from '../store/actions/stay.actions';
 
@@ -8,9 +9,14 @@ export function Reserve() {
     const stay = useSelector(storeState => storeState.stayModule.stay)
     const [isDatePickerOpen, setIsDatePickerOpen] = useState(false)
     const filterBy = useSelector((storeState) => storeState.stayModule.filterBy)
+    const navigate = useNavigate()
 
     const [checkInDate, setCheckInDate] = useState(filterBy.checkInDate || null);
     const [checkOutDate, setCheckOutDate] = useState(filterBy.checkOutDate || null);
+
+    function handleReserveClick() {
+        navigate('/confirm-pay')
+    }
 
     function toggleIsDatePickerOpen() {
         setIsDatePickerOpen(!isDatePickerOpen)
@@ -78,7 +84,9 @@ export function Reserve() {
                     <div className="guests-number">{filterBy.minCapacity}</div>
                 </div>
             </div>
-            <button className="reserve-btn">Reserve</button>
+            <button className="reserve-btn" onClick={handleReserveClick}>
+                Reserve
+            </button>
             <p>You won't be charged yet</p>
             <div className="stay-reserve-summary">
                 <div className="reserve-total-details">
