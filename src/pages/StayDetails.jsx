@@ -116,7 +116,7 @@ export function StayDetails() {
                 <img src={stay.host.pictureUrl} alt="" />
               </div>
               <p>
-                <strong>Hosted by {stay.host.fullname}</strong> 
+                <strong>Hosted by {stay.host.fullname}</strong>
               </p>
               {/* <button onClick={onAddStayMsg}>Add Stay Message</button> */}
             </div>
