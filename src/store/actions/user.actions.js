@@ -43,6 +43,7 @@ export async function login(credentials) {
 }
 
 export async function signup(credentials) {
+    console.log('caredentials', credentials)
     try {
         const user = await userService.signup(credentials)
         store.dispatch({
@@ -64,7 +65,7 @@ export async function logout() {
             type: SET_USER,
             user: null
         })
-        socketService.logout()
+        // socketService.logout()
     } catch (err) {
         console.log('Cannot logout', err)
         throw err

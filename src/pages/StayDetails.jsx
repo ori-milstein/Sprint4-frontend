@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 import { AppHeader } from "../cmps/AppHeader.jsx"
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service'
 import { loadStay, addStayMsg } from '../store/actions/stay.actions'
-import { ReviewSection } from '../cmps/ReviewSection.jsx';
+import { ReviewSection } from '../cmps/ReviewSection.jsx'
 import { AppModal } from '../cmps/AppModal.jsx'
 import { useDispatch } from 'react-redux'
 import { Amenities } from '../cmps/Amenities.jsx'
@@ -23,12 +23,26 @@ export function StayDetails() {
 
   const appModal = useSelector((storeState) => storeState.systemModule.appModal)
   const [isModalActive, setIsModalActive] = useState(false)
+  const [isClicked, setIsClicked] = useState(false)
+  const navigate = useNavigate()
   const dispatch = useDispatch()
   const [reviewIdxToScroll, setReviewIdxToScroll] = useState(0)
 
   useEffect(() => {
     loadStay(stayId)
   }, [stayId])
+
+  const handleShowAllPhotos = () => {
+    setIsClicked(true)
+    setTimeout(() => {
+      setIsClicked(false)
+      navigate("/photos", { state: { imgUrls: stay?.imgUrls || [] } })
+    }, 300)
+  }
+
+  const handleImgShowAllPhotos = () => {
+    navigate("/photos", { state: { imgUrls: stay?.imgUrls || [] } })
+  }
 
   function handleShowMore(modalType) {
     dispatch({ type: modalType })
@@ -68,31 +82,44 @@ export function StayDetails() {
             className="main-image"
             src={stay.imgUrls[0]}
             alt="Main Stay Image"
+            onClick={handleImgShowAllPhotos}
           />
           {/* Side images */}
           <img
             className="side-top"
             src={stay.imgUrls[1]}
             alt="Side Top Image"
+            onClick={handleImgShowAllPhotos}
           />
           <img
             className="side-middle"
             src={stay.imgUrls[2]}
             alt="Side Middle Image"
+            onClick={handleImgShowAllPhotos}
           />
           <img
             className="side-bottom-image"
             src={stay.imgUrls[3]}
             alt="Side Bottom Image"
+            onClick={handleImgShowAllPhotos}
           />
           <img
             className="side-extra"
             src={stay.imgUrls[4]}
             alt="Side Extra Image"
+            onClick={handleImgShowAllPhotos}
           />
+          {/* <button className={`show-all-btn ${isClicked ? 'clicked' : ''}`}
+            onClick={handleShowAllPhotos}
+          >
+            <img
+              src="/src/assets/icons/apps_24dp_000000_FILL0_wght400_GRAD0_opsz24.png"
+              className="icon"
+              alt="Show All Photos"
+            />
+            Show all photos
+          </button> */}
         </div>
-        {/* <button className="show-all-btn">Show all photos</button> */}
-
         <div className="stay-details-info">
           <section className='details-content'>
 
@@ -116,7 +143,7 @@ export function StayDetails() {
                 <img src={stay.host.pictureUrl} alt="" />
               </div>
               <p>
-                <strong>Hosted by {stay.host.fullname}</strong> 
+                <strong>Hosted by {stay.host.fullname}</strong>
               </p>
               {/* <button onClick={onAddStayMsg}>Add Stay Message</button> */}
             </div>
@@ -135,7 +162,7 @@ export function StayDetails() {
         <LocationDetails stay={stay} />
         {stay.reviews.length > 0 &&
           <ReviewSection stay={stay} handleShowMore={handleShowMore} isModalActive={isModalActive} setReviewIdxToScroll={setReviewIdxToScroll} />}
-      </section>
+      </section >
     </>
   )
 }

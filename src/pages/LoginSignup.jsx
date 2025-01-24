@@ -1,28 +1,37 @@
 import React, { useState } from 'react';
+import { login, signup } from '../store/actions/user.actions'
 
 export function LoginSignup({ isLoginSignupOpen, setIsLoginSignupOpen }) {
-    const [formData, setFormData] = useState({
+    const [isLoginFailed, setIsLoginFailed] = useState(false)
+
+    const [caredentials, setCaredentials] = useState({
         username: '',
         password: '',
         fullname: ''
-    });
+    })
 
     const handleChange = (ev) => {
         const { name, value } = ev.target;
-        setFormData((prevFormData) => ({
-            ...prevFormData,
+        setCaredentials((prevCaredentials) => ({
+            ...prevCaredentials,
             [name]: value
-        }));
-    };
+        }))
+    }
 
     const handleSubmit = (ev) => {
         ev.preventDefault();
         if (isLoginSignupOpen.action === 'login') {
-            console.log('Logging in with:', formData.username, formData.password);
+            console.log('Logging in with:', caredentials.username, caredentials.password)
+            try{
+                login(caredentials)
+            }catch{
+                setIsLoginFailed(true)
+            }
         } else if (isLoginSignupOpen.action === 'signup') {
-            console.log('Signing up with:', formData.username, formData.password, formData.fullname);
+            signup(caredentials)
+            console.log('Signing up with:', caredentials.username, caredentials.password, caredentials.fullname)
         }
-    };
+    }
 
     function handleClick(event) {
         event.stopPropagation()
@@ -32,13 +41,14 @@ export function LoginSignup({ isLoginSignupOpen, setIsLoginSignupOpen }) {
         <div className="login-signup-page" onClick={handleClick}>
             <h1 style={{paddingTop: isLoginSignupOpen.action === 'signup' ? '20px' : '0'}}>{isLoginSignupOpen.action === 'login' ? 'Login' : 'Signup'}</h1>
             <form onSubmit={handleSubmit}>
+                {isLoginFailed && <p className="failed-login-err">Operation failed, please try again</p>}
                 <div className="form-group">
                     <label htmlFor="username"><span>* </span>Username:</label>
                     <input
                         type="text"
                         id="username"
                         name="username"
-                        value={formData.username}
+                        value={caredentials.username}
                         onChange={handleChange}
                         required
                     />
@@ -49,7 +59,7 @@ export function LoginSignup({ isLoginSignupOpen, setIsLoginSignupOpen }) {
                         type="password"
                         id="password"
                         name="password"
-                        value={formData.password}
+                        value={caredentials.password}
                         onChange={handleChange}
                         required
                     />
@@ -61,7 +71,7 @@ export function LoginSignup({ isLoginSignupOpen, setIsLoginSignupOpen }) {
                             type="text"
                             id="fullname"
                             name="fullname"
-                            value={formData.fullname}
+                            value={caredentials.fullname}
                             onChange={handleChange}
                             required
                         />
@@ -70,5 +80,5 @@ export function LoginSignup({ isLoginSignupOpen, setIsLoginSignupOpen }) {
                 <button type="submit">{isLoginSignupOpen.action === 'login' ? 'Login' : 'Signup'}</button>
             </form>
         </div>
-    );
+    )
 }

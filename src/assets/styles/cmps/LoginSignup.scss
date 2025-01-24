@@ -15,7 +15,9 @@
     background-color: white;
 
     z-index: 20;
-
+    .failed-login-err{
+        color: red;
+    }
     h1 {
         width: 100%;
         display: flex;

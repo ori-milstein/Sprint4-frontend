@@ -23,7 +23,9 @@
         }
     }
 }
-
+.failed-login-err{
+	background-color: red !important;
+}
 .login-page nav {
 	display: flex;
 	align-items: center;

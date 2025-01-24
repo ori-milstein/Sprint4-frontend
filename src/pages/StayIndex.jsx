@@ -9,6 +9,9 @@ import { stayService } from '../services/stay/'
 import { userService } from '../services/user'
 
 import { StayList } from '../cmps/StayList'
+import { StayFilter } from '../cmps/StayFilter'
+
+import { AppFooter } from '../cmps/AppFooter.jsx'
 import { AppHeader } from '../cmps/AppHeader.jsx';
 
 export function StayIndex() {
@@ -70,6 +73,7 @@ export function StayIndex() {
                     onRemoveStay={onRemoveStay}
                     onUpdateStay={onUpdateStay} />
             </main>
+            <AppFooter />
         </>
     )
 }
