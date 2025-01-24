@@ -10,6 +10,8 @@ export function Reserve() {
     const [isDatePickerOpen, setIsDatePickerOpen] = useState(false)
     const filterBy = useSelector((storeState) => storeState.stayModule.filterBy)
 
+    const { reservedDates } = stay || {}
+    const disabledDates = calculateDisabledDates(reservedDates)
     const [checkInDate, setCheckInDate] = useState(filterBy.checkInDate || null);
     const [checkOutDate, setCheckOutDate] = useState(filterBy.checkOutDate || null);
     const [totalPrice, setTotalPrice] = useState(0)
@@ -21,14 +23,26 @@ export function Reserve() {
     }
 
     useEffect(() => {
+        // Calculate default dates if filterBy does not have dates
+        if (!filterBy.checkInDate || !filterBy.checkOutDate) {
+            console.log('default dates')
+            const { start, end } = findDefaultDateRange(reservedDates)
+            setCheckInDate(start)
+            setCheckOutDate(end)
+            updateFilterBy(start, end)
+        } else {
+            setCheckInDate(new Date(filterBy.checkInDate))
+            setCheckOutDate(new Date(filterBy.checkOutDate))
+        }
+    }, [filterBy, reservedDates])
+
+    useEffect(() => {
         const stayPrice = parsePrice(stay.price, 'number')
 
         const days = getNumberOfDays(checkInDate, checkOutDate);
         if (days > 0) {
-            console.log('stayPrice', stayPrice)
             setTotalPrice(days * +stayPrice);
         } else {
-            console.log('in else')
             setTotalPrice(0)
         }
     }, [checkInDate, checkOutDate, stay.price])
@@ -40,7 +54,7 @@ export function Reserve() {
             start: checkInDate,
             end: checkOutDate,
             price: totalPrice,
-        }));
+        }))
     }, [checkInDate, checkOutDate, totalPrice])
 
     function getNumberOfDays(checkInDate, checkOutDate) {
@@ -49,11 +63,10 @@ export function Reserve() {
         const checkOut = new Date(checkOutDate);
         const timeDiff = checkOut - checkIn; // Difference in milliseconds
         const daysDiff = timeDiff / (1000 * 60 * 60 * 24); // Convert milliseconds to days
-        return Math.max(0, daysDiff); // Ensure non-negative number
+        return Math.max(0, Math.floor(daysDiff)) // Ensure non-negative number
     }
 
     function onChangeCheckIn(checkInFromDatePicker) {
-        console.log('changing check in to', checkInFromDatePicker)
         setCheckInDate(checkInFromDatePicker)
         updateFilterBy(checkInFromDatePicker, checkOutDate);
         setReserve({
@@ -63,13 +76,44 @@ export function Reserve() {
     }
 
     function onChangeCheckOut(checkOutFromDatePicker) {
-        console.log('changing check out to', checkOutFromDatePicker)
         setCheckOutDate(checkOutFromDatePicker)
         updateFilterBy(checkInDate, checkOutFromDatePicker);
         setReserve({
             ...reserve,
             end: checkOutDate
         })
+    }
+
+    function findDefaultDateRange(reservedDates) {
+        const today = new Date()
+        const disabledDates = calculateDisabledDates(reservedDates)
+        const availableDates = []
+        let currentDate = new Date(today)
+
+        while (availableDates.length < 3) {
+            if (!disabledDates.some((d) => d.getTime() === currentDate.getTime())) {
+                availableDates.push(new Date(currentDate));
+            }
+            currentDate.setDate(currentDate.getDate() + 1)
+        }
+        return {
+            start: availableDates[0],
+            end: availableDates[2],
+        }
+    }
+
+    function calculateDisabledDates(reservedDates) {
+        const disabledDates = [];
+        reservedDates.forEach(({ start, end }) => {
+            let currDate = new Date(start)
+            const endDate = new Date(end)
+
+            while (currDate <= endDate) {
+                disabledDates.push(new Date(currDate))
+                currDate.setDate(currDate.getDate() + 1)
+            }
+        })
+        return disabledDates
     }
 
     async function updateFilterBy(newCheckInDate, newCheckOutDate) {
@@ -103,6 +147,10 @@ export function Reserve() {
                     <DatePickerCmp
                         onCheckInChange={onChangeCheckIn}
                         onCheckOutChange={onChangeCheckOut}
+                        stay={stay}
+                        checkInDate={checkInDate}
+                        checkOutDate={checkOutDate}
+                        disabledDates={disabledDates}
                     />
                     <button className="close" onClick={toggleIsDatePickerOpen}>Close</button>
                 </div>}

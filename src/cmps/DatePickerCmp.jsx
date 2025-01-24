@@ -4,23 +4,24 @@ import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css'; // Default theme
 import { useSelector } from 'react-redux';
 
-export function DatePickerCmp({ onCheckInChange, onCheckOutChange }) {
+export function DatePickerCmp({ onCheckInChange, onCheckOutChange, stay, disabledDates }) {
 
     const filterBy = useSelector((storeState) => storeState.stayModule.filterBy)
 
     function trimDate(date) {
         return new Date(date.getFullYear(), date.getMonth(), date.getDate())
     }
-    
+
     const [selectionRange, setSelectionRange] = useState({
-        startDate: filterBy.checkInDate ? new Date(filterBy.checkInDate) : trimDate(new Date()),
-        endDate: filterBy.checkOutDate ? new Date(filterBy.checkOutDate) : trimDate(new Date()),
+        startDate: filterBy.checkInDate ? new Date(filterBy.checkInDate) : new Date(),
+        endDate: filterBy.checkOutDate ? new Date(filterBy.checkOutDate) : new Date(),
         key: 'selection',
     })
 
 
     const handleSelect = (ranges) => {
         let { startDate, endDate } = ranges.selection
+
         startDate = trimDate(startDate)
         endDate = trimDate(endDate)
 
@@ -51,6 +52,7 @@ export function DatePickerCmp({ onCheckInChange, onCheckOutChange }) {
                 inputRanges={[]}
                 rangeColors={["rgb(0, 0, 0)"]}
                 minDate={new Date()}
+                disabledDates={disabledDates}
             />
         </div>
     )
