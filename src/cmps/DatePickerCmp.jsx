@@ -4,7 +4,7 @@ import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css'; // Default theme
 import { useSelector } from 'react-redux';
 
-export function DatePickerCmp({ onCheckInChange, onCheckOutChange, stay, disabledDates }) {
+export function DatePickerCmp({ onChangeCheckIn, onChangeCheckOut, stay, disabledDates }) {
 
     const filterBy = useSelector((storeState) => storeState.stayModule.filterBy)
 
@@ -24,7 +24,7 @@ export function DatePickerCmp({ onCheckInChange, onCheckOutChange, stay, disable
 
         startDate = trimDate(startDate)
         endDate = trimDate(endDate)
-
+        
         if (startDate > endDate) {
             [startDate, endDate] = [endDate, startDate]
         }
@@ -35,9 +35,10 @@ export function DatePickerCmp({ onCheckInChange, onCheckOutChange, stay, disable
             endDate,
         })
 
-        onCheckInChange(startDate)
-        onCheckOutChange(endDate)
+        console.log('startdate', startDate)
 
+        onChangeCheckIn(startDate)
+        onChangeCheckOut(endDate)
     }
 
     return (

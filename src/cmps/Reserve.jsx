@@ -71,16 +71,16 @@ export function Reserve() {
         updateFilterBy(checkInFromDatePicker, checkOutDate);
         setReserve({
             ...reserve,
-            start: checkInDate
+            start: checkInFromDatePicker
         })
     }
 
     function onChangeCheckOut(checkOutFromDatePicker) {
         setCheckOutDate(checkOutFromDatePicker)
-        updateFilterBy(checkInDate, checkOutFromDatePicker);
+        // updateFilterBy(checkInDate, checkOutFromDatePicker);
         setReserve({
             ...reserve,
-            end: checkOutDate
+            end: checkOutFromDatePicker
         })
     }
 
@@ -145,8 +145,8 @@ export function Reserve() {
             <div className="stay-reserve-dates">
                 {isDatePickerOpen && <div className="date-picker-reserve-container">
                     <DatePickerCmp
-                        onCheckInChange={onChangeCheckIn}
-                        onCheckOutChange={onChangeCheckOut}
+                        onChangeCheckIn={onChangeCheckIn}
+                        onChangeCheckOut={onChangeCheckOut}
                         stay={stay}
                         checkInDate={checkInDate}
                         checkOutDate={checkOutDate}
@@ -157,14 +157,14 @@ export function Reserve() {
                 <div className={`check-in-container ${isDatePickerOpen ? 'open' : ''}`} onClick={toggleIsDatePickerOpen}>
                     <label className='reserve-labels'>CHECK-IN</label>
                     <div className="checkout-date info-date">
-                        {filterBy.checkInDate ? formatDate(filterBy.checkInDate) : 'Add date'}
+                        {filterBy.checkInDate ? formatDate(checkInDate) : 'Add date'}
                     </div>
 
                 </div>
                 <div className={`check-out-container ${isDatePickerOpen ? 'open' : ''}`} onClick={toggleIsDatePickerOpen}>
                     <label className='reserve-labels'>CHECKOUT</label>
                     <div className="checkout-date info-date">
-                        {filterBy.checkOutDate ? formatDate(filterBy.checkOutDate) : 'Add date'}
+                        {filterBy.checkOutDate ? formatDate(checkOutDate) : 'Add date'}
                     </div>
                 </div>
                 <div className="stay-reserve-guests">
