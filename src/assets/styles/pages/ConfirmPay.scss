@@ -15,16 +15,19 @@
     }
 
     .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
         width: 100%;
-        max-width: 1000px;
+        // max-width: 1400px;
         margin: 3rem 0rem;
-        gap: 5rem;
+        gap: 2rem;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(6, 1fr);
 
         .trip-details {
-            flex: 2;
+            grid-column: span 2 / span 2;
+            grid-row: span 3 / span 3;
+            grid-column-start: 2;
+            padding: 20px;
 
             .no-service-fee {
                 border: 1px solid #e0e0e0;
@@ -127,17 +130,21 @@
             }
         }
 
-
         .price-summary {
             position: sticky;
             align-self: flex-start;
             top: 150px;
+            max-height: 400px;
             max-width: 500px;
-            margin: auto;
-            flex: 1;
+            margin: -10rem 0rem;
+            grid-column: span 2 / span 2;
+            grid-row: span 3 / span 3;
+            grid-column-start: 4;
+            grid-row-start: 2;
             padding: 20px;
             border: 1px solid #e0e0e0;
             border-radius: 10px;
+            background-color: #fff;
 
             .image {
                 display: flex;
@@ -221,12 +228,14 @@
 }
 
 .payment-form {
-    max-width: 635px;
-    margin-top: 20px;
-    margin: -5rem 26.5rem;
-    padding: 20px;
-    background-color: #fff;
+    margin: -13rem 0px;
     font-family: Arial, sans-serif;
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-column-start: 2;
+    grid-row-start: 4;
+    padding: 20px;
+
 
     .separator {
         border: none;
@@ -322,6 +331,143 @@
                     outline: 2px solid #000;
                 }
             }
+        }
+    }
+}
+
+.required-section,
+.cancellation-policy {
+    padding: 20px;
+
+    hr {
+        border: none;
+        border-top: 1px solid #e0e0e0;
+        margin: 10px 0;
+    }
+
+    h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+}
+
+.required-section {
+    .required-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .label {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .description {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .add-button {
+            padding: 8px 16px;
+            font-size: 14px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            background-color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #f7f7f7;
+            }
+        }
+    }
+}
+
+.cancellation-policy {
+    p {
+        font-size: 14px;
+        color: #333;
+        line-height: 1.5;
+
+        strong {
+            font-weight: bold;
+        }
+
+        .learn-more {
+            color: #000;
+            text-decoration: underline;
+        }
+    }
+}
+
+.ground-rules {
+    padding: 20px;
+    margin-top: 20px;
+
+    hr {
+        border: none;
+        border-top: 1px solid #e0e0e0;
+        margin: 10px 0;
+    }
+
+    h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 14px;
+        color: #333;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+
+    ul {
+        list-style: disc;
+        padding-left: 20px;
+        margin-bottom: 15px;
+
+        li {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+    }
+
+    .agreement-text {
+        font-size: 12px;
+        color: #666;
+        margin-bottom: 15px;
+
+        a {
+            color: #000;
+            text-decoration: underline;
+        }
+    }
+
+    .confirm-button {
+        display: inline-block;
+        padding: 18px 25px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        background: linear-gradient(90deg, #ff416c, #ff4b2b);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        transition: background 0.3s ease;
+        margin: 15px 0;
+
+        &:hover {
+            background: linear-gradient(90deg, #ff4b2b, #ff416c);
+        }
+
+        &:active {
+            transform: scale(0.98);
         }
     }
 }

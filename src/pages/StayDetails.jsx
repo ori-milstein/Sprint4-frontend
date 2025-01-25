@@ -18,7 +18,7 @@ import { SET_APP_MODAL_REVIEWS } from "../store/reducers/system.reducer.js"
 export function StayDetails() {
   const { stayId } = useParams()
   const stay = useSelector(storeState => storeState.stayModule.stay)
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState(null)
 
   const appModal = useSelector((storeState) => storeState.systemModule.appModal)

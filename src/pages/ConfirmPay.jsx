@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react"
-import { useLocation } from "react-router-dom"
+import { useParams, useLocation } from "react-router-dom"
 import { AppHeader } from "../cmps/AppHeader.jsx"
 import { loadFromStorage } from "../services/util.service"
 
 const STORAGE_KEY = "stay"
 
 export function ConfirmPay() {
+    const { stayId } = useParams()
     const { state } = useLocation()
     const [stay, setStay] = useState(state?.stay || null)
     const [selectedOption, setSelectedOption] = useState("pay-now")
 
-
     const handleOptionChange = (option) => {
-        setSelectedOption(option);
+        setSelectedOption(option)
     }
 
     useEffect(() => {
@@ -138,37 +138,88 @@ export function ConfirmPay() {
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            {/* Payment Form */}
-            <div className="payment-form">
-                <hr className="separator" />
-                <div className="pay-with-header">
-                    <h3>Pay with</h3>
-                    <div className="payment-icons">
-                        <img src="/src/assets/logos/Visa_Brandmark_Blue_RGB_2021.png" alt="Visa" />
-                        <img src="/src/assets/logos/Full Colour .png" alt="MasterCard" />
-                        <img src="/src/assets/logos/American Express_id9oPLWkTF_0.png" alt="AMEX" />
-                        <img src="/src/assets/logos/google-pay.png" alt="Google Pay" />
-                    </div>
-                </div>
-                <div className="payment-method">
-                    <select>
-                        <option>Credit or debit card</option>
-                    </select>
-                </div>
-                <div className="payment-fields">
-                    <input type="text" placeholder="Card number" />
-                    <div className="expiration-cvv">
-                        <input type="text" placeholder="Expiration" />
-                        <input type="text" placeholder="CVV" />
-                    </div>
-                    <input type="text" placeholder="ZIP code" />
-                    <div className="country-region">
-                        <select>
-                            <option>Israel</option>
-                        </select>
+                    {/* Payment Form */}
+                    <div className="payment-form">
+                        <hr className="separator" />
+                        <div className="pay-with-header">
+                            <h3>Pay with</h3>
+                            <div className="payment-icons">
+                                <img src="/src/assets/logos/Visa_Brandmark_Blue_RGB_2021.png" alt="Visa" />
+                                <img src="/src/assets/logos/Full Colour .png" alt="MasterCard" />
+                                <img src="/src/assets/logos/American Express_id9oPLWkTF_0.png" alt="AMEX" />
+                                <img src="/src/assets/logos/google-pay.png" alt="Google Pay" />
+                            </div>
+                        </div>
+                        <div className="payment-method">
+                            <select>
+                                <option>Credit or debit card</option>
+                            </select>
+                        </div>
+                        <div className="payment-fields">
+                            <input type="text" placeholder="Card number" />
+                            <div className="expiration-cvv">
+                                <input type="text" placeholder="Expiration" />
+                                <input type="text" placeholder="CVV" />
+                            </div>
+                            <input type="text" placeholder="ZIP code" />
+                            <div className="country-region">
+                                <select>
+                                    <option>Israel</option>
+                                </select>
+                            </div>
+
+                            {/* New Sections */}
+                            <div className="required-section">
+                                <hr />
+                                <h3>Required for your trip</h3>
+                                <div className="required-content">
+                                    <div>
+                                        <p className="label">Phone number</p>
+                                        <p className="description">
+                                            Add and confirm your phone number to get trip updates.
+                                        </p>
+                                    </div>
+                                    <button className="add-button">Add</button>
+                                </div>
+                                <hr />
+                            </div>
+
+                            <div className="cancellation-policy">
+                                <h3>Cancellation policy</h3>
+                                <p>
+                                    <strong>Free cancellation before Feb 18.</strong> Cancel before Mar 13 for a
+                                    partial refund.{" "}
+                                    <a href="#learn-more" className="learn-more">
+                                        Learn more
+                                    </a>
+                                </p>
+                                <hr />
+                            </div>
+
+                            {/* Ground Rules Section */}
+                            <div className="ground-rules">
+                                <h3>Ground rules</h3>
+                                <p>
+                                    We ask every guest to remember a few simple things about what makes a great guest.
+                                </p>
+                                <ul>
+                                    <li>Follow the house rules</li>
+                                    <li>Treat your Host’s home like your own</li>
+                                </ul>
+                                <hr />
+                                <p className="agreement-text">
+                                    By selecting the button below, I agree to the{" "}
+                                    <a href="#house-rules">Host's House Rules</a>,{" "}
+                                    <a href="#ground-rules">Ground rules for guests</a>,{" "}
+                                    <a href="#rebooking-refund-policy">Airbnb's Rebooking and Refund Policy</a>, and
+                                    that Airbnb can{" "}
+                                    <a href="#charge-payment-method">charge my payment method</a> if I'm responsible
+                                    for damage.
+                                </p>
+                                <button className="confirm-button">Confirm and pay</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
