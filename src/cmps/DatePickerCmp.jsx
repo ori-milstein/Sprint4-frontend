@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import { DateRangePicker } from 'react-date-range';
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css'; // Default theme
@@ -7,6 +7,14 @@ import { useSelector } from 'react-redux';
 export function DatePickerCmp({ onChangeCheckIn, onChangeCheckOut, stay, disabledDates }) {
 
     const filterBy = useSelector((storeState) => storeState.stayModule.filterBy)
+
+    useLayoutEffect(() => {
+        const weekDays = document.querySelectorAll(`span.rdrWeekDay`)
+
+        weekDays.forEach(day => {
+            day.innerText = day.innerText.slice(0, 2)
+        })
+    }, [])
 
     function trimDate(date) {
         return new Date(date.getFullYear(), date.getMonth(), date.getDate())

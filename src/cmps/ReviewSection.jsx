@@ -7,7 +7,7 @@ export function ReviewSection({ stay, handleShowMore, isModalActive, setReviewId
         <div className="stay-review-container">
             <section className="stay-review-header">
                 <img src='../../src/assets/assets/icons/general icons/asset 158.svg' />
-                <p>5.0 · {stay.reviews.length} reviews</p>
+                <p>5.0 · {stay.reviews.length} review{stay.reviews.length > 1 && 's'}</p>
             </section>
 
             <ReviewList stay={stay} isModalActive={isModalActive} handleShowMore={handleShowMore} setReviewIdxToScroll={setReviewIdxToScroll} />
