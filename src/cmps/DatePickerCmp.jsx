@@ -4,9 +4,7 @@ import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css'; // Default theme
 import { useSelector } from 'react-redux';
 
-export function DatePickerCmp({ onChangeCheckIn, onChangeCheckOut, stay, disabledDates }) {
-
-    const filterBy = useSelector((storeState) => storeState.stayModule.filterBy)
+export function DatePickerCmp({ onChangeCheckIn, onChangeCheckOut,checkInDate,checkOutDate, disabledDates }) {
 
     useLayoutEffect(() => {
         const weekDays = document.querySelectorAll(`span.rdrWeekDay`)
@@ -21,8 +19,8 @@ export function DatePickerCmp({ onChangeCheckIn, onChangeCheckOut, stay, disable
     }
 
     const [selectionRange, setSelectionRange] = useState({
-        startDate: filterBy.checkInDate ? new Date(filterBy.checkInDate) : new Date(),
-        endDate: filterBy.checkOutDate ? new Date(filterBy.checkOutDate) : new Date(),
+        startDate: checkInDate ? new Date(checkInDate) : new Date(),
+        endDate: checkOutDate ? new Date(checkOutDate) : new Date(),
         key: 'selection',
     })
 

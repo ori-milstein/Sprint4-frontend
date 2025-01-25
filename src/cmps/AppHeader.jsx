@@ -148,10 +148,9 @@ export function AppHeader({ isHomepage }) {
 						<GenericCmp onClose={() => toggleIsFilterOpen(null)}>
 							<DatePickerCmp
 								onClose={() => setIsExpanded(false)}
-								onCheckInChange={(date) => setCheckInDate(date)}
-								onCheckOutChange={(date) => setCheckOutDate(date)}
+								onChangeCheckIn={(date) => setCheckInDate(date)}
+								onChangeCheckOut={(date) => setCheckOutDate(date)}
 							/>
-
 						</GenericCmp>
 					)}
 					{inputModal === 'suggested-locations' && (

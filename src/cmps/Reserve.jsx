@@ -23,6 +23,7 @@ export function Reserve() {
     }
 
     useEffect(() => {
+        console.log('checkIndate', checkInDate, 'checkout date', checkOutDate)
         // Calculate default dates if filterBy does not have dates
         if (!filterBy.checkInDate || !filterBy.checkOutDate) {
             console.log('default dates')
@@ -37,7 +38,7 @@ export function Reserve() {
     }, [filterBy, reservedDates])
 
     useEffect(() => {
-        const stayPrice = parsePrice(stay.price, 'string')
+        const stayPrice = parsePrice(stay.price, 'number')
 
         const days = getNumberOfDays(checkInDate, checkOutDate);
         if (days > 0) {
@@ -67,21 +68,21 @@ export function Reserve() {
     }
 
     function onChangeCheckIn(checkInFromDatePicker) {
-        setCheckInDate(checkInFromDatePicker)
-        updateFilterBy(checkInFromDatePicker, checkOutDate);
-        setReserve({
-            ...reserve,
-            start: checkInFromDatePicker
-        })
+        setCheckInDate(checkInFromDatePicker);
+        // updateFilterBy(checkInFromDatePicker, checkOutDate);
+        setReserve((prevReserve) => ({
+            ...prevReserve,
+            start: checkInFromDatePicker,
+        }))
     }
 
     function onChangeCheckOut(checkOutFromDatePicker) {
-        setCheckOutDate(checkOutFromDatePicker)
-        // updateFilterBy(checkInDate, checkOutFromDatePicker);
-        setReserve({
-            ...reserve,
-            end: checkOutFromDatePicker
-        })
+        setCheckOutDate(checkOutFromDatePicker);
+        // updateFilterBy(checkInDate, checkOutFromDatePicker); // Ensure `filterBy` is updated
+        setReserve((prevReserve) => ({
+            ...prevReserve,
+            end: checkOutFromDatePicker,
+        }));
     }
 
     function findDefaultDateRange(reservedDates) {
@@ -157,7 +158,7 @@ export function Reserve() {
                 <div className={`check-in-container ${isDatePickerOpen ? 'open' : ''}`} onClick={toggleIsDatePickerOpen}>
                     <label className='reserve-labels'>CHECK-IN</label>
                     <div className="checkout-date info-date">
-                        {filterBy.checkInDate ? formatDate(checkInDate) : 'Add date'}
+                        {checkInDate ? formatDate(checkInDate) : 'Add date'}
                     </div>
 
                 </div>
