@@ -18,7 +18,7 @@
 
         position: relative;
 
-        margin-inline: 40px;
+        // margin-inline: 40px;
         margin-top: 20px;
         transition: height 0.9s ease-out;
 
@@ -167,7 +167,7 @@
                     color: #707070;
                     font-size: 14px;
                     line-break: strict;
-                    
+
                 }
             }
 
@@ -251,6 +251,7 @@
         height: 168px;
     }
 }
+
 .modal-backdrop {
     background-color: rgb(34, 34, 34);
     opacity: 0.4;
