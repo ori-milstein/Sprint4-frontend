@@ -2,7 +2,7 @@
 export function AppFooter() {
 
 	return (
-		<footer className="app-footer">
+		<footer className="app-footer full">
 			<p>© 2025 StayApp, Inc. ·
 				<a href="#">Terms</a> ·
 				<a href="#">Sitemap</a> ·
