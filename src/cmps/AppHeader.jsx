@@ -74,29 +74,29 @@ export function AppHeader({ isHomepage }) {
 
 	function onSearchFromHeader(ev) {
 		ev.preventDefault()
-	
+
 		const filterByToUpdate = {
 			txt: where,
 			minCapacity: getTotalGuests(),
 			checkInDate,
 			checkOutDate
 		}
-	
+
 		setIsExpanded(false)
 		setInputModal(null)
 		setFiterBy(filterByToUpdate)
-	
+
 		if (location.pathname.includes('stay')) {
 			navigate('/')
 		}
 	}
-	
-	function onUserLogout(){
+
+	function onUserLogout() {
 		console.log('Logout button clicked');
 		logout()
 	}
 
-	async function onLogoClick(){
+	async function onLogoClick() {
 		console.log('click on logo')
 		setIsExpanded(false)
 		const filterByToUpdate = stayService.getDefaultFilter()
@@ -105,16 +105,16 @@ export function AppHeader({ isHomepage }) {
 
 	return (
 		<>
-			<div className="headers">
-				{isLoginSignupOpen.isOpen && !user && <div className="modal-backdrop" onClick={() => setIsLoginSignupOpen(false)}/>}
+			<div className="headers main-container full">
+				{isLoginSignupOpen.isOpen && !user && <div className="modal-backdrop" onClick={() => setIsLoginSignupOpen(false)} />}
 
 				<header
-					className={`app-header full`}
+					className={`app-header main-container full grid`}
 					onClick={isMenuOpen}
 				>
 					<nav className={`${isExpanded ? 'expand' : ''} ${!isHomepage ? 'in-stay-details' : ''}`}>
-						<NavLink to="/" className="logo"  onClick={onLogoClick}>
-							<Logo/>
+						<NavLink to="/" className="logo" onClick={onLogoClick}>
+							<Logo />
 							<h1>airbnb</h1>
 						</NavLink>
 						<HeaderFilter
@@ -130,7 +130,7 @@ export function AppHeader({ isHomepage }) {
 							onSearchFromHeader={onSearchFromHeader}
 						/>
 						{<HeaderUserControls onToggleMenu={onToggleMenu} />}
-						{isAuthMenuOpen && <HeaderAuthMenu onToggleLoginSignupDialog={onToggleLoginSignupDialog} onUserLogout={onUserLogout}/>}
+						{isAuthMenuOpen && <HeaderAuthMenu onToggleLoginSignupDialog={onToggleLoginSignupDialog} onUserLogout={onUserLogout} />}
 						{!user && isLoginSignupOpen.isOpen && (
 							<LoginSignup isLoginSignupOpen={isLoginSignupOpen} setIsLoginSignupOpen={setIsLoginSignupOpen} />
 						)}

@@ -24,8 +24,8 @@ export function RootCmp() {
     const isHomePage = useSelector(storeState => storeState.systemModule.isHomePage)
 
     return (
-        <div className="main-container">
-            <main>
+        <div >
+            <main className="main-container">
                 <Routes>
                     <Route path="/" element={<StayIndex />} />
                     <Route path="stay/:stayId" element={<StayDetails />} />
