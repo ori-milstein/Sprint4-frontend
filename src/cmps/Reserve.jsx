@@ -45,7 +45,7 @@ export function Reserve() {
     }, [filterBy, reservedDates])
 
     useEffect(() => {
-        const stayPrice = parsePrice(stay.price, 'string')
+        const stayPrice = parsePrice(stay.price, 'number')
 
         const days = getNumberOfDays(checkInDate, checkOutDate);
         if (days > 0) {
