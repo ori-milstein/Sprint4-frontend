@@ -23,7 +23,7 @@ async function query(filterBy = { txt: '', price: 0, label: '', sortField: '', s
     if (txt) {
         const regex = new RegExp(txt, 'i')
         stays = stays.filter(stay =>
-            regex.test(stay.loc.address) ||
+            // regex.test(stay.loc.address) ||
             regex.test(stay.loc.country) ||
             regex.test(stay.loc.city)
         )
@@ -116,7 +116,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437250/o8uutj3t2bvfafvxkr9j.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436281/doubvhbpwjfx81yfzpxq.jpg"
             ],
-            "price": 595,
+            "price": "595",
             "summary": "Westin Kaanapali Ocean Resort Villas North timeshare - Pay resort: $14-20/day, stays under 7 night $38/res - Inquire about availability, I review then offer/approve if available :) - READ \"The Space\" for cleaning/etc AND brief explanation about timeshare reservations - Want guaranteed view for additional cost? Must be weekly rental, other restrictions - Wheelchair accessible / ADA, call resort directly to ensure U receive. If U need ADA U MUST inform us BEFORE booking.",
             "capacity": 8,
             "amenities": [
@@ -1712,7 +1712,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436453/ndl8odasqgnyquvsbalp.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436460/qi3vkpts37b4k0dedosc.jpg"
             ],
-            "price": 870,
+            "price": "870",
             "summary": "If the dates you wish are not available, we have other options in the same location. You can find them on my profile. My goal is for you to have your days with the most comfort i can propose. I want you to taste all the feelings in Porto, as our food, as our best places, our best pointviews. I just love to help you enjoying this beautiful city :)",
             "capacity": 2,
             "amenities": [
@@ -2539,7 +2539,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436993/yzxnnw83e9qyas022au4.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436952/aef9ajipinpjhkley1e3.jpg"
             ],
-            "price": 996,
+            "price": "996",
             "summary": "Description for New Stay 3",
             "capacity": 4,
             "amenities": [
@@ -2819,7 +2819,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436861/xrxhgsif3ekhxgn8irlm.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436481/tqwkxtbalipudzhivoag.jpg"
             ],
-            "price": 750,
+            "price": "750",
             "summary": "Description for New Stay 8",
             "capacity": 4,
             "amenities": [
@@ -3099,7 +3099,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436861/xrxhgsif3ekhxgn8irlm.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg"
             ],
-            "price": 926,
+            "price": "926",
             "summary": "Description for New Stay 13",
             "capacity": 4,
             "amenities": [
@@ -3323,7 +3323,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436556/mb70fifvvpvde8jub5cg.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437310/tus71yfpnvgulenrli6a.jpg"
             ],
-            "price": 394,
+            "price": "394",
             "summary": "Description for New Stay 17",
             "capacity": 4,
             "amenities": [
@@ -3379,7 +3379,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437327/epcnh2tzpafwmvi3srcp.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436261/hwqt72njlhf9hkqou9ka.jpg"
             ],
-            "price": 735,
+            "price": "735",
             "summary": "Description for New Stay 18",
             "capacity": 4,
             "amenities": [
@@ -3547,7 +3547,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437327/epcnh2tzpafwmvi3srcp.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436390/om97cgufeacwlric2r5w.jpg"
             ],
-            "price": 519,
+            "price": "519",
             "summary": "Description for New Stay 21",
             "capacity": 4,
             "amenities": [
@@ -3603,7 +3603,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436334/nqgdwv3ljfkrbvynoetv.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437308/p80ndulkcghpcfsnvjdo.jpg"
             ],
-            "price": 389,
+            "price": "389",
             "summary": "Description for New Stay 22",
             "capacity": 4,
             "amenities": [
@@ -3659,7 +3659,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436571/fvqbazrysqpymjlhhdqu.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437033/rhw6gycttaimzocc1poz.jpg"
             ],
-            "price": 626,
+            "price": "626",
             "summary": "Description for New Stay 23",
             "capacity": 4,
             "amenities": [
@@ -3771,7 +3771,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436281/doubvhbpwjfx81yfzpxq.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436453/ndl8odasqgnyquvsbalp.jpg"
             ],
-            "price": 636,
+            "price": "636",
             "summary": "Description for New Stay 25",
             "capacity": 4,
             "amenities": [
@@ -3827,7 +3827,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436867/yocip4igdbruuh2grzpf.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436983/pivldxmrxssnhyzixhes.jpg"
             ],
-            "price": 441,
+            "price": "441",
             "summary": "Description for New Stay 26",
             "capacity": 4,
             "amenities": [
@@ -3939,7 +3939,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436855/khyvb5q3yzcqaoscuppz.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436827/znh7gqzbwb4wm6bdziy7.jpg"
             ],
-            "price": 216,
+            "price": "216",
             "summary": "Description for New Stay 28",
             "capacity": 4,
             "amenities": [
@@ -4051,7 +4051,7 @@ function _createStays() {
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436453/ndl8odasqgnyquvsbalp.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436937/mkbcjfockxezgrvimska.jpg"
             ],
-            "price": 303,
+            "price": "303",
             "summary": "Description for New Stay 30",
             "capacity": 4,
             "amenities": [

@@ -25,6 +25,21 @@ export function getRandomIntInclusive(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min //The maximum is inclusive and the minimum is inclusive 
 }
 
+export function parsePrice(input, type) {
+    if (type === 'number') {
+        if (typeof input !== 'string') {
+            throw new Error("Input must be a string when converting to a number.")
+        }
+        return parseFloat(input.replace(/,/g, '')) || 0;
+    } else if (type === 'string') {
+        if (typeof input !== 'number') {
+            throw new Error("Input must be a number when converting to a string.")
+        }
+        return input.toLocaleString('en-US');
+    } else {
+        throw new Error("Invalid type. Use 'number' or 'string'.")
+    }
+}
 
 export function randomPastTime() {
     const HOUR = 1000 * 60 * 60

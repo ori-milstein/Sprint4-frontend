@@ -1,29 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import { DateRangePicker } from 'react-date-range';
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css'; // Default theme
 import { useSelector } from 'react-redux';
 
-export function DatePickerCmp({ onCheckInChange, onCheckOutChange }) {
+export function DatePickerCmp({ onChangeCheckIn, onChangeCheckOut,checkInDate,checkOutDate, disabledDates }) {
 
-    const filterBy = useSelector((storeState) => storeState.stayModule.filterBy)
+    useLayoutEffect(() => {
+        const weekDays = document.querySelectorAll(`span.rdrWeekDay`)
+
+        weekDays.forEach(day => {
+            day.innerText = day.innerText.slice(0, 2)
+        })
+    }, [])
 
     function trimDate(date) {
         return new Date(date.getFullYear(), date.getMonth(), date.getDate())
     }
-    
+
     const [selectionRange, setSelectionRange] = useState({
-        startDate: filterBy.checkInDate ? new Date(filterBy.checkInDate) : trimDate(new Date()),
-        endDate: filterBy.checkOutDate ? new Date(filterBy.checkOutDate) : trimDate(new Date()),
+        startDate: checkInDate ? new Date(checkInDate) : new Date(),
+        endDate: checkOutDate ? new Date(checkOutDate) : new Date(),
         key: 'selection',
     })
 
 
     const handleSelect = (ranges) => {
         let { startDate, endDate } = ranges.selection
+
         startDate = trimDate(startDate)
         endDate = trimDate(endDate)
-
+        
         if (startDate > endDate) {
             [startDate, endDate] = [endDate, startDate]
         }
@@ -34,9 +41,10 @@ export function DatePickerCmp({ onCheckInChange, onCheckOutChange }) {
             endDate,
         })
 
-        onCheckInChange(startDate)
-        onCheckOutChange(endDate)
+        console.log('startdate', startDate)
 
+        onChangeCheckIn(startDate)
+        onChangeCheckOut(endDate)
     }
 
     return (
@@ -51,6 +59,7 @@ export function DatePickerCmp({ onCheckInChange, onCheckOutChange }) {
                 inputRanges={[]}
                 rangeColors={["rgb(0, 0, 0)"]}
                 minDate={new Date()}
+                disabledDates={disabledDates}
             />
         </div>
     )

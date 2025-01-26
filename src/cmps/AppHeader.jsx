@@ -12,6 +12,7 @@ import { GuestSelector } from './GuestSelector';
 import { setFiterBy } from '../store/actions/stay.actions';
 import { StayFilter } from './StayFilter';
 import { stayService } from '../services/stay';
+import { logout } from '../store/actions/user.actions';
 
 
 export function AppHeader({ isHomepage }) {
@@ -90,6 +91,11 @@ export function AppHeader({ isHomepage }) {
 		}
 	}
 	
+	function onUserLogout(){
+		console.log('Logout button clicked');
+		logout()
+	}
+
 	async function onLogoClick(){
 		console.log('click on logo')
 		setIsExpanded(false)
@@ -100,7 +106,7 @@ export function AppHeader({ isHomepage }) {
 	return (
 		<>
 			<div className="headers">
-				{isLoginSignupOpen.isOpen && <div className="modal-backdrop" />}
+				{isLoginSignupOpen.isOpen && !user && <div className="modal-backdrop" onClick={() => setIsLoginSignupOpen(false)}/>}
 
 				<header
 					className={`app-header full`}
@@ -123,9 +129,9 @@ export function AppHeader({ isHomepage }) {
 							isHomepage={isHomepage}
 							onSearchFromHeader={onSearchFromHeader}
 						/>
-						{!isLoginSignupOpen.isOpen && <HeaderUserControls onToggleMenu={onToggleMenu} />}
-						{isAuthMenuOpen && <HeaderAuthMenu onToggleLoginSignupDialog={onToggleLoginSignupDialog} />}
-						{isLoginSignupOpen.isOpen && (
+						{<HeaderUserControls onToggleMenu={onToggleMenu} />}
+						{isAuthMenuOpen && <HeaderAuthMenu onToggleLoginSignupDialog={onToggleLoginSignupDialog} onUserLogout={onUserLogout}/>}
+						{!user && isLoginSignupOpen.isOpen && (
 							<LoginSignup isLoginSignupOpen={isLoginSignupOpen} setIsLoginSignupOpen={setIsLoginSignupOpen} />
 						)}
 					</nav>
@@ -142,10 +148,9 @@ export function AppHeader({ isHomepage }) {
 						<GenericCmp onClose={() => toggleIsFilterOpen(null)}>
 							<DatePickerCmp
 								onClose={() => setIsExpanded(false)}
-								onCheckInChange={(date) => setCheckInDate(date)}
-								onCheckOutChange={(date) => setCheckOutDate(date)}
+								onChangeCheckIn={(date) => setCheckInDate(date)}
+								onChangeCheckOut={(date) => setCheckOutDate(date)}
 							/>
-
 						</GenericCmp>
 					)}
 					{inputModal === 'suggested-locations' && (

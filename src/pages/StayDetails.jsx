@@ -128,13 +128,13 @@ export function StayDetails() {
                 {stay.roomType} in {stay.loc.city}, {stay.loc.country}
               </h2>
               <h3 className='regular-text'>
-                {stay.capacity} guests  · {stay.equipment.bedroomNum} bedrooms  ·  {stay.equipment.bedsNum} beds  ·  {stay.equipment.bathNum} baths
+                {stay.capacity} guest{stay.capacity > 1 && 's'}  · {stay.equipment.bedroomNum} bedroom{stay.equipment.bedroomNum > 1 && 's'}  ·  {stay.equipment.bedsNum} bed{stay.equipment.bedsNum > 1 && 's'}  ·  {stay.equipment.bathNum} bath{stay.equipment.bathNum > 1 && 's'}
               </h3>
               <h4 className='bold-text reviews-summary'>
                 <img src='../../src/assets/assets/icons/general icons/asset 158.svg' />
                 <span>{stay.reviews.length ? '5.0' : 'New'} · </span>
                 {stay.reviews.length > 0 &&
-                  <a className='nostyle underline' onClick={() => { handleShowMore(SET_APP_MODAL_REVIEWS) }}>{stay.reviews.length} reviews</a>}
+                  <a className='nostyle underline' onClick={() => { handleShowMore(SET_APP_MODAL_REVIEWS) }}>{stay.reviews.length} review{stay.reviews.length > 1 && 's'}</a>}
               </h4>
             </section>
 
