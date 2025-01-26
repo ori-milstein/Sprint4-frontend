@@ -1,0 +1,473 @@
+.confirm-pay-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+
+    .header {
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: left;
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
+        // max-width: 1400px;
+        margin: 3rem 0rem;
+        gap: 2rem;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+
+        .trip-details {
+            grid-column: span 2 / span 2;
+            grid-row: span 3 / span 3;
+            grid-column-start: 2;
+            padding: 20px;
+
+            .no-service-fee {
+                border: 1px solid #e0e0e0;
+                padding: 15px;
+                border-radius: 10px;
+                margin-bottom: 20px;
+
+                p {
+                    font-weight: bold;
+                    margin: 0 0 5px 0;
+                }
+
+                span {
+                    font-size: 14px;
+                    color: #666;
+                }
+            }
+
+            .section {
+                margin-bottom: 20px;
+
+                .section-header {
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin-bottom: 15px;
+                }
+
+                .details {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 10px;
+                    font-size: 16px;
+
+                    p {
+                        margin: 0;
+                    }
+
+                    .edit {
+                        color: #222222;
+                        text-decoration: none;
+                        font-size: 16px;
+                        margin-bottom: 10px;
+                        text-decoration: underline;
+
+                        &:hover {
+                            color: black;
+                        }
+                    }
+                }
+            }
+
+            hr {
+                border: none;
+                border-top: 1px solid #e0e0e0;
+                margin: 10px 0;
+            }
+        }
+
+        .pay-options {
+            margin-top: 20px;
+
+            label {
+                display: flex;
+                align-items: flex-start;
+                font-size: 16px;
+                margin-bottom: 15px;
+                cursor: pointer;
+                padding: 10px;
+                border: 1px solid #e0e0e0;
+                border-radius: 10px;
+
+                input[type='radio'] {
+                    cursor: pointer;
+                    margin-right: 15px;
+                    accent-color: #000;
+                    width: 18px;
+                    height: 18px;
+                }
+
+                .payment-info {
+                    font-size: 14px;
+                    color: #666;
+                    margin-left: 10px;
+
+                    a {
+                        color: #222222;
+                        text-decoration: none;
+                        font-weight: bold;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                &.selected {
+                    border: 2px solid #000;
+                }
+            }
+        }
+
+        .price-summary {
+            position: sticky;
+            align-self: flex-start;
+            top: 150px;
+            max-height: 400px;
+            max-width: 500px;
+            margin: -10rem 0rem;
+            grid-column: span 2 / span 2;
+            grid-row: span 3 / span 3;
+            grid-column-start: 4;
+            grid-row-start: 2;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            background-color: #fff;
+
+            .image {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+
+                img {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 10px;
+                    object-fit: cover;
+                }
+
+                .info {
+                    margin-left: 10px;
+
+                    .title {
+                        font-weight: bold;
+                        font-size: 14px;
+                        margin-bottom: 5px;
+                    }
+
+                    .rating {
+                        font-size: 14px;
+                        color: #777;
+                    }
+                }
+            }
+
+            .price-details {
+                font-size: 16px;
+
+                .price-row {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 10px;
+
+                    &.total {
+                        font-weight: bold;
+                        font-size: 18px;
+                    }
+                }
+
+                hr {
+                    border: none;
+                    border-top: 1px solid #e0e0e0;
+                    margin: 10px 0;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .confirm-pay-page .container {
+            flex-direction: column;
+            gap: 15px;
+
+            .trip-details,
+            .price-summary {
+                flex: unset;
+                width: 100%;
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        .confirm-pay-page .header {
+            font-size: 20px;
+        }
+
+        .confirm-pay-page .container {
+            padding: 10px;
+        }
+
+        .price-summary .image img {
+            width: 80px;
+            height: 80px;
+        }
+    }
+}
+
+.payment-form {
+    margin: -13rem 0px;
+    font-family: Arial, sans-serif;
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-column-start: 2;
+    grid-row-start: 4;
+    padding: 20px;
+
+
+    .separator {
+        border: none;
+        border-top: 1px solid #e0e0e0;
+        margin: 10px 0;
+    }
+
+    .pay-with-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+
+        h3 {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .payment-icons {
+            display: flex;
+            gap: 10px;
+
+            img {
+                width: 22px;
+                height: auto;
+                object-fit: contain;
+            }
+        }
+    }
+
+    .payment-method {
+        margin-bottom: 20px;
+
+        select {
+            width: 100%;
+            height: 55px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 16px;
+            color: #333;
+
+            &:focus {
+                outline: 2px solid #000;
+            }
+        }
+    }
+
+    .payment-fields {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        input {
+            width: 100%;
+            height: 55px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 16px;
+            color: #333;
+
+            &::placeholder {
+                color: #aaa;
+            }
+
+            &:focus {
+                outline: 2px solid #000;
+            }
+        }
+
+        .expiration-cvv {
+            display: flex;
+            gap: 15px;
+
+            input {
+                flex: 1;
+            }
+        }
+
+        .country-region {
+            select {
+                width: 100%;
+                height: 55px;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                font-size: 16px;
+                color: #333;
+
+                &:focus {
+                    outline: 2px solid #000;
+                }
+            }
+        }
+    }
+}
+
+.required-section,
+.cancellation-policy {
+    padding: 20px;
+
+    hr {
+        border: none;
+        border-top: 1px solid #e0e0e0;
+        margin: 10px 0;
+    }
+
+    h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+}
+
+.required-section {
+    .required-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .label {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .description {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .add-button {
+            padding: 8px 16px;
+            font-size: 14px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            background-color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #f7f7f7;
+            }
+        }
+    }
+}
+
+.cancellation-policy {
+    p {
+        font-size: 14px;
+        color: #333;
+        line-height: 1.5;
+
+        strong {
+            font-weight: bold;
+        }
+
+        .learn-more {
+            color: #000;
+            text-decoration: underline;
+        }
+    }
+}
+
+.ground-rules {
+    padding: 20px;
+    margin-top: 20px;
+
+    hr {
+        border: none;
+        border-top: 1px solid #e0e0e0;
+        margin: 10px 0;
+    }
+
+    h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 14px;
+        color: #333;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+
+    ul {
+        list-style: disc;
+        padding-left: 20px;
+        margin-bottom: 15px;
+
+        li {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+    }
+
+    .agreement-text {
+        font-size: 12px;
+        color: #666;
+        margin-bottom: 15px;
+
+        a {
+            color: #000;
+            text-decoration: underline;
+        }
+    }
+
+    .confirm-button {
+        display: inline-block;
+        padding: 18px 25px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        background: linear-gradient(90deg, #ff416c, #ff4b2b);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        transition: background 0.3s ease;
+        margin: 15px 0;
+
+        &:hover {
+            background: linear-gradient(90deg, #ff4b2b, #ff416c);
+        }
+
+        &:active {
+            transform: scale(0.98);
+        }
+    }
+}

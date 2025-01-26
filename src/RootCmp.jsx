@@ -8,6 +8,8 @@ import { ReviewIndex } from './pages/ReviewIndex.jsx'
 import { ChatApp } from './pages/Chat.jsx'
 import { AdminIndex } from './pages/AdminIndex.jsx'
 
+import { ConfirmPay } from './pages/ConfirmPay.jsx'
+
 import { StayDetails } from './pages/StayDetails'
 import { UserDetails } from './pages/UserDetails'
 import { PhotosPage } from './pages/PhotosPage'
@@ -29,6 +31,7 @@ export function RootCmp() {
                     <Route path="stay/:stayId" element={<StayDetails />} />
                     <Route path="/photos" element={<PhotosPage />} />
                     <Route path="user/:id" element={<UserDetails />} />
+                    <Route path="/confirm-pay" element={<ConfirmPay />} />
                     <Route path="review" element={<ReviewIndex />} />
                     <Route path="chat" element={<ChatApp />} />
                     <Route path="admin" element={<AdminIndex />} />

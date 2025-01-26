@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import { DatePickerCmp } from './DatePickerCmp'
 import { setFiterBy } from '../store/actions/stay.actions';
 import { parsePrice } from '../services/util.service'
@@ -9,6 +10,7 @@ export function Reserve() {
     const stay = useSelector(storeState => storeState.stayModule.stay)
     const [isDatePickerOpen, setIsDatePickerOpen] = useState(false)
     const filterBy = useSelector((storeState) => storeState.stayModule.filterBy)
+    const navigate = useNavigate()
 
     const { reservedDates } = stay || {}
     const disabledDates = calculateDisabledDates(reservedDates)
@@ -17,6 +19,11 @@ export function Reserve() {
     const [totalPrice, setTotalPrice] = useState(0)
 
     const [reserve, setReserve] = useState({ start: checkInDate, end: checkOutDate, guests: 1, price: totalPrice })
+
+    function handleReserveClick() {
+        navigate('/confirm-pay')
+    }
+
 
     function toggleIsDatePickerOpen() {
         setIsDatePickerOpen(!isDatePickerOpen)
@@ -173,7 +180,9 @@ export function Reserve() {
                     <div className="guests-number">{filterBy.minCapacity}</div>
                 </div>
             </div>
-            <button className="reserve-btn" onClick={onReserve}>Reserve</button>
+            <button className="reserve-btn" onClick={handleReserveClick}>
+                Reserve
+            </button>
             <p>You won't be charged yet</p>
             <div className="stay-reserve-summary">
                 <div className="reserve-total-details">
