@@ -1,0 +1,201 @@
+// .site-footer {
+//     width: 100%;
+//     box-sizing: border-box;
+//     background-color: #f7f7f7;
+//     width: 120rem;
+//     margin: 0px -25rem;
+//     padding: 20px;
+//     font-size: 14px;
+//     border-top: 1px solid #ddd;
+//     color: #484848;
+// }
+
+// .footer-container {
+//     display: flex;
+//     justify-content: center;
+//     gap: 10rem;
+//     margin-bottom: 20px;
+// }
+
+// .footer-column h4 {
+//     margin-bottom: 10px;
+//     font-weight: bold;
+// }
+
+// .footer-column ul {
+//     list-style-type: none;
+//     padding: 0;
+// }
+
+// .footer-column li {
+//     margin-bottom: 8px;
+//     cursor: pointer;
+
+//     &:hover {
+//         text-decoration: underline;
+//     }
+// }
+
+// .footer-bottom {
+//     display: flex;
+//     color: #222222;
+//     justify-content: center;
+//     align-items: center;
+//     gap: 23.5rem;
+//     border-top: 1px solid #ddd;
+//     padding-top: 20px;
+//     max-width: 50%;
+//     margin: 0 auto;
+// }
+
+// .footer-icons {
+//     display: flex;
+//     align-items: center;
+//     gap: 1rem;
+//     color: #222222;
+//     font-size: 14px;
+// }
+
+// .footer-icons i {
+//     font-size: 16px;
+// }
+
+// .footer-icons .language,
+// .footer-icons .currency {
+//     cursor: pointer;
+// }
+
+// .footer-icons .language:hover,
+// .footer-icons .currency:hover {
+//     text-decoration: underline;
+// }
+
+// .footer-bottom p {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     gap: 5px;
+//     margin: 0;
+//     flex-wrap: wrap;
+// }
+
+// .footer-link {
+//     cursor: pointer;
+// }
+
+// .footer-link:hover {
+//     text-decoration: underline;
+// }
+
+// .social-icons i {
+//     margin-right: 10px;
+//     font-size: 20px;
+//     cursor: pointer;
+// }
+
+.site-footer {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+    width: 120rem;
+    margin: 0px -25rem;
+    padding: 20px;
+    font-size: 14px;
+    color: #484848;
+    border-top: 1px solid #ddd;
+
+    .footer-container {
+        display: flex;
+        justify-content: center;
+        gap: 10rem;
+        margin-bottom: 20px;
+
+        .footer-column {
+            h4 {
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+
+            ul {
+                list-style-type: none;
+                padding: 0;
+
+                li {
+                    margin-bottom: 8px;
+                    cursor: pointer;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10rem;
+        color: #222222;
+        border-top: 1px solid #ddd;
+        padding-top: 20px;
+        max-width: 60%;
+        margin: 0 auto;
+
+        p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 0;
+            flex-wrap: wrap;
+
+            .footer-link {
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .footer-icons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+
+            span {
+                display: flex;
+                align-items: center;
+                gap: 0.3rem;
+                font-size: 14px;
+                color: #222;
+
+                .clickable {
+                    cursor: pointer;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            i {
+                font-size: 16px;
+            }
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin: 0px -4rem;
+
+            i {
+                font-size: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+}
