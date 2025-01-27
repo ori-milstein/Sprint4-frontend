@@ -154,8 +154,8 @@
     .stay-details-info {
         display: grid;
         padding-top: 26px;
-        // grid-template-columns: 0.6fr 0.4fr;
-        gap: 5%;
+        grid-template-columns: 6fr 4fr;
+        // gap: 5%;
         width: 100%;
 
         position: relative;
@@ -243,6 +243,7 @@
     .stay-reserve-container {
         grid-column: 2;
         position: relative;
+        margin-inline-start: 8.33%;
     }
 
     .stay-reserve {
