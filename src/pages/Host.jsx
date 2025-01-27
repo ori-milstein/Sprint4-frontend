@@ -1,4 +1,4 @@
-export function Add(params) {
+export function Host() {
     return (
         <div>hi</div>
     )
