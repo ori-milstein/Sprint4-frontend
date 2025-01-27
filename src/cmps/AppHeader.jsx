@@ -112,7 +112,8 @@ export function AppHeader({ isHomepage }) {
 					className={`app-header main-container full grid`}
 					onClick={isMenuOpen}
 				>
-					<nav className={`${isExpanded ? 'expand' : ''} ${!isHomepage ? 'in-stay-details' : ''}`}>
+					<nav className={`${isExpanded ? 'expand' : ''} 
+					${/*!isHomepage ? 'in-stay-details' : ''*/''}`}>
 						<NavLink to="/" className="logo" onClick={onLogoClick}>
 							<Logo />
 							<h1>airbnb</h1>
