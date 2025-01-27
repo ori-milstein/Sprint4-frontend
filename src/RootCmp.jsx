@@ -20,6 +20,7 @@ import { LoginSignup } from './pages/LoginSignup.jsx'
 import { Login } from './pages/Login.jsx'
 import { Signup } from './pages/Signup.jsx'
 import { StayFilter } from './cmps/StayFilter.jsx'
+import { Add } from "./pages/Add.jsx";
 export function RootCmp() {
     const isHomePage = useSelector(storeState => storeState.systemModule.isHomePage)
     let href = useHref(null)
@@ -32,6 +33,7 @@ export function RootCmp() {
             <main className={`main-container ${hrefFirstWord}`}>
                 <Routes>
                     <Route path="/" element={<StayIndex />} />
+                    <Route path="add" element={<Add />} />
                     <Route path="stay/:stayId" element={<StayDetails />} />
                     <Route path="/photos" element={<PhotosPage />} />
                     <Route path="user/:id" element={<UserDetails />} />

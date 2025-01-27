@@ -131,7 +131,9 @@ export function AppHeader({ isHomepage }) {
 							onSearchFromHeader={onSearchFromHeader}
 						/>
 						<div className='header-button-wrapper'>
-							<button className='airbnb-your-home'>Airbnb your home</button>
+							<Link to="/add">
+								<button className='airbnb-your-home'>Airbnb your home</button>
+							</Link>
 							{<HeaderUserControls onToggleMenu={onToggleMenu} />}
 							{isAuthMenuOpen && <HeaderAuthMenu onToggleLoginSignupDialog={onToggleLoginSignupDialog} onUserLogout={onUserLogout} />}
 							{!user && isLoginSignupOpen.isOpen && (
