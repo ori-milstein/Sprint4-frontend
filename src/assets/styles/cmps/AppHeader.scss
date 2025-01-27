@@ -19,7 +19,8 @@
         position: relative;
 
         // margin-inline: 40px;
-        margin-top: 20px;
+        // margin-top: 20px;
+        align-items: center;
         transition: height 0.9s ease-out;
 
         //logo
@@ -216,6 +217,7 @@
 
         .user-controls-profile {
             color: rgb(106, 106, 106);
+            margin-inline-start: 14px;
         }
 
         .auth-menu {
