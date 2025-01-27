@@ -84,7 +84,7 @@ export function StayPreview({ stay }) {
                             >
                                 <i
                                     class="fa-duotone fa-light fa-heart"
-                                    style={{ "--fa-secondary-color": "#141414" }}
+                                    style={{ "--fa-secondary-color": "#222222" }}
                                 ></i>
                             </button>
                             <div className="carousel-controls">
