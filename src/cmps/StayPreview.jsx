@@ -82,7 +82,10 @@ export function StayPreview({ stay }) {
                                 className="wishlist-btn"
                                 onClick={handleWishlistToggle}
                             >
-                                <i class="fa-regular fa-heart"></i>
+                                <i
+                                    class="fa-duotone fa-light fa-heart"
+                                    style={{ "--fa-secondary-color": "#141414" }}
+                                ></i>
                             </button>
                             <div className="carousel-controls">
                                 <button
