@@ -74,7 +74,19 @@ export function StayDetails() {
         {appModal &&
           <AppModal isModalActive={isModalActive} setIsModalActive={setIsModalActive} modalType={appModal} stay={stay} reviewIdxToScroll={reviewIdxToScroll} />}
 
-        <h1 className="stay-details-header">{stay.name}</h1>
+        <h1 className="stay-details-header">
+          {stay.name}
+          <div className="actions-container">
+            <button className="action-btn">
+              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              <span className="action-text">Share</span>
+            </button>
+            <button className="action-btn">
+              <i class="fa-regular fa-heart"></i>
+              <span className="action-text">Save</span>
+            </button>
+          </div>
+        </h1>
 
         <div className="stay-images">
           {/* Main image */}
@@ -109,7 +121,7 @@ export function StayDetails() {
             alt="Side Extra Image"
             onClick={handleImgShowAllPhotos}
           />
-          {/* <button className={`show-all-btn ${isClicked ? 'clicked' : ''}`}
+          <button className={`show-all-btn ${isClicked ? 'clicked' : ''}`}
             onClick={handleShowAllPhotos}
           >
             <img
@@ -118,7 +130,7 @@ export function StayDetails() {
               alt="Show All Photos"
             />
             Show all photos
-          </button> */}
+          </button>
         </div>
         <div className="stay-details-info">
           <section className='details-content'>
