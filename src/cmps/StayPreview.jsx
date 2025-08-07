@@ -74,7 +74,7 @@ export function StayPreview({ stay }) {
 
     function calculateAverageRating(reviews) {
         const total = reviews.reduce((sum, review) => sum + review.rate, 0)
-        return (total / reviews.length).toLocaleString('en-US', { maximumFractionDigits: 2 })
+        return (total / reviews.length).toLocaleString('en-US', { maximumFractionDigits: 2, minimumFractionDigits: 1 })
     }
 
     return (
