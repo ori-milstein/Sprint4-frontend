@@ -155,6 +155,8 @@ export function HeaderFilter({ isExpanded, setIsExpanded, toggleIsFilterOpen, gu
                                             onClose={() => setIsExpanded(false)}
                                             onChangeCheckIn={(date) => setCheckInDate(date)}
                                             onChangeCheckOut={(date) => setCheckOutDate(date)}
+                                            checkInDate={checkInDate}
+                                            checkOutDate={checkOutDate}
                                         />
                                     </GenericCmp>
                                 )}
