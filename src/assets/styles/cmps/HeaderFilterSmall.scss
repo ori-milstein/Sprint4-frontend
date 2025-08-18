@@ -1,0 +1,171 @@
+.app-header {
+    @media (max-width: 768px) {
+        .search-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: white;
+            z-index: 1999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $header-hover-color;
+        }
+
+
+
+        nav {
+            &.expand {
+                margin: auto;
+
+                a {
+                    display: none;
+                }
+            }
+
+            .filter-container.expanded {
+                position: fixed;
+                // top: 50%;
+                // left: 50%;
+                // transform: translate(-50%, -50%);
+                // width: 95vw;
+                // max-width: 400px;
+                // min-height: 60vh;
+                // max-height: 90vh;
+                height: 100%;
+
+
+                background-color: $header-hover-color;
+                border: none;
+                padding: 12px;
+                box-shadow: none;
+                // box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
+                z-index: 2000;
+                // padding: 32px 18px 18px 18px;
+                display: grid;
+                align-items: end;
+                overflow-y: auto;
+                margin: 0;
+            }
+
+            .filter-container.expanded .filter-action-container {
+                padding: 24px 24px 0px;
+            }
+
+            .filter-container.expanded .filter-label {
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 8px;
+                color: #222;
+            }
+
+            .filter-container.expanded input.filter-action {
+                font-size: 16px;
+                border: 1px solid #ddd;
+                border-radius: 10px;
+                padding: 12px;
+                width: 100%;
+                background: #fff;
+                color: #222;
+                margin-bottom: 0;
+            }
+
+            .filter-container.expanded .filter-search {
+                width: 100%;
+                border-radius: 12px;
+                background: #ff385c;
+                color: #fff;
+                font-size: 18px;
+                font-weight: 600;
+                height: 48px;
+                margin-top: 18px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+            }
+
+            .filter-container.expanded .long-btn svg {
+                margin-left: 8px;
+            }
+
+            .filter-container.expanded .clear-all {
+                color: #222;
+                font-size: 15px;
+                text-decoration: underline;
+                margin-bottom: 12px;
+                cursor: pointer;
+                background: none;
+                border: none;
+                text-align: left;
+                padding: 0;
+            }
+
+            *::after {
+                display: none;
+            }
+
+            .filter-wrapper {
+                margin-block-end: 18px;
+                border-radius: 16px;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 4px 6px rgba(0, 0, 0, 0.03);
+                background-color: #fff;
+
+                &:has(details[open]) {
+                    border-radius: 24px;
+                    box-shadow: 0 0 0 1px rgb(0 0 0/4%), 0 6px 20px rgb(0 0 0/20%);
+                }
+
+                .suggested-locations-container {
+                    padding-inline-start: 0px;
+                }
+            }
+
+            .filter-summary {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 24px 20px;
+                border-radius: 0px;
+
+                line-height: 1.125rem;
+                font-size: 0.875rem;
+                font-weight: 500;
+                color: $weaker-writing-color;
+                letter-spacing: normal;
+
+                *:last-child {
+                    color: black;
+                }
+
+                ::marker {
+                    visibility: hidden;
+                    display: none;
+                }
+            }
+
+            details[open] summary {
+                display: none;
+            }
+
+            .buttons {
+                display: flex;
+                justify-content: space-between;
+
+                button:first-child {
+                    font-weight: 500;
+                    text-decoration: underline;
+                    font-size: 1rem;
+                    cursor: pointer;
+                }
+
+                button:last-child {
+                    width: auto !important;
+                }
+            }
+        }
+    }
+}

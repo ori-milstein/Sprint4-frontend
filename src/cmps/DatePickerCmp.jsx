@@ -4,7 +4,12 @@ import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css'; // Default theme
 import { useSelector } from 'react-redux';
 
-export function DatePickerCmp({ onChangeCheckIn, onChangeCheckOut,checkInDate,checkOutDate, disabledDates }) {
+export function DatePickerCmp({ onChangeCheckIn, onChangeCheckOut, checkInDate, checkOutDate, disabledDates }) {
+    const [selectionRange, setSelectionRange] = useState({
+        startDate: checkInDate ? new Date(checkInDate) : new Date(),
+        endDate: checkOutDate ? new Date(checkOutDate) : new Date(),
+        key: 'selection',
+    })
 
     useLayoutEffect(() => {
         const weekDays = document.querySelectorAll(`span.rdrWeekDay`)
@@ -18,26 +23,19 @@ export function DatePickerCmp({ onChangeCheckIn, onChangeCheckOut,checkInDate,ch
         return new Date(date.getFullYear(), date.getMonth(), date.getDate(), 12)
     }
 
-    const [selectionRange, setSelectionRange] = useState({
-        startDate: checkInDate ? new Date(checkInDate) : new Date(),
-        endDate: checkOutDate ? new Date(checkOutDate) : new Date(),
-        key: 'selection',
-    })
-
-
     function formatDateISO(date) {
         return date.toISOString().split('T')[0]  // Returns "YYYY-MM-DD"
     }
-    
+
     const handleSelect = (ranges) => {
         let { startDate, endDate } = ranges.selection
         startDate = trimDate(startDate)
         endDate = trimDate(endDate)
-    
+
         if (startDate > endDate) [startDate, endDate] = [endDate, startDate]
-    
+
         setSelectionRange({ ...ranges.selection, startDate, endDate })
-    
+
         onChangeCheckIn(formatDateISO(startDate))  // Pass formatted date
         onChangeCheckOut(formatDateISO(endDate))
     }

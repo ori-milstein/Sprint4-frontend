@@ -1,6 +1,8 @@
 import { Link, NavLink, useNavigate, useLocation } from 'react-router-dom'; import { useSelector } from 'react-redux';
+import { useViewport } from '../customHooks/useViewport'
 import Logo from './Logo';
 import { HeaderFilter } from './HeaderFilter';
+import { HeaderFilterSmall } from './HeaderFilterSmall.jsx';
 import { useEffect, useState } from 'react';
 import { HeaderUserControls } from './HeaderUserControls';
 import { HeaderAuthMenu } from './HeaderAuthMenu';
@@ -21,6 +23,7 @@ export function AppHeader({ isHomepage, inputModal, setInputModal, isClosing, se
 	const filterBy = useSelector((storeState) => storeState.stayModule.filterBy)
 	const stay = useSelector(storeState => storeState.stayModule.stay)
 
+	const { width, height } = useViewport()
 	const [isExpanded, setIsExpanded] = useState(false)
 	const [isAuthMenuOpen, setIsAuthMenuOpen] = useState(false)
 
@@ -139,7 +142,7 @@ export function AppHeader({ isHomepage, inputModal, setInputModal, isClosing, se
 							<Logo />
 							<h1>TravelNest</h1>
 						</NavLink>
-						<HeaderFilter
+						{width >= 744 ? <HeaderFilter
 							isExpanded={isExpanded}
 							setIsExpanded={setIsExpanded}
 							toggleIsFilterOpen={toggleIsFilterOpen}
@@ -156,6 +159,24 @@ export function AppHeader({ isHomepage, inputModal, setInputModal, isClosing, se
 							onSearchFromHeader={onSearchFromHeader}
 							setInputModal={setInputModal}
 						/>
+
+							: <HeaderFilterSmall
+								isExpanded={isExpanded}
+								setIsExpanded={setIsExpanded}
+								toggleIsFilterOpen={toggleIsFilterOpen}
+								checkInDate={checkInDate}
+								setCheckInDate={setCheckInDate}
+								checkOutDate={checkOutDate}
+								setCheckOutDate={setCheckOutDate}
+								guests={guests}
+								setGuests={setGuests}
+								where={where}
+								setWhere={setWhere}
+								isHomepage={isHomepage}
+								inputModal={inputModal}
+								onSearchFromHeader={onSearchFromHeader}
+								setInputModal={setInputModal}
+							/>}
 						{<HeaderUserControls onToggleMenu={onToggleMenu} onAddStay={onAddStay} user={user} />}
 						{isAuthMenuOpen && <HeaderAuthMenu onToggleLoginSignupDialog={onToggleLoginSignupDialog} onUserLogout={onUserLogout} onManageBooking={onManageBooking} />}
 
