@@ -112,12 +112,12 @@ export function HeaderFilterSmall({ isExpanded, setIsExpanded, toggleIsFilterOpe
                                     </summary>
                                     <div className="filter-action-container date-picker" onClick={() => toggleIsFilterOpen('date-picker')}>
                                         <label className="filter-label">When</label>
-                                        <input
+                                        {/* <input
                                             className="filter-action filter-checkin"
                                             value={formatDate(checkInDate) || 'Add dates'}
                                             required
                                             readOnly
-                                        ></input>
+                                        ></input> */}
                                         <DatePickerCmp
                                             onClose={() => setIsExpanded(false)}
                                             onChangeCheckIn={(date) => setCheckInDate(date)}

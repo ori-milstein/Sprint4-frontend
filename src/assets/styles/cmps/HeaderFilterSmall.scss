@@ -151,6 +151,14 @@
                 display: none;
             }
 
+            .rdrMonths {
+                flex-direction: column;
+            }
+
+            .rdrDateRangePickerWrapper {
+                margin: auto;
+            }
+
             .buttons {
                 display: flex;
                 justify-content: space-between;
