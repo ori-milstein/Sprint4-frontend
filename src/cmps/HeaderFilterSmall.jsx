@@ -122,6 +122,8 @@ export function HeaderFilterSmall({ isExpanded, setIsExpanded, toggleIsFilterOpe
                                             onClose={() => setIsExpanded(false)}
                                             onChangeCheckIn={(date) => setCheckInDate(date)}
                                             onChangeCheckOut={(date) => setCheckOutDate(date)}
+                                            checkInDate={checkInDate}
+                                            checkOutDate={checkOutDate}
                                         />
                                     </div>
                                 </details>
