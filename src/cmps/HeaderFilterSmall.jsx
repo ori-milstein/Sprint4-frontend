@@ -79,8 +79,8 @@ export function HeaderFilterSmall({ isExpanded, setIsExpanded, toggleIsFilterOpe
             {isExpanded && (
                 <>
                     {/* <div className="search-modal-overlay"></div> */}
-                    <form className="filter-container expanded" onSubmit={onSearchFromHeader}>
-                        <ul>
+                    <form className="filter-container expanded small" onSubmit={onSearchFromHeader}>
+                        <ul className='filters-list'>
                             <li className="filter-wrapper">
                                 <details name='filter'>
                                     <summary className='filter-summary'>

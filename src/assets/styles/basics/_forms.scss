@@ -7,7 +7,7 @@
 	cursor: pointer;
 }
 
-form:not(.add-stay-form)>* {
+form:not(.add-stay-form, .small)>* {
 	display: block;
 	// width: 200px;
 	margin: 10px 0px;
