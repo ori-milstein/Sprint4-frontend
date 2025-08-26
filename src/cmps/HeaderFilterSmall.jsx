@@ -148,19 +148,22 @@ export function HeaderFilterSmall({ isExpanded, setIsExpanded, toggleIsFilterOpe
 
                         <div className='buttons'>
                             <button>Clear All</button>
-                            <button className="filter-search long-btn">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 32 32"
-                                    width="13"
-                                    height="13"
-                                    stroke="white"
-                                    strokeWidth="4"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                >
-                                    <path fill="none" d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9"></path>
-                                </svg>
+                            <button className="search-btn ">
+                                <span>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 32 32"
+                                        width="16"
+                                        height="16"
+                                        stroke="white"
+                                        strokeWidth="4"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                    >
+                                        <path fill="none" d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9"></path>
+                                    </svg>
+                                    Search
+                                </span>
                             </button>
                         </div>
 
