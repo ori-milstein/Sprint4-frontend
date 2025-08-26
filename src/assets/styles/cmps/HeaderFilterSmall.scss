@@ -1,4 +1,4 @@
-.app-header {
+.headers {
     @media (max-width: 768px) {
         .search-modal-overlay {
             position: fixed;
@@ -14,7 +14,9 @@
             background-color: $header-hover-color;
         }
 
-
+        &:has(.expand)~* {
+            display: none;
+        }
 
         nav {
             &.expand {
