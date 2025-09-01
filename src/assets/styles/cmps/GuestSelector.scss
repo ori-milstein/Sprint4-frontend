@@ -44,9 +44,12 @@
     }
 
     .guest-controls {
+        width: 104px;
+        height: 32px;
         display: flex;
         align-items: center;
-        gap: 10px;
+        // gap: 10px;
+        justify-content: space-between;
     }
 
     .guest-count {
@@ -66,12 +69,22 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
-    }
-}
 
-.block,
-.guests-view {
-    .guest-selector {
-        width: 363px;
+        &:disabled {
+            border-color: #EBEBEB;
+            color: #EBEBEB;
+            cursor: not-allowed;
+
+            * {
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    .block,
+    .guests-view {
+        .guest-selector {
+            width: 363px;
+        }
     }
 }

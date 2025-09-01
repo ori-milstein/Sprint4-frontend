@@ -30,12 +30,12 @@ export function GuestSelector({ guests, setGuests }) {
                             disabled={value === 0}
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                                <path d="M0.75 6.75H11.25V5.25H0.75V6.75Z" fill="grey" />
+                                <path d="M0.75 6.75H11.25V5.25H0.75V6.75Z" fill={value > 0 ? 'grey' : '#ebebeb'} />
                             </svg>
 
 
                         </button>
-                        <span className="guest-count">{value}</span>
+                        <div className="guest-count">{value}</div>
                         <button
                             type="button"
                             className="guest-btn increment"
