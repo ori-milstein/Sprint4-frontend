@@ -88,14 +88,33 @@ export function HeaderFilterSmall({ isExpanded, setIsExpanded, toggleIsFilterOpe
                                         <div>I'm flexible</div>
                                     </summary>
                                     <div className="filter-action-container">
-                                        <h2 className='subtitle'>Where?</h2>
-                                        <input
-                                            onChange={handleWhereInputChange}
-                                            onClick={handleWhereClick}
-                                            className="filter-action filter-where"
-                                            value={where}
-                                            placeholder="Search destinations"
-                                        ></input>
+                                        <h2 className='subtitle where'>Where?</h2>
+
+                                        <div className="flex align-center search-destinaions-wrapper">
+                                            <div className="flex align-center">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 32 32"
+                                                    width="16"
+                                                    height="16"
+                                                    stroke="rgb(34, 34, 34)"
+                                                    strokeWidth="4"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                >
+                                                    <path fill="none" stroke="currentColor" d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9"></path>
+                                                </svg>
+                                            </div>
+                                            <input
+                                                onChange={handleWhereInputChange}
+                                                onClick={handleWhereClick}
+                                                className="filter-action filter-where"
+                                                value={where}
+                                                placeholder="Search destinations"
+                                                name={'search destinations'}
+                                            >
+                                            </input>
+                                        </div>
                                         <SuggestedLocations
                                             setWhere={setWhere}
                                             onClose={() => toggleIsFilterOpen(null)}

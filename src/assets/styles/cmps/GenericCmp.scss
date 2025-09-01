@@ -57,8 +57,9 @@
 .block:has(.suggested-locations-container) {
     // width: 428px;
     // height: 500px;
-
+    width: 377px;
     left: 0;
+    padding-block: 20px;
 }
 
 .block:has(.guest-selector) {
