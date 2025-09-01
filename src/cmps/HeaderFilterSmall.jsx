@@ -88,7 +88,7 @@ export function HeaderFilterSmall({ isExpanded, setIsExpanded, toggleIsFilterOpe
                                         <div>I'm flexible</div>
                                     </summary>
                                     <div className="filter-action-container">
-                                        <label className="filter-label">Where?</label>
+                                        <h2 className='subtitle'>Where?</h2>
                                         <input
                                             onChange={handleWhereInputChange}
                                             onClick={handleWhereClick}
@@ -111,7 +111,7 @@ export function HeaderFilterSmall({ isExpanded, setIsExpanded, toggleIsFilterOpe
                                         <div>Add dates</div>
                                     </summary>
                                     <div className="filter-action-container date-picker" onClick={() => toggleIsFilterOpen('date-picker')}>
-                                        <label className="filter-label">When</label>
+                                        <h2 className='subtitle'>When?</h2>
                                         {/* <input
                                             className="filter-action filter-checkin"
                                             value={formatDate(checkInDate) || 'Add dates'}
@@ -135,7 +135,7 @@ export function HeaderFilterSmall({ isExpanded, setIsExpanded, toggleIsFilterOpe
                                         <div>Add guests</div>
                                     </summary>
                                     <div className="filter-action-container who " onClick={() => toggleIsFilterOpen('guest-selector')}>
-                                        <label className="filter-label">Who</label>
+                                        <h2 className='subtitle'>Who?</h2>
                                         <GuestSelector
                                             guests={guests}
                                             setGuests={setGuests}

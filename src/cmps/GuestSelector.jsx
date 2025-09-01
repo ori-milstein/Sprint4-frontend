@@ -16,10 +16,10 @@ export function GuestSelector({ guests, setGuests }) {
                     <div className="guest-info">
                         <p className="guest-type">{key.charAt(0).toUpperCase() + key.slice(1)}</p>
                         <p className="guest-description">
-                            {key === 'adults' ? 'Ages 18 or above' :
-                                key === 'children' ? 'Ages 2 – 17' :
+                            {key === 'adults' ? 'Ages 13 or above' :
+                                key === 'children' ? 'Ages 2 – 12' :
                                     key === 'infants' ? 'Under 2' :
-                                        'Bringing a service animal?'}
+                                        `Service animals aren't considered as pets`}
                         </p>
                     </div>
                     <div className="guest-controls">

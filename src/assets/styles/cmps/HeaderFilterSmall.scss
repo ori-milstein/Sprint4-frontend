@@ -46,6 +46,7 @@
                 border: none;
                 padding: 12px;
                 box-shadow: none;
+                border-radius: 0px;
                 // box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
                 z-index: 2000;
                 // padding: 32px 18px 18px 18px;
@@ -64,7 +65,7 @@
             }
 
             .filter-container.expanded .filter-action-container {
-                padding: 24px 24px 0px;
+                padding: 24px;
             }
 
             .filter-container.expanded .filter-label {
@@ -200,6 +201,14 @@
                 }
             }
         }
+    }
+
+    .subtitle {
+        margin: 0;
+        line-height: clamp(26PX, 1.625rem, 38PX);
+        font-size: clamp(22PX, 1.375rem, 32PX);
+        font-weight: 700;
+        letter-spacing: -0.01375rem;
     }
 }
 
