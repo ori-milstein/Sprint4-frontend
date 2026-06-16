@@ -127,7 +127,57 @@ export function AppHeader({ isHomepage, inputModal, setInputModal, isClosing, se
 		navigate('/add-stay')
 	}
 
-	return (
+
+	if (width >= 744) {
+		return (
+			<>
+				<div className={'headers main-container full'
+					+ (classNameToAdd ? ` ${classNameToAdd}` : '')}>
+
+
+					<header
+						className={`app-header main-container full grid` + (classNameToAdd ? ` ${classNameToAdd}` : '')}
+						onClick={isMenuOpen}
+					>
+						<nav className={`${isExpanded ? 'expand' : ''} ${!isHomepage ? 'in-stay-details' : ''}`}>
+							<NavLink to="/" className="logo" onClick={onLogoClick}>
+								<Logo />
+								<h1>TravelNest</h1>
+							</NavLink>
+							<HeaderFilter
+								isExpanded={isExpanded}
+								setIsExpanded={setIsExpanded}
+								toggleIsFilterOpen={toggleIsFilterOpen}
+								checkInDate={checkInDate}
+								setCheckInDate={setCheckInDate}
+								checkOutDate={checkOutDate}
+								setCheckOutDate={setCheckOutDate}
+								guests={guests}
+								setGuests={setGuests}
+								where={where}
+								setWhere={setWhere}
+								isHomepage={isHomepage}
+								inputModal={inputModal}
+								onSearchFromHeader={onSearchFromHeader}
+								setInputModal={setInputModal}
+							/>
+
+
+							{<HeaderUserControls onToggleMenu={onToggleMenu} onAddStay={onAddStay} user={user} />}
+							{isAuthMenuOpen && <HeaderAuthMenu onToggleLoginSignupDialog={onToggleLoginSignupDialog} onUserLogout={onUserLogout} onManageBooking={onManageBooking} />}
+
+						</nav>
+					</header >
+					{/* {!isExpanded && isHomepage && (
+					<StayFilter />
+				)} */}
+				</div>
+
+			</>
+
+		)
+	}
+	else return (
 		<>
 			<div className={'headers main-container full'
 				+ (classNameToAdd ? ` ${classNameToAdd}` : '')}>
@@ -138,11 +188,8 @@ export function AppHeader({ isHomepage, inputModal, setInputModal, isClosing, se
 					onClick={isMenuOpen}
 				>
 					<nav className={`${isExpanded ? 'expand' : ''} ${!isHomepage ? 'in-stay-details' : ''}`}>
-						<NavLink to="/" className="logo" onClick={onLogoClick}>
-							<Logo />
-							<h1>TravelNest</h1>
-						</NavLink>
-						{width >= 744 ? <HeaderFilter
+
+						<HeaderFilterSmall
 							isExpanded={isExpanded}
 							setIsExpanded={setIsExpanded}
 							toggleIsFilterOpen={toggleIsFilterOpen}
@@ -160,25 +207,6 @@ export function AppHeader({ isHomepage, inputModal, setInputModal, isClosing, se
 							setInputModal={setInputModal}
 						/>
 
-							: <HeaderFilterSmall
-								isExpanded={isExpanded}
-								setIsExpanded={setIsExpanded}
-								toggleIsFilterOpen={toggleIsFilterOpen}
-								checkInDate={checkInDate}
-								setCheckInDate={setCheckInDate}
-								checkOutDate={checkOutDate}
-								setCheckOutDate={setCheckOutDate}
-								guests={guests}
-								setGuests={setGuests}
-								where={where}
-								setWhere={setWhere}
-								isHomepage={isHomepage}
-								inputModal={inputModal}
-								onSearchFromHeader={onSearchFromHeader}
-								setInputModal={setInputModal}
-							/>}
-						{<HeaderUserControls onToggleMenu={onToggleMenu} onAddStay={onAddStay} user={user} />}
-						{isAuthMenuOpen && <HeaderAuthMenu onToggleLoginSignupDialog={onToggleLoginSignupDialog} onUserLogout={onUserLogout} onManageBooking={onManageBooking} />}
 
 					</nav>
 				</header >
@@ -188,5 +216,6 @@ export function AppHeader({ isHomepage, inputModal, setInputModal, isClosing, se
 			</div>
 
 		</>
-	);
+	)
+
 }

@@ -193,39 +193,21 @@ export function HeaderFilterSmall({ isExpanded, setIsExpanded, toggleIsFilterOpe
             {
                 !isExpanded && (
                     <React.Fragment>
-                        <form
-                            className="filter-container not-expanded"
+                        <button
+                            className="filter-container not-expanded small short"
                             onClick={handleClick}
                         >
-                            <div className="filter-action-container short anywhere">
-                                <label className="filter-label">
-                                    {!isHomepage && `${stay?.loc.city}, ${stay?.loc.country}` || filterBy?.txt || 'Anywhere'}
-                                </label>
-                            </div>
-                            <div className="filter-action-container short anyweek">
-                                <label className="filter-label">Anytime</label>
-                            </div>
-                            <div className="filter-action-container short who">
-                                <label className="filter-label add-guests">
-                                    {filterBy.minCapacity ? `${filterBy.minCapacity} guest${(filterBy.minCapacity > 1) ? `s` : ``}` : 'Add guests'}
-                                </label>
-                            </div>
-                            <button className="filter-search short-btn">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 32 32"
-                                    width="13"
-                                    height="13"
-                                    stroke="white"
-                                    strokeWidth="4"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                >
-                                    <path fill="none" d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9"></path>
-                                </svg>
-                            </button>
+                            <span >
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false" style={{ display: 'block', height: ' 12px', width: ' 12px', fill: 'currentcolor', }}><path d="M13 0a13 13 0 0 1 10.5 20.67l7.91 7.92-2.82 2.82-7.92-7.91A12.94 12.94 0 0 1 13 26a13 13 0 1 1 0-26zm0 4a9 9 0 1 0 0 18 9 9 0 0 0 0-18z"></path></svg>
+                                </span>
 
-                        </form>
+                                <span>
+                                    Start your search
+                                </span>
+                            </span>
+
+                        </button>
                     </React.Fragment>
                 )
             }
